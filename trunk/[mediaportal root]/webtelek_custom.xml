@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<profile>
+  <section name="0">
+    <entry name="name">РБК ТВ</entry>
+    <entry name="url">mms://tv.gldn.net/rbc</entry>
+    <entry name="country">Российская федерация</entry>
+    <entry name="category">Пользовательские</entry>
+    <entry name="description">Новости бизнеса</entry>
+  </section>
+  <section name="1">
+    <entry name="name">Евроспорт</entry>
+    <entry name="url">http://www.rambler-audio.ru/asx/video/special/eurosportnews/eurosport.asx</entry>
+    <entry name="country">Российская федерация</entry>
+    <entry name="category">Пользовательские</entry>
+    <entry name="description">Новости спорта</entry>
+  </section>
+  <section name="2">
+    <entry name="name">Рамблер ТВ</entry>
+    <entry name="url">http://www.rambler-audio.ru/asx/video/rambler-tv.asx</entry>
+    <entry name="country">Российская федерация</entry>
+    <entry name="category">Пользовательские</entry>
+    <entry name="description">Нет данных</entry>
+  </section>
+  <section name="3">
+    <entry name="name">МИР ТВ</entry>
+    <entry name="url">http://www.webtelek.com/php/play.php?in=tv&amp;streamid=148</entry>
+    <entry name="country">Российская федерация</entry>
+    <entry name="category">Пользовательские</entry>
+    <entry name="description">Телевидение СНГ</entry>
+  </section>
+  <section name="4">
+    <entry name="name">CNN</entry>
+    <entry name="url">http://www.webtelek.com/php/play.php?in=tv&amp;streamid=68</entry>
+    <entry name="country">США</entry>
+    <entry name="category">Пользовательские</entry>
+    <entry name="description">"Золотой стандарт" средств массовой информации. Всюду первый: самые горячие интервью, самые скандальные кадры, самые громкие сенсации в мире спорта, искусства, политики и бизнеса, самые откровенные признания известных людей. Максимум проверенной информации!</entry>
+  </section>
+  <section name="5">
+    <entry name="name">BBC 24 NEWS</entry>
+    <entry name="url">http://www.webtelek.com/php/play.php?in=tv&amp;streamid=22</entry>
+    <entry name="country">Великобритания</entry>
+    <entry name="category">Пользовательские</entry>
+    <entry name="description">24-часовой канал телевидения новостей BBC в Великобритании.</entry>
+  </section>
+</profile>

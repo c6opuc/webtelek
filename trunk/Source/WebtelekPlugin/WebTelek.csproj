@@ -1,0 +1,125 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{59FD049D-CEE1-4772-847E-5480386D23C1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebTelek</RootNamespace>
+    <AssemblyName>WebTelek</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Core, Version=1.0.2553.37481, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Team MediaPortal\MediaPortal\Core.DLL</HintPath>
+    </Reference>
+    <Reference Include="Dialogs, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Team MediaPortal\MediaPortal\Plugins\Windows\Dialogs.DLL</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TVCapture, Version=0.2.2.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Team MediaPortal\MediaPortal\TVCapture.DLL</HintPath>
+    </Reference>
+    <Reference Include="Utils, Version=1.0.2553.37524, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Team MediaPortal\MediaPortal\Utils.DLL</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfigurationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationForm.Designer.cs">
+      <DependentUpon>ConfigurationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDVolume.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OSDVolume.Designer.cs">
+      <DependentUpon>OSDVolume.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomChannel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomChannel.Designer.cs">
+      <DependentUpon>CustomChannel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebTelekArchiveXML.cs" />
+    <Compile Include="WebTelekHTTPClient.cs" />
+    <Compile Include="WebTelekPlugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebTelek.cs" />
+    <Compile Include="WebTelekLiveXML.cs" />
+    <Compile Include="OSDProgressBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OSDProgressBar.Designer.cs">
+      <DependentUpon>OSDProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSDInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OSDInfo.Designer.cs">
+      <DependentUpon>OSDInfo.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ConfigurationForm.resx">
+      <DependentUpon>ConfigurationForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OSDVolume.resx">
+      <DependentUpon>OSDVolume.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomChannel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CustomChannel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OSDProgressBar.resx">
+      <DependentUpon>OSDProgressBar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OSDInfo.resx">
+      <DependentUpon>OSDInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
