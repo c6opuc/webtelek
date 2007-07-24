@@ -64,6 +64,7 @@ namespace MediaPortal.GUI.WebTelek
             }
             catch (Exception)
             {
+
             }
             return result;
         }
