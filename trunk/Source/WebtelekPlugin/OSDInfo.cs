@@ -50,20 +50,21 @@ namespace MediaPortal.GUI.WebTelek
         g_Player.EndedHandler _gpeh;
         EventHandler _losc;
         readonly PointF[] _pathPoints;
-        static string sched_string;
+        public static string sched_string;
+        public static WebTelek wp;
+        public static int index;
 
-        public static void Start(string schedstring)
+        public static void Start()
         {
-            sched_string = schedstring;
             if (_osd == null)
             {
                 _osd = new OSDInfo(Application.OpenForms[0]);
             }
             _enabled = true;
         }
-        
+
         public OSDInfo(Form parent)
-        {                      
+        {
             //TODO: MediaPortal closes when WMP9OSD file is not found, why? 
             ConfigXmlDocument cxd = new ConfigXmlDocument();
             cxd.Load(GUIGraphicsContext.Skin + @"\WMP9SCHED.xml");
@@ -94,6 +95,7 @@ namespace MediaPortal.GUI.WebTelek
             GUIWindowManager.OnNewAction += new OnActionHandler(GUIWindowManager_OnNewAction);
             parent.Focus();
         }
+
 
         /// <summary>
         /// Clean up any resources being used.
@@ -133,7 +135,15 @@ namespace MediaPortal.GUI.WebTelek
                                 _timer.Enabled = false;
                                 if (g_Player.FullScreen)
                                 {
-                                    this.Show(sched_string);
+                                    if (wp == null)
+                                    {
+                                        this.Show(sched_string);
+                                    }
+                                    else
+                                    {
+                                        wp.GetChannelData(false);
+                                        this.Show(wp.DataDescriptions[index]);
+                                    }
                                 }
                                 _timer.Interval = 5000;
                                 _timer.Enabled = true;
