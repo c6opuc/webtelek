@@ -162,6 +162,7 @@ namespace MediaPortal.GUI.WebTelek
                     expr = nav.Compile("/WebTelek/channel[id=" + getChannelId()[i] + "]/listing/*");
                     XPathNodeIterator iterator = nav.Select(expr);
                     int j = 0;
+                    int k = 0;
                     try
                     {
                         while (iterator.MoveNext() && j <= 3)
@@ -184,15 +185,14 @@ namespace MediaPortal.GUI.WebTelek
                             DateTime currtime = DateTime.Now;
                             DateTime from = DateTime.Parse(showfrom);
                             DateTime to = DateTime.Parse(showthru);
-                            if (to < from && j > 0)
-                            {
-                                to = to.AddDays(1);
-                            }
+                            if (to < from && k > 0) to = to.AddDays(1);
+                            if (from > to  && k == 0) from = from.AddDays(-1);
                             if ( ((from <= currtime) && (to > currtime)) || ((from > currtime) && (to > currtime)) )
                             {
                                 channellist = channellist + showfrom + "-" + showthru + " : " + showtitle + "\n";
                                 j++;
                             }
+                            k++;
 
                         }
                     }
