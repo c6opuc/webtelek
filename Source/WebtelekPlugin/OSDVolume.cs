@@ -181,7 +181,7 @@ namespace MediaPortal.GUI.WebTelek
                         }
                 }
             }
-            this.Opacity = 1;//0.71;
+            this.Opacity = 1;
             this.Refresh();
         }
 
