@@ -1,8 +1,11 @@
+!system 'svn export "[mediaportal root]" ../release'
+!system 'copy Source\WebtelekPlugin\bin\Release\WebTelek.dll ..\release\plugins\windows'
+
 ; The name of the installer
 Name "WEBTELEK+ frontend plugin"
 
 ; The file to write
-OutFile "webtelek+.exe"
+OutFile "..\webtelek+.exe"
 
 ; The default installation directory
 InstallDir "$PROGRAMFILES\Team MediaPortal\MediaPortal"
@@ -21,6 +24,8 @@ Section "" ;No components page, name is not important
   SetOutPath $INSTDIR
   
   ; Put file there
-  File /r "[mediaportal root]\*.*"
+  File /r "..\release\*.*"
   
 SectionEnd ; end the section
+
+!system 'del /S /Q ../release'
