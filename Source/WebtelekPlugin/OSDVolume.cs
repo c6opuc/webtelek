@@ -52,8 +52,8 @@ namespace MediaPortal.GUI.WebTelek
         // Bar size
         int vheight = 25;
         int vwidth = 10;
-        int vseparator = 4;
-        int vsize = 10;
+        int vseparator = 2; 
+        int vsize = 10; // number of elements
 
         public static void Start()
         {
@@ -63,7 +63,15 @@ namespace MediaPortal.GUI.WebTelek
             }
             _enabled = true;
         }
-        
+
+        public static void Stop()
+        {
+            if (_osd != null)
+            {
+                _osd.Dispose();
+            }
+        }
+
         public OSDVolume(Form parent)
         {                      
 

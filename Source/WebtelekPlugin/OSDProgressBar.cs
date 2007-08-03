@@ -66,7 +66,15 @@ namespace MediaPortal.GUI.WebTelek
             }
             _enabled = true;
         }
-        
+
+        public static void Stop()
+        {
+            if (_osd != null)
+            {
+                _osd.Dispose();
+            }
+        }
+
         public OSDProgressBar(Form parent)
         {                      
             //TODO: MediaPortal closes when WMP9OSD file is not found, why? 
