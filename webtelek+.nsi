@@ -28,4 +28,4 @@ Section "" ;No components page, name is not important
   
 SectionEnd ; end the section
 
-!system 'del /S /Q ../release'
+!system 'rmdir /S /Q ..\release'
