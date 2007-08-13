@@ -63,11 +63,13 @@ namespace MediaPortal.GUI.WebTelek
             _enabled = true;
         }
 
-        public static void Stop ()
+        public static void Stop()
         {
+            //TODO: Use g_Player events ?
             if (_osd != null)
             {
                 _osd.Dispose();
+                _osd = null;
             }
         }
 
