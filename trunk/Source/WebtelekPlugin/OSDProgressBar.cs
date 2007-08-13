@@ -181,7 +181,7 @@ namespace MediaPortal.GUI.WebTelek
                                 if (g_Player.FullScreen)
                                 {
                                     double cs = 0;
-                                    this.Show(g_Player.Duration, g_Player.CurrentPosition, cs, g_Player.GetStepDescription());
+                                    this.Show(g_Player.Duration, g_Player.CurrentPosition, cs, DateTime.Now.ToString("HH:mm:ss"));
                                 }
                                 _timer.Interval = 5000;
                                 _timer.Enabled = true;
