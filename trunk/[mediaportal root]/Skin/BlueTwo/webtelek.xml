@@ -46,6 +46,7 @@
 				<posY>110</posY>
 				<label>#favorites</label>
 				<align>left</align>
+				<font>font14</font>
 			</control>
 			<control>
 				<description>Select country</description>
@@ -55,6 +56,7 @@
 				<posY>160</posY>      			
 				<label>#select</label>
 				<align>left</align>
+				<font>font14</font>
 			</control>
 			<control>
       				<description>Select category</description>
@@ -64,6 +66,7 @@
       				<posY>210</posY>      			
       				<label>#archive</label>
       				<align>left</align>
+				<font>font14</font>
     			</control>
 			<control>
       				<description>others</description>
@@ -74,6 +77,7 @@
       				<label>#others</label>
       				<ondown>99</ondown>
       				<align>left</align>
+				<font>font14</font>
     			</control>
 		</control>
 			<control>
@@ -83,7 +87,7 @@
 				<posX>250</posX>
 				<posY>90</posY>
 				<label>#Header</label>
-				<font>font16</font>
+				<font>font20</font>
 				<align>left</align>
 				<textcolor>ffffffff</textcolor>
 			</control>
@@ -104,10 +108,9 @@
       			<spaceBetweenItems>8</spaceBetweenItems>
       			<textureHeight>35</textureHeight>
       			<keepaspectratio>no</keepaspectratio>
-      			<font2>font10</font2>
-      			<font3>font12</font3>
       			<onleft>7</onleft>
       			<onright>7</onright>
+			<font>font14</font>
 		</control>
 		<control>
    			<type>textboxscrollup</type>
@@ -117,7 +120,7 @@
       			<posY>230</posY>
       			<width>200</width>
       			<height>150</height>
-			<font>font12</font>
+			<font>font14</font>
       			<label>#ChannelInfo</label>
       			<textcolor>ffffffff</textcolor>
 		</control>
