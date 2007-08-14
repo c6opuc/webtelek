@@ -56,6 +56,7 @@ namespace MediaPortal.GUI.WebTelek
         LinearGradientBrush _brushPosTop;
         g_Player.EndedHandler _gpeh;
         EventHandler _losc;
+        OnActionHandler _ahandler;
         readonly PointF[] _pathPoints;
 
         public static void Start()
@@ -72,7 +73,7 @@ namespace MediaPortal.GUI.WebTelek
             //TODO: Use g_Player events ?
             if (_osd != null)
             {
-                _osd.Dispose();
+                _osd.Dispose(true);
                 _osd = null;
             }
         }
@@ -109,7 +110,8 @@ namespace MediaPortal.GUI.WebTelek
             _parent.SizeChanged += _losc;
             _timer.Tick += new EventHandler(_timer_Tick);
             g_Player.PlayBackEnded += _gpeh;//TODO: Does not work as expected, add g_Player.PlayBackStopped  += _gpeh;?
-            GUIWindowManager.OnNewAction += new OnActionHandler(GUIWindowManager_OnNewAction);
+            _ahandler = new OnActionHandler(GUIWindowManager_OnNewAction);
+            GUIWindowManager.OnNewAction += _ahandler;
             _brushBottom = new LinearGradientBrush(new Rectangle(0, 0, 10, _bitmap.Height / 2), Color.FromArgb(7, 142, 2), Color.FromArgb(14, 180, 11), LinearGradientMode.Vertical);
             _brushTop = new LinearGradientBrush(new Rectangle(0, _bitmap.Height / 2 - 1, 1, _bitmap.Height), Color.FromArgb(128, 196, 128), Color.FromArgb(61, 164, 57), LinearGradientMode.Vertical);
             _brushPosBottom = new LinearGradientBrush(new Rectangle(0, 0, 10, _bitmap.Height / 2), Color.Yellow, Color.DarkOrange, LinearGradientMode.Vertical);
@@ -124,6 +126,7 @@ namespace MediaPortal.GUI.WebTelek
         protected override void Dispose(bool disposing)
         {
             g_Player.PlayBackEnded -= _gpeh;
+            GUIWindowManager.OnNewAction -= _ahandler;
             _parent.LocationChanged += _losc;
             _parent.SizeChanged += _losc;
             _timer.Dispose();

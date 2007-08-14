@@ -48,6 +48,7 @@ namespace MediaPortal.GUI.WebTelek
         static OSDVolume _osd;
         g_Player.EndedHandler _gpeh;
         EventHandler _losc;
+        OnActionHandler _ahandler;
 
         // Bar size
         int vheight = 25;
@@ -69,7 +70,7 @@ namespace MediaPortal.GUI.WebTelek
             //TODO: Use g_Player events ?
             if (_osd != null)
             {
-                _osd.Dispose();
+                _osd.Dispose(true);
                 _osd = null;
             }
         }
@@ -89,7 +90,8 @@ namespace MediaPortal.GUI.WebTelek
             _timer.Tick += new EventHandler(_timer_Tick);
             _bitmap = new Bitmap((vwidth+vseparator)*vsize-vseparator,vheight);
             g_Player.PlayBackEnded += _gpeh;//TODO: Does not work as expected, add g_Player.PlayBackStopped  += _gpeh;?
-            GUIWindowManager.OnNewAction += new OnActionHandler(GUIWindowManager_OnNewAction);
+            _ahandler = new OnActionHandler(GUIWindowManager_OnNewAction);
+            GUIWindowManager.OnNewAction += _ahandler;
             parent.Focus();
         }
 
@@ -100,6 +102,7 @@ namespace MediaPortal.GUI.WebTelek
         protected override void Dispose(bool disposing)
         {
             g_Player.PlayBackEnded -= _gpeh;
+            GUIWindowManager.OnNewAction -= _ahandler;
             _parent.LocationChanged += _losc;
             _parent.SizeChanged += _losc;
             _timer.Dispose();

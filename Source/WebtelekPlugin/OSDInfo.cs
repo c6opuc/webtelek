@@ -49,6 +49,7 @@ namespace MediaPortal.GUI.WebTelek
         static OSDInfo _osd;
         g_Player.EndedHandler _gpeh;
         EventHandler _losc;
+        OnActionHandler _ahandler;
         readonly PointF[] _pathPoints;
         public static string sched_string;
         public static WebTelek wp;
@@ -68,7 +69,7 @@ namespace MediaPortal.GUI.WebTelek
             //TODO: Use g_Player events ?
             if (_osd != null)
             {
-                _osd.Dispose();
+                _osd.Dispose(true);
                 _osd = null;
             }
         }
@@ -102,7 +103,8 @@ namespace MediaPortal.GUI.WebTelek
             _parent.SizeChanged += _losc;
             _timer.Tick += new EventHandler(_timer_Tick);
             g_Player.PlayBackEnded += _gpeh;//TODO: Does not work as expected, add g_Player.PlayBackStopped  += _gpeh;?
-            GUIWindowManager.OnNewAction += new OnActionHandler(GUIWindowManager_OnNewAction);
+            _ahandler = new OnActionHandler(GUIWindowManager_OnNewAction);
+            GUIWindowManager.OnNewAction += _ahandler;
             parent.Focus();
         }
 
@@ -114,6 +116,7 @@ namespace MediaPortal.GUI.WebTelek
         protected override void Dispose(bool disposing)
         {
             g_Player.PlayBackEnded -= _gpeh;
+            GUIWindowManager.OnNewAction -= _ahandler;
             _parent.LocationChanged += _losc;
             _parent.SizeChanged += _losc;
             _timer.Dispose();
@@ -161,7 +164,7 @@ namespace MediaPortal.GUI.WebTelek
                         break;
                     default:
                         break;
-                }             
+                }  
         }
 
         void parent_LocationOrSizeChanged(object sender, EventArgs e)
