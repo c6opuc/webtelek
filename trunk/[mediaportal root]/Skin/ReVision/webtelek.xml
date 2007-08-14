@@ -91,7 +91,7 @@
 			<posX>325</posX>
 			<posY>120</posY>
 			<label>#Header</label>
-			<font>font20</font>
+			<font>font18</font>
 			<align>left</align>
 			<textcolor>ffffffff</textcolor>
 		</control>
