@@ -58,6 +58,8 @@ namespace MediaPortal.GUI.WebTelek
         EventHandler _losc;
         OnActionHandler _ahandler;
         readonly PointF[] _pathPoints;
+        int refreshCounter = 0;
+        Action _action;
 
         public static void Start()
         {
@@ -143,23 +145,21 @@ namespace MediaPortal.GUI.WebTelek
             _timer.Enabled = false;
         }
 
-        void GUIWindowManager_OnNewAction(Action action)
+        void drawOSD()
         {
-                //string dir = Directory.GetCurrentDirectory();
-                //File.AppendAllText(dir + @"\webtelek.log", "OSD: " + action.wID.ToString() + " \n");
-                switch (action.wID)
-                {
-                    //TODO: Is it adjustible????
-                    case Action.ActionType.ACTION_BIG_STEP_FORWARD:
-                    case Action.ActionType.ACTION_BIG_STEP_BACK:
-                    case Action.ActionType.ACTION_STEP_BACK:
-                    case Action.ActionType.ACTION_STEP_FORWARD:
-                    case Action.ActionType.ACTION_MOVE_LEFT:
-                    case Action.ActionType.ACTION_MOVE_RIGHT:
-                    case Action.ActionType.ACTION_MOVE_UP:
-                    case Action.ActionType.ACTION_MOVE_DOWN:
-                        if (_enabled)
-                            if((g_Player.Playing|g_Player.Paused)&g_Player.FullScreen&g_Player.HasVideo&(g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9)) )
+            switch (_action.wID)
+            {
+                //TODO: Is it adjustible????
+                case Action.ActionType.ACTION_BIG_STEP_FORWARD:
+                case Action.ActionType.ACTION_BIG_STEP_BACK:
+                case Action.ActionType.ACTION_STEP_BACK:
+                case Action.ActionType.ACTION_STEP_FORWARD:
+                case Action.ActionType.ACTION_MOVE_LEFT:
+                case Action.ActionType.ACTION_MOVE_RIGHT:
+                case Action.ActionType.ACTION_MOVE_UP:
+                case Action.ActionType.ACTION_MOVE_DOWN:
+                    if (_enabled)
+                        if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9)))
                         {
                             _timer.Enabled = false;
                             if (g_Player.FullScreen)
@@ -170,29 +170,58 @@ namespace MediaPortal.GUI.WebTelek
                                 if (cs < 0) cs = 0;
                                 this.Show(g_Player.Duration, g_Player.CurrentPosition, cs, g_Player.GetStepDescription());
                             }
-                            _timer.Interval = 3000;
+                            _timer.Interval = 1000;
                             _timer.Enabled = true;
                         }
-                        break;
-                    case Action.ActionType.ACTION_SHOW_OSD:
-                    case Action.ActionType.ACTION_CONTEXT_MENU:
-                    case Action.ActionType.ACTION_SELECT_ITEM:
-                        if (_enabled)
-                            if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9)))
+                    break;
+                case Action.ActionType.ACTION_SHOW_OSD:
+                case Action.ActionType.ACTION_CONTEXT_MENU:
+                case Action.ActionType.ACTION_SELECT_ITEM:
+                    if (_enabled)
+                        if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9)))
+                        {
+                            _timer.Enabled = false;
+                            if (g_Player.FullScreen)
                             {
-                                _timer.Enabled = false;
-                                if (g_Player.FullScreen)
-                                {
-                                    double cs = 0;
-                                    this.Show(g_Player.Duration, g_Player.CurrentPosition, cs, DateTime.Now.ToString("HH:mm:ss"));
-                                }
-                                _timer.Interval = 5000;
-                                _timer.Enabled = true;
+                                double cs = 0;
+                                this.Show(g_Player.Duration, g_Player.CurrentPosition, cs, DateTime.Now.ToString("HH:mm:ss"));
                             }
-                        break;
-                    default:
-                        break;
-                }             
+                            _timer.Interval = 1000;
+                            _timer.Enabled = true;
+                        }
+                    break;
+                default:
+                    break;
+            }             
+        }
+
+        void GUIWindowManager_OnNewAction(Action action)
+        {
+            //string dir = Directory.GetCurrentDirectory();
+            //File.AppendAllText(dir + @"\webtelek.log", "OSD: " + action.wID.ToString() + " \n");
+
+            switch (action.wID)
+            {
+                case Action.ActionType.ACTION_BIG_STEP_FORWARD:
+                case Action.ActionType.ACTION_BIG_STEP_BACK:
+                case Action.ActionType.ACTION_STEP_BACK:
+                case Action.ActionType.ACTION_STEP_FORWARD:
+                case Action.ActionType.ACTION_MOVE_LEFT:
+                case Action.ActionType.ACTION_MOVE_RIGHT:
+                case Action.ActionType.ACTION_MOVE_UP:
+                case Action.ActionType.ACTION_MOVE_DOWN:
+                    refreshCounter = 3;
+                    _action = action;
+                    drawOSD();
+                    break;
+                case Action.ActionType.ACTION_SHOW_OSD:
+                case Action.ActionType.ACTION_CONTEXT_MENU:
+                case Action.ActionType.ACTION_SELECT_ITEM:
+                        refreshCounter = 4;
+                        _action = action;
+                        drawOSD();
+                    break;
+            }
         }
 
         void parent_LocationOrSizeChanged(object sender, EventArgs e)
@@ -220,7 +249,18 @@ namespace MediaPortal.GUI.WebTelek
 
         protected virtual void _timer_Tick(object sender, EventArgs e)
         {
-            this.Hide();
+            if (refreshCounter < 1)
+            {
+                _timer.Enabled = false;
+                this.Hide();
+            }
+            else
+            {
+                refreshCounter--;
+                drawOSD();
+                _timer.Interval = 1000;
+                _timer.Enabled = true;
+            }
         }
 
         private new void Show()
