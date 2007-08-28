@@ -69,11 +69,21 @@
 				<font>font14</font>
     			</control>
 			<control>
+      				<description>Kinozal</description>
+      				<type>button</type>
+      				<id>3</id>
+      				<posX>20</posX>
+      				<posY>260</posY>      			
+      				<label>#kinozal</label>
+      				<align>left</align>
+				<font>font14</font>
+    			</control>
+			<control>
       				<description>others</description>
       				<type>button</type>
       				<id>8</id>
       				<posX>20</posX>
-      				<posY>260</posY>      			
+      				<posY>310</posY>      			
       				<label>#others</label>
       				<ondown>99</ondown>
       				<align>left</align>
@@ -117,7 +127,7 @@
       			<description>Channel-Info</description>
       			<id>11</id>
       			<posX>20</posX>
-      			<posY>230</posY>
+      			<posY>250</posY>
       			<width>200</width>
       			<height>150</height>
 			<font>font14</font>
