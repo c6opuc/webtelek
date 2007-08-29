@@ -69,15 +69,25 @@
 				<posX>20</posX>
 				<posY>250</posY>      			
 				<label>#archive</label>
-				<align>left</align>
 				<font>font14</font>
+				<align>left</align>
 			</control>
+			<control>
+      				<description>Kinozal</description>
+      				<type>button</type>
+      				<id>3</id>
+      				<posX>20</posX>
+      				<posY>300</posY>      			
+      				<label>#kinozal</label>
+      				<align>left</align>
+				<font>font14</font>
+    			</control>
 			<control>
       				<description>Others</description>
       				<type>button</type>
       				<id>8</id>
       				<posX>20</posX>
-      				<posY>300</posY>      			
+      				<posY>350</posY>      			
       				<label>#others</label>
       				<ondown>99</ondown>
       				<align>left</align>
@@ -100,7 +110,7 @@
       			<type>listcontrol</type>
       			<id>10</id>
 			<posX>325</posX>
-      			<posY>160</posY>
+      			<posY>170</posY>
       			<width>1025</width>
       			<height>500</height>
 			<textXOff>30</textXOff>
@@ -121,9 +131,9 @@
       			<description>Channel-Info</description>
       			<id>11</id>
       			<posX>15</posX>
-      			<posY>280</posY>
+      			<posY>310</posY>
       			<width>300</width>
-      			<height>320</height>
+      			<height>280</height>
 			<font>font14</font>
       			<label>#ChannelInfo</label>
       			<textcolor>ffffffff</textcolor>
