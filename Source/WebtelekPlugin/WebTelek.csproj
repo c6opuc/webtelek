@@ -72,6 +72,7 @@
     </Compile>
     <Compile Include="WebTelekArchiveXML.cs" />
     <Compile Include="WebTelekHTTPClient.cs" />
+    <Compile Include="WebTelekKinozalXML.cs" />
     <Compile Include="WebTelekPlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebTelek.cs" />
