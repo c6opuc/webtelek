@@ -90,6 +90,27 @@ namespace MediaPortal.GUI.WebTelek
             result[0] = new StringCollection();
             result[1] = new StringCollection();
 
+            try
+            {
+                xml = new XPathDocument(new MemoryStream(UTF8Encoding.Default.GetBytes(webdata.getHTTPData(url))));
+                XPathNavigator nav = xml.CreateNavigator();
+                XPathExpression expr;
+                expr = nav.Compile("/vod/RECORD");
+                XPathNodeIterator iterator = nav.Select(expr);
+                while (iterator.MoveNext())
+                {
+                    XPathNavigator nav2 = iterator.Current.Clone();
+
+                    result[0].Add(nav2.GetAttribute("id", ""));
+                    result[1].Add(nav2.GetAttribute("name", ""));
+                }
+            }
+            catch (Exception e)
+            {
+                string dir = Directory.GetCurrentDirectory();
+                File.AppendAllText(dir + @"\webtelek.log", "getChannels: " + e.ToString() + " \n");
+            }
+
             return result;
         }
     }
