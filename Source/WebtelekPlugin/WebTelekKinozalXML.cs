@@ -51,7 +51,7 @@ namespace MediaPortal.GUI.WebTelek
             catch (Exception e)
             {
                 string dir = Directory.GetCurrentDirectory();
-                File.AppendAllText(dir + @"\webtelek.log", "getChannels: " + e.ToString() + " \n");
+                File.AppendAllText(dir + @"\webtelek.log", "Kinozal getCategories: " + e.ToString() + " \n");
             }
             return result;
         }
@@ -79,7 +79,7 @@ namespace MediaPortal.GUI.WebTelek
             catch (Exception e)
             {
                 string dir = Directory.GetCurrentDirectory();
-                File.AppendAllText(dir + @"\webtelek.log", "getChannels: " + e.ToString() + " \n");
+                File.AppendAllText(dir + @"\webtelek.log", "Kinozal getGenres: " + e.ToString() + " \n");
             }
 
             return result;
@@ -108,10 +108,47 @@ namespace MediaPortal.GUI.WebTelek
             catch (Exception e)
             {
                 string dir = Directory.GetCurrentDirectory();
-                File.AppendAllText(dir + @"\webtelek.log", "getChannels: " + e.ToString() + " \n");
+                File.AppendAllText(dir + @"\webtelek.log", "Kinozal getRecords: " + e.ToString() + " \n");
             }
 
             return result;
         }
+
+        public StringCollection[] getRecord(string url)
+        {
+            StringCollection[] result = new StringCollection[5];
+            result[0] = new StringCollection();
+            result[1] = new StringCollection();
+            result[2] = new StringCollection();
+            result[3] = new StringCollection();
+            result[4] = new StringCollection();
+
+            try
+            {
+                xml = new XPathDocument(new MemoryStream(UTF8Encoding.Default.GetBytes(webdata.getHTTPData(url))));
+                XPathNavigator nav = xml.CreateNavigator();
+                XPathExpression expr;
+                expr = nav.Compile("/vod/ITEM");
+                XPathNodeIterator iterator = nav.Select(expr);
+                while (iterator.MoveNext())
+                {
+                    XPathNavigator nav2 = iterator.Current.Clone();
+
+                    result[0].Add(nav2.GetAttribute("movieID", ""));
+                    result[1].Add(nav2.GetAttribute("moviePart", ""));
+                    result[2].Add(nav2.GetAttribute("name", ""));
+                    result[3].Add(nav2.GetAttribute("description", ""));
+                    result[4].Add(nav2.GetAttribute("img", ""));
+                }
+            }
+            catch (Exception e)
+            {
+                string dir = Directory.GetCurrentDirectory();
+                File.AppendAllText(dir + @"\webtelek.log", "Kinozal getRecord: " + e.ToString() + " \n");
+            }
+
+            return result;
+        }
+
     }
 }
