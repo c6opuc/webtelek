@@ -139,7 +139,7 @@
       			<description>Movie-Info</description>
       			<id>12</id>
       			<posX>360</posX>
-      			<posY>150</posY>
+      			<posY>120</posY>
       			<width>350</width>
       			<height>200</height>
 			<font>font12</font>
@@ -151,12 +151,12 @@
       			<type>image</type>
       			<id>13</id>
       			<posX>250</posX>
-      			<posY>150</posY>
+      			<posY>120</posY>
       			<width>100</width>
       			<height>148</height>
       			<texture></texture>
       			<keepaspectratio>yes</keepaspectratio>
-      			<centered>yes</centered>
+      			<centered>no</centered>
       			<animation effect="fade" time="200">WindowOpen</animation>
       			<animation effect="fade" time="200">WindowClose</animation>
     		</control>
@@ -165,9 +165,9 @@
       			<type>listcontrol</type>
       			<id>14</id>
 			<posX>250</posX>
-      			<posY>300</posY>
+      			<posY>340</posY>
       			<width>450</width>
-      			<height>100</height>
+      			<height>150</height>
 			<textXOff>30</textXOff>
 			<textYOff>2</textYOff>
 			<textXOff2>478</textXOff2>
