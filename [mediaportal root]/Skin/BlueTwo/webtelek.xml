@@ -138,11 +138,11 @@
    			<type>textboxscrollup</type>
       			<description>Movie-Info</description>
       			<id>12</id>
-      			<posX>400</posX>
+      			<posX>360</posX>
       			<posY>150</posY>
-      			<width>200</width>
-      			<height>148</height>
-			<font>font14</font>
+      			<width>350</width>
+      			<height>200</height>
+			<font>font12</font>
       			<label>#MovieInfo</label>
       			<textcolor>ffffffff</textcolor>
 		</control>
