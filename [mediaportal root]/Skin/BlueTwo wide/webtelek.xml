@@ -133,5 +133,54 @@
       			<label>#ChannelInfo</label>
       			<textcolor>ffffffff</textcolor>
 		</control>
+
+    		<control>
+    			<description>MovieLogo</description>
+      			<type>image</type>
+      			<id>13</id>
+      			<posX>400</posX>
+      			<posY>180</posY>
+      			<width>100</width>
+      			<height>148</height>
+      			<texture></texture>
+      			<keepaspectratio>yes</keepaspectratio>
+      			<centered>no</centered>
+      			<animation effect="fade" time="200">WindowOpen</animation>
+      			<animation effect="fade" time="200">WindowClose</animation>
+    		</control>
+		<control>
+   			<type>textboxscrollup</type>
+      			<description>Movie-Info</description>
+      			<id>12</id>
+      			<posX>530</posX>
+      			<posY>180</posY>
+      			<width>820</width>
+      			<height>200</height>
+			<font>font12</font>
+      			<label>#MovieInfo</label>
+      			<textcolor>ffffffff</textcolor>
+		</control>
+		<control>
+      			<description>MovieButton</description>
+      			<type>listcontrol</type>
+      			<id>14</id>
+			<posX>400</posX>
+      			<posY>400</posY>
+      			<width>950</width>
+      			<height>300</height>
+			<textXOff>30</textXOff>
+			<textYOff>2</textYOff>
+			<textXOff2>478</textXOff2>
+			<textYOff2>2</textYOff2>
+			<textXOff3>486</textXOff3>
+			<textYOff3>2</textYOff3>
+      			<spaceBetweenItems>8</spaceBetweenItems>
+      			<textureHeight>35</textureHeight>
+      			<keepaspectratio>no</keepaspectratio>
+      			<onleft>7</onleft>
+      			<onright>7</onright>
+			<font>font14</font>
+		</control>
+
 	</controls>
 </window>
