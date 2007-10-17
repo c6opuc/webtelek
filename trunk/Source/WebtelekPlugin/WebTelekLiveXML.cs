@@ -223,7 +223,7 @@ namespace MediaPortal.GUI.WebTelek
                     expr = nav.Compile("/WebTelek/channel[id=" + getChannelId()[i] + "]/listing/*");
                     XPathNodeIterator iterator = nav.Select(expr);
 
-                    tvguide = tvguide + "\n<channel id=\"" + getChannelId()[i] + "\"><display-name>"+  getChannelsNames()[i] + "</display-name></channel>\n";
+                    tvguide = tvguide + "\n<channel id=\"" + getChannelId()[i] + "\"><display-name>"+  getChannelsNames()[i] + "</display-name><icon src=\"http://www.webtelek.com/img/mediaportal/" + getChannelId()[i] + ".jpg\"></icon></channel>\n";
 
                     int k = 0;
                     try
