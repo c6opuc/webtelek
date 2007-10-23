@@ -45,7 +45,7 @@ namespace MediaPortal.GUI.WebTelek
         Timer _timer = new Timer();
         Form _parent;
         static bool _enabled;
-        static OSDVolume _osd;
+        static OSDVolume _osd = null;
         g_Player.EndedHandler _gpeh;
         EventHandler _losc;
         OnActionHandler _ahandler;
