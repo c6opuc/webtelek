@@ -9,6 +9,7 @@ using System.Text;
 using System.IO;
 using System.Xml;
 using System.Windows.Forms;
+using MediaPortal.Configuration;
 
 namespace MediaPortal.GUI.WebTelek
 {
@@ -50,7 +51,8 @@ namespace MediaPortal.GUI.WebTelek
         private void CustomChannel_Load(object sender, EventArgs e)
         {
             string dir = Directory.GetCurrentDirectory();
-            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(dir + @"\webtelek_custom.xml", false))
+            //using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(dir + @"\webtelek_custom.xml", true))
+            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_custom.xml")))
             {
                 for (int i = 0; i <= 1500; i++)
                 {
@@ -183,8 +185,9 @@ namespace MediaPortal.GUI.WebTelek
         private void SaveAll()
         {
             string dir = Directory.GetCurrentDirectory();
-            File.Delete(dir + @"\webtelek_custom.xml");
-            XmlTextWriter writer = new XmlTextWriter(dir + @"\webtelek_custom.xml", null);
+            File.Delete(Config.GetFile(Config.Dir.Config, "webtelek_custom.xml"));
+//            XmlTextWriter writer = new XmlTextWriter(dir + @"\webtelek_custom.xml", null);
+            XmlTextWriter writer = new XmlTextWriter(Config.GetFile(Config.Dir.Config, "webtelek_custom.xml"), null); 
             writer.WriteStartDocument();
             writer.Formatting = Formatting.Indented;
             writer.WriteStartElement("profile");

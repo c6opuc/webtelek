@@ -10,6 +10,7 @@ using MediaPortal.GUI.Library;
 using MediaPortal.Player;
 using MediaPortal.Util;
 using MediaPortal.Playlists;
+using MediaPortal.Configuration;
 using System.IO;
 
 namespace MediaPortal.GUI.WebTelek
@@ -33,7 +34,7 @@ namespace MediaPortal.GUI.WebTelek
         public WebTelekHTTPClient() 
         {
             string dir = Directory.GetCurrentDirectory();
-            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(dir + @"\webtelek_profile.xml", false))
+            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"), false))
             {
                 username = Convert.ToString(xmlreader.GetValueAsString("Account", "username", ""));
                 password = Convert.ToString(xmlreader.GetValueAsString("Account", "password", ""));

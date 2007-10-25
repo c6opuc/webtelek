@@ -7,6 +7,8 @@ using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Specialized;
 using System.IO;
+using MediaPortal.Configuration;
+
 
 namespace MediaPortal.GUI.WebTelek
 {
@@ -29,7 +31,7 @@ namespace MediaPortal.GUI.WebTelek
         {
             StringCollection result = new StringCollection();
             string dir = Directory.GetCurrentDirectory();
-            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(dir + @"\webtelek_custom.xml", false))
+            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_custom.xml"), false))
             {
                 for (int i = 0; i <= 1500; i++)
                 {
@@ -280,9 +282,13 @@ namespace MediaPortal.GUI.WebTelek
             {
             }
             tvguide = tvguide + "</tv>\n";
-            string dir = Directory.GetCurrentDirectory();
-            File.Delete(dir + @"\XMLTV\tvguide.xml");
-            File.WriteAllText(dir + @"\XMLTV\tvguide.xml", tvguide, Encoding.Default);
+
+            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "MediaPortal.xml"), false))
+            {
+                string dirname = Convert.ToString(xmlreader.GetValueAsString("xmltv", "folder", ""));
+                File.Delete(dirname + @"\tvguide.xml");
+                File.WriteAllText(dirname + @"\tvguide.xml", tvguide, Encoding.Default);
+            }
         }
    }
 }
