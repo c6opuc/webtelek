@@ -10,6 +10,7 @@ using System.Text;
 using System.Windows.Forms;
 using MediaPortal.GUI.Library;
 using MediaPortal.Utils;
+using MediaPortal.Configuration;
 
 namespace MediaPortal.GUI.WebTelek
 {
@@ -43,7 +44,7 @@ namespace MediaPortal.GUI.WebTelek
         {
             InitializeComponent();
             string dir = Directory.GetCurrentDirectory();
-            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(dir + @"\webtelek_profile.xml", false))
+            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"), false))
             {
                 string username = Convert.ToString(xmlreader.GetValueAsString("Account", "username", ""));
                 string password = Convert.ToString(xmlreader.GetValueAsString("Account", "password", ""));
@@ -110,7 +111,8 @@ namespace MediaPortal.GUI.WebTelek
         {
             //OK Button
             string dir = Directory.GetCurrentDirectory();
-            using (MediaPortal.Profile.Settings writer = new MediaPortal.Profile.Settings(dir +  @"\webtelek_profile.xml",false) )
+            //using (MediaPortal.Profile.Settings writer = new MediaPortal.Profile.Settings(dir +  @"\webtelek_profile.xml",false) )
+            using (MediaPortal.Profile.Settings writer = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"),false) )
             {   
                 writer.SetValue("Account", "username", textBox1.Text.Trim());                
                 writer.SetValue("Account", "password", textBox2.Text.Trim());
