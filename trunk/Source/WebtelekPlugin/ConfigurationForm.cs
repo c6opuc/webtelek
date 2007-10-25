@@ -110,7 +110,7 @@ namespace MediaPortal.GUI.WebTelek
         {
             //OK Button
             string dir = Directory.GetCurrentDirectory();
-            using (MediaPortal.Profile.Settings writer = new MediaPortal.Profile.Settings(dir +  @"\webtelek_profile.xml"))
+            using (MediaPortal.Profile.Settings writer = new MediaPortal.Profile.Settings(dir +  @"\webtelek_profile.xml",false) )
             {   
                 writer.SetValue("Account", "username", textBox1.Text.Trim());                
                 writer.SetValue("Account", "password", textBox2.Text.Trim());
