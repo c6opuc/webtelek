@@ -174,6 +174,11 @@ namespace MediaPortal.GUI.WebTelek
         {
 
         }
+
+        private void EPGdays_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
         
     }
 }

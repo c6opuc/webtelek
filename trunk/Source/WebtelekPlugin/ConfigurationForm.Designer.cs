@@ -88,9 +88,9 @@ namespace MediaPortal.GUI.WebTelek
             // 
             // EPGdays
             // 
-            this.EPGdays.Location = new System.Drawing.Point(245, 171);
+            this.EPGdays.Location = new System.Drawing.Point(237, 171);
             this.EPGdays.Maximum = new decimal(new int[] {
-            10,
+            14,
             0,
             0,
             0});
@@ -100,13 +100,15 @@ namespace MediaPortal.GUI.WebTelek
             0,
             0});
             this.EPGdays.Name = "EPGdays";
-            this.EPGdays.Size = new System.Drawing.Size(31, 20);
+            this.EPGdays.Size = new System.Drawing.Size(42, 20);
             this.EPGdays.TabIndex = 12;
+            this.EPGdays.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.EPGdays.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
+            this.EPGdays.ValueChanged += new System.EventHandler(this.EPGdays_ValueChanged);
             // 
             // label7
             // 
@@ -292,7 +294,7 @@ namespace MediaPortal.GUI.WebTelek
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(365, 277);
+            this.ClientSize = new System.Drawing.Size(365, 276);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
