@@ -27,6 +27,7 @@ namespace MediaPortal.GUI.WebTelek
         public string region = "";
         string timezone = "";
         string httpurl = "";
+        string epgdays = "1";
         bool _workerCompleted = true; 
         StreamReader responseStream = null;
         Encoding enc = null;
@@ -40,7 +41,21 @@ namespace MediaPortal.GUI.WebTelek
                 password = Convert.ToString(xmlreader.GetValueAsString("Account", "password", ""));
                 region = Convert.ToString(xmlreader.GetValueAsString("Account", "region", ""));
                 timezone = Convert.ToString(xmlreader.GetValueAsString("Account", "timezone", ""));
+                epgdays = Convert.ToString(xmlreader.GetValueAsString("Account", "epgdays", ""));
             }
+        }
+
+        public void getEPG()
+        {
+            //URL http://www.webtelek.com/export/epg.php?from=2007-11-05&days=1
+            string tvguide = getHTTPData("http://www.webtelek.com/export/epg.php?from=" + DateTime.Today.ToString("yyyy-MM-dd") + "&days=" + epgdays);
+            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "MediaPortal.xml"), false))
+            {
+                string dirname = Convert.ToString(xmlreader.GetValueAsString("xmltv", "folder", ""));
+                File.Delete(dirname + @"\tvguide.xml");
+                File.WriteAllText(dirname + @"\tvguide.xml", tvguide, Encoding.UTF8);
+            }
+
         }
 
         public string getData()

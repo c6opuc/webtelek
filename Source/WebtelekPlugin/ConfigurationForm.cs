@@ -50,8 +50,11 @@ namespace MediaPortal.GUI.WebTelek
                 string password = Convert.ToString(xmlreader.GetValueAsString("Account", "password", ""));
                 string region = Convert.ToString(xmlreader.GetValueAsString("Account", "region", ""));
                 string timezone = Convert.ToString(xmlreader.GetValueAsString("Account", "timezone", ""));
+                string epgdays = Convert.ToString(xmlreader.GetValueAsString("Account", "epgdays", ""));
                 textBox1.Text = username;
                 textBox2.Text = password;
+                if (epgdays == "") epgdays = "1";
+                EPGdays.Value = Decimal.Parse(epgdays);
 
                 ArrayList streamZones = new ArrayList();
                 ArrayList timeZones = new ArrayList();
@@ -118,6 +121,7 @@ namespace MediaPortal.GUI.WebTelek
                 writer.SetValue("Account", "password", textBox2.Text.Trim());
                 writer.SetValue("Account", "region", comboBox1.SelectedValue.ToString().Trim());
                 writer.SetValue("Account", "timezone", comboBox2.SelectedValue.ToString().Trim());
+                writer.SetValue("Account", "epgdays",  EPGdays.Value.ToString().Trim());
             }
             this.Dispose(true);
         }
@@ -161,6 +165,15 @@ namespace MediaPortal.GUI.WebTelek
             process.Start();
         }
 
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
         
     }
 }
