@@ -30,6 +30,9 @@ namespace MediaPortal.GUI.WebTelek
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigurationForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.EPGdays = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
             this.CustomButton = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -49,12 +52,16 @@ namespace MediaPortal.GUI.WebTelek
             this.label6 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EPGdays)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.EPGdays);
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.CustomButton);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.groupBox3);
@@ -63,15 +70,57 @@ namespace MediaPortal.GUI.WebTelek
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(340, 191);
+            this.groupBox1.Size = new System.Drawing.Size(340, 240);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Настройки";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(285, 173);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(31, 13);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "дней";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // EPGdays
+            // 
+            this.EPGdays.Location = new System.Drawing.Point(245, 171);
+            this.EPGdays.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.EPGdays.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.EPGdays.Name = "EPGdays";
+            this.EPGdays.Size = new System.Drawing.Size(31, 20);
+            this.EPGdays.TabIndex = 12;
+            this.EPGdays.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(14, 173);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(224, 13);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Настройки EPG. Загружать программу на ";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
             // CustomButton
             // 
-            this.CustomButton.Location = new System.Drawing.Point(216, 160);
+            this.CustomButton.Location = new System.Drawing.Point(219, 211);
             this.CustomButton.Name = "CustomButton";
             this.CustomButton.Size = new System.Drawing.Size(100, 23);
             this.CustomButton.TabIndex = 10;
@@ -81,7 +130,7 @@ namespace MediaPortal.GUI.WebTelek
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(98, 160);
+            this.button4.Location = new System.Drawing.Point(98, 211);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 4;
@@ -145,7 +194,7 @@ namespace MediaPortal.GUI.WebTelek
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(17, 160);
+            this.button3.Location = new System.Drawing.Point(17, 211);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 3;
@@ -230,7 +279,7 @@ namespace MediaPortal.GUI.WebTelek
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(225, 206);
+            this.linkLabel1.Location = new System.Drawing.Point(228, 255);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(125, 13);
             this.linkLabel1.TabIndex = 3;
@@ -243,19 +292,22 @@ namespace MediaPortal.GUI.WebTelek
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(365, 226);
+            this.ClientSize = new System.Drawing.Size(365, 277);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(373, 254);
-            this.MinimumSize = new System.Drawing.Size(373, 254);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(373, 304);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(373, 304);
             this.Name = "ConfigurationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Настройки WEBTELEK+";
             this.Load += new System.EventHandler(this.ConfigurationForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EPGdays)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -286,5 +338,8 @@ namespace MediaPortal.GUI.WebTelek
         private System.Windows.Forms.Button CustomButton;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.NumericUpDown EPGdays;
     }
 }
