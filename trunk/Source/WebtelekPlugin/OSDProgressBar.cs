@@ -36,6 +36,7 @@ using System.IO;
 using System.Configuration;
 using MediaPortal.GUI.Library;
 using MediaPortal.Player;
+using MediaPortal.Configuration;
 
 namespace MediaPortal.GUI.WebTelek
 {
@@ -59,6 +60,7 @@ namespace MediaPortal.GUI.WebTelek
         OnActionHandler _ahandler;
         readonly PointF[] _pathPoints;
         int refreshCounter = 0;
+        int refresh = 0;
         Action _action;
 
         public static void Start()
@@ -90,6 +92,9 @@ namespace MediaPortal.GUI.WebTelek
             _indicator = new Bitmap(GUIGraphicsContext.Skin + @"\Media\" + cxd.GetElementsByTagName("ProgressIndicator")[0].InnerText);
             _background = new Bitmap(GUIGraphicsContext.Skin + @"\Media\" + cxd.GetElementsByTagName("ProgressBackground")[0].InnerText);
             _bitmap = new Bitmap(1246, 65);
+
+            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"), false))
+                refresh = (int)Decimal.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "osddelay", "5"))) - 1;
 
             try
             {
@@ -215,14 +220,14 @@ namespace MediaPortal.GUI.WebTelek
                 case Action.ActionType.ACTION_MOVE_RIGHT:
                 case Action.ActionType.ACTION_MOVE_UP:
                 case Action.ActionType.ACTION_MOVE_DOWN:
-                    refreshCounter = 3;
-                    _action = action;
-                    drawOSD();
-                    break;
+                    //refreshCounter = 3;
+                    //_action = action;
+                    //drawOSD();
+                    //break;
                 case Action.ActionType.ACTION_SHOW_OSD:
                 case Action.ActionType.ACTION_CONTEXT_MENU:
                 case Action.ActionType.ACTION_SELECT_ITEM:
-                        refreshCounter = 4;
+                        refreshCounter = refresh;
                         _action = action;
                         drawOSD();
                     break;

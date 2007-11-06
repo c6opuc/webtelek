@@ -86,6 +86,9 @@ namespace MediaPortal.GUI.WebTelek
             using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "MediaPortal.xml")))
                 if (xmlreader.GetValue("plugins", "TV Notifier") == "yes") origNotifier = false; else origNotifier = true;
 
+            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"), false))
+                _timer.Interval = (int)Decimal.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "osddelay", "5")))*1000;
+
             //string dir = Directory.GetCurrentDirectory();
             //File.AppendAllText(dir + @"\webtelek.log", "EPGNotify: " + origNotifier.ToString() + " \n");
 
@@ -136,25 +139,29 @@ namespace MediaPortal.GUI.WebTelek
 
         void _notifytimer_Tick(object sender, EventArgs e)
         {
-            DateTime preNotifySecs = DateTime.Now.AddSeconds(_preNotifyConfig);
-            if (_notifiesListChanged)
+            if (origNotifier)
             {
-                LoadNotifies();
-                _notifiesListChanged = false;
-            }
-            for (int i = 0; i < _notifiesList.Count; ++i)
-            {
-                TVNotify notify = _notifiesList[i];
-                if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9)))
+                DateTime preNotifySecs = DateTime.Now.AddSeconds(_preNotifyConfig);
+                if (_notifiesListChanged)
                 {
-                    if (preNotifySecs > notify.Program.StartTime)
-                    {
-                        if (origNotifier) TVDatabase.DeleteNotify(notify);
-                        _timer.Enabled = false;
-                        this.Show(notify.Program.Title + "\n" + "начнется в " + notify.Program.StartTime);
-                        _timer.Interval = 5000;
-                        _timer.Enabled = true;
-                    }
+                    LoadNotifies();
+                    _notifiesListChanged = false;
+                }
+                for (int i = 0; i < _notifiesList.Count; ++i)
+                {
+                    TVNotify notify = _notifiesList[i];
+                    //if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9)))
+                    //{
+                        if (preNotifySecs > notify.Program.StartTime)
+                        {
+                            TVDatabase.DeleteNotify(notify);
+                            _timer.Enabled = false;
+                            MediaPortal.Util.Utils.PlaySound("notify.wav", false, true);
+                            this.Show(notify.Program.Genre + " " + notify.Program.Title + " начнется в " + notify.Program.StartTime.TimeOfDay + " на канале " + notify.Program.Channel );
+                            //_timer.Interval = 10000;
+                            _timer.Enabled = true;
+                        }
+                    //}
                 }
             }
         }
