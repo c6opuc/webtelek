@@ -36,6 +36,7 @@ using System.IO;
 using System.Configuration;
 using MediaPortal.GUI.Library;
 using MediaPortal.Player;
+using MediaPortal.Configuration;
 
 namespace MediaPortal.GUI.WebTelek
 {
@@ -81,6 +82,9 @@ namespace MediaPortal.GUI.WebTelek
             cxd.Load(GUIGraphicsContext.Skin + @"\WMP9SCHED.xml");
             _top = new Bitmap(GUIGraphicsContext.Skin + @"\Media\" + cxd.GetElementsByTagName("TopBackground")[0].InnerText);
             _bitmap = new Bitmap(600, 200);
+
+            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"), false))
+                _timer.Interval = (int)Decimal.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "osddelay", "5"))) * 1000;
 
             try
             {
@@ -158,7 +162,7 @@ namespace MediaPortal.GUI.WebTelek
                                         this.Show(wp.DataDescriptions[index]);
                                     }
                                 }
-                                _timer.Interval = 5000;
+                                //_timer.Interval = 5000;
                                 _timer.Enabled = true;
                             }
                         break;

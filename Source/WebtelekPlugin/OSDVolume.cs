@@ -36,6 +36,7 @@ using System.IO;
 using System.Configuration;
 using MediaPortal.GUI.Library;
 using MediaPortal.Player;
+using MediaPortal.Configuration;
 
 namespace MediaPortal.GUI.WebTelek
 {
@@ -81,6 +82,10 @@ namespace MediaPortal.GUI.WebTelek
             _losc = new EventHandler(parent_LocationOrSizeChanged);
             _gpeh = new g_Player.EndedHandler(g_Player_PlayBackEnded);
             InitializeComponent();
+
+            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"), false))
+                _timer.Interval = (int)Decimal.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "osddelay", "5"))) * 1000;
+
             _parent = parent;
             this.Opacity = 0; 
             base.Show(_parent);
@@ -134,7 +139,7 @@ namespace MediaPortal.GUI.WebTelek
                                 {
                                     this.Show(action);
                                 }
-                                _timer.Interval = 3000;
+                                //_timer.Interval = 3000;
                                 _timer.Enabled = true;
                             }
                         break;

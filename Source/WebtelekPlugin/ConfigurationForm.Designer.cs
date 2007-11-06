@@ -51,14 +51,23 @@ namespace MediaPortal.GUI.WebTelek
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.EPGNotifyCheckBox = new System.Windows.Forms.CheckBox();
+            this.OSDDelay = new System.Windows.Forms.NumericUpDown();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EPGdays)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OSDDelay)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.OSDDelay);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.EPGNotifyCheckBox);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.EPGdays);
             this.groupBox1.Controls.Add(this.label7);
@@ -70,7 +79,7 @@ namespace MediaPortal.GUI.WebTelek
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(340, 240);
+            this.groupBox1.Size = new System.Drawing.Size(340, 249);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Настройки";
@@ -79,7 +88,7 @@ namespace MediaPortal.GUI.WebTelek
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(285, 173);
+            this.label9.Location = new System.Drawing.Point(285, 166);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(31, 13);
             this.label9.TabIndex = 13;
@@ -88,7 +97,7 @@ namespace MediaPortal.GUI.WebTelek
             // 
             // EPGdays
             // 
-            this.EPGdays.Location = new System.Drawing.Point(237, 171);
+            this.EPGdays.Location = new System.Drawing.Point(237, 164);
             this.EPGdays.Maximum = new decimal(new int[] {
             14,
             0,
@@ -102,7 +111,7 @@ namespace MediaPortal.GUI.WebTelek
             this.EPGdays.Name = "EPGdays";
             this.EPGdays.Size = new System.Drawing.Size(42, 20);
             this.EPGdays.TabIndex = 12;
-            this.EPGdays.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.EPGdays.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.EPGdays.Value = new decimal(new int[] {
             1,
             0,
@@ -113,7 +122,7 @@ namespace MediaPortal.GUI.WebTelek
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(14, 173);
+            this.label7.Location = new System.Drawing.Point(14, 166);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(224, 13);
             this.label7.TabIndex = 11;
@@ -122,7 +131,7 @@ namespace MediaPortal.GUI.WebTelek
             // 
             // CustomButton
             // 
-            this.CustomButton.Location = new System.Drawing.Point(219, 211);
+            this.CustomButton.Location = new System.Drawing.Point(219, 218);
             this.CustomButton.Name = "CustomButton";
             this.CustomButton.Size = new System.Drawing.Size(100, 23);
             this.CustomButton.TabIndex = 10;
@@ -132,7 +141,7 @@ namespace MediaPortal.GUI.WebTelek
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(98, 211);
+            this.button4.Location = new System.Drawing.Point(98, 218);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 4;
@@ -196,7 +205,7 @@ namespace MediaPortal.GUI.WebTelek
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(17, 211);
+            this.button3.Location = new System.Drawing.Point(17, 218);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 3;
@@ -281,7 +290,7 @@ namespace MediaPortal.GUI.WebTelek
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(228, 255);
+            this.linkLabel1.Location = new System.Drawing.Point(227, 264);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(125, 13);
             this.linkLabel1.TabIndex = 3;
@@ -290,19 +299,73 @@ namespace MediaPortal.GUI.WebTelek
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Blue;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // EPGNotifyCheckBox
+            // 
+            this.EPGNotifyCheckBox.AutoSize = true;
+            this.EPGNotifyCheckBox.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.EPGNotifyCheckBox.Location = new System.Drawing.Point(17, 189);
+            this.EPGNotifyCheckBox.Name = "EPGNotifyCheckBox";
+            this.EPGNotifyCheckBox.Size = new System.Drawing.Size(158, 17);
+            this.EPGNotifyCheckBox.TabIndex = 14;
+            this.EPGNotifyCheckBox.Text = "Напоминатель программ.";
+            this.EPGNotifyCheckBox.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.EPGNotifyCheckBox.UseVisualStyleBackColor = true;
+            this.EPGNotifyCheckBox.CheckedChanged += new System.EventHandler(this.EPGNotifyCheckBox_CheckedChanged);
+            // 
+            // OSDDelay
+            // 
+            this.OSDDelay.Location = new System.Drawing.Point(237, 187);
+            this.OSDDelay.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.OSDDelay.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.OSDDelay.Name = "OSDDelay";
+            this.OSDDelay.Size = new System.Drawing.Size(42, 20);
+            this.OSDDelay.TabIndex = 16;
+            this.OSDDelay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.OSDDelay.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(285, 190);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(28, 13);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "сек.";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(205, 190);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(33, 13);
+            this.label13.TabIndex = 19;
+            this.label13.Text = " OSD";
+            // 
             // ConfigurationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(365, 276);
+            this.ClientSize = new System.Drawing.Size(365, 286);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(373, 304);
+            this.MaximumSize = new System.Drawing.Size(373, 314);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(373, 304);
+            this.MinimumSize = new System.Drawing.Size(373, 314);
             this.Name = "ConfigurationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Настройки WEBTELEK+";
@@ -314,6 +377,7 @@ namespace MediaPortal.GUI.WebTelek
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OSDDelay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -343,5 +407,9 @@ namespace MediaPortal.GUI.WebTelek
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.NumericUpDown EPGdays;
+        private System.Windows.Forms.CheckBox EPGNotifyCheckBox;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.NumericUpDown OSDDelay;
+        private System.Windows.Forms.Label label13;
     }
 }

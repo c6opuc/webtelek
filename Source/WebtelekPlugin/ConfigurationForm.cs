@@ -46,15 +46,19 @@ namespace MediaPortal.GUI.WebTelek
             string dir = Directory.GetCurrentDirectory();
             using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"), false))
             {
-                string username = Convert.ToString(xmlreader.GetValueAsString("Account", "username", ""));
-                string password = Convert.ToString(xmlreader.GetValueAsString("Account", "password", ""));
-                string region = Convert.ToString(xmlreader.GetValueAsString("Account", "region", ""));
-                string timezone = Convert.ToString(xmlreader.GetValueAsString("Account", "timezone", ""));
-                string epgdays = Convert.ToString(xmlreader.GetValueAsString("Account", "epgdays", ""));
+                string username = Convert.ToString(xmlreader.GetValueAsString("Account", "username", "your@email.com"));
+                string password = Convert.ToString(xmlreader.GetValueAsString("Account", "password", "password"));
+                string region = Convert.ToString(xmlreader.GetValueAsString("Account", "region", "MSK"));
+                string timezone = Convert.ToString(xmlreader.GetValueAsString("Account", "timezone", "1"));
+                string epgdays = Convert.ToString(xmlreader.GetValueAsString("Account", "epgdays", "1"));
+                string epgnotify = Convert.ToString(xmlreader.GetValueAsString("Account", "epgnotify", "false"));
+                string osddelay = Convert.ToString(xmlreader.GetValueAsString("Account", "osddelay", "5"));
                 textBox1.Text = username;
                 textBox2.Text = password;
-                if (epgdays == "") epgdays = "1";
+
                 EPGdays.Value = Decimal.Parse(epgdays);
+                OSDDelay.Value = Decimal.Parse(osddelay);
+                EPGNotifyCheckBox.Checked = Boolean.Parse(epgnotify);
 
                 ArrayList streamZones = new ArrayList();
                 ArrayList timeZones = new ArrayList();
@@ -122,6 +126,8 @@ namespace MediaPortal.GUI.WebTelek
                 writer.SetValue("Account", "region", comboBox1.SelectedValue.ToString().Trim());
                 writer.SetValue("Account", "timezone", comboBox2.SelectedValue.ToString().Trim());
                 writer.SetValue("Account", "epgdays",  EPGdays.Value.ToString().Trim());
+                writer.SetValue("Account", "epgnotify", EPGNotifyCheckBox.Checked.ToString().Trim());
+                writer.SetValue("Account", "osddelay", OSDDelay.Value.ToString().Trim());
             }
             this.Dispose(true);
         }
@@ -178,6 +184,18 @@ namespace MediaPortal.GUI.WebTelek
         private void EPGdays_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void EPGNotifyCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "MediaPortal.xml")))
+            {
+                if (xmlreader.GetValue("plugins", "TV Notifier") == "yes" && EPGNotifyCheckBox.Checked == true)
+                {
+                    MessageBox.Show("Стандартный TV Notifier активирован. Выключите его сначала.");
+                    EPGNotifyCheckBox.Checked = false;
+                }
+            }
         }
         
     }
