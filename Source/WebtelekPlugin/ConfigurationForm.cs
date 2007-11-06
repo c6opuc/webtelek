@@ -192,7 +192,7 @@ namespace MediaPortal.GUI.WebTelek
             {
                 if (xmlreader.GetValue("plugins", "TV Notifier") == "yes" && EPGNotifyCheckBox.Checked == true)
                 {
-                    MessageBox.Show("Стандартный TV Notifier активирован. Выключите его сначала.");
+                    MessageBox.Show("Стандартный \"TV Notifier\" активирован. Выключите его сначала и перезапустите \"Mediaportal Configuration\".");
                     EPGNotifyCheckBox.Checked = false;
                 }
             }
