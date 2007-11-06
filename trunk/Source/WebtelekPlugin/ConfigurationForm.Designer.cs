@@ -30,6 +30,10 @@ namespace MediaPortal.GUI.WebTelek
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigurationForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.OSDDelay = new System.Windows.Forms.NumericUpDown();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.EPGNotifyCheckBox = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.EPGdays = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
@@ -51,15 +55,11 @@ namespace MediaPortal.GUI.WebTelek
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.EPGNotifyCheckBox = new System.Windows.Forms.CheckBox();
-            this.OSDDelay = new System.Windows.Forms.NumericUpDown();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OSDDelay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EPGdays)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.OSDDelay)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -84,6 +84,60 @@ namespace MediaPortal.GUI.WebTelek
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Настройки";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // OSDDelay
+            // 
+            this.OSDDelay.Location = new System.Drawing.Point(237, 187);
+            this.OSDDelay.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.OSDDelay.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.OSDDelay.Name = "OSDDelay";
+            this.OSDDelay.Size = new System.Drawing.Size(42, 20);
+            this.OSDDelay.TabIndex = 16;
+            this.OSDDelay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.OSDDelay.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(205, 190);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(33, 13);
+            this.label13.TabIndex = 19;
+            this.label13.Text = " OSD";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(285, 190);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(28, 13);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "сек.";
+            // 
+            // EPGNotifyCheckBox
+            // 
+            this.EPGNotifyCheckBox.AutoSize = true;
+            this.EPGNotifyCheckBox.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.EPGNotifyCheckBox.Location = new System.Drawing.Point(17, 189);
+            this.EPGNotifyCheckBox.Name = "EPGNotifyCheckBox";
+            this.EPGNotifyCheckBox.Size = new System.Drawing.Size(158, 17);
+            this.EPGNotifyCheckBox.TabIndex = 14;
+            this.EPGNotifyCheckBox.Text = "Напоминатель программ.";
+            this.EPGNotifyCheckBox.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.EPGNotifyCheckBox.UseVisualStyleBackColor = true;
+            this.EPGNotifyCheckBox.CheckedChanged += new System.EventHandler(this.EPGNotifyCheckBox_CheckedChanged);
             // 
             // label9
             // 
@@ -299,60 +353,6 @@ namespace MediaPortal.GUI.WebTelek
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Blue;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // EPGNotifyCheckBox
-            // 
-            this.EPGNotifyCheckBox.AutoSize = true;
-            this.EPGNotifyCheckBox.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.EPGNotifyCheckBox.Location = new System.Drawing.Point(17, 189);
-            this.EPGNotifyCheckBox.Name = "EPGNotifyCheckBox";
-            this.EPGNotifyCheckBox.Size = new System.Drawing.Size(158, 17);
-            this.EPGNotifyCheckBox.TabIndex = 14;
-            this.EPGNotifyCheckBox.Text = "Напоминатель программ.";
-            this.EPGNotifyCheckBox.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.EPGNotifyCheckBox.UseVisualStyleBackColor = true;
-            this.EPGNotifyCheckBox.CheckedChanged += new System.EventHandler(this.EPGNotifyCheckBox_CheckedChanged);
-            // 
-            // OSDDelay
-            // 
-            this.OSDDelay.Location = new System.Drawing.Point(237, 187);
-            this.OSDDelay.Maximum = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
-            this.OSDDelay.Minimum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.OSDDelay.Name = "OSDDelay";
-            this.OSDDelay.Size = new System.Drawing.Size(42, 20);
-            this.OSDDelay.TabIndex = 16;
-            this.OSDDelay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.OSDDelay.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(285, 190);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(28, 13);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "сек.";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(205, 190);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(33, 13);
-            this.label13.TabIndex = 19;
-            this.label13.Text = " OSD";
-            // 
             // ConfigurationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -372,12 +372,12 @@ namespace MediaPortal.GUI.WebTelek
             this.Load += new System.EventHandler(this.ConfigurationForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OSDDelay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EPGdays)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.OSDDelay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
