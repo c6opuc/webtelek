@@ -47,13 +47,39 @@ namespace MediaPortal.GUI.WebTelek
 
         public void getEPG()
         {
-            //URL http://www.webtelek.com/export/epg.php?from=2007-11-05&days=1
-            string tvguide = getHTTPData("http://www.webtelek.com/export/epg.php?from=" + DateTime.Today.ToString("yyyy-MM-dd") + "&days=" + epgdays);
+            
             using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "MediaPortal.xml"), false))
             {
-                string dirname = Convert.ToString(xmlreader.GetValueAsString("xmltv", "folder", ""));
-                File.Delete(dirname + @"\tvguide.xml");
-                File.WriteAllText(dirname + @"\tvguide.xml", tvguide, Encoding.UTF8);
+                string      dirname =   Convert.ToString(xmlreader.GetValueAsString("xmltv", "folder", ""));
+                string      fromdate =  DateTime.Today.ToString("yyyy-MM-dd");
+                DateTime    lastdate =  DateTime.Now.Date;
+                DateTime    now =       DateTime.Now.Date;
+
+                if (File.Exists(dirname+@"\epglastdate.dat"))
+                {
+                    //DateTime lastdate = DateTime.Parse(File.ReadAllText(dirname + @"\epglastdate.dat"));
+                    lastdate = DateTime.Parse(File.ReadAllText(dirname + @"\epglastdate.dat"));
+                    if (lastdate >= now)
+                    {
+                        TimeSpan diff = lastdate.Subtract(now);
+                        epgdays = (Decimal.Parse(epgdays) - diff.Days).ToString();
+                        fromdate = lastdate.ToString("yyyy-MM-dd");
+                    }
+                    else
+                    {
+                        lastdate = now;
+                    }
+                }
+                if (epgdays != "0")
+                {
+                    //File.WriteAllText(dirname + @"\epg.log", "EPG:" + "http://www.webtelek.com/export/epg.php?from=" + fromdate + "&days=" + epgdays);
+                    string tvguide = getHTTPData("http://www.webtelek.com/export/epg.php?from=" + fromdate + "&days=" + epgdays);
+                    File.Delete(dirname + @"\tvguide.xml");
+                    tvguide = Regex.Replace(tvguide, "windows-1251", "utf-8");
+                    File.WriteAllText(dirname + @"\tvguide.xml", tvguide, Encoding.UTF8);
+                    File.Delete(dirname + @"\epglastdate.dat");
+                    File.WriteAllText(dirname + @"\epglastdate.dat", lastdate.AddDays(Double.Parse(epgdays)).Date.ToString());
+                }
             }
 
         }
