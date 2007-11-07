@@ -78,8 +78,6 @@ namespace MediaPortal.GUI.WebTelek
 
         public OSDNotify(Form parent)
         {
-            _notifiesList = new List<TVNotify>();
-            TVDatabase.OnNotifiesChanged += new MediaPortal.TV.Database.TVDatabase.OnChangedHandler(OnNotifiesChanged);
             using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "MediaPortal.xml")))
                 _preNotifyConfig = xmlreader.GetValueAsInt("movieplayer", "notifyTVBefore", 300);
 
@@ -89,9 +87,8 @@ namespace MediaPortal.GUI.WebTelek
             using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"), false))
                 _timer.Interval = (int)Decimal.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "osddelay", "5")))*1000;
 
-            //string dir = Directory.GetCurrentDirectory();
-            //File.AppendAllText(dir + @"\webtelek.log", "EPGNotify: " + origNotifier.ToString() + " \n");
-
+            _notifiesList = new List<TVNotify>();
+            TVDatabase.OnNotifiesChanged += new MediaPortal.TV.Database.TVDatabase.OnChangedHandler(OnNotifiesChanged);
             _notifytimer = new System.Windows.Forms.Timer();
             _notifytimer.Interval = 15000;
             _notifytimer.Enabled = false;
@@ -157,7 +154,7 @@ namespace MediaPortal.GUI.WebTelek
                             TVDatabase.DeleteNotify(notify);
                             _timer.Enabled = false;
                             MediaPortal.Util.Utils.PlaySound("notify.wav", false, true);
-                            this.Show(notify.Program.Genre + " " + notify.Program.Title + " начнется в " + notify.Program.StartTime.TimeOfDay + " на канале " + notify.Program.Channel );
+                            this.Show( notify );
                             //_timer.Interval = 10000;
                             _timer.Enabled = true;
                         }
@@ -209,7 +206,7 @@ namespace MediaPortal.GUI.WebTelek
         {
         }
 
-        public void Show(string info)
+        public void Show(TVNotify notify)
         {
             using (Graphics g = Graphics.FromImage(_bitmap))
             {
@@ -217,8 +214,10 @@ namespace MediaPortal.GUI.WebTelek
                 {
                     g.FillRectangle(new System.Drawing.Drawing2D.LinearGradientBrush(new Point(0, 0), new Point(0, _bitmap.Height), Color.White, Color.Black), 0, 0, _bitmap.Width, _bitmap.Height);
                     g.DrawImage(_top, 0, 0, _bitmap.Width, _bitmap.Height);
-                    Font f = new Font("Arial", 20);                    
-                    g.DrawString(info, f, new SolidBrush(Color.White), new RectangleF(40,20,_bitmap.Width-70,_bitmap.Height-40));
+                    Font f = new Font("Arial", 20);
+                    g.DrawString(notify.Program.Genre + " " + notify.Program.Title + " начнется в " + notify.Program.StartTime.TimeOfDay + " на канале " + notify.Program.Channel, f, new SolidBrush(Color.White), new RectangleF(40, 20, _bitmap.Width - 70, _bitmap.Height - 40));
+                    Bitmap logo = new Bitmap(Config.GetFile(Config.Dir.Config, @"Thumbs\TV\logos", notify.Program.Channel + ".jpg"));
+                    g.DrawImage(logo,10,10,66,50);
                 }
                 catch (Exception ex)
                 {
