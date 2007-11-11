@@ -47,12 +47,12 @@ namespace MediaPortal.GUI.WebTelek
     {
         Bitmap _top;
         Bitmap _bitmap;
-        Timer _timer = new Timer();
+        static Timer _timer = new Timer();
+        static Timer _notifytimer = null;
         Form _parent;
         static OSDNotify _osd = null;
         EventHandler _losc;
         readonly PointF[] _pathPoints;
-        static Timer _notifytimer = null;
         bool _notifiesListChanged;
         int _preNotifyConfig;
         List<TVNotify> _notifiesList;
@@ -68,12 +68,14 @@ namespace MediaPortal.GUI.WebTelek
 
         public static void Stop()
         {
+            
             if (_osd != null)
             {
                 _osd.Dispose(true);
                 _osd = null;
             }
-            if (_notifytimer != null) _notifytimer.Enabled = false;
+
+            //if (_notifytimer != null) _notifytimer.Enabled = false;
         }
 
         public OSDNotify(Form parent)
@@ -136,29 +138,59 @@ namespace MediaPortal.GUI.WebTelek
 
         void _notifytimer_Tick(object sender, EventArgs e)
         {
+            string dir = Directory.GetCurrentDirectory();
+            File.AppendAllText(dir + @"\webtelek.log", "1 \n");
             if (origNotifier)
             {
+                File.AppendAllText(dir + @"\webtelek.log", "2 \n");
                 DateTime preNotifySecs = DateTime.Now.AddSeconds(_preNotifyConfig);
+                File.AppendAllText(dir + @"\webtelek.log", "3 \n");
                 if (_notifiesListChanged)
                 {
+                    File.AppendAllText(dir + @"\webtelek.log", "4 \n");
                     LoadNotifies();
                     _notifiesListChanged = false;
                 }
+                File.AppendAllText(dir + @"\webtelek.log", "5 \n");
                 for (int i = 0; i < _notifiesList.Count; ++i)
                 {
+                    File.AppendAllText(dir + @"\webtelek.log", "6 \n");
                     TVNotify notify = _notifiesList[i];
-                    //if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9)))
-                    //{
-                        if (preNotifySecs > notify.Program.StartTime)
+                    if (preNotifySecs > notify.Program.StartTime)
+                    {
+                        File.AppendAllText(dir + @"\webtelek.log", "7 \n");
+                        TVDatabase.DeleteNotify(notify);
+                        File.AppendAllText(dir + @"\webtelek.log", "8 \n");
+                        _timer.Enabled = false;
+                        File.AppendAllText(dir + @"\webtelek.log", "9 \n");
+                        if (g_Player.Player != null)
                         {
-                            TVDatabase.DeleteNotify(notify);
-                            _timer.Enabled = false;
-                            MediaPortal.Util.Utils.PlaySound("notify.wav", false, true);
-                            this.Show( notify );
-                            //_timer.Interval = 10000;
-                            _timer.Enabled = true;
+                            if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9)))
+                            {
+                                File.AppendAllText(dir + @"\webtelek.log", "10 \n");
+                                MediaPortal.Util.Utils.PlaySound("notify.wav", false, true);
+                                this.Show(notify);
+                                _timer.Enabled = true;
+                            }
+                            else
+                            {
+                                File.AppendAllText(dir + @"\webtelek.log", "11 \n");
+                                GUIMessage msg = new GUIMessage(GUIMessage.MessageType.GUI_MSG_NOTIFY_TV_PROGRAM, 0, 0, 0, 0, 0, null);
+                                msg.Object = notify.Program;
+                                GUIGraphicsContext.SendMessage(msg);
+                                msg = null;
+                            }
                         }
-                    //}
+                        else
+                        {
+                            File.AppendAllText(dir + @"\webtelek.log", "11 \n");
+                            GUIMessage msg = new GUIMessage(GUIMessage.MessageType.GUI_MSG_NOTIFY_TV_PROGRAM, 0, 0, 0, 0, 0, null);
+                            msg.Object = notify.Program;
+                            GUIGraphicsContext.SendMessage(msg);
+                            msg = null;
+                        }
+
+                    }                   
                 }
             }
         }
