@@ -68,13 +68,13 @@ namespace MediaPortal.GUI.WebTelek
 
         public static void Stop()
         {
-            
+            /*
             if (_osd != null)
             {
                 _osd.Dispose(true);
                 _osd = null;
             }
-
+            */
             //if (_notifytimer != null) _notifytimer.Enabled = false;
         }
 
@@ -138,43 +138,31 @@ namespace MediaPortal.GUI.WebTelek
 
         void _notifytimer_Tick(object sender, EventArgs e)
         {
-            string dir = Directory.GetCurrentDirectory();
-            File.AppendAllText(dir + @"\webtelek.log", "1 \n");
             if (origNotifier)
             {
-                File.AppendAllText(dir + @"\webtelek.log", "2 \n");
                 DateTime preNotifySecs = DateTime.Now.AddSeconds(_preNotifyConfig);
-                File.AppendAllText(dir + @"\webtelek.log", "3 \n");
                 if (_notifiesListChanged)
                 {
-                    File.AppendAllText(dir + @"\webtelek.log", "4 \n");
                     LoadNotifies();
                     _notifiesListChanged = false;
                 }
-                File.AppendAllText(dir + @"\webtelek.log", "5 \n");
                 for (int i = 0; i < _notifiesList.Count; ++i)
                 {
-                    File.AppendAllText(dir + @"\webtelek.log", "6 \n");
                     TVNotify notify = _notifiesList[i];
                     if (preNotifySecs > notify.Program.StartTime)
                     {
-                        File.AppendAllText(dir + @"\webtelek.log", "7 \n");
                         TVDatabase.DeleteNotify(notify);
-                        File.AppendAllText(dir + @"\webtelek.log", "8 \n");
                         _timer.Enabled = false;
-                        File.AppendAllText(dir + @"\webtelek.log", "9 \n");
                         if (g_Player.Player != null)
                         {
                             if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9)))
                             {
-                                File.AppendAllText(dir + @"\webtelek.log", "10 \n");
                                 MediaPortal.Util.Utils.PlaySound("notify.wav", false, true);
                                 this.Show(notify);
                                 _timer.Enabled = true;
                             }
                             else
                             {
-                                File.AppendAllText(dir + @"\webtelek.log", "11 \n");
                                 GUIMessage msg = new GUIMessage(GUIMessage.MessageType.GUI_MSG_NOTIFY_TV_PROGRAM, 0, 0, 0, 0, 0, null);
                                 msg.Object = notify.Program;
                                 GUIGraphicsContext.SendMessage(msg);
@@ -183,7 +171,6 @@ namespace MediaPortal.GUI.WebTelek
                         }
                         else
                         {
-                            File.AppendAllText(dir + @"\webtelek.log", "11 \n");
                             GUIMessage msg = new GUIMessage(GUIMessage.MessageType.GUI_MSG_NOTIFY_TV_PROGRAM, 0, 0, 0, 0, 0, null);
                             msg.Object = notify.Program;
                             GUIGraphicsContext.SendMessage(msg);
@@ -240,6 +227,7 @@ namespace MediaPortal.GUI.WebTelek
 
         public void Show(TVNotify notify)
         {
+            this.Size = new Size(600, 200);
             using (Graphics g = Graphics.FromImage(_bitmap))
             {
                 try
@@ -247,9 +235,10 @@ namespace MediaPortal.GUI.WebTelek
                     g.FillRectangle(new System.Drawing.Drawing2D.LinearGradientBrush(new Point(0, 0), new Point(0, _bitmap.Height), Color.White, Color.Black), 0, 0, _bitmap.Width, _bitmap.Height);
                     g.DrawImage(_top, 0, 0, _bitmap.Width, _bitmap.Height);
                     Font f = new Font("Arial", 20);
-                    g.DrawString(notify.Program.Genre + " " + notify.Program.Title + " начнется в " + notify.Program.StartTime.TimeOfDay + " на канале " + notify.Program.Channel, f, new SolidBrush(Color.White), new RectangleF(40, 20, _bitmap.Width - 70, _bitmap.Height - 40));
+                    g.DrawString(notify.Program.Genre + "\n" + notify.Program.Title + "\nначнется в " + notify.Program.StartTime.TimeOfDay + " на канале " + notify.Program.Channel, f, new SolidBrush(Color.White), new RectangleF(40, 20, _bitmap.Width - 70, _bitmap.Height - 40));
                     Bitmap logo = new Bitmap(Config.GetFile(Config.Dir.Config, @"Thumbs\TV\logos", notify.Program.Channel + ".jpg"));
-                    g.DrawImage(logo,10,10,66,50);
+                    g.DrawImage(logo, _bitmap.Width - 70 - 66, 22, 66, 50);
+                    g.DrawRectangle(new Pen(Color.Gray,2),_bitmap.Width - 70 - 66 - 2, 20, 70, 54);
                 }
                 catch (Exception ex)
                 {
@@ -262,6 +251,7 @@ namespace MediaPortal.GUI.WebTelek
 
         private new void Hide()
         {
+            this.Size = new Size(0, 0);
             this.Opacity = 0;
             this.Refresh();
         } 

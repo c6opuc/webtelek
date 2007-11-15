@@ -141,6 +141,8 @@ namespace MediaPortal.GUI.WebTelek
         {
                 //string dir = Directory.GetCurrentDirectory();
                 //File.AppendAllText(dir + @"\webtelek.log", "OSD: " + action.wID.ToString() + " \n");
+            if (g_Player.Player != null)
+            {
                 switch (action.wID)
                 {
                     case Action.ActionType.ACTION_SHOW_OSD:
@@ -168,7 +170,8 @@ namespace MediaPortal.GUI.WebTelek
                         break;
                     default:
                         break;
-                }  
+                }
+            }
         }
 
         void parent_LocationOrSizeChanged(object sender, EventArgs e)
