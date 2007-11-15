@@ -236,9 +236,12 @@ namespace MediaPortal.GUI.WebTelek
                     g.DrawImage(_top, 0, 0, _bitmap.Width, _bitmap.Height);
                     Font f = new Font("Arial", 20);
                     g.DrawString(notify.Program.Genre + "\n" + notify.Program.Title + "\nначнется в " + notify.Program.StartTime.TimeOfDay + " на канале " + notify.Program.Channel, f, new SolidBrush(Color.White), new RectangleF(40, 20, _bitmap.Width - 70, _bitmap.Height - 40));
-                    Bitmap logo = new Bitmap(Config.GetFile(Config.Dir.Config, @"Thumbs\TV\logos", notify.Program.Channel + ".jpg"));
-                    g.DrawImage(logo, _bitmap.Width - 70 - 40, 27, 66, 50);
-                    g.DrawRectangle(new Pen(Color.Gray,2),_bitmap.Width - 70 - 40 - 2, 25, 70, 54);
+                    if (File.Exists(Config.GetFile(Config.Dir.Config, @"Thumbs\TV\logos", notify.Program.Channel + ".jpg"))) 
+                    {
+                        Bitmap logo = new Bitmap(Config.GetFile(Config.Dir.Config, @"Thumbs\TV\logos", notify.Program.Channel + ".jpg"));
+                        g.DrawImage(logo, _bitmap.Width - 70 - 40, 27, 66, 50);
+                    }
+                    g.DrawRectangle(new Pen(Color.Gray, 2), _bitmap.Width - 70 - 40 - 2, 25, 70, 54);
                 }
                 catch (Exception ex)
                 {
