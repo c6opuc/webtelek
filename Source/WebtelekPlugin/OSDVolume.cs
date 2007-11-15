@@ -126,6 +126,9 @@ namespace MediaPortal.GUI.WebTelek
 
         void GUIWindowManager_OnNewAction(Action action)
         {
+
+            if (g_Player.Player != null)
+            {
                 switch (action.wID)
                 {
                     case Action.ActionType.ACTION_VOLUME_UP:
@@ -145,7 +148,8 @@ namespace MediaPortal.GUI.WebTelek
                         break;
                     default:
                         break;
-                }             
+                }
+            }
         }
 
         void parent_LocationOrSizeChanged(object sender, EventArgs e)

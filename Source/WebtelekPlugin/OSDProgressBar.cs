@@ -154,51 +154,55 @@ namespace MediaPortal.GUI.WebTelek
         {
             try
             {
-                switch (_action.wID)
+                if (g_Player.Player != null)
                 {
-                    //TODO: Is it adjustible????
-                    case Action.ActionType.ACTION_BIG_STEP_FORWARD:
-                    case Action.ActionType.ACTION_BIG_STEP_BACK:
-                    case Action.ActionType.ACTION_STEP_BACK:
-                    case Action.ActionType.ACTION_STEP_FORWARD:
-                    case Action.ActionType.ACTION_MOVE_LEFT:
-                    case Action.ActionType.ACTION_MOVE_RIGHT:
-                    case Action.ActionType.ACTION_MOVE_UP:
-                    case Action.ActionType.ACTION_MOVE_DOWN:
-                        if (_enabled)
-                            if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9)))
-                            {
-                                _timer.Enabled = false;
-                                if (g_Player.FullScreen)
+
+                    switch (_action.wID)
+                    {
+                        //TODO: Is it adjustible????
+                        case Action.ActionType.ACTION_BIG_STEP_FORWARD:
+                        case Action.ActionType.ACTION_BIG_STEP_BACK:
+                        case Action.ActionType.ACTION_STEP_BACK:
+                        case Action.ActionType.ACTION_STEP_FORWARD:
+                        case Action.ActionType.ACTION_MOVE_LEFT:
+                        case Action.ActionType.ACTION_MOVE_RIGHT:
+                        case Action.ActionType.ACTION_MOVE_UP:
+                        case Action.ActionType.ACTION_MOVE_DOWN:
+                            if (_enabled)
+                                if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9)))
                                 {
-                                    double cs = 0; bool s, e;
-                                    cs = g_Player.GetSeekStep(out s, out e) + g_Player.CurrentPosition;
-                                    if (cs > g_Player.Duration) cs = g_Player.Duration;
-                                    if (cs < 0) cs = 0;
-                                    this.Show(g_Player.Duration, g_Player.CurrentPosition, cs, g_Player.GetStepDescription());
+                                    _timer.Enabled = false;
+                                    if (g_Player.FullScreen)
+                                    {
+                                        double cs = 0; bool s, e;
+                                        cs = g_Player.GetSeekStep(out s, out e) + g_Player.CurrentPosition;
+                                        if (cs > g_Player.Duration) cs = g_Player.Duration;
+                                        if (cs < 0) cs = 0;
+                                        this.Show(g_Player.Duration, g_Player.CurrentPosition, cs, g_Player.GetStepDescription());
+                                    }
+                                    _timer.Interval = 1000;
+                                    _timer.Enabled = true;
                                 }
-                                _timer.Interval = 1000;
-                                _timer.Enabled = true;
-                            }
-                        break;
-                    case Action.ActionType.ACTION_SHOW_OSD:
-                    case Action.ActionType.ACTION_CONTEXT_MENU:
-                    case Action.ActionType.ACTION_SELECT_ITEM:
-                        if (_enabled)
-                            if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9)))
-                            {
-                                _timer.Enabled = false;
-                                if (g_Player.FullScreen)
+                            break;
+                        case Action.ActionType.ACTION_SHOW_OSD:
+                        case Action.ActionType.ACTION_CONTEXT_MENU:
+                        case Action.ActionType.ACTION_SELECT_ITEM:
+                            if (_enabled)
+                                if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9)))
                                 {
-                                    double cs = 0;
-                                    this.Show(g_Player.Duration, g_Player.CurrentPosition, cs, DateTime.Now.ToString("HH:mm:ss"));
+                                    _timer.Enabled = false;
+                                    if (g_Player.FullScreen)
+                                    {
+                                        double cs = 0;
+                                        this.Show(g_Player.Duration, g_Player.CurrentPosition, cs, DateTime.Now.ToString("HH:mm:ss"));
+                                    }
+                                    _timer.Interval = 1000;
+                                    _timer.Enabled = true;
                                 }
-                                _timer.Interval = 1000;
-                                _timer.Enabled = true;
-                            }
-                        break;
-                    default:
-                        break;
+                            break;
+                        default:
+                            break;
+                    }
                 }
 
             }
