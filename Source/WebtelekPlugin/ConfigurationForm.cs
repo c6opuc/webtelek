@@ -186,7 +186,7 @@ namespace MediaPortal.GUI.WebTelek
 
         }
 
-        private void EPGNotifyCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void EPGNotifyCheckBox_CheckedChanged_1(object sender, EventArgs e)
         {
             using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "MediaPortal.xml")))
             {
@@ -197,6 +197,26 @@ namespace MediaPortal.GUI.WebTelek
                 }
             }
         }
-        
+
+        private void OSDDelay_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+                   
     }
 }
