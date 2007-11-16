@@ -30,6 +30,9 @@ namespace MediaPortal.GUI.WebTelek
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigurationForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.NetDelay = new System.Windows.Forms.NumericUpDown();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.OSDDelay = new System.Windows.Forms.NumericUpDown();
@@ -58,6 +61,8 @@ namespace MediaPortal.GUI.WebTelek
             this.label6 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NetDelay)).BeginInit();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OSDDelay)).BeginInit();
             this.groupBox5.SuspendLayout();
@@ -70,6 +75,7 @@ namespace MediaPortal.GUI.WebTelek
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.groupBox6);
+            this.groupBox1.Controls.Add(this.groupBox7);
             this.groupBox1.Controls.Add(this.groupBox5);
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.CustomButton);
@@ -86,16 +92,60 @@ namespace MediaPortal.GUI.WebTelek
             this.groupBox1.Text = "Настройки";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.label12);
+            this.groupBox7.Controls.Add(this.NetDelay);
+            this.groupBox7.Location = new System.Drawing.Point(196, 192);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(120, 40);
+            this.groupBox7.TabIndex = 15;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Сетевой таймаут";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(59, 17);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(28, 13);
+            this.label12.TabIndex = 36;
+            this.label12.Text = "сек.";
+            // 
+            // NetDelay
+            // 
+            this.NetDelay.Location = new System.Drawing.Point(9, 13);
+            this.NetDelay.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.NetDelay.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.NetDelay.Name = "NetDelay";
+            this.NetDelay.Size = new System.Drawing.Size(44, 20);
+            this.NetDelay.TabIndex = 0;
+            this.NetDelay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.NetDelay.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.label10);
             this.groupBox6.Controls.Add(this.OSDDelay);
-            this.groupBox6.Location = new System.Drawing.Point(196, 198);
+            this.groupBox6.Location = new System.Drawing.Point(196, 148);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(120, 40);
             this.groupBox6.TabIndex = 13;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "OSD";
+            this.groupBox6.Text = "OSD таймаут";
+            this.groupBox6.Enter += new System.EventHandler(this.groupBox6_Enter);
             // 
             // label10
             // 
@@ -133,7 +183,7 @@ namespace MediaPortal.GUI.WebTelek
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.EPGNotifyCheckBox);
-            this.groupBox5.Location = new System.Drawing.Point(17, 198);
+            this.groupBox5.Location = new System.Drawing.Point(17, 192);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(173, 40);
             this.groupBox5.TabIndex = 12;
@@ -158,9 +208,9 @@ namespace MediaPortal.GUI.WebTelek
             this.groupBox4.Controls.Add(this.label7);
             this.groupBox4.Controls.Add(this.EPGdays);
             this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Location = new System.Drawing.Point(17, 157);
+            this.groupBox4.Location = new System.Drawing.Point(17, 148);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(299, 40);
+            this.groupBox4.Size = new System.Drawing.Size(173, 40);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "EPG";
@@ -168,17 +218,17 @@ namespace MediaPortal.GUI.WebTelek
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(37, 15);
+            this.label7.Location = new System.Drawing.Point(3, 15);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(138, 13);
+            this.label7.Size = new System.Drawing.Size(84, 13);
             this.label7.TabIndex = 27;
-            this.label7.Text = "Загружать программу на ";
+            this.label7.Text = "Программа на ";
             // 
             // EPGdays
             // 
-            this.EPGdays.Location = new System.Drawing.Point(181, 13);
+            this.EPGdays.Location = new System.Drawing.Point(88, 13);
             this.EPGdays.Maximum = new decimal(new int[] {
-            14,
+            7,
             0,
             0,
             0});
@@ -200,7 +250,7 @@ namespace MediaPortal.GUI.WebTelek
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(229, 16);
+            this.label9.Location = new System.Drawing.Point(134, 16);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(22, 13);
             this.label9.TabIndex = 29;
@@ -233,7 +283,7 @@ namespace MediaPortal.GUI.WebTelek
             this.groupBox3.Controls.Add(this.textBox2);
             this.groupBox3.Controls.Add(this.textBox1);
             this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Location = new System.Drawing.Point(135, 28);
+            this.groupBox3.Location = new System.Drawing.Point(135, 19);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(181, 126);
             this.groupBox3.TabIndex = 9;
@@ -300,7 +350,7 @@ namespace MediaPortal.GUI.WebTelek
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Location = new System.Drawing.Point(17, 28);
+            this.groupBox2.Location = new System.Drawing.Point(17, 19);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(112, 126);
             this.groupBox2.TabIndex = 6;
@@ -383,21 +433,24 @@ namespace MediaPortal.GUI.WebTelek
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(352, 313);
+            this.ClientSize = new System.Drawing.Size(357, 313);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(360, 340);
+            this.MaximumSize = new System.Drawing.Size(365, 340);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(360, 340);
+            this.MinimumSize = new System.Drawing.Size(365, 340);
             this.Name = "ConfigurationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Настройки WEBTELEK+";
             this.Load += new System.EventHandler(this.ConfigurationForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NetDelay)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OSDDelay)).EndInit();
@@ -445,5 +498,8 @@ namespace MediaPortal.GUI.WebTelek
         private System.Windows.Forms.NumericUpDown OSDDelay;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.CheckBox EPGNotifyCheckBox;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.NumericUpDown NetDelay;
+        private System.Windows.Forms.Label label12;
     }
 }

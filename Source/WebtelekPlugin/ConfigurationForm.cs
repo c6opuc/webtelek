@@ -53,11 +53,13 @@ namespace MediaPortal.GUI.WebTelek
                 string epgdays = Convert.ToString(xmlreader.GetValueAsString("Account", "epgdays", "1"));
                 string epgnotify = Convert.ToString(xmlreader.GetValueAsString("Account", "epgnotify", "false"));
                 string osddelay = Convert.ToString(xmlreader.GetValueAsString("Account", "osddelay", "5"));
+                string netdelay = Convert.ToString(xmlreader.GetValueAsString("Account", "netdelay", "15"));
                 textBox1.Text = username;
                 textBox2.Text = password;
 
                 EPGdays.Value = Decimal.Parse(epgdays);
                 OSDDelay.Value = Decimal.Parse(osddelay);
+                NetDelay.Value = Decimal.Parse(netdelay);
                 EPGNotifyCheckBox.Checked = Boolean.Parse(epgnotify);
 
                 ArrayList streamZones = new ArrayList();
@@ -128,6 +130,7 @@ namespace MediaPortal.GUI.WebTelek
                 writer.SetValue("Account", "epgdays",  EPGdays.Value.ToString().Trim());
                 writer.SetValue("Account", "epgnotify", EPGNotifyCheckBox.Checked.ToString().Trim());
                 writer.SetValue("Account", "osddelay", OSDDelay.Value.ToString().Trim());
+                writer.SetValue("Account", "netdelay", NetDelay.Value.ToString().Trim());
             }
             this.Dispose(true);
         }
@@ -214,6 +217,11 @@ namespace MediaPortal.GUI.WebTelek
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox6_Enter(object sender, EventArgs e)
         {
 
         }
