@@ -12,6 +12,8 @@ using MediaPortal.Util;
 using MediaPortal.Playlists;
 using MediaPortal.Configuration;
 using System.IO;
+using System.Windows.Forms;
+using MediaPortal.Dialogs;
 
 namespace MediaPortal.GUI.WebTelek
 {
@@ -31,6 +33,9 @@ namespace MediaPortal.GUI.WebTelek
         bool _workerCompleted = true; 
         StreamReader responseStream = null;
         Encoding enc = null;
+        BackgroundWorker worker = null;
+        int timeout = 0;
+        System.Windows.Forms.Timer _timer = null;
 
         public WebTelekHTTPClient() 
         {
@@ -42,6 +47,7 @@ namespace MediaPortal.GUI.WebTelek
                 region = Convert.ToString(xmlreader.GetValueAsString("Account", "region", ""));
                 timezone = Convert.ToString(xmlreader.GetValueAsString("Account", "timezone", ""));
                 epgdays = Convert.ToString(xmlreader.GetValueAsString("Account", "epgdays", ""));
+                timeout = (int)Decimal.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "netdelay", "15"))) * 1000;
             }
         }
 
@@ -90,7 +96,13 @@ namespace MediaPortal.GUI.WebTelek
             {
                 _workerCompleted = false;
 
-                BackgroundWorker worker = new BackgroundWorker();
+                worker = new BackgroundWorker();
+                worker.WorkerSupportsCancellation = true;
+
+                _timer = new System.Windows.Forms.Timer();
+                _timer.Interval = timeout;
+                _timer.Enabled = true;
+                _timer.Tick += new EventHandler(_timer_Tick);
 
                 worker.DoWork += new DoWorkEventHandler(get_Data);
                 worker.RunWorkerAsync();
@@ -100,8 +112,23 @@ namespace MediaPortal.GUI.WebTelek
                     while (_workerCompleted == false) GUIWindowManager.Process();
                 }
             }
+            _timer.Enabled = false;
             return responseHtml;
         }
+
+        protected virtual void _timer_Tick(object sender, EventArgs e)
+        {
+            worker.CancelAsync();
+            GUIDialogNotify info = (GUIDialogNotify)GUIWindowManager.GetWindow((int)GUIWindow.Window.WINDOW_DIALOG_NOTIFY);
+            info.Reset();
+            info.IsOverlayAllowed = true;
+            info.SetHeading("Ошибка");
+            info.SetText("Не удалось установить связь с сервером. Проверте свои сетевые настройки.");
+            info.DoModal(WebTelek.PluginID);
+            _timer.Dispose();
+            _workerCompleted = true;
+        }
+
         void get_Data(object sender, DoWorkEventArgs e)
         {
             _workerCompleted = false;
@@ -156,16 +183,23 @@ namespace MediaPortal.GUI.WebTelek
             {
                 _workerCompleted = false;
 
-                BackgroundWorker worker = new BackgroundWorker();
+                worker = new BackgroundWorker();
+                worker.WorkerSupportsCancellation = true;
 
                 worker.DoWork += new DoWorkEventHandler(get_HTTP_Data);
                 worker.RunWorkerAsync();
+
+                _timer = new System.Windows.Forms.Timer();
+                _timer.Interval = timeout;
+                _timer.Enabled = true;
+                _timer.Tick += new EventHandler(_timer_Tick);
 
                 using (WaitCursor cursor = new WaitCursor())
                 {
                     while (_workerCompleted == false) GUIWindowManager.Process();
                 }
             }
+            _timer.Enabled = false;
             return responseHtml;
         }
 
@@ -174,10 +208,12 @@ namespace MediaPortal.GUI.WebTelek
             string url = httpurl;
             _workerCompleted = false;
 
+            /*
             if (responseHtml == "")
             {
                 getData();
             }
+            */
 
             request = (HttpWebRequest)WebRequest.Create(url);
             request.CookieContainer = cookieContainer;
