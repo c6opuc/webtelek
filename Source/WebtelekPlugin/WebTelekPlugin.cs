@@ -32,7 +32,7 @@ using MediaPortal.GUI.Library;
 
 namespace MediaPortal.GUI.WebTelek
 {
-    public class WebTelekPlugin : ISetupForm, IShowPlugin
+    public class WebTelekPlugin : ISetupForm, IShowPlugin, IPlugin
     {
         // Returns the name of the plugin which is shown in the plugin menu
         public string PluginName()
@@ -58,7 +58,14 @@ namespace MediaPortal.GUI.WebTelek
             Form setup = new ConfigurationForm();
             setup.ShowDialog();
         }
-
+        public void Start()
+        {
+            OSDNotify.Start();
+        }
+        public void Stop()
+        {
+            OSDNotify.Stop();
+        }
         // Indicates whether plugin can be enabled/disabled
         public bool CanEnable()
         {
