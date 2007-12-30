@@ -169,7 +169,7 @@ namespace MediaPortal.GUI.WebTelek
                 response.Cookies = request.CookieContainer.GetCookies(request.RequestUri);
                 responseStream = new StreamReader(response.GetResponseStream(), enc, true);
                 responseHtml = responseStream.ReadToEnd();
-
+                
                 response.Close();
                 responseStream.Close();
             }
