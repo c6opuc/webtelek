@@ -68,14 +68,10 @@ namespace MediaPortal.GUI.WebTelek
 
         public static void Stop()
         {
-            /*
             if (_osd != null)
             {
-                _osd.Dispose(true);
-                _osd = null;
+                _osd.Hide();
             }
-            */
-            //if (_notifytimer != null) _notifytimer.Enabled = false;
         }
 
         public OSDNotify(Form parent)
