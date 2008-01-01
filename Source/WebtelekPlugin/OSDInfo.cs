@@ -219,15 +219,18 @@ namespace MediaPortal.GUI.WebTelek
                     //g.MeasureString(info, this.Font, new SizeF(_bitmap.Width,_bitmap.Height));
                     //g.DrawString(
                     Font f = new Font("Arial", 20);                    
-                    g.DrawString(info, f, new SolidBrush(Color.White), new RectangleF(40,20,_bitmap.Width-70,_bitmap.Height-40));
+                    g.DrawString(info, f, new SolidBrush(Color.Black), new RectangleF(42, 22, _bitmap.Width - 70, _bitmap.Height - 40));
+                    g.DrawString(info, f, new SolidBrush(Color.White), new RectangleF(40, 20, _bitmap.Width - 70, _bitmap.Height - 40)); 
                     if (channel_id != null)
                     {
                         if (File.Exists(Config.GetFile(Config.Dir.Config, @"webtelek\", channel_id + ".jpg")))
                         {
                             Bitmap logo = new Bitmap(Config.GetFile(Config.Dir.Config, @"webtelek\", channel_id + ".jpg"));
+                            g.DrawRectangle(new Pen(Color.Black, 2), _bitmap.Width - 70 - 40 + 2, 27 + 2, 66, 50);
                             g.DrawImage(logo, _bitmap.Width - 70 - 40, 27, 66, 50);
+                            g.DrawRectangle(new Pen(Color.Gray, 2), _bitmap.Width - 70 - 40, 27, 66, 50);
+
                         }
-                        g.DrawRectangle(new Pen(Color.Gray, 2), _bitmap.Width - 70 - 40 - 2, 25, 70, 54);
                     }
 
                 }
