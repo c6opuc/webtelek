@@ -229,7 +229,6 @@ namespace MediaPortal.GUI.WebTelek
                             g.DrawRectangle(new Pen(Color.Black, 2), _bitmap.Width - 70 - 40 + 2, 27 + 2, 66, 50);
                             g.DrawImage(logo, _bitmap.Width - 70 - 40, 27, 66, 50);
                             g.DrawRectangle(new Pen(Color.Gray, 2), _bitmap.Width - 70 - 40, 27, 66, 50);
-
                         }
                     }
 
