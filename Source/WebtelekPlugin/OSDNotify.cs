@@ -231,14 +231,14 @@ namespace MediaPortal.GUI.WebTelek
                     g.FillRectangle(new System.Drawing.Drawing2D.LinearGradientBrush(new Point(0, 0), new Point(0, _bitmap.Height), Color.White, Color.Black), 0, 0, _bitmap.Width, _bitmap.Height);
                     g.DrawImage(_top, 0, 0, _bitmap.Width, _bitmap.Height);
                     Font f = new Font("Arial", 20);
-                    g.DrawString(notify.Program.Genre + "\n" + notify.Program.Title + "\nначнется в " + notify.Program.StartTime.TimeOfDay + " на канале " + notify.Program.Channel, f, new SolidBrush(Color.Black), new RectangleF(42, 22, _bitmap.Width - 70, _bitmap.Height - 40));
-                    g.DrawString(notify.Program.Genre + "\n" + notify.Program.Title + "\nначнется в " + notify.Program.StartTime.TimeOfDay + " на канале " + notify.Program.Channel, f, new SolidBrush(Color.White), new RectangleF(40, 20, _bitmap.Width - 70, _bitmap.Height - 40));
+                    g.DrawString(notify.Program.Genre + "\n" + notify.Program.Title + "\nначнется в " + notify.Program.StartTime.TimeOfDay + " на канале " + notify.Program.Channel, f, new SolidBrush(Color.Black), new RectangleF(42, 22, _bitmap.Width - 70 - 49, _bitmap.Height - 40));
+                    g.DrawString(notify.Program.Genre + "\n" + notify.Program.Title + "\nначнется в " + notify.Program.StartTime.TimeOfDay + " на канале " + notify.Program.Channel, f, new SolidBrush(Color.White), new RectangleF(40, 20, _bitmap.Width - 70 - 49, _bitmap.Height - 40));
                     if (File.Exists(Config.GetFile(Config.Dir.Config, @"Thumbs\TV\logos", notify.Program.Channel + ".jpg"))) 
                     {
                         Bitmap logo = new Bitmap(Config.GetFile(Config.Dir.Config, @"Thumbs\TV\logos", notify.Program.Channel + ".jpg"));
-                        g.DrawRectangle(new Pen(Color.Black, 2), _bitmap.Width - 70 - 40 + 2, 27 + 2, 66, 50);
-                        g.DrawImage(logo, _bitmap.Width - 70 - 40, 27, 66, 50);
-                        g.DrawRectangle(new Pen(Color.Gray, 2), _bitmap.Width - 70 - 40, 27, 66, 50);
+                        g.DrawRectangle(new Pen(Color.Black, 2), _bitmap.Width - 70 - 40 + 17 + 2, 27 + 2, 49, 37);
+                        g.DrawImage(logo, _bitmap.Width - 70 - 40 + 17, 27, 49, 37);
+                        g.DrawRectangle(new Pen(Color.Gray, 2), _bitmap.Width - 70 - 40 + 17, 27, 49, 37);
                     }
                 }
                 catch (Exception ex)
