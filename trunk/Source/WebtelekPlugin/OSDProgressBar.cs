@@ -302,16 +302,20 @@ namespace MediaPortal.GUI.WebTelek
                     g.DrawImage(_mid, x, y, wm, h);
                     g.DrawImage(_indicator, x + wp - iw / 2, y, iw, h);
                     //TODO: Add colors, size and position to config !!!
+                    g.DrawString(new TimeSpan(0, 0, (int)p).ToString(), this.Font, new SolidBrush(Color.Black), 15+2, y+2);
                     g.DrawString(new TimeSpan(0, 0, (int)p).ToString(), this.Font, new SolidBrush(Color.White), 15, y);
                     if (d < double.MaxValue)
                     {
+                        g.DrawString(new TimeSpan(0, 0, (int)d).ToString(), this.Font, new SolidBrush(Color.Black), 960+2, y+2);
                         g.DrawString(new TimeSpan(0, 0, (int)d).ToString(), this.Font, new SolidBrush(Color.White), 960, y);
                     }
                     else
                     {
-                        g.DrawString("STREAM", this.Font, new SolidBrush(Color.White), 950, y);//TODO: Think about text;
+                        g.DrawString("TV Live", this.Font, new SolidBrush(Color.Black), 950+2, y+2);//TODO: Think about text;
+                        g.DrawString("TV Live", this.Font, new SolidBrush(Color.White), 950, y);//TODO: Think about text;
                     }
-                    g.DrawString(info, this.Font, new SolidBrush(Color.Black), 1100, y);
+                    g.DrawString(info, this.Font, new SolidBrush(Color.Black), 1100+2, y+2);
+                    g.DrawString(info, this.Font, new SolidBrush(Color.White), 1100, y);
                 }
                 catch (Exception ex)
                 {
