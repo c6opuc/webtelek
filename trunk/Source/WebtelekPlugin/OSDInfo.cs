@@ -140,8 +140,8 @@ namespace MediaPortal.GUI.WebTelek
 
         void GUIWindowManager_OnNewAction(Action action)
         {
-                //string dir = Directory.GetCurrentDirectory();
-                //File.AppendAllText(dir + @"\webtelek.log", "OSD: " + action.wID.ToString() + " \n");
+            //string dir = Directory.GetCurrentDirectory();
+            //File.AppendAllText(dir + @"\webtelek.log", "OSD: " + action.wID.ToString() + " \n");
             if (g_Player.Player != null)
             {
                 switch (action.wID)
@@ -168,6 +168,24 @@ namespace MediaPortal.GUI.WebTelek
                                 //_timer.Interval = 5000;
                                 _timer.Enabled = true;
                             }
+                        break;
+                    case Action.ActionType.ACTION_NEXT_ITEM:
+                    case Action.ActionType.ACTION_NEXT_CHANNEL:
+                        if (wp != null)
+                        {
+                            wp.PlayNext(1);
+                            wp.GetChannelData(false);
+                            this.Show(wp.DataDescriptions[index]);
+                        }
+                        break;
+                    case Action.ActionType.ACTION_PREV_CHANNEL:
+                    case Action.ActionType.ACTION_PREV_ITEM:
+                        if (wp != null)
+                        {
+                            wp.PlayNext(-1);
+                            wp.GetChannelData(false);
+                            this.Show(wp.DataDescriptions[index]);
+                        }
                         break;
                     default:
                         break;
