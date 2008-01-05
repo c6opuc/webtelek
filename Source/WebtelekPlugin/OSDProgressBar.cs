@@ -315,7 +315,7 @@ namespace MediaPortal.GUI.WebTelek
                         g.DrawString("TV Live", this.Font, new SolidBrush(Color.White), 950, y);//TODO: Think about text;
                     }
                     g.DrawString(info, this.Font, new SolidBrush(Color.Black), 1100+2, y+2);
-                    g.DrawString(info, this.Font, new SolidBrush(Color.White), 1100, y);
+                    g.DrawString(info, this.Font, new SolidBrush(Color.Gray), 1100, y);
                 }
                 catch (Exception ex)
                 {
