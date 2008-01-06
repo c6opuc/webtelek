@@ -56,6 +56,7 @@ namespace MediaPortal.GUI.WebTelek
         public static WebTelek wp;
         public static int index;
         public static string channel_id;
+        int interval;
 
         public static void Start()
         {
@@ -85,7 +86,8 @@ namespace MediaPortal.GUI.WebTelek
             _bitmap = new Bitmap(600, 200);
 
             using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"), false))
-                _timer.Interval = (int)Decimal.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "osddelay", "5"))) * 1000;
+                interval = (int)Decimal.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "osddelay", "5"))) * 1000;
+            _timer.Interval = interval;
 
             try
             {
@@ -171,20 +173,32 @@ namespace MediaPortal.GUI.WebTelek
                         break;
                     case Action.ActionType.ACTION_NEXT_ITEM:
                     case Action.ActionType.ACTION_NEXT_CHANNEL:
+                    case Action.ActionType.ACTION_PAGE_UP:
                         if (wp != null)
                         {
-                            wp.PlayNext(1);
-                            wp.GetChannelData(false);
-                            this.Show(wp.DataDescriptions[index]);
+                            if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9)))
+                            {
+                                wp.PlayNext(1);
+                                wp.GetChannelData(false);
+                                this.Show(wp.DataDescriptions[index]);
+                                _timer.Interval = interval;
+                                _timer.Enabled = true;
+                            }
                         }
                         break;
                     case Action.ActionType.ACTION_PREV_CHANNEL:
                     case Action.ActionType.ACTION_PREV_ITEM:
+                    case Action.ActionType.ACTION_PAGE_DOWN:
                         if (wp != null)
                         {
-                            wp.PlayNext(-1);
-                            wp.GetChannelData(false);
-                            this.Show(wp.DataDescriptions[index]);
+                            if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9)))
+                            {
+                                wp.PlayNext(-1);
+                                wp.GetChannelData(false);
+                                this.Show(wp.DataDescriptions[index]);
+                                _timer.Interval = interval;
+                                _timer.Enabled = true;
+                            }
                         }
                         break;
                     default:
