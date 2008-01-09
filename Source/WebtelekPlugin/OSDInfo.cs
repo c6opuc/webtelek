@@ -167,7 +167,6 @@ namespace MediaPortal.GUI.WebTelek
                                         this.Show(wp.DataDescriptions[index]);
                                     }
                                 }
-                                //_timer.Interval = 5000;
                                 _timer.Enabled = true;
                             }
                         break;
@@ -180,9 +179,11 @@ namespace MediaPortal.GUI.WebTelek
                             {
                                 wp.PlayNext(1);
                                 wp.GetChannelData(false);
+                                _timer.Stop();
                                 this.Show(wp.DataDescriptions[index]);
                                 _timer.Interval = interval;
                                 _timer.Enabled = true;
+                                _timer.Start();
                             }
                         }
                         break;
@@ -195,9 +196,11 @@ namespace MediaPortal.GUI.WebTelek
                             {
                                 wp.PlayNext(-1);
                                 wp.GetChannelData(false);
+                                _timer.Stop();
                                 this.Show(wp.DataDescriptions[index]);
                                 _timer.Interval = interval;
                                 _timer.Enabled = true;
+                                _timer.Start();
                             }
                         }
                         break;
