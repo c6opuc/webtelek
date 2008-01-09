@@ -224,10 +224,6 @@ namespace MediaPortal.GUI.WebTelek
                 case Action.ActionType.ACTION_MOVE_RIGHT:
                 case Action.ActionType.ACTION_MOVE_UP:
                 case Action.ActionType.ACTION_MOVE_DOWN:
-                    //refreshCounter = 3;
-                    //_action = action;
-                    //drawOSD();
-                    //break;
                 case Action.ActionType.ACTION_SHOW_OSD:
                 case Action.ActionType.ACTION_CONTEXT_MENU:
                 case Action.ActionType.ACTION_SELECT_ITEM:
