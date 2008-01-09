@@ -117,6 +117,93 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="label10.ToolTip" xml:space="preserve">
+    <value>Этот параметр определяет длительность показа Он-Screen-Display информации. 
+OSD состоит из индикатора громкости, индикатора прокрутки записаных передач, 
+и информационного окна о текущем и будущих программах на выбраном канале.
+OSD появляется только во время проигрывания видео в полноэкранном режиме. 
+Для вызова OSD вы можете воспользоваться кнопкой ENTER на клавиатуре или 
+кнопкой OK на пульте ДУ.
+   </value>
+  </data>
+  <data name="OSDDelay.ToolTip" xml:space="preserve">
+    <value>Этот параметр определяет длительность показа Он-Screen-Display информации. 
+OSD состоит из индикатора громкости, индикатора прокрутки записаных передач, 
+и информационного окна о текущем и будущих программах на выбраном канале.
+OSD появляется только во время проигрывания видео в полноэкранном режиме. 
+Для вызова OSD вы можете воспользоваться кнопкой ENTER на клавиатуре или 
+кнопкой OK на пульте ДУ.
+   </value>
+  </data>
+  <data name="groupBox6.ToolTip" xml:space="preserve">
+    <value>Этот параметр определяет длительность показа Он-Screen-Display информации. 
+OSD состоит из индикатора громкости, индикатора прокрутки записаных передач, 
+и информационного окна о текущем и будущих программах на выбраном канале.
+OSD появляется только во время проигрывания видео в полноэкранном режиме. 
+Для вызова OSD вы можете воспользоваться кнопкой ENTER на клавиатуре или 
+кнопкой OK на пульте ДУ.
+   </value>
+  </data>
+  <data name="EPGNotifyCheckBox.ToolTip" xml:space="preserve">
+    <value>Напоминатель программм
+Поможет Вам не пропустить интересующее Вас телешоу 
+пока вы смотрите другой канал Webtelek+ или используете 
+Mediaportal в других целях.Вас известят звуковым сигналом 
+и информационным окном за пять минут до начала 
+интересующей Вас передачи.
+TV Notifier извещает о передачах отмеченых к напоминанию в EPG. 
+Для того чтобы отметить передачу, воспользуйтесь EPG.
+ </value>
+  </data>
+  <data name="groupBox5.ToolTip" xml:space="preserve">
+    <value>Напоминатель программм
+Поможет Вам не пропустить интересующее Вас телешоу 
+пока вы смотрите другой канал Webtelek+ или используете 
+Mediaportal в других целях.Вас известят звуковым сигналом 
+и информационным окном за пять минут до начала 
+интересующей Вас передачи.
+TV Notifier извещает о передачах отмеченых к напоминанию в EPG. 
+Для того чтобы отметить передачу, воспользуйтесь EPG.
+ </value>
+  </data>
+  <data name="EPGLoadCheckBox.ToolTip" xml:space="preserve">
+    <value>EPG - electronic program guide. 
+Используется для отображения программы передач телеканалов.
+EPG можно запустить из меню "Дополнительно" в плагине.
+Если вы не хотите использовать EPG, уберите галочку. 
+Это ускорит время начальной загрузки плагина. </value>
+  </data>
+  <data name="label7.ToolTip" xml:space="preserve">
+    <value>EPG - electronic program guide. 
+Используется для отображения программы передач телеканалов.
+EPG можно запустить из меню "Дополнительно" в плагине.
+Если вы не хотите использовать EPG, уберите галочку. 
+Это ускорит время начальной загрузки плагина. </value>
+  </data>
+  <data name="EPGdays.ToolTip" xml:space="preserve">
+    <value>EPG - electronic program guide. 
+Используется для отображения программы передач телеканалов.
+EPG можно запустить из меню "Дополнительно" в плагине.
+Если вы не хотите использовать EPG, уберите галочку. 
+Это ускорит время начальной загрузки плагина. </value>
+  </data>
+  <data name="label9.ToolTip" xml:space="preserve">
+    <value>EPG - electronic program guide. 
+Используется для отображения программы передач телеканалов.
+EPG можно запустить из меню "Дополнительно" в плагине.
+Если вы не хотите использовать EPG, уберите галочку. 
+Это ускорит время начальной загрузки плагина. </value>
+  </data>
+  <data name="groupBox4.ToolTip" xml:space="preserve">
+    <value>EPG - electronic program guide. 
+Используется для отображения программы передач телеканалов.
+EPG можно запустить из меню "Дополнительно" в плагине.
+Если вы не хотите использовать EPG, уберите галочку. 
+Это ускорит время начальной загрузки плагина. </value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

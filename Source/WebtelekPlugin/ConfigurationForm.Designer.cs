@@ -28,6 +28,7 @@ namespace MediaPortal.GUI.WebTelek
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigurationForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -63,6 +64,7 @@ namespace MediaPortal.GUI.WebTelek
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -106,6 +108,8 @@ namespace MediaPortal.GUI.WebTelek
             this.groupBox8.TabIndex = 37;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Новые версии";
+            this.toolTip.SetToolTip(this.groupBox8, "Отметьте галочку если Вы \r\nхотите получать уведомления \r\nо новых версиях WebTelek" +
+                    "+ плагина.");
             // 
             // VersionCheckBox
             // 
@@ -115,6 +119,8 @@ namespace MediaPortal.GUI.WebTelek
             this.VersionCheckBox.Size = new System.Drawing.Size(97, 17);
             this.VersionCheckBox.TabIndex = 0;
             this.VersionCheckBox.Text = "вкл. проверку";
+            this.toolTip.SetToolTip(this.VersionCheckBox, "Отметьте галочку если Вы \r\nхотите получать уведомления \r\nо новых версиях WebTelek" +
+                    "+ плагина.");
             this.VersionCheckBox.UseVisualStyleBackColor = true;
             // 
             // groupBox6
@@ -127,6 +133,7 @@ namespace MediaPortal.GUI.WebTelek
             this.groupBox6.TabIndex = 13;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "OSD таймаут";
+            this.toolTip.SetToolTip(this.groupBox6, resources.GetString("groupBox6.ToolTip"));
             this.groupBox6.Enter += new System.EventHandler(this.groupBox6_Enter);
             // 
             // label10
@@ -137,6 +144,7 @@ namespace MediaPortal.GUI.WebTelek
             this.label10.Size = new System.Drawing.Size(28, 13);
             this.label10.TabIndex = 35;
             this.label10.Text = "сек.";
+            this.toolTip.SetToolTip(this.label10, resources.GetString("label10.ToolTip"));
             // 
             // OSDDelay
             // 
@@ -155,6 +163,7 @@ namespace MediaPortal.GUI.WebTelek
             this.OSDDelay.Size = new System.Drawing.Size(44, 20);
             this.OSDDelay.TabIndex = 34;
             this.OSDDelay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.OSDDelay, resources.GetString("OSDDelay.ToolTip"));
             this.OSDDelay.Value = new decimal(new int[] {
             5,
             0,
@@ -172,6 +181,8 @@ namespace MediaPortal.GUI.WebTelek
             this.groupBox7.TabIndex = 15;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Сетевой таймаут";
+            this.toolTip.SetToolTip(this.groupBox7, "Этот параметр определяет сколько секунд плагин \r\nбудет пытаться соединиться с сер" +
+                    "вером WebTelek+.\r\nМеняйте этот параметр только когда это необходимо.\r\n");
             // 
             // label12
             // 
@@ -181,6 +192,8 @@ namespace MediaPortal.GUI.WebTelek
             this.label12.Size = new System.Drawing.Size(28, 13);
             this.label12.TabIndex = 36;
             this.label12.Text = "сек.";
+            this.toolTip.SetToolTip(this.label12, "Этот параметр определяет сколько секунд плагин \r\nбудет пытаться соединиться с сер" +
+                    "вером WebTelek+.\r\nМеняйте этот параметр только когда это необходимо.\r\n");
             // 
             // NetDelay
             // 
@@ -199,6 +212,8 @@ namespace MediaPortal.GUI.WebTelek
             this.NetDelay.Size = new System.Drawing.Size(44, 20);
             this.NetDelay.TabIndex = 0;
             this.NetDelay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.NetDelay, "Этот параметр определяет сколько секунд плагин \r\nбудет пытаться соединиться с сер" +
+                    "вером WebTelek+.\r\nМеняйте этот параметр только когда это необходимо.\r\n");
             this.NetDelay.Value = new decimal(new int[] {
             5,
             0,
@@ -214,6 +229,7 @@ namespace MediaPortal.GUI.WebTelek
             this.groupBox5.TabIndex = 12;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "TV Notify";
+            this.toolTip.SetToolTip(this.groupBox5, resources.GetString("groupBox5.ToolTip"));
             // 
             // EPGNotifyCheckBox
             // 
@@ -225,6 +241,7 @@ namespace MediaPortal.GUI.WebTelek
             this.EPGNotifyCheckBox.TabIndex = 30;
             this.EPGNotifyCheckBox.Text = "Напоминатель программ";
             this.EPGNotifyCheckBox.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolTip.SetToolTip(this.EPGNotifyCheckBox, resources.GetString("EPGNotifyCheckBox.ToolTip"));
             this.EPGNotifyCheckBox.UseVisualStyleBackColor = true;
             this.EPGNotifyCheckBox.CheckedChanged += new System.EventHandler(this.EPGNotifyCheckBox_CheckedChanged_1);
             // 
@@ -240,6 +257,7 @@ namespace MediaPortal.GUI.WebTelek
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "EPG";
+            this.toolTip.SetToolTip(this.groupBox4, resources.GetString("groupBox4.ToolTip"));
             // 
             // EPGLoadCheckBox
             // 
@@ -249,6 +267,7 @@ namespace MediaPortal.GUI.WebTelek
             this.EPGLoadCheckBox.Size = new System.Drawing.Size(139, 17);
             this.EPGLoadCheckBox.TabIndex = 30;
             this.EPGLoadCheckBox.Text = "Загружать программу";
+            this.toolTip.SetToolTip(this.EPGLoadCheckBox, resources.GetString("EPGLoadCheckBox.ToolTip"));
             this.EPGLoadCheckBox.UseVisualStyleBackColor = true;
             // 
             // label7
@@ -259,6 +278,7 @@ namespace MediaPortal.GUI.WebTelek
             this.label7.Size = new System.Drawing.Size(84, 13);
             this.label7.TabIndex = 27;
             this.label7.Text = "Программа на ";
+            this.toolTip.SetToolTip(this.label7, resources.GetString("label7.ToolTip"));
             // 
             // EPGdays
             // 
@@ -277,6 +297,7 @@ namespace MediaPortal.GUI.WebTelek
             this.EPGdays.Size = new System.Drawing.Size(42, 20);
             this.EPGdays.TabIndex = 28;
             this.EPGdays.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.EPGdays, resources.GetString("EPGdays.ToolTip"));
             this.EPGdays.Value = new decimal(new int[] {
             1,
             0,
@@ -291,6 +312,7 @@ namespace MediaPortal.GUI.WebTelek
             this.label9.Size = new System.Drawing.Size(22, 13);
             this.label9.TabIndex = 29;
             this.label9.Text = "дн.";
+            this.toolTip.SetToolTip(this.label9, resources.GetString("label9.ToolTip"));
             // 
             // CustomButton
             // 
@@ -542,5 +564,6 @@ namespace MediaPortal.GUI.WebTelek
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.CheckBox VersionCheckBox;
         private System.Windows.Forms.CheckBox EPGLoadCheckBox;
+        private System.Windows.Forms.ToolTip toolTip;
     }
 }
