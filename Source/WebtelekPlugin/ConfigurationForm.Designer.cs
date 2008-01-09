@@ -321,6 +321,9 @@ namespace MediaPortal.GUI.WebTelek
             this.CustomButton.Size = new System.Drawing.Size(100, 23);
             this.CustomButton.TabIndex = 10;
             this.CustomButton.Text = "Другие каналы";
+            this.toolTip.SetToolTip(this.CustomButton, "Здесь Вы сможете добавить  Ваши любимые видео- и \r\nтелеканалы найденые на простор" +
+                    "ах Интернета. \r\nК примеру, Вы сможете добавить бесплатные каналы \r\nопубликованые" +
+                    " на www.webtelek.com.\r\n");
             this.CustomButton.UseVisualStyleBackColor = true;
             this.CustomButton.Click += new System.EventHandler(this.CustomButton_Click);
             // 
