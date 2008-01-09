@@ -54,6 +54,9 @@ namespace MediaPortal.GUI.WebTelek
                 string epgnotify = Convert.ToString(xmlreader.GetValueAsString("Account", "epgnotify", "false"));
                 string osddelay = Convert.ToString(xmlreader.GetValueAsString("Account", "osddelay", "5"));
                 string netdelay = Convert.ToString(xmlreader.GetValueAsString("Account", "netdelay", "15"));
+                string epgload = Convert.ToString(xmlreader.GetValueAsString("Account", "epgload", "true"));
+                string versioncheck = Convert.ToString(xmlreader.GetValueAsString("Account", "versioncheck", "true"));
+
                 textBox1.Text = username;
                 textBox2.Text = password;
 
@@ -61,6 +64,8 @@ namespace MediaPortal.GUI.WebTelek
                 OSDDelay.Value = Decimal.Parse(osddelay);
                 NetDelay.Value = Decimal.Parse(netdelay);
                 EPGNotifyCheckBox.Checked = Boolean.Parse(epgnotify);
+                EPGLoadCheckBox.Checked = Boolean.Parse(epgload);
+                VersionCheckBox.Checked = Boolean.Parse(versioncheck);
 
                 ArrayList streamZones = new ArrayList();
                 ArrayList timeZones = new ArrayList();
@@ -131,6 +136,8 @@ namespace MediaPortal.GUI.WebTelek
                 writer.SetValue("Account", "epgnotify", EPGNotifyCheckBox.Checked.ToString().Trim());
                 writer.SetValue("Account", "osddelay", OSDDelay.Value.ToString().Trim());
                 writer.SetValue("Account", "netdelay", NetDelay.Value.ToString().Trim());
+                writer.SetValue("Account", "epgload", EPGLoadCheckBox.Checked.ToString().Trim());
+                writer.SetValue("Account", "versioncheck", VersionCheckBox.Checked.ToString().Trim());
             }
             this.Dispose(true);
         }
@@ -225,6 +232,7 @@ namespace MediaPortal.GUI.WebTelek
         {
 
         }
+
                    
     }
 }
