@@ -182,7 +182,8 @@ namespace MediaPortal.GUI.WebTelek
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Сетевой таймаут";
             this.toolTip.SetToolTip(this.groupBox7, "Этот параметр определяет сколько секунд плагин \r\nбудет пытаться соединиться с сер" +
-                    "вером WebTelek+.\r\nМеняйте этот параметр только когда это необходимо.\r\n");
+                    "вером WebTelek+.\r\nМеняйте этот параметр только когда это необходимо и \r\nтолько е" +
+                    "слы Вы знаете что Вы делаете.");
             // 
             // label12
             // 
@@ -193,7 +194,8 @@ namespace MediaPortal.GUI.WebTelek
             this.label12.TabIndex = 36;
             this.label12.Text = "сек.";
             this.toolTip.SetToolTip(this.label12, "Этот параметр определяет сколько секунд плагин \r\nбудет пытаться соединиться с сер" +
-                    "вером WebTelek+.\r\nМеняйте этот параметр только когда это необходимо.\r\n");
+                    "вером WebTelek+.\r\nМеняйте этот параметр только когда это необходимо и \r\nтолько е" +
+                    "слы Вы знаете что Вы делаете.");
             // 
             // NetDelay
             // 
@@ -213,7 +215,8 @@ namespace MediaPortal.GUI.WebTelek
             this.NetDelay.TabIndex = 0;
             this.NetDelay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.toolTip.SetToolTip(this.NetDelay, "Этот параметр определяет сколько секунд плагин \r\nбудет пытаться соединиться с сер" +
-                    "вером WebTelek+.\r\nМеняйте этот параметр только когда это необходимо.\r\n");
+                    "вером WebTelek+.\r\nМеняйте этот параметр только когда это необходимо и \r\nтолько е" +
+                    "слы Вы знаете что Вы делаете.");
             this.NetDelay.Value = new decimal(new int[] {
             5,
             0,
@@ -322,8 +325,8 @@ namespace MediaPortal.GUI.WebTelek
             this.CustomButton.TabIndex = 10;
             this.CustomButton.Text = "Другие каналы";
             this.toolTip.SetToolTip(this.CustomButton, "Здесь Вы сможете добавить  Ваши любимые видео- и \r\nтелеканалы найденые на простор" +
-                    "ах Интернета. \r\nК примеру, Вы сможете добавить бесплатные каналы \r\nопубликованые" +
-                    " на www.webtelek.com.\r\n");
+                    "ах Интернета. \r\nК примеру, Вы сможете добавить бесплатные каналы, \r\nопубликованы" +
+                    "е на www.webtelek.com.");
             this.CustomButton.UseVisualStyleBackColor = true;
             this.CustomButton.Click += new System.EventHandler(this.CustomButton_Click);
             // 
@@ -489,6 +492,12 @@ namespace MediaPortal.GUI.WebTelek
             this.linkLabel1.Text = "© 6opuc (Borys Saulyak)";
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Blue;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // toolTip
+            // 
+            this.toolTip.AutoPopDelay = 10000;
+            this.toolTip.InitialDelay = 500;
+            this.toolTip.ReshowDelay = 100;
             // 
             // ConfigurationForm
             // 
