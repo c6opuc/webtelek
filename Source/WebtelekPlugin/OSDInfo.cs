@@ -181,6 +181,7 @@ namespace MediaPortal.GUI.WebTelek
                                 wp.GetChannelData(false);
                                 _timer.Stop();
                                 this.Show(wp.DataDescriptions[index]);
+                                wp.PlayNext(0);
                                 _timer.Interval = interval;
                                 _timer.Enabled = true;
                                 _timer.Start();
@@ -198,6 +199,7 @@ namespace MediaPortal.GUI.WebTelek
                                 wp.GetChannelData(false);
                                 _timer.Stop();
                                 this.Show(wp.DataDescriptions[index]);
+                                wp.PlayNext(0);
                                 _timer.Interval = interval;
                                 _timer.Enabled = true;
                                 _timer.Start();
