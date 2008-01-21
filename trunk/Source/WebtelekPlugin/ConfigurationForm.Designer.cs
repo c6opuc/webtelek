@@ -150,7 +150,7 @@ namespace MediaPortal.GUI.WebTelek
             // 
             this.OSDDelay.Location = new System.Drawing.Point(9, 14);
             this.OSDDelay.Maximum = new decimal(new int[] {
-            20,
+            60,
             0,
             0,
             0});
@@ -183,7 +183,7 @@ namespace MediaPortal.GUI.WebTelek
             this.groupBox7.Text = "Сетевой таймаут";
             this.toolTip.SetToolTip(this.groupBox7, "Этот параметр определяет сколько секунд плагин \r\nбудет пытаться соединиться с сер" +
                     "вером WebTelek+.\r\nМеняйте этот параметр только когда это необходимо и \r\nтолько е" +
-                    "слы Вы знаете что Вы делаете.");
+                    "сли Вы знаете что Вы делаете.");
             // 
             // label12
             // 
@@ -195,13 +195,13 @@ namespace MediaPortal.GUI.WebTelek
             this.label12.Text = "сек.";
             this.toolTip.SetToolTip(this.label12, "Этот параметр определяет сколько секунд плагин \r\nбудет пытаться соединиться с сер" +
                     "вером WebTelek+.\r\nМеняйте этот параметр только когда это необходимо и \r\nтолько е" +
-                    "слы Вы знаете что Вы делаете.");
+                    "сли Вы знаете что Вы делаете.");
             // 
             // NetDelay
             // 
             this.NetDelay.Location = new System.Drawing.Point(9, 13);
             this.NetDelay.Maximum = new decimal(new int[] {
-            30,
+            60,
             0,
             0,
             0});
@@ -216,7 +216,7 @@ namespace MediaPortal.GUI.WebTelek
             this.NetDelay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.toolTip.SetToolTip(this.NetDelay, "Этот параметр определяет сколько секунд плагин \r\nбудет пытаться соединиться с сер" +
                     "вером WebTelek+.\r\nМеняйте этот параметр только когда это необходимо и \r\nтолько е" +
-                    "слы Вы знаете что Вы делаете.");
+                    "сли Вы знаете что Вы делаете.");
             this.NetDelay.Value = new decimal(new int[] {
             5,
             0,
