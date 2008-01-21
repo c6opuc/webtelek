@@ -45,6 +45,7 @@ namespace MediaPortal.GUI.WebTelek
         Bitmap _top;
         Bitmap _bitmap;
         Timer _timer = new Timer();
+        Timer _playtimer = new Timer();
         Form _parent;
         static bool _enabled;
         static OSDInfo _osd = null;
@@ -109,6 +110,7 @@ namespace MediaPortal.GUI.WebTelek
             _parent.LocationChanged += _losc;
             _parent.SizeChanged += _losc;
             _timer.Tick += new EventHandler(_timer_Tick);
+            _playtimer.Tick += new EventHandler(_playtimer_Tick);
             g_Player.PlayBackEnded += _gpeh;//TODO: Does not work as expected, add g_Player.PlayBackStopped  += _gpeh;?
             _ahandler = new OnActionHandler(GUIWindowManager_OnNewAction);
             GUIWindowManager.OnNewAction += _ahandler;
@@ -181,7 +183,10 @@ namespace MediaPortal.GUI.WebTelek
                                 wp.GetChannelData(false);
                                 _timer.Stop();
                                 this.Show(wp.DataDescriptions[index]);
-                                wp.PlayNext(0);
+                                _playtimer.Enabled = false;
+                                _playtimer.Interval = 1000;
+                                _playtimer.Enabled = true;
+                                _playtimer.Start();
                                 _timer.Interval = interval;
                                 _timer.Enabled = true;
                                 _timer.Start();
@@ -199,7 +204,10 @@ namespace MediaPortal.GUI.WebTelek
                                 wp.GetChannelData(false);
                                 _timer.Stop();
                                 this.Show(wp.DataDescriptions[index]);
-                                wp.PlayNext(0);
+                                _playtimer.Stop();
+                                _playtimer.Interval = 1000;
+                                _playtimer.Enabled = true;
+                                _playtimer.Start();
                                 _timer.Interval = interval;
                                 _timer.Enabled = true;
                                 _timer.Start();
@@ -237,6 +245,14 @@ namespace MediaPortal.GUI.WebTelek
         protected virtual void _timer_Tick(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        protected virtual void _playtimer_Tick(object sender, EventArgs e)
+        {
+            //string dir = Directory.GetCurrentDirectory();
+            //File.AppendAllText(dir + @"\webtelek.log", "timer has gone\n");
+            _playtimer.Stop();
+            wp.PlayNext(0);
         }
 
         private new void Show()
