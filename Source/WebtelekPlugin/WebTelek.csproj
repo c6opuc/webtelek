@@ -85,6 +85,9 @@
     <Compile Include="CustomChannel.Designer.cs">
       <DependentUpon>CustomChannel.cs</DependentUpon>
     </Compile>
+    <Compile Include="TVGuide\TVGuide.cs" />
+    <Compile Include="TVGuide\TVGuideBase.cs" />
+    <Compile Include="TVGuide\TVProgramInfo.cs" />
     <Compile Include="WebTelekArchiveXML.cs" />
     <Compile Include="WebTelekHTTPClient.cs" />
     <Compile Include="WebTelekKinozalXML.cs" />
