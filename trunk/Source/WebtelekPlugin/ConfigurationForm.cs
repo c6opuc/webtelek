@@ -56,6 +56,8 @@ namespace MediaPortal.GUI.WebTelek
                 string netdelay = Convert.ToString(xmlreader.GetValueAsString("Account", "netdelay", "15"));
                 string epgload = Convert.ToString(xmlreader.GetValueAsString("Account", "epgload", "true"));
                 string versioncheck = Convert.ToString(xmlreader.GetValueAsString("Account", "versioncheck", "true"));
+                string switchtimeout = Convert.ToString(xmlreader.GetValueAsString("Account", "switchtimeout", "1"));
+                string switchonokonly = Convert.ToString(xmlreader.GetValueAsString("Account", "switchonokonly", "false"));
 
                 textBox1.Text = username;
                 textBox2.Text = password;
@@ -66,6 +68,10 @@ namespace MediaPortal.GUI.WebTelek
                 EPGNotifyCheckBox.Checked = Boolean.Parse(epgnotify);
                 EPGLoadCheckBox.Checked = Boolean.Parse(epgload);
                 VersionCheckBox.Checked = Boolean.Parse(versioncheck);
+                SwitchTimeout.Value = Decimal.Parse(switchtimeout);
+                SwitchOnOKOnly.Checked = Boolean.Parse(switchonokonly);
+
+                if (Boolean.Parse(switchonokonly)) SwitchTimeout.Enabled = false;
 
                 ArrayList streamZones = new ArrayList();
                 ArrayList timeZones = new ArrayList();
@@ -138,6 +144,8 @@ namespace MediaPortal.GUI.WebTelek
                 writer.SetValue("Account", "netdelay", NetDelay.Value.ToString().Trim());
                 writer.SetValue("Account", "epgload", EPGLoadCheckBox.Checked.ToString().Trim());
                 writer.SetValue("Account", "versioncheck", VersionCheckBox.Checked.ToString().Trim());
+                writer.SetValue("Account", "switchtimeout",  SwitchTimeout.Value.ToString().Trim());
+                writer.SetValue("Account", "switchonokonly", SwitchOnOKOnly.Checked.ToString().Trim());
             }
             this.Dispose(true);
         }
@@ -230,6 +238,13 @@ namespace MediaPortal.GUI.WebTelek
 
         private void groupBox6_Enter(object sender, EventArgs e)
         {
+
+        }
+
+        private void SwitchOnOKOnly_CheckedChanged(object sender, EventArgs e)
+        {
+            if (SwitchOnOKOnly.Checked) SwitchTimeout.Enabled = false;
+            else SwitchTimeout.Enabled = true;
 
         }
 

@@ -46,6 +46,7 @@ namespace MediaPortal.GUI.WebTelek
         Bitmap _bitmap;
         Timer _timer = new Timer();
         Timer _playtimer = new Timer();
+        Boolean _changeOnOKonly = false;
         Form _parent;
         static bool _enabled;
         static OSDInfo _osd = null;
@@ -87,8 +88,12 @@ namespace MediaPortal.GUI.WebTelek
             _bitmap = new Bitmap(600, 200);
 
             using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"), false))
-                interval = (int)Decimal.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "osddelay", "5"))) * 1000;
-            _timer.Interval = interval;
+            {
+                _timer.Interval = (int)Decimal.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "osddelay", "5"))) * 1000;
+                _playtimer.Interval = (int)Decimal.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "switchtimeout", "1"))) * 1000;
+                interval = _timer.Interval;
+                _changeOnOKonly = Boolean.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "switchonokonly", "true")));
+            }
 
             try
             {
@@ -152,7 +157,6 @@ namespace MediaPortal.GUI.WebTelek
                 {
                     case Action.ActionType.ACTION_SHOW_OSD:
                     case Action.ActionType.ACTION_CONTEXT_MENU:
-                    case Action.ActionType.ACTION_SELECT_ITEM:
                         if (_enabled)
                             if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9)))
                             {
@@ -179,12 +183,11 @@ namespace MediaPortal.GUI.WebTelek
                         {
                             if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9)))
                             {
-                                wp.PlayNext(1);
+                                wp.PlayNext(1,false);
                                 wp.GetChannelData(false);
                                 _timer.Stop();
                                 this.Show(wp.DataDescriptions[index]);
                                 _playtimer.Enabled = false;
-                                _playtimer.Interval = 1000;
                                 _playtimer.Enabled = true;
                                 _playtimer.Start();
                                 _timer.Interval = interval;
@@ -200,18 +203,28 @@ namespace MediaPortal.GUI.WebTelek
                         {
                             if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9)))
                             {
-                                wp.PlayNext(-1);
+                                wp.PlayNext(-1,false);
                                 wp.GetChannelData(false);
                                 _timer.Stop();
                                 this.Show(wp.DataDescriptions[index]);
                                 _playtimer.Stop();
-                                _playtimer.Interval = 1000;
                                 _playtimer.Enabled = true;
                                 _playtimer.Start();
                                 _timer.Interval = interval;
                                 _timer.Enabled = true;
                                 _timer.Start();
                             }
+                        }
+                        break;
+                    case Action.ActionType.ACTION_SELECT_ITEM:
+                        if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9)))
+                        {
+                            if (_changeOnOKonly) wp.PlayNext(0, false);
+                            _timer.Stop();
+                            this.Show(wp.DataDescriptions[index]);
+                            _timer.Interval = interval;
+                            _timer.Enabled = true;
+                            _timer.Start();
                         }
                         break;
                     default:
@@ -251,8 +264,8 @@ namespace MediaPortal.GUI.WebTelek
         {
             //string dir = Directory.GetCurrentDirectory();
             //File.AppendAllText(dir + @"\webtelek.log", "timer has gone\n");
-            _playtimer.Stop();
-            wp.PlayNext(0);
+                _playtimer.Stop();
+                wp.PlayNext(0, _changeOnOKonly);
         }
 
         private new void Show()
