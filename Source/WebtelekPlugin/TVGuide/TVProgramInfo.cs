@@ -45,15 +45,15 @@ namespace MediaPortal.GUI.TV
     [SkinControlAttribute(14)]     protected GUILabelControl lblProgramTime = null;
     [SkinControlAttribute(13)]     protected GUIFadeLabel lblProgramTitle = null;
     [SkinControlAttribute(16)]     protected GUIFadeLabel lblProgramChannel = null;
-    [SkinControlAttribute(2)]      protected GUIButtonControl btnRecord = null;
-    [SkinControlAttribute(3)]      protected GUIButtonControl btnAdvancedRecord = null;
-    [SkinControlAttribute(4)]      protected GUIButtonControl btnKeep = null;
+    // [SkinControlAttribute(2)]      protected GUIButtonControl btnRecord = null;
+    // [SkinControlAttribute(3)]      protected GUIButtonControl btnAdvancedRecord = null;
+    // [SkinControlAttribute(4)]      protected GUIButtonControl btnKeep = null;
     [SkinControlAttribute(5)]      protected GUIToggleButtonControl btnNotify = null;
     [SkinControlAttribute(10)]     protected GUIListControl lstUpcomingEpsiodes = null;
-    [SkinControlAttribute(6)]      protected GUIButtonControl btnQuality = null;
-    [SkinControlAttribute(7)]      protected GUIButtonControl btnEpisodes = null;
-    [SkinControlAttribute(8)]      protected GUIButtonControl btnPreRecord = null;
-    [SkinControlAttribute(9)]      protected GUIButtonControl btnPostRecord = null;
+    // [SkinControlAttribute(6)]      protected GUIButtonControl btnQuality = null;
+    // [SkinControlAttribute(7)]      protected GUIButtonControl btnEpisodes = null;
+    // [SkinControlAttribute(8)]      protected GUIButtonControl btnPreRecord = null;
+    // [SkinControlAttribute(9)]      protected GUIButtonControl btnPostRecord = null;
 
     static TVProgram currentProgram = null;
     public TVProgramInfo()
@@ -173,6 +173,7 @@ namespace MediaPortal.GUI.TV
 
       if (bRecording)
       {
+/*
         btnRecord.Label = GUILocalizeStrings.Get(1039);//dont record
         btnAdvancedRecord.Disabled = true;
         btnKeep.Disabled = false;
@@ -180,9 +181,11 @@ namespace MediaPortal.GUI.TV
         btnEpisodes.Disabled = !bSeries;
         btnPreRecord.Disabled = false;
         btnPostRecord.Disabled = false;
+*/
       }
       else
       {
+/*
         btnRecord.Label = GUILocalizeStrings.Get(264);//record
         btnAdvancedRecord.Disabled = false;
         btnKeep.Disabled = true;
@@ -190,12 +193,13 @@ namespace MediaPortal.GUI.TV
         btnEpisodes.Disabled = true;
         btnPreRecord.Disabled = true;
         btnPostRecord.Disabled = true;
+*/
       }
 
-      if (bNoPaddingFront)
-        btnPreRecord.Disabled = true;
-      if (bNoPaddingEnd)
-        btnPostRecord.Disabled = true;
+//      if (bNoPaddingFront)
+//        btnPreRecord.Disabled = true;
+//      if (bNoPaddingEnd)
+//        btnPostRecord.Disabled = true;
 
       List<TVNotify> notifies = new List<TVNotify>();
       TVDatabase.GetNotifies(notifies, false);
@@ -281,6 +285,7 @@ namespace MediaPortal.GUI.TV
 
     protected override void OnClicked(int controlId, GUIControl control, MediaPortal.GUI.Library.Action.ActionType actionType)
     {
+/* 
       if (control == btnPreRecord)
         OnPreRecordInterval();
       if (control == btnPostRecord)
@@ -295,6 +300,7 @@ namespace MediaPortal.GUI.TV
         OnRecordProgram(currentProgram);
       if (control == btnAdvancedRecord)
         OnAdvancedRecord();
+*/
       if (control == btnNotify)
         OnNotify();
       if (control == lstUpcomingEpsiodes)
