@@ -31,6 +31,11 @@ namespace MediaPortal.GUI.WebTelek
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigurationForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.SwitchTimeout = new System.Windows.Forms.NumericUpDown();
+            this.SwitchOnOKOnly = new System.Windows.Forms.CheckBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.VersionCheckBox = new System.Windows.Forms.CheckBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -65,12 +70,9 @@ namespace MediaPortal.GUI.WebTelek
             this.label6 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.SwitchOnOKOnly = new System.Windows.Forms.CheckBox();
-            this.SwitchTimeout = new System.Windows.Forms.NumericUpDown();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SwitchTimeout)).BeginInit();
             this.groupBox8.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OSDDelay)).BeginInit();
@@ -81,8 +83,6 @@ namespace MediaPortal.GUI.WebTelek
             ((System.ComponentModel.ISupportInitialize)(this.EPGdays)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SwitchTimeout)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -106,6 +106,75 @@ namespace MediaPortal.GUI.WebTelek
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Настройки";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.label14);
+            this.groupBox9.Controls.Add(this.label13);
+            this.groupBox9.Controls.Add(this.SwitchTimeout);
+            this.groupBox9.Controls.Add(this.SwitchOnOKOnly);
+            this.groupBox9.Location = new System.Drawing.Point(17, 278);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(299, 46);
+            this.groupBox9.TabIndex = 38;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Переключатель каналов";
+            this.toolTip.SetToolTip(this.groupBox9, resources.GetString("groupBox9.ToolTip"));
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(145, 21);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(28, 13);
+            this.label14.TabIndex = 37;
+            this.label14.Text = "сек.";
+            this.toolTip.SetToolTip(this.label14, resources.GetString("label14.ToolTip"));
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(3, 21);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(107, 13);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "Переключать через";
+            this.toolTip.SetToolTip(this.label13, resources.GetString("label13.ToolTip"));
+            // 
+            // SwitchTimeout
+            // 
+            this.SwitchTimeout.Location = new System.Drawing.Point(112, 19);
+            this.SwitchTimeout.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            this.SwitchTimeout.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.SwitchTimeout.Name = "SwitchTimeout";
+            this.SwitchTimeout.Size = new System.Drawing.Size(32, 20);
+            this.SwitchTimeout.TabIndex = 1;
+            this.toolTip.SetToolTip(this.SwitchTimeout, resources.GetString("SwitchTimeout.ToolTip"));
+            this.SwitchTimeout.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // SwitchOnOKOnly
+            // 
+            this.SwitchOnOKOnly.AutoSize = true;
+            this.SwitchOnOKOnly.Location = new System.Drawing.Point(179, 20);
+            this.SwitchOnOKOnly.Name = "SwitchOnOKOnly";
+            this.SwitchOnOKOnly.Size = new System.Drawing.Size(114, 17);
+            this.SwitchOnOKOnly.TabIndex = 0;
+            this.SwitchOnOKOnly.Text = "Только по кн. OK";
+            this.toolTip.SetToolTip(this.SwitchOnOKOnly, resources.GetString("SwitchOnOKOnly.ToolTip"));
+            this.SwitchOnOKOnly.UseVisualStyleBackColor = true;
+            this.SwitchOnOKOnly.CheckedChanged += new System.EventHandler(this.SwitchOnOKOnly_CheckedChanged);
             // 
             // groupBox8
             // 
@@ -507,73 +576,6 @@ namespace MediaPortal.GUI.WebTelek
             this.toolTip.InitialDelay = 500;
             this.toolTip.ReshowDelay = 100;
             // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.label14);
-            this.groupBox9.Controls.Add(this.label13);
-            this.groupBox9.Controls.Add(this.SwitchTimeout);
-            this.groupBox9.Controls.Add(this.SwitchOnOKOnly);
-            this.groupBox9.Location = new System.Drawing.Point(17, 278);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(299, 46);
-            this.groupBox9.TabIndex = 38;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Переключатель каналов";
-            // 
-            // SwitchOnOKOnly
-            // 
-            this.SwitchOnOKOnly.AutoSize = true;
-            this.SwitchOnOKOnly.Location = new System.Drawing.Point(179, 20);
-            this.SwitchOnOKOnly.Name = "SwitchOnOKOnly";
-            this.SwitchOnOKOnly.Size = new System.Drawing.Size(114, 17);
-            this.SwitchOnOKOnly.TabIndex = 0;
-            this.SwitchOnOKOnly.Text = "Только по кн. OK";
-            this.SwitchOnOKOnly.UseVisualStyleBackColor = true;
-            this.SwitchOnOKOnly.CheckedChanged += new System.EventHandler(this.SwitchOnOKOnly_CheckedChanged);
-            // 
-            // SwitchTimeout
-            // 
-            this.SwitchTimeout.Location = new System.Drawing.Point(112, 19);
-            this.SwitchTimeout.Maximum = new decimal(new int[] {
-            9,
-            0,
-            0,
-            0});
-            this.SwitchTimeout.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.SwitchTimeout.Name = "SwitchTimeout";
-            this.SwitchTimeout.Size = new System.Drawing.Size(32, 20);
-            this.SwitchTimeout.TabIndex = 1;
-            this.SwitchTimeout.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(3, 21);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(107, 13);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "Переключать через";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(145, 21);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(28, 13);
-            this.label14.TabIndex = 37;
-            this.label14.Text = "сек.";
-            this.toolTip.SetToolTip(this.label14, "Этот параметр определяет сколько секунд плагин \r\nбудет пытаться соединиться с сер" +
-                    "вером WebTelek+.\r\nМеняйте этот параметр только когда это необходимо и \r\nтолько е" +
-                    "сли Вы знаете что Вы делаете.");
-            // 
             // ConfigurationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -593,6 +595,9 @@ namespace MediaPortal.GUI.WebTelek
             this.Load += new System.EventHandler(this.ConfigurationForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SwitchTimeout)).EndInit();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -610,9 +615,6 @@ namespace MediaPortal.GUI.WebTelek
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SwitchTimeout)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
