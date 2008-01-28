@@ -185,8 +185,8 @@ namespace MediaPortal.GUI.WebTelek
             this.groupBox8.TabIndex = 37;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Новые версии";
-            this.toolTip.SetToolTip(this.groupBox8, "Отметьте галочку если Вы \r\nхотите получать уведомления \r\nо новых версиях WebTelek" +
-                    "+ плагина.");
+            this.toolTip.SetToolTip(this.groupBox8, "Отметьте эту галочку если Вы хотите видеть \r\nуведомления о доступных новых версия" +
+                    "х \r\nWebTelek+ плагина.");
             // 
             // VersionCheckBox
             // 
@@ -196,8 +196,8 @@ namespace MediaPortal.GUI.WebTelek
             this.VersionCheckBox.Size = new System.Drawing.Size(97, 17);
             this.VersionCheckBox.TabIndex = 0;
             this.VersionCheckBox.Text = "вкл. проверку";
-            this.toolTip.SetToolTip(this.VersionCheckBox, "Отметьте галочку если Вы \r\nхотите получать уведомления \r\nо новых версиях WebTelek" +
-                    "+ плагина.");
+            this.toolTip.SetToolTip(this.VersionCheckBox, "Отметьте эту галочку если Вы хотите видеть \r\nуведомления о доступных новых версия" +
+                    "х \r\nWebTelek+ плагина.");
             this.VersionCheckBox.UseVisualStyleBackColor = true;
             // 
             // groupBox6
@@ -260,7 +260,7 @@ namespace MediaPortal.GUI.WebTelek
             this.groupBox7.Text = "Сетевой таймаут";
             this.toolTip.SetToolTip(this.groupBox7, "Этот параметр определяет сколько секунд плагин \r\nбудет пытаться соединиться с сер" +
                     "вером WebTelek+.\r\nМеняйте этот параметр только когда это необходимо и \r\nтолько е" +
-                    "сли Вы знаете что Вы делаете.");
+                    "сли Вы знаете, что Вы делаете.");
             // 
             // label12
             // 
@@ -272,7 +272,7 @@ namespace MediaPortal.GUI.WebTelek
             this.label12.Text = "сек.";
             this.toolTip.SetToolTip(this.label12, "Этот параметр определяет сколько секунд плагин \r\nбудет пытаться соединиться с сер" +
                     "вером WebTelek+.\r\nМеняйте этот параметр только когда это необходимо и \r\nтолько е" +
-                    "сли Вы знаете что Вы делаете.");
+                    "сли Вы знаете, что Вы делаете.");
             // 
             // NetDelay
             // 
@@ -293,7 +293,7 @@ namespace MediaPortal.GUI.WebTelek
             this.NetDelay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.toolTip.SetToolTip(this.NetDelay, "Этот параметр определяет сколько секунд плагин \r\nбудет пытаться соединиться с сер" +
                     "вером WebTelek+.\r\nМеняйте этот параметр только когда это необходимо и \r\nтолько е" +
-                    "сли Вы знаете что Вы делаете.");
+                    "сли Вы знаете, что Вы делаете.");
             this.NetDelay.Value = new decimal(new int[] {
             5,
             0,
@@ -572,7 +572,7 @@ namespace MediaPortal.GUI.WebTelek
             // 
             // toolTip
             // 
-            this.toolTip.AutoPopDelay = 10000;
+            this.toolTip.AutoPopDelay = 20000;
             this.toolTip.InitialDelay = 500;
             this.toolTip.ReshowDelay = 100;
             // 
