@@ -90,7 +90,7 @@ namespace MediaPortal.GUI.WebTelek
             using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"), false))
             {
                 _timer.Interval = (int)Decimal.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "osddelay", "5"))) * 1000;
-                _changeOnOKonly = Boolean.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "switchonokonly", "true")));
+                _changeOnOKonly = Boolean.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "switchonokonly", "false")));
                 _playtimer.Interval = (int)Decimal.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "switchtimeout", "1"))) * 1000;
                 if (_changeOnOKonly) _playtimer.Interval = _timer.Interval;
                 interval = _timer.Interval;

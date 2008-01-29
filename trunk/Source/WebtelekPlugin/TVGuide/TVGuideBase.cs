@@ -2399,16 +2399,9 @@ namespace MediaPortal.GUI.TV
           dlg.AddLocalizedString(938);// View this channel
 
         dlg.AddLocalizedString(939);// Switch mode
-        if (_currentProgram != null && _currentTvChannel.Length > 0 && _currentTitle.Length > 0)
-        {
-          dlg.AddLocalizedString(264);// Record
-        }
+
         if (!_disableXMLTVImportOption)
           dlg.AddLocalizedString(937);// Reload tvguide
-        dlg.AddLocalizedString(971);// Group
-        dlg.AddLocalizedString(724);// TVGuide search
-        dlg.AddLocalizedString(603);// Scheduled TV
-        dlg.AddLocalizedString(652);// Recorded TV
 
 
         dlg.DoModal(GetID);
@@ -2416,33 +2409,6 @@ namespace MediaPortal.GUI.TV
           return;
         switch (dlg.SelectedId)
         {
-          case 652: //Recorded TV
-            GUIWindowManager.ActivateWindow((int)GUIWindow.Window.WINDOW_RECORDEDTV);
-            break;
-
-          case 603: //Scheduled TV
-            GUIWindowManager.ActivateWindow((int)GUIWindow.Window.WINDOW_SCHEDULER);
-            break;
-
-          case 724: //TVGuide search
-            GUIWindowManager.ActivateWindow((int)GUIWindow.Window.WINDOW_SEARCHTV);
-            break;
-
-          case 971: //group
-            dlg.Reset();
-            dlg.SetHeading(GUILocalizeStrings.Get(971));//Group
-            foreach (TVGroup group in GUITVHome.Navigator.Groups)
-            {
-              dlg.Add(group.GroupName);
-            }
-            dlg.DoModal(GetID);
-            if (dlg.SelectedLabel == -1)
-              return;
-            GUITVHome.Navigator.SetCurrentGroup(dlg.SelectedLabelText);
-            GetChannels();
-            Update(false);
-            SetFocus();
-            break;
 
           case 937: //import tvguide
             Import();
@@ -2462,10 +2428,6 @@ namespace MediaPortal.GUI.TV
 
           case 939: // switch mode
             OnSwitchMode();
-            break;
-
-          case 264: // record
-            OnRecordContext();
             break;
         }
       }
@@ -2492,154 +2454,67 @@ namespace MediaPortal.GUI.TV
       Update(true);
       SetFocus();
     }
-    void ShowProgramInfo()
-    {
-      if (_currentProgram == null)
-        return;
-      TVProgramInfo.CurrentProgram = _currentProgram;
-      GUIWindowManager.ActivateWindow((int)WebTelek.WebTelek.TVProgramID);
-    }
 
     void OnSelectItem()
     {
-      if (_currentProgram == null)
-        return;
-      // Selected show is not 'On'
-      if (!(_currentProgram.IsRunningAt(DateTime.Now) || _currentProgram.EndTime <= DateTime.Now))
-      {
-        ShowProgramInfo();
-        return;
-      }
-      // Stop running player
-      if (g_Player.Playing && g_Player.IsTVRecording)
-      {
-        g_Player.Stop();
-      }
-      //view this channel
-      try
-      {
-        TVRecording recFound = null;
-
-        Log.Info("TVGuide: IsAnyCardRecording: {0}", Convert.ToString(Recorder.IsAnyCardRecording()));
-
+        if (_currentProgram == null) return;
         GUIDialogMenu dlg = (GUIDialogMenu)GUIWindowManager.GetWindow((int)GUIWindow.Window.WINDOW_DIALOG_MENU);
-        if (dlg == null)
-          return;
-
-        if (Recorder.IsAnyCardRecording())
+        if (dlg == null) return;
+        dlg.Reset();
+        dlg.SetHeading(_currentProgram.Title);
+        if (!(_currentProgram.IsRunningAt(DateTime.Now) || _currentProgram.EndTime <= DateTime.Now))
         {
-          if (_recordingList == null)
-             Log.Debug("EPG: _recordingList was not available");
-
-          // If you select the program which is currently recording open a dialog to ask if you want to see it from the beginning
-          // imagine a sports event where you do not want to see the live point to be spoiled
-
-          // here a check is needed of _currentTitle == Recorder.CurrentTVRecording.Title
-          foreach (TVRecording rec in _recordingList)
-          {
-            // Take into consideration old and comming recordings! Just checking titel is not enough
-            // It could be that there is a old recording with the same title
-            if ((rec.Title == _currentProgram.Title) && (rec.StartTime <= DateTime.Now) && (rec.EndTime >= DateTime.Now))
-            {
-              recFound = rec;
-              break;
-            }
-          }
-          // We clicked on a show that is recording.
-          if (recFound != null)
-          {
-            Log.Debug("TVGuide: clicked on a currently running recording {0}", _currentProgram.Title);
-            dlg.Reset();
-            dlg.SetHeading(_currentProgram.Title);
-            dlg.AddLocalizedString(979); //Play recording from beginning
-            dlg.AddLocalizedString(980); //Play recording from live point
-            dlg.AddLocalizedString(1041); //Upcoming episodes
-            dlg.DoModal(GetID);
-
-            if (dlg.SelectedLabel == -1)
-              return;
-
-            Log.Debug("TVGuide: Found current program {0} in recording list", _currentTitle);
-            switch (dlg.SelectedId)
-            {
-              case 979: // Play recording from beginning                          
-                Recorder.StopViewing();
-                string filename = Recorder.GetRecordingFileName(recFound);
-                if (filename != string.Empty)
-                {
-                  Log.Info("TVGuide: Play recording {0} from start", _currentTitle);
-                  g_Player.Play(filename);
-                  if (g_Player.Playing)
-                  {
-                    g_Player.ShowFullScreenWindow();
-                  }
-                }
-                break;
-              case 980: // Play recording from live point
-                GUITVHome.IsTVOn = true;
-                GUITVHome.ViewChannel(recFound.Channel);
-                if (Recorder.IsViewing())
-                {
-                  if (g_Player.Playing)
-                  {
-                    Log.Info("TVGuide: Show recording {0} at live point", _currentTitle);
-                    g_Player.SeekAsolutePercentage(99);
-                  }
-                  GUIWindowManager.ActivateWindow((int)GUIWindow.Window.WINDOW_TVFULLSCREEN);
-                }
-                break;
-              case 1041:
-                ShowProgramInfo();
-                Log.Debug("TVGuide: show episodes or repeatings for current show");
-                break;
-            }
-            return;
-          }
-        } // if (Recorder.IsAnyCardRecording())
-
-        // clicked the show we're currently watching
-        if (Recorder.TVChannelName == _currentProgram.Channel)
-        {
-          Log.Debug("TVGuide: clicked on a currently running show");
-          dlg.Reset();
-          dlg.SetHeading(_currentProgram.Title);
-          dlg.AddLocalizedString(938);  //View this channel
-          dlg.AddLocalizedString(1041); //Upcoming episodes
-          dlg.DoModal(GetID);
-
-          if (dlg.SelectedLabel == -1)
-            return;
-
-          switch (dlg.SelectedId)
-          {
-            case 1041:
-              ShowProgramInfo();
-              Log.Debug("TVGuide: show episodes or repeatings for current show");
-              break;
-            case 938:
-              Log.Debug("TVGuide: switch currently running show to fullscreen");
-              if (Recorder.IsViewing())
-                GUIWindowManager.ActivateWindow((int)GUIWindow.Window.WINDOW_TVFULLSCREEN);
-              break;
-          }
+            dlg.Add("Смотреть этот канал");
+            dlg.Add("Напомнить о начале этой программы");
         }
         else
-        // zap to selected show's channel
         {
-          GUITVHome.IsTVOn = true;
-          GUITVHome.ViewChannelAndCheck(_currentProgram.Channel);
-          if (Recorder.IsViewing() && Recorder.TVChannelName == _currentProgram.Channel)
-          {
-            GUIWindowManager.ActivateWindow((int)GUIWindow.Window.WINDOW_TVFULLSCREEN);
-          }
+            dlg.Add("Смотреть этот канал");
         }
-      }
-      finally
-      {
-        if (VMR9Util.g_vmr9 != null)
-          VMR9Util.g_vmr9.Enable(true);
-      }
+        dlg.DoModal(GetID);
+        switch (dlg.SelectedId)
+        {
+            case 1:
+                GUIDialogNotify info = (GUIDialogNotify)GUIWindowManager.GetWindow((int)GUIWindow.Window.WINDOW_DIALOG_NOTIFY);
+                info.Reset();
+                info.IsOverlayAllowed = true;
+                info.SetHeading("Debug");
+                info.SetText(_currentProgram.Channel);
+                info.DoModal(GetID);
+                break;
+            case 2:
+                OnNotify();
+                break;
+            default:
+                break;
+        }
     }
+
+      void OnNotify()
+      {
+          TVNotify notification = null;
+          List<TVNotify> notifies = new List<TVNotify>();
+          TVDatabase.GetNotifies(notifies, false);
+          bool showNotify = false;
+          foreach (TVNotify notify in notifies)
+          {
+              if (notify.Program.ID == _currentProgram.ID)
+              {
+                  showNotify = true;
+                  notification = notify;
+                  break;
+              }
+          }
+          if (showNotify)
+              TVDatabase.DeleteNotify(notification);
+          else
+          {
+              TVNotify notify = new TVNotify();
+              notify.Program = _currentProgram;
+              TVDatabase.AddNotify(notify);
+          }
+          Update(true);
+      }
 
     /// <summary>
     /// "Record" via REC button
@@ -2657,8 +2532,8 @@ namespace MediaPortal.GUI.TV
         if ((tvHome != null) && (tvHome.GetID != GUIWindowManager.ActiveWindow))
           tvHome.OnAction(new Action(Action.ActionType.ACTION_RECORD, 0, 0));
       }
-      else
-        ShowProgramInfo();
+      //else
+        //ShowProgramInfo();
     }
 
     /// <summary>
@@ -2668,7 +2543,7 @@ namespace MediaPortal.GUI.TV
     {
       if (_currentProgram == null)
         return;
-      ShowProgramInfo();
+      //ShowProgramInfo();
     }
 
     void CheckRecordingConflicts()
