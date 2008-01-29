@@ -126,6 +126,7 @@ namespace MediaPortal.GUI.TV
 
     bool _byIndex = false;
 
+    public static MediaPortal.GUI.WebTelek.WebTelek wp = null;
     #endregion
 
     #region ctor
@@ -263,78 +264,6 @@ namespace MediaPortal.GUI.TV
             {
               OnSelectItem();
             }
-          }
-          break;
-
-        case Action.ActionType.ACTION_RECORD:
-          if ((GetFocusControlId() == 1) && (_cursorY > 0) && (_cursorX >= 0))
-            OnRecord();
-          break;
-
-        case Action.ActionType.ACTION_MOUSE_MOVE:
-          {
-            int x = (int)action.fAmount1;
-            int y = (int)action.fAmount2;
-            foreach (GUIControl control in controlList)
-            {
-              if (control.GetID >= (int)Controls.IMG_CHAN1 + 0 && control.GetID <= (int)Controls.IMG_CHAN1 + _channelCount)
-              {
-                if (x >= control.XPosition && x < control.XPosition + control.Width)
-                {
-                  if (y >= control.YPosition && y < control.YPosition + control.Height)
-                  {
-                    UnFocus();
-                    _cursorX = control.GetID - (int)Controls.IMG_CHAN1;
-                    _cursorY = 0;
-
-                    if (_singleChannelNumber != _cursorX + _channelOffset)
-                      Update(false);
-                    UpdateCurrentProgram();
-                    UpdateHorizontalScrollbar();
-                    UpdateVerticalScrollbar();
-                    updateSingleChannelNumber();
-                    return;
-                  }
-                }
-              }
-              if (control.GetID >= 100)
-              {
-                if (x >= control.XPosition && x < control.XPosition + control.Width)
-                {
-                  if (y >= control.YPosition && y < control.YPosition + control.Height)
-                  {
-                    int iControlId = control.GetID;
-                    if (iControlId >= 100)
-                    {
-                      iControlId -= 100;
-                      int iCursorY = (iControlId / RowID);
-                      iControlId -= iCursorY * RowID;
-                      if (iControlId % ColID == 0)
-                      {
-                        int iCursorX = (iControlId / ColID) + 1;
-                        if (iCursorY != _cursorX || iCursorX != _cursorY)
-                        {
-                          UnFocus();
-                          _cursorX = iCursorY;
-                          _cursorY = iCursorX;
-                          UpdateCurrentProgram();
-                          SetFocus();
-                          UpdateHorizontalScrollbar();
-                          UpdateVerticalScrollbar();
-                          updateSingleChannelNumber();
-                          return;
-                        }
-                        return;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-            UnFocus();
-            _cursorY = -1;
-            _cursorX = -1;
-            base.OnAction(action);
           }
           break;
 
@@ -2395,9 +2324,6 @@ namespace MediaPortal.GUI.TV
         dlg.Reset();
         dlg.SetHeading(GUILocalizeStrings.Get(498));//Menu
 
-        if (_currentTvChannel.Length > 0)
-          dlg.AddLocalizedString(938);// View this channel
-
         dlg.AddLocalizedString(939);// Switch mode
 
         if (!_disableXMLTVImportOption)
@@ -2415,16 +2341,6 @@ namespace MediaPortal.GUI.TV
             Update(false);
             SetFocus();
             break;
-
-          case 938: // view channel
-            GUITVHome.IsTVOn = true;
-            GUITVHome.ViewChannelAndCheck(_currentTvChannel);
-            if (Recorder.IsViewing() && Recorder.TVChannelName == _currentProgram.Channel)
-            {
-              GUIWindowManager.ActivateWindow((int)GUIWindow.Window.WINDOW_TVFULLSCREEN);
-            }
-            return;
-
 
           case 939: // switch mode
             OnSwitchMode();
@@ -2475,12 +2391,7 @@ namespace MediaPortal.GUI.TV
         switch (dlg.SelectedId)
         {
             case 1:
-                GUIDialogNotify info = (GUIDialogNotify)GUIWindowManager.GetWindow((int)GUIWindow.Window.WINDOW_DIALOG_NOTIFY);
-                info.Reset();
-                info.IsOverlayAllowed = true;
-                info.SetHeading("Debug");
-                info.SetText(_currentProgram.Channel);
-                info.DoModal(GetID);
+                wp.PlayChannel(_currentProgram.Channel);
                 break;
             case 2:
                 OnNotify();
@@ -2519,6 +2430,7 @@ namespace MediaPortal.GUI.TV
     /// <summary>
     /// "Record" via REC button
     /// </summary>
+/*
     void OnRecord()
     {
       if (_currentProgram == null)
@@ -2535,7 +2447,7 @@ namespace MediaPortal.GUI.TV
       //else
         //ShowProgramInfo();
     }
-
+*/
     /// <summary>
     /// "Record" entry in context menu
     /// </summary>
