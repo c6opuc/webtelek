@@ -68,6 +68,16 @@ namespace MediaPortal.GUI.TV
 
     protected override void OnPageLoad()
     {
+
+        MediaPortal.GUI.WebTelek.OSDVolume.Stop();
+        MediaPortal.GUI.WebTelek.OSDInfo.Stop();
+        MediaPortal.GUI.WebTelek.OSDProgressBar.Stop();
+        MediaPortal.GUI.WebTelek.OSDNotify.Stop();
+        MediaPortal.GUI.WebTelek.OSDVolume.Start();
+        MediaPortal.GUI.WebTelek.OSDInfo.Start();
+        MediaPortal.GUI.WebTelek.OSDProgressBar.Start();
+        MediaPortal.GUI.WebTelek.OSDNotify.Start();
+        
       base.OnPageLoad();
       CheckNewTVGuide();
       // check if there's a new TVguide.xml
