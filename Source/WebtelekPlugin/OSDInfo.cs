@@ -150,8 +150,8 @@ namespace MediaPortal.GUI.WebTelek
 
         void GUIWindowManager_OnNewAction(Action action)
         {
-            string dir = Directory.GetCurrentDirectory();
-            File.AppendAllText(dir + @"\webtelek.log", "OSD: " + action.wID.ToString() + " \n");
+            //string dir = Directory.GetCurrentDirectory();
+            //File.AppendAllText(dir + @"\webtelek.log", "OSD: " + action.wID.ToString() + " \n");
             if (g_Player.Player != null)
             {
                 switch (action.wID)
