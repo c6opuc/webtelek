@@ -2324,11 +2324,14 @@ namespace MediaPortal.GUI.TV
         dlg.Reset();
         dlg.SetHeading(GUILocalizeStrings.Get(498));//Menu
 
+        dlg.Add("Полноэкранный режим просмотра");
+
         dlg.AddLocalizedString(939);// Switch mode
 
         if (!_disableXMLTVImportOption)
           dlg.AddLocalizedString(937);// Reload tvguide
 
+        
 
         dlg.DoModal(GetID);
         if (dlg.SelectedLabel == -1)
@@ -2336,6 +2339,9 @@ namespace MediaPortal.GUI.TV
         switch (dlg.SelectedId)
         {
 
+          case 1:
+            doFullScreen();
+            break;
           case 937: //import tvguide
             Import();
             Update(false);
@@ -2371,6 +2377,15 @@ namespace MediaPortal.GUI.TV
       SetFocus();
     }
 
+   void doFullScreen()
+   {
+
+       GUIGraphicsContext.IsFullScreenVideo = true;
+       GUIWindowManager.ActivateWindow((int)GUIWindow.Window.WINDOW_FULLSCREEN_VIDEO);
+       g_Player.FullScreen = true;
+   
+   }
+
     void OnSelectItem()
     {
         if (_currentProgram == null) return;
@@ -2381,11 +2396,13 @@ namespace MediaPortal.GUI.TV
         if (!(_currentProgram.IsRunningAt(DateTime.Now) || _currentProgram.EndTime <= DateTime.Now))
         {
             dlg.Add("Смотреть этот канал");
+            dlg.Add("Полноэкранный режим просмотра");
             dlg.Add("Напомнить о начале этой программы");
         }
         else
         {
             dlg.Add("Смотреть этот канал");
+            dlg.Add("Полноэкранный режим просмотра");
         }
         dlg.DoModal(GetID);
         switch (dlg.SelectedId)
@@ -2394,6 +2411,9 @@ namespace MediaPortal.GUI.TV
                 wp.PlayChannel(_currentProgram.Channel);
                 break;
             case 2:
+                doFullScreen();
+                break;
+            case 3:
                 OnNotify();
                 break;
             default:
