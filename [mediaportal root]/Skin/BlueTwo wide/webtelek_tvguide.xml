@@ -2,7 +2,7 @@
 <window>
   <id>6927</id>
   <defaultcontrol>2</defaultcontrol>
-  <allowoverlay>no</allowoverlay>
+  <allowoverlay>yes</allowoverlay>
   <controls>
     <control>
       <description>BG</description>
@@ -74,7 +74,7 @@
       <posX>113</posX>
       <posY>120</posY>
       <width>1140</width>
-      <height>440</height>
+      <height>400</height>
       <colordiffuse>60ffffff</colordiffuse>
       <texture>-</texture>
       <animation effect="fade" time="250">WindowOpen</animation>
@@ -324,6 +324,7 @@
     </control>
     <animation effect="fade" time="250">WindowOpen</animation>
     <animation effect="fade" time="250">WindowClose</animation>
+<!--
     <control>
       <description>TV preview window</description>
       <type>videowindow</type>
@@ -337,6 +338,7 @@
       <animation effect="fade" time="250">WindowOpen</animation>
       <animation effect="fade" time="250">WindowClose</animation>
     </control>
+-->
     <control>
       <description>Horizontal scrollbar</description>
       <type>hscrollbar</type>

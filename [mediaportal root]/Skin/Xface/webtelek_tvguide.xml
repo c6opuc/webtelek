@@ -94,9 +94,9 @@
 		<type>image</type>
 		<id>2</id>
 		<posX>90</posX>
-		<posY>100</posY>
+		<posY>105</posY>
 		<width>1260</width>
-		<height>440</height>
+		<height>445</height>
 		<colordiffuse>ffffffff</colordiffuse>
 		<texture>-</texture>
 		<animation effect="fade" time="250">WindowOpen</animation>
@@ -107,8 +107,8 @@
 		<type>label</type>
 		<id>32</id>
 		<posX>436</posX>
-		<posY>100</posY>
-		<font>font10</font>
+		<posY>105</posY>
+		<font>font14</font>
 		<align>left</align>
 		<textcolor>FFFFFFFF</textcolor>
 		<animation effect="fade" time="250">WindowOpen</animation>
@@ -120,7 +120,7 @@
 		<id>33</id>
 		<posX>350</posX>
 		<posY>97</posY>
-		<width>46</width>
+		<width>61</width>
 		<height>46</height>
 		<keepaspectratio>yes</keepaspectratio>
 		<zoom>yes</zoom>
@@ -147,7 +147,7 @@
 		<type>label</type>
 		<id>40</id>
 		<posX>287</posX>
-		<posY>70</posY>
+		<posY>100</posY>
 		<font>font12</font>
 		<textcolor>ffffffff</textcolor>
 		<animation effect="fade" time="250">WindowOpen</animation>
@@ -160,7 +160,7 @@
 		<width>25</width>
 		<height>25</height>
 		<posX>49</posX>
-		<posY>73</posY>
+		<posY>103</posY>
 		<showrange>no</showrange>
 		<orientation>horizontal</orientation>
 		<align>center</align>
@@ -180,7 +180,7 @@
 		<width>25</width>
 		<height>25</height>
 		<posX>215</posX>
-		<posY>73</posY>
+		<posY>103</posY>
 		<showrange>no</showrange>
 		<orientation>horizontal</orientation>
 		<align>center</align>
@@ -198,9 +198,9 @@
 		<type>image</type>
 		<id>20</id>
 		<posX>50</posX>
-		<posY>105</posY>
+		<posY>145</posY>
 		<width>256</width>
-		<height>54</height>
+		<height>40</height>
 		<animation effect="fade" time="250">WindowOpen</animation>
 		<animation effect="fade" time="500">WindowClose</animation>
 	</control>
@@ -209,9 +209,9 @@
 		<type>image</type>
 		<id>7</id>
 		<width>49</width>
-		<height>49</height>
-		<posX>3</posX>
-		<posY>3</posY>
+		<height>36</height>
+		<posX>1</posX>
+		<posY>1</posY>
 		<zoom>no</zoom>
 		<texture>defaultVideoBig.png</texture>
 		<animation effect="fade" time="250">WindowOpen</animation>
@@ -222,10 +222,10 @@
 		<type>label</type>
 		<id>18</id>
 		<posX>60</posX>
-		<posY>14</posY>
+		<posY>7</posY>
 		<width>86</width>
 		<height>26</height>
-		<font>font13</font>
+		<font>font12</font>
 		<textcolor>FFFFFFFF</textcolor>
 		<animation effect="fade" time="250">WindowOpen</animation>
 		<animation effect="fade" time="500">WindowClose</animation>
@@ -299,8 +299,9 @@
 		<id>24</id>
 		<visible>no</visible>
 		<label>-</label>
-		<font>font14</font>
-		<textcolor>FF101010</textcolor>
+		<font>font12</font>
+		<textcolor>EEEEEEEE</textcolor>
+		<!--textcolor>FF101010</textcolor-->
 		<animation effect="fade" time="250">WindowOpen</animation>
 		<animation effect="fade" time="500">WindowClose</animation>
 	</control>
@@ -309,8 +310,8 @@
 		<type>image</type>
 		<id>25</id>
 		<posX>55</posX>
-		<posY>94</posY>
-		<height>458</height>
+		<posY>137</posY>
+		<height>385</height>
 		<colordiffuse>c0ffffff</colordiffuse>
 		<texture>tvguide_slider.png</texture>
 		<animation effect="fade" time="250">WindowOpen</animation>
@@ -322,7 +323,7 @@
 		<visible>no</visible>
 		<id>26</id>
 		<label>-</label>
-		<font>font14</font>
+		<font>font12</font>
 		<textcolor>FFFFFFFF</textcolor>
 		<animation effect="fade" time="250">WindowOpen</animation>
 		<animation effect="fade" time="500">WindowClose</animation>

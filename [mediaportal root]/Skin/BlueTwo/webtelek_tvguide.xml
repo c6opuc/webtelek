@@ -2,7 +2,7 @@
 <window>
   <id>6927</id>
   <defaultcontrol>2</defaultcontrol>
-  <allowoverlay>no</allowoverlay>
+  <allowoverlay>yes</allowoverlay>
   <controls>
     <control>
       <description>BG</description>
@@ -325,6 +325,7 @@
     <animation effect="fade" time="250">WindowOpen</animation>
     <animation effect="fade" time="250">WindowClose</animation>
 
+<!--
     <control>
       <description>TV preview window</description>
       <type>videowindow</type>
@@ -338,6 +339,7 @@
       <animation effect="fade" time="250">WindowOpen</animation>
       <animation effect="fade" time="250">WindowClose</animation>
     </control>
+-->
     
     <control>
       <description>Horizontal scrollbar</description>
