@@ -5,8 +5,75 @@
   <autohidetopbar>yes</autohidetopbar>
   <define>#header.label:  </define>
   <controls>
-    <import>common.window.xml</import>
     <import>common.time.xml</import>
+
+    <control>
+      <description>BG</description>
+      <type>image</type>
+      <id>1</id>
+      <width>1366</width>
+      <height>768</height>
+    </control>
+    <control>
+      <type>image</type>
+      <id>1</id>
+      <posX>113</posX>
+      <posY>26</posY>
+      <texture>#header.image</texture>
+      <animation effect="fade" time="250">WindowOpen</animation>
+      <animation effect="fade" time="250">WindowClose</animation>
+    </control>
+    <control>
+      <type>label</type>
+      <id>1</id>
+      <posX>398</posX>
+      <posY>93</posY>
+      <label>#header.label</label>
+      <font>font16</font>
+      <align>right</align>
+      <textcolor>White</textcolor>
+      <animation effect="fade" time="250">WindowOpen</animation>
+      <animation effect="fade" time="250">WindowClose</animation>
+    </control>
+    <control>
+      <description>Number of Files Label</description>
+      <type>label</type>
+      <id>1</id>
+      <posX>493</posX>
+      <posY>706</posY>
+      <label>#itemcount</label>
+      <align>left</align>
+      <textcolor>White</textcolor>
+      <animation effect="fade" time="250">WindowOpen</animation>
+      <animation effect="fade" time="250">WindowClose</animation>
+    </control>
+    <control>
+      <description>Selected item Label</description>
+      <type>fadelabel</type>
+      <id>1</id>
+      <posX>1280</posX>
+      <posY>630</posY>
+      <width>700</width>
+      <label>#selecteditem</label>
+      <font>font12</font>
+      <align>right</align>
+      <textcolor>White</textcolor>
+      <animation effect="fade" time="250">WindowOpen</animation>
+      <animation effect="fade" time="250">WindowClose</animation>
+    </control>
+    <control>
+      <type>image</type>
+      <id>1</id>
+      <posX>155</posX>
+      <posY>522</posY>
+      <width>217</width>
+      <height>213</height>
+      <texture>#header.hover</texture>
+      <visible>!videoplayer.usingoverlays</visible>
+      <animation effect="fade" time="250">WindowOpen</animation>
+      <animation effect="fade" time="250">WindowClose</animation>
+    </control>
+
 		<control>
 			<description>Logo</description>
 			<type>image</type>
@@ -21,7 +88,7 @@
     			<description>ChannelLogo</description>
       			<type>image</type>
       			<id>6</id>
-      			<posX>400</posX>
+      			<posX>350</posX>
       			<posY>25</posY>
       			<width>70</width>
       			<height>70</height>
@@ -35,7 +102,7 @@
 		<type>group</type>
 			<description>group element</description>			
 			<posX>10</posX>
-			<posY>130</posY>
+			<posY>110</posY>
 			<layout>StackLayout</layout>
 			<control>
 				<description>Favorites</description>
@@ -93,8 +160,8 @@
 				<description>Current category</description>
 				<type>label</type>
 				<id>5</id>
-				<posX>400</posX>
-				<posY>120</posY>
+				<posX>450</posX>
+				<posY>50</posY>
 				<label>#Header</label>
 				<font>font18</font>
 				<align>left</align>
@@ -104,10 +171,10 @@
       			<description>Channels</description>
       			<type>listcontrol</type>
       			<id>10</id>
-			<posX>400</posX>
-      			<posY>160</posY>
+			<posX>350</posX>
+      			<posY>110</posY>
       			<width>950</width>
-      			<height>500</height>
+      			<height>450</height>
 			<textXOff>30</textXOff>
 			<textYOff>2</textYOff>
 			<textXOff2>478</textXOff2>
@@ -181,6 +248,5 @@
       			<onright>7</onright>
 			<font>font14</font>
 		</control>
-
 	</controls>
 </window>
