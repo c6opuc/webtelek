@@ -88,7 +88,7 @@
       <description>Single Channel Label</description>
       <type>label</type>
       <id>32</id>
-      <posX>230</posX>
+      <posX>245</posX>
       <posY>90</posY>
       <font>font16</font>
       <align>left</align>
@@ -102,7 +102,7 @@
       <id>33</id>
       <posX>186</posX>
       <posY>80</posY>
-      <width>40</width>
+      <width>53</width>
       <height>40</height>
       <keepaspectratio>yes</keepaspectratio>
       <zoom>yes</zoom>
@@ -186,8 +186,10 @@
       <description>Channel image template</description>
       <type>image</type>
       <id>7</id>
+      <posX>3</posX>
+      <posY>5</posY>
       <width>31</width>
-      <height>31</height>
+      <height>23</height>
       <zoom>no</zoom>
       <texture>defaultVideoBig.png</texture>
       <animation effect="fade" time="250">WindowOpen</animation>
