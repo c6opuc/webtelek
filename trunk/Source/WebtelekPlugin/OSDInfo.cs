@@ -33,10 +33,12 @@ using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.Xml.Serialization;
 using System.IO;
+using System.Net;
 using System.Configuration;
 using MediaPortal.GUI.Library;
 using MediaPortal.Player;
 using MediaPortal.Configuration;
+
 
 namespace MediaPortal.GUI.WebTelek
 {
@@ -290,13 +292,34 @@ namespace MediaPortal.GUI.WebTelek
                     g.DrawString(info, f, new SolidBrush(Color.White), new RectangleF(40, 20, _bitmap.Width - 70 - 49, _bitmap.Height - 40)); 
                     if (channel_id != null)
                     {
-                        if (File.Exists(Config.GetFile(Config.Dir.Config, @"webtelek\", channel_id + ".jpg")))
+                        if (!File.Exists(@"webtelek\" + channel_id + ".jpg"))
                         {
-                            Bitmap logo = new Bitmap(Config.GetFile(Config.Dir.Config, @"webtelek\", channel_id + ".jpg"));
-                            g.DrawRectangle(new Pen(Color.Black, 2), _bitmap.Width - 70 - 40 + 17 + 2, 27 + 2, 49, 37);
-                            g.DrawImage(logo, _bitmap.Width - 70 - 40 + 17 , 27, 49, 37);
-                            g.DrawRectangle(new Pen(Color.Gray, 2), _bitmap.Width - 70 - 40 + 17, 27, 49, 37);
+                            try
+                            {
+                                WebClient client = new WebClient();
+                                client.DownloadFile(
+                                "http://www.webtelek.com/img/mediaportal/" + channel_id + ".jpg",
+                                "webtelek\\" + channel_id + ".jpg"
+                                );
+                            }
+                            catch (Exception)
+                            {
+
+                            }
                         }
+                        Bitmap logo;
+                        if (File.Exists(@"webtelek\" + channel_id + ".jpg"))
+                        {
+                            logo = new Bitmap(@"webtelek\" + channel_id + ".jpg");
+                        }
+                        else
+                        {
+                            logo = new Bitmap(@"webtelek\default.jpg");
+                        }
+                        g.DrawRectangle(new Pen(Color.Black, 2), _bitmap.Width - 70 - 40 + 17 + 2, 27 + 2, 49, 37);
+                        g.DrawImage(logo, _bitmap.Width - 70 - 40 + 17, 27, 49, 37);
+                        g.DrawRectangle(new Pen(Color.Gray, 2), _bitmap.Width - 70 - 40 + 17, 27, 49, 37);
+
                     }
 
                 }
