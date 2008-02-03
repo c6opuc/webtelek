@@ -106,11 +106,6 @@ namespace MediaPortal.GUI.TV
       TVDatabase.OnNotifiesChanged -= new MediaPortal.TV.Database.TVDatabase.OnChangedHandler(TVDatabase_On_notifyListChanged);
       ConflictManager.OnConflictsUpdated -= new MediaPortal.TV.Recording.ConflictManager.OnConflictsUpdatedHandler(ConflictManager_OnConflictsUpdated);
 
-      MediaPortal.GUI.WebTelek.OSDInfo.Stop();
-      MediaPortal.GUI.WebTelek.OSDVolume.Stop();
-      MediaPortal.GUI.WebTelek.OSDProgressBar.Stop();
-      MediaPortal.GUI.WebTelek.OSDNotify.Stop();
-
       base.OnPageDestroy(newWindowId);
 
       if (!GUIGraphicsContext.IsTvWindow(newWindowId))
