@@ -10,6 +10,7 @@ using System.Text;
 using System.Windows.Forms;
 using MediaPortal.GUI.Library;
 using MediaPortal.Utils;
+using MediaPortal.TV.Database;
 using MediaPortal.Configuration;
 
 namespace MediaPortal.GUI.WebTelek
@@ -246,6 +247,27 @@ namespace MediaPortal.GUI.WebTelek
             if (SwitchOnOKOnly.Checked) SwitchTimeout.Enabled = false;
             else SwitchTimeout.Enabled = true;
 
+        }
+
+        private void btnCleanAll_Click(object sender, EventArgs e)
+        {
+            // delete tvguide.xml
+            MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "MediaPortal.xml"), false);
+            string dirname = Convert.ToString(xmlreader.GetValueAsString("xmltv", "folder", ""));
+            File.Delete(dirname + @"\tvguide.xml");
+            File.Delete(dirname + @"\epglastdate.dat");
+            // delete tvguide databases
+            TVDatabase.RemovePrograms();
+            List<TVChannel> channels = new List<TVChannel>();
+            TVDatabase.GetChannels(ref channels);
+            foreach (TVChannel channel in channels)
+            {
+                TVDatabase.RemoveChannel(channel.Name);
+            }
+            
+            // delete channel thumbs
+            foreach (string file in Directory.GetFiles( Config.GetFolder(Config.Dir.Thumbs) + @"\tv\logos\","*.jpg") ) File.Delete(file);
+            MessageBox.Show("Готово!");
         }
 
                    
