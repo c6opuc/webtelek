@@ -85,6 +85,8 @@ namespace MediaPortal.GUI.WebTelek
             using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"), false))
                 _timer.Interval = (int)Decimal.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "osddelay", "5")))*1000;
 
+            _timer.Interval = 60000;
+            
             _notifiesList = new List<TVNotify>();
             TVDatabase.OnNotifiesChanged += new MediaPortal.TV.Database.TVDatabase.OnChangedHandler(OnNotifiesChanged);
             _notifytimer = new System.Windows.Forms.Timer();
@@ -221,6 +223,16 @@ namespace MediaPortal.GUI.WebTelek
         {
         }
 
+        void GUIWindowManager_OnNewAction(Action action)
+        {
+            switch (action.wID)
+            {
+                case Action.ActionType.ACTION_SELECT_ITEM:
+                    this.Hide();
+                    break;
+            }
+        }
+        
         public void Show(TVNotify notify)
         {
             this.Size = new Size(600, 200);
