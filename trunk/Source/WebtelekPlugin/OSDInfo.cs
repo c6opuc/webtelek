@@ -224,7 +224,17 @@ namespace MediaPortal.GUI.WebTelek
                         {
                             if (_changeOnOKonly) wp.PlayNext(0, false);
                             _timer.Stop();
-                            this.Show(wp.DataDescriptions[index]);
+
+                            if (wp == null)
+                            {
+                                this.Show(sched_string);
+                            }
+                            else
+                            {
+                                wp.GetChannelData(false);
+                                this.Show(wp.DataDescriptions[index]);
+                            }
+
                             _timer.Interval = interval;
                             _timer.Enabled = true;
                             _timer.Start();
