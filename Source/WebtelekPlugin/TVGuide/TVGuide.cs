@@ -115,8 +115,6 @@ namespace MediaPortal.GUI.TV
           if (GUIGraphicsContext.ShowBackground)
           {
             // stop timeshifting & viewing... 
-
-            Recorder.StopViewing();
           }
         }
       }
