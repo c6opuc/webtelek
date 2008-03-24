@@ -222,7 +222,8 @@ namespace MediaPortal.GUI.WebTelek
                     case Action.ActionType.ACTION_SELECT_ITEM:
                         if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9)))
                         {
-                            if (_changeOnOKonly) wp.PlayNext(0, false);
+
+                            if ((_changeOnOKonly) && (wp != null)) wp.PlayNext(0, false);
                             _timer.Stop();
 
                             if (wp == null)
