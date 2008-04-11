@@ -153,7 +153,7 @@ namespace MediaPortal.GUI.WebTelek
                         _timer.Enabled = false;
                         if (g_Player.Player != null)
                         {
-                            if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9)))
+                            if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.WebTelekWMP)))
                             {
                                 MediaPortal.Util.Utils.PlaySound("notify.wav", false, true);
                                 this.Show(notify);

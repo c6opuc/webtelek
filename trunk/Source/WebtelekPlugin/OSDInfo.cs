@@ -161,7 +161,7 @@ namespace MediaPortal.GUI.WebTelek
                     case Action.ActionType.ACTION_SHOW_OSD:
                     case Action.ActionType.ACTION_CONTEXT_MENU:
                         if (_enabled)
-                            if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9)))
+                            if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.WebTelekWMP)))
                             {
                                 _timer.Enabled = false;
                                 if (g_Player.FullScreen)
@@ -184,7 +184,7 @@ namespace MediaPortal.GUI.WebTelek
                     case Action.ActionType.ACTION_PAGE_UP:
                         if (wp != null)
                         {
-                            if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9)))
+                            if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.WebTelekWMP)))
                             {
                                 wp.PlayNext(1,false);
                                 wp.GetChannelData(false);
@@ -204,7 +204,7 @@ namespace MediaPortal.GUI.WebTelek
                     case Action.ActionType.ACTION_PAGE_DOWN:
                         if (wp != null)
                         {
-                            if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9)))
+                            if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.WebTelekWMP)))
                             {
                                 wp.PlayNext(-1,false);
                                 wp.GetChannelData(false);
@@ -220,7 +220,7 @@ namespace MediaPortal.GUI.WebTelek
                         }
                         break;
                     case Action.ActionType.ACTION_SELECT_ITEM:
-                        if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9)))
+                        if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.WebTelekWMP)))
                         {
 
                             if ((_changeOnOKonly) && (wp != null)) wp.PlayNext(0, false);
