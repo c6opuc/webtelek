@@ -169,7 +169,7 @@ namespace MediaPortal.GUI.WebTelek
                         case Action.ActionType.ACTION_MOVE_UP:
                         case Action.ActionType.ACTION_MOVE_DOWN:
                             if (_enabled)
-                                if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9)))
+                                if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.WebTelekWMP)))
                                 {
                                     _timer.Enabled = false;
                                     if (g_Player.FullScreen)
@@ -188,7 +188,7 @@ namespace MediaPortal.GUI.WebTelek
                         case Action.ActionType.ACTION_CONTEXT_MENU:
                         case Action.ActionType.ACTION_SELECT_ITEM:
                             if (_enabled)
-                                if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9)))
+                                if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.WebTelekWMP)))
                                 {
                                     _timer.Enabled = false;
                                     if (g_Player.FullScreen)
