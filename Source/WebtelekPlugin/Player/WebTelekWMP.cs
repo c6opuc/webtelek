@@ -29,6 +29,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
+using System.Globalization;
 using MediaPortal.TagReader;
 using MediaPortal.Util;
 using Microsoft.DirectX;
@@ -64,7 +65,7 @@ namespace MediaPortal.Player
     static AxWMPLib.AxWindowsMediaPlayer _wmp10Player = null;
     bool _needUpdate = true;
     bool _notifyPlaying = true;
-    bool _bufferCompleted = true;    
+    bool _bufferCompleted = true;
 
     public WebTelekWMP()
     {
@@ -189,8 +190,7 @@ namespace MediaPortal.Player
         _wmp10Player.currentMedia = _wmp10Player.cdromCollection.Item(iCdRomDriveNr).Playlist.get_Item(iTrack - 1);
         if (_wmp10Player.currentMedia == null) return false;
 
-          // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-          Log.Info("WebTelekPlayer:play {0}", strFile);
+        Log.Info("WebTelekPlayer:play {0}", strFile);
 
         _currentFile = strFile;
         _isCDA = true;
@@ -258,14 +258,33 @@ namespace MediaPortal.Player
     private void OnPlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
     {
       if (_wmp10Player == null) return;
+      Log.Debug("WebTelekPlayer: PlayStateChanged: {0}", _wmp10Player.playState);
       switch (_wmp10Player.playState)
       {
         case WMPLib.WMPPlayState.wmppsStopped:
           SongEnded(false);
           break;
+        case WMPLib.WMPPlayState.wmppsReady:
+            PlayEnded();
+            break;
       }
     }
 
+    private void PlayEnded()
+    {
+        _currentFile = "";
+        _isCDA = false;
+        if (_wmp10Player != null)
+        {
+            _bufferCompleted = true;
+            _wmp10Player.ClientSize = new Size(0, 0);
+            _wmp10Player.Visible = false;
+        }
+        GUIGraphicsContext.IsFullScreenVideo = false;
+        GUIGraphicsContext.IsPlaying = false;
+        _graphState = PlayState.Init;
+        GC.Collect();
+    }
     private void LoadStreamingSettings()
     {      
       using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "MediaPortal.xml")))
