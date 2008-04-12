@@ -41,7 +41,7 @@ namespace MediaPortal.GUI.WebTelek
         // Returns the name of the plugin which is shown in the plugin menu
         public string PluginName()
         {
-            return "WEBTELEK+ " + WebTelek.VERSION;
+            return "WEBTELEK";
         }
 
         // Returns the description of the plugin is shown in the plugin menu
