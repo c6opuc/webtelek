@@ -59,9 +59,11 @@ namespace MediaPortal.GUI.WebTelek
                 string versioncheck = Convert.ToString(xmlreader.GetValueAsString("Account", "versioncheck", "true"));
                 string switchtimeout = Convert.ToString(xmlreader.GetValueAsString("Account", "switchtimeout", "1"));
                 string switchonokonly = Convert.ToString(xmlreader.GetValueAsString("Account", "switchonokonly", "false"));
+                string PluginName = Convert.ToString(xmlreader.GetValueAsString("Account", "pluginname", "WEBTELEK+"));
 
                 textBox1.Text = username;
                 textBox2.Text = password;
+                txtPluginName.Text = PluginName;
 
                 EPGdays.Value = Decimal.Parse(epgdays);
                 OSDDelay.Value = Decimal.Parse(osddelay);
@@ -147,6 +149,7 @@ namespace MediaPortal.GUI.WebTelek
                 writer.SetValue("Account", "versioncheck", VersionCheckBox.Checked.ToString().Trim());
                 writer.SetValue("Account", "switchtimeout",  SwitchTimeout.Value.ToString().Trim());
                 writer.SetValue("Account", "switchonokonly", SwitchOnOKOnly.Checked.ToString().Trim());
+                writer.SetValue("Account", "pluginname", txtPluginName.Text.Trim());
             }
             this.Dispose(true);
         }
