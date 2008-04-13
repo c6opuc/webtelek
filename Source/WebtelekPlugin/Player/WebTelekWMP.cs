@@ -30,6 +30,7 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
 using System.Globalization;
+using MediaPortal;
 using MediaPortal.TagReader;
 using MediaPortal.Util;
 using Microsoft.DirectX;
@@ -94,10 +95,10 @@ namespace MediaPortal.Player
       _wmp10Player.BeginInit();
       GUIGraphicsContext.form.SuspendLayout();
       _wmp10Player.Enabled = true;
-      //System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Resource1));
+      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WebTelek.Player.Resource1));
       _wmp10Player.Location = new System.Drawing.Point(8, 16);
       _wmp10Player.Name = "axWindowsMediaPlayer1";
-      //_wmp10Player.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+      _wmp10Player.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
       _wmp10Player.Size = new System.Drawing.Size(264, 240);
       _wmp10Player.TabIndex = 0;            
 
