@@ -98,7 +98,7 @@ namespace MediaPortal.Player
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WebTelek.Player.Resource1));
       _wmp10Player.Location = new System.Drawing.Point(8, 16);
       _wmp10Player.Name = "axWindowsMediaPlayer1";
-      _wmp10Player.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+      _wmp10Player.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1OcxState")));
       _wmp10Player.Size = new System.Drawing.Size(264, 240);
       _wmp10Player.TabIndex = 0;            
 
