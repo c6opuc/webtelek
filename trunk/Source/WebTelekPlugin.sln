@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual C# Express 2005
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C# Express 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebTelek", "WebTelekPlugin\WebTelek.csproj", "{59FD049D-CEE1-4772-847E-5480386D23C1}"
 EndProject
 Global
