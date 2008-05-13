@@ -263,7 +263,7 @@ namespace MediaPortal.Player
       switch (_wmp10Player.playState)
       {
         case WMPLib.WMPPlayState.wmppsStopped:
-              if (!MediaPortal.GUI.WebTelek.WebTelek.isPlayNextActive) SongEnded(false);
+          if ( ! MediaPortal.GUI.WebTelek.WebTelek.isPlayNextActive ) SongEnded(false);
           break;
         case WMPLib.WMPPlayState.wmppsReady:
           if ( ! MediaPortal.GUI.WebTelek.WebTelek.isPlayNextActive ) PlayEnded();
