@@ -152,8 +152,6 @@ namespace MediaPortal.GUI.WebTelek
 
         void GUIWindowManager_OnNewAction(Action action)
         {
-            //string dir = Directory.GetCurrentDirectory();
-            //File.AppendAllText(dir + @"\webtelek.log", "OSD: " + action.wID.ToString() + " \n");
             if (g_Player.Player != null)
             {
                 switch (action.wID)
@@ -276,8 +274,6 @@ namespace MediaPortal.GUI.WebTelek
 
         protected virtual void _playtimer_Tick(object sender, EventArgs e)
         {
-            //string dir = Directory.GetCurrentDirectory();
-            //File.AppendAllText(dir + @"\webtelek.log", "timer has gone\n");
                 _playtimer.Stop();
                 wp.PlayNext(0, _changeOnOKonly);
         }
@@ -303,21 +299,7 @@ namespace MediaPortal.GUI.WebTelek
                     g.DrawString(info, f, new SolidBrush(Color.White), new RectangleF(40, 20, _bitmap.Width - 70 - 49, _bitmap.Height - 40)); 
                     if (channel_id != null)
                     {
-                        if (!File.Exists(@"webtelek\" + channel_id + ".jpg"))
-                        {
-                            try
-                            {
-                                WebClient client = new WebClient();
-                                client.DownloadFile(
-                                "http://www.webtelek.com/img/mediaportal/" + channel_id + ".jpg",
-                                "webtelek\\" + channel_id + ".jpg"
-                                );
-                            }
-                            catch (Exception)
-                            {
-
-                            }
-                        }
+                        WebTelek.getChannelLogo(channel_id);
                         Bitmap logo;
                         if (File.Exists(@"webtelek\" + channel_id + ".jpg"))
                         {
