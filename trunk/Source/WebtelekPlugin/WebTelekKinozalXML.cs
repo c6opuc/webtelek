@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Specialized;
 using System.IO;
+using MediaPortal.GUI.Library;
 
 namespace MediaPortal.GUI.WebTelek
 {
@@ -22,8 +23,7 @@ namespace MediaPortal.GUI.WebTelek
             }
             catch (Exception e)
             {
-                string dir = Directory.GetCurrentDirectory();
-                File.AppendAllText(dir + @"\webtelek.log", "Kinozal: " + e.ToString() + " \n");
+                Log.Error(e);
             }
         }
         public StringCollection[] getCategories()
@@ -44,14 +44,11 @@ namespace MediaPortal.GUI.WebTelek
                     
                     result[0].Add(nav2.GetAttribute("id", ""));
                     result[1].Add(nav2.GetAttribute("name", ""));
-                    //string dir = Directory.GetCurrentDirectory();
-                    //File.AppendAllText(dir + @"\webtelek.log", nav2.GetAttribute("id", "") + nav2.GetAttribute("name", ""));
                 }
             }
             catch (Exception e)
             {
-                string dir = Directory.GetCurrentDirectory();
-                File.AppendAllText(dir + @"\webtelek.log", "Kinozal getCategories: " + e.ToString() + " \n");
+                Log.Error(e);
             }
             return result;
         }
@@ -78,8 +75,7 @@ namespace MediaPortal.GUI.WebTelek
             }
             catch (Exception e)
             {
-                string dir = Directory.GetCurrentDirectory();
-                File.AppendAllText(dir + @"\webtelek.log", "Kinozal getGenres: " + e.ToString() + " \n");
+                Log.Error(e);
             }
 
             return result;
@@ -107,8 +103,7 @@ namespace MediaPortal.GUI.WebTelek
             }
             catch (Exception e)
             {
-                string dir = Directory.GetCurrentDirectory();
-                File.AppendAllText(dir + @"\webtelek.log", "Kinozal getRecords: " + e.ToString() + " \n");
+                Log.Error(e);
             }
 
             return result;
@@ -150,8 +145,7 @@ namespace MediaPortal.GUI.WebTelek
             }
             catch (Exception e)
             {
-                string dir = Directory.GetCurrentDirectory();
-                File.AppendAllText(dir + @"\webtelek.log", "Kinozal getRecord: " + e.ToString() + " \n");
+                Log.Error(e);
             }
 
             return result;

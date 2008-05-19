@@ -211,9 +211,6 @@ namespace MediaPortal.GUI.WebTelek
 
         void GUIWindowManager_OnNewAction(Action action)
         {
-            //string dir = Directory.GetCurrentDirectory();
-            //File.AppendAllText(dir + @"\webtelek.log", "OSD: " + action.wID.ToString() + " \n");
-
             switch (action.wID)
             {
                 case Action.ActionType.ACTION_BIG_STEP_FORWARD:
