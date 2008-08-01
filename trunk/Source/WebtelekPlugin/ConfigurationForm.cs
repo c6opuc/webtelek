@@ -40,7 +40,7 @@ namespace MediaPortal.GUI.WebTelek
             }
 
         }
-        
+
         public ConfigurationForm()
         {
             InitializeComponent();
@@ -82,12 +82,12 @@ namespace MediaPortal.GUI.WebTelek
                 streamZones.Add(new KeyValuePair("est", "EST - Нью-Йорк"));
                 streamZones.Add(new KeyValuePair("pst", "PST - Лос Анжелес"));
                 streamZones.Add(new KeyValuePair("msk", "MSK - Москва"));
-                
+
                 timeZones.Add(new KeyValuePair("-12", "Камчатка, GMT-12"));
                 timeZones.Add(new KeyValuePair("-11", "Самоа, GMT-11"));
                 timeZones.Add(new KeyValuePair("-10", "Гонолулу, GMT-10"));
                 timeZones.Add(new KeyValuePair("-9", "Анкоридж, GMT-9"));
-                timeZones.Add(new KeyValuePair("-8", "Лос-Анжелес, GMT-8"));
+                timeZones.Add(new KeyValuePair("-8", "Лос-Анджелес, GMT-8"));
                 timeZones.Add(new KeyValuePair("-7", "Денвер, GMT-7"));
                 timeZones.Add(new KeyValuePair("-6", "Чикаго, GMT-6"));
                 timeZones.Add(new KeyValuePair("-5", "Нью-Йорк, GMT-5"));
@@ -120,7 +120,7 @@ namespace MediaPortal.GUI.WebTelek
                 comboBox2.SelectedValue = timezone;
 
 
-              
+
             }
 
         }
@@ -135,19 +135,19 @@ namespace MediaPortal.GUI.WebTelek
             //OK Button
             string dir = Directory.GetCurrentDirectory();
             //using (MediaPortal.Profile.Settings writer = new MediaPortal.Profile.Settings(dir +  @"\webtelek_profile.xml",false) )
-            using (MediaPortal.Profile.Settings writer = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"),false) )
-            {   
-                writer.SetValue("Account", "username", textBox1.Text.Trim());                
+            using (MediaPortal.Profile.Settings writer = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"), false))
+            {
+                writer.SetValue("Account", "username", textBox1.Text.Trim());
                 writer.SetValue("Account", "password", textBox2.Text.Trim());
                 writer.SetValue("Account", "region", comboBox1.SelectedValue.ToString().Trim());
                 writer.SetValue("Account", "timezone", comboBox2.SelectedValue.ToString().Trim());
-                writer.SetValue("Account", "epgdays",  EPGdays.Value.ToString().Trim());
+                writer.SetValue("Account", "epgdays", EPGdays.Value.ToString().Trim());
                 writer.SetValue("Account", "epgnotify", EPGNotifyCheckBox.Checked.ToString().Trim());
                 writer.SetValue("Account", "osddelay", OSDDelay.Value.ToString().Trim());
                 writer.SetValue("Account", "netdelay", NetDelay.Value.ToString().Trim());
                 writer.SetValue("Account", "epgload", EPGLoadCheckBox.Checked.ToString().Trim());
                 writer.SetValue("Account", "versioncheck", VersionCheckBox.Checked.ToString().Trim());
-                writer.SetValue("Account", "switchtimeout",  SwitchTimeout.Value.ToString().Trim());
+                writer.SetValue("Account", "switchtimeout", SwitchTimeout.Value.ToString().Trim());
                 writer.SetValue("Account", "switchonokonly", SwitchOnOKOnly.Checked.ToString().Trim());
                 writer.SetValue("Account", "pluginname", txtPluginName.Text.Trim());
             }
@@ -214,7 +214,7 @@ namespace MediaPortal.GUI.WebTelek
             {
                 if (xmlreader.GetValue("plugins", "TV Notifier") == "yes" && EPGNotifyCheckBox.Checked == true)
                 {
-                    MessageBox.Show("Ñòàíäàðòíûé \"TV Notifier\" àêòèâèðîâàí. Âûêëþ÷èòå åãî ñíà÷àëà è ïåðåçàïóñòèòå \"Mediaportal Configuration\".");
+                    MessageBox.Show("Стандартный \"TV Notifier\" активирован. Выключите его сначала и перезапустите \"Mediaportal Configuration\".");
                     EPGNotifyCheckBox.Checked = false;
                 }
             }
@@ -267,12 +267,12 @@ namespace MediaPortal.GUI.WebTelek
             {
                 TVDatabase.RemoveChannel(channel.Name);
             }
-            
+
             // delete channel thumbs
-            foreach (string file in Directory.GetFiles( Config.GetFolder(Config.Dir.Thumbs) + @"\tv\logos\","*.jpg") ) File.Delete(file);
+            foreach (string file in Directory.GetFiles(Config.GetFolder(Config.Dir.Thumbs) + @"\tv\logos\", "*.jpg")) File.Delete(file);
             MessageBox.Show("Готово!");
         }
 
-                   
+
     }
 }

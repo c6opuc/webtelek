@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigurationForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.txtPluginName = new System.Windows.Forms.TextBox();
             this.btnCleanAll = new System.Windows.Forms.Button();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -73,8 +71,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.txtPluginName = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
-            this.groupBox10.SuspendLayout();
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SwitchTimeout)).BeginInit();
             this.groupBox8.SuspendLayout();
@@ -87,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.EPGdays)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox10.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -112,23 +112,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Настройки";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // groupBox10
-            // 
-            this.groupBox10.Controls.Add(this.txtPluginName);
-            this.groupBox10.Location = new System.Drawing.Point(17, 323);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(299, 53);
-            this.groupBox10.TabIndex = 40;
-            this.groupBox10.TabStop = false;
-            this.toolTip.SetToolTip(this.groupBox10, "Çäåñü Âû ìîæåòå çàäàòü íàçâàíèå ïëàãèíà.");
-            // 
-            // txtPluginName
-            // 
-            this.txtPluginName.Location = new System.Drawing.Point(6, 20);
-            this.txtPluginName.Name = "txtPluginName";
-            this.txtPluginName.Size = new System.Drawing.Size(287, 20);
-            this.txtPluginName.TabIndex = 0;
             // 
             // btnCleanAll
             // 
@@ -205,7 +188,7 @@
             this.SwitchOnOKOnly.Name = "SwitchOnOKOnly";
             this.SwitchOnOKOnly.Size = new System.Drawing.Size(114, 17);
             this.SwitchOnOKOnly.TabIndex = 0;
-            this.SwitchOnOKOnly.Text = "Только по кн. ОК";
+            this.SwitchOnOKOnly.Text = "Только по кн. OK";
             this.toolTip.SetToolTip(this.SwitchOnOKOnly, resources.GetString("SwitchOnOKOnly.ToolTip"));
             this.SwitchOnOKOnly.UseVisualStyleBackColor = true;
             this.SwitchOnOKOnly.CheckedChanged += new System.EventHandler(this.SwitchOnOKOnly_CheckedChanged);
@@ -219,8 +202,8 @@
             this.groupBox8.TabIndex = 37;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Новые версии";
-            this.toolTip.SetToolTip(this.groupBox8, "Îòìåòüòå ýòó ãàëî÷êó åñëè Âû õîòèòå âèäåòü \r\nóâåäîìëåíèÿ î äîñòóïíûõ íîâûõ âåðñèÿ" +
-                    "õ \r\nWebTelek+ ïëàãèíà.");
+            this.toolTip.SetToolTip(this.groupBox8, "Отметьте эту галочку если Вы хотите видеть \r\nуведомления о доступных новых версия" +
+                    "х \r\nWebTelek+ плагина.");
             // 
             // VersionCheckBox
             // 
@@ -230,8 +213,8 @@
             this.VersionCheckBox.Size = new System.Drawing.Size(97, 17);
             this.VersionCheckBox.TabIndex = 0;
             this.VersionCheckBox.Text = "вкл. проверку";
-            this.toolTip.SetToolTip(this.VersionCheckBox, "Отметьте эту галочку если Вы хотите видеть уведомления о доступных новых версиях " +
-                    "WebTelek+ плагина.");
+            this.toolTip.SetToolTip(this.VersionCheckBox, "Отметьте эту галочку если Вы хотите видеть \r\nуведомления о доступных новых версия" +
+                    "х \r\nWebTelek+ плагина.");
             this.VersionCheckBox.UseVisualStyleBackColor = true;
             // 
             // groupBox6
@@ -292,21 +275,21 @@
             this.groupBox7.TabIndex = 15;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Сетевой таймаут";
-            this.toolTip.SetToolTip(this.groupBox7, "Ýòîò ïàðàìåòð îïðåäåëÿåò ñêîëüêî ñåêóíä ïëàãèí \r\náóäåò ïûòàòüñÿ ñîåäèíèòüñÿ ñ ñåð" +
-                    "âåðîì WebTelek+.\r\nÌåíÿéòå ýòîò ïàðàìåòð òîëüêî êîãäà ýòî íåîáõîäèìî è \r\nòîëüêî å" +
-                    "ñëè Âû çíàåòå, ÷òî Âû äåëàåòå.");
+            this.toolTip.SetToolTip(this.groupBox7, "Этот параметр определяет сколько секунд плагин \r\nбудет пытаться соединиться с сер" +
+                    "вером WebTelek+.\r\nМеняйте этот параметр только когда это необходимо и \r\nтолько е" +
+                    "сли Вы знаете, что Вы делаете.");
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(59, 17);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(25, 13);
+            this.label12.Size = new System.Drawing.Size(28, 13);
             this.label12.TabIndex = 36;
-            this.label12.Text = "сек";
-            this.toolTip.SetToolTip(this.label12, "Ýòîò ïàðàìåòð îïðåäåëÿåò ñêîëüêî ñåêóíä ïëàãèí \r\náóäåò ïûòàòüñÿ ñîåäèíèòüñÿ ñ ñåð" +
-                    "âåðîì WebTelek+.\r\nÌåíÿéòå ýòîò ïàðàìåòð òîëüêî êîãäà ýòî íåîáõîäèìî è \r\nòîëüêî å" +
-                    "ñëè Âû çíàåòå, ÷òî Âû äåëàåòå.");
+            this.label12.Text = "сек.";
+            this.toolTip.SetToolTip(this.label12, "Этот параметр определяет сколько секунд плагин \r\nбудет пытаться соединиться с сер" +
+                    "вером WebTelek+.\r\nМеняйте этот параметр только когда это необходимо и \r\nтолько е" +
+                    "сли Вы знаете, что Вы делаете.");
             // 
             // NetDelay
             // 
@@ -325,9 +308,9 @@
             this.NetDelay.Size = new System.Drawing.Size(44, 20);
             this.NetDelay.TabIndex = 0;
             this.NetDelay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.toolTip.SetToolTip(this.NetDelay, "Этот пареметр определяет сколько секунд плагин будет пытаться соединиться с серве" +
-                    "ром WebTelek+.\r\nМеняйте этот параметр только когда это необходимо и только если " +
-                    "Вы знаете, что Вы делаете.\r\n");
+            this.toolTip.SetToolTip(this.NetDelay, "Этот параметр определяет сколько секунд плагин \r\nбудет пытаться соединиться с сер" +
+                    "вером WebTelek+.\r\nМеняйте этот параметр только когда это необходимо и \r\nтолько е" +
+                    "сли Вы знаете, что Вы делаете.");
             this.NetDelay.Value = new decimal(new int[] {
             5,
             0,
@@ -389,9 +372,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(8, 37);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 13);
+            this.label7.Size = new System.Drawing.Size(84, 13);
             this.label7.TabIndex = 27;
-            this.label7.Text = "Программа на";
+            this.label7.Text = "Программа на ";
             this.toolTip.SetToolTip(this.label7, resources.GetString("label7.ToolTip"));
             // 
             // EPGdays
@@ -423,9 +406,9 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(139, 38);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(25, 13);
+            this.label9.Size = new System.Drawing.Size(22, 13);
             this.label9.TabIndex = 29;
-            this.label9.Text = "дня";
+            this.label9.Text = "дн.";
             this.toolTip.SetToolTip(this.label9, resources.GetString("label9.ToolTip"));
             // 
             // CustomButton
@@ -435,9 +418,9 @@
             this.CustomButton.Size = new System.Drawing.Size(100, 23);
             this.CustomButton.TabIndex = 10;
             this.CustomButton.Text = "Другие каналы";
-            this.toolTip.SetToolTip(this.CustomButton, "Здесь Вы сможете добавить Ваши любимые видео- и телеканалы найденные на просторах" +
-                    " Интернета. \r\nК примеру, Вы сможете добавить бесплатные каналы, опубликованные н" +
-                    "а www.webtelek.com.");
+            this.toolTip.SetToolTip(this.CustomButton, "Здесь Вы сможете добавить  Ваши любимые видео- и \r\nтелеканалы найденые на простор" +
+                    "ах Интернета. \r\nК примеру, Вы сможете добавить бесплатные каналы, \r\nопубликованы" +
+                    "е на www.webtelek.com.");
             this.CustomButton.UseVisualStyleBackColor = true;
             this.CustomButton.Click += new System.EventHandler(this.CustomButton_Click);
             // 
@@ -546,9 +529,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(3, 70);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 13);
+            this.label4.Size = new System.Drawing.Size(79, 13);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Зона вещания";
+            this.label4.Text = "3она вещания";
             // 
             // label2
             // 
@@ -610,11 +593,29 @@
             this.toolTip.InitialDelay = 500;
             this.toolTip.ReshowDelay = 100;
             // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.txtPluginName);
+            this.groupBox10.Location = new System.Drawing.Point(17, 323);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(299, 53);
+            this.groupBox10.TabIndex = 40;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Название плагина";
+            this.toolTip.SetToolTip(this.groupBox10, "Здесь Вы можете задать название плагина.");
+            // 
+            // txtPluginName
+            // 
+            this.txtPluginName.Location = new System.Drawing.Point(6, 20);
+            this.txtPluginName.Name = "txtPluginName";
+            this.txtPluginName.Size = new System.Drawing.Size(287, 20);
+            this.txtPluginName.TabIndex = 0;
+            // 
             // ConfigurationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(357, 493);
+            this.ClientSize = new System.Drawing.Size(357, 492);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
@@ -629,8 +630,6 @@
             this.Load += new System.EventHandler(this.ConfigurationForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox10.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SwitchTimeout)).EndInit();
@@ -651,6 +650,8 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

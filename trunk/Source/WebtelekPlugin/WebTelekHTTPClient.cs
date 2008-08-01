@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Net;
 using System.Text;
 using System.Threading;
@@ -125,8 +125,8 @@ namespace MediaPortal.GUI.WebTelek
             GUIDialogNotify info = (GUIDialogNotify)GUIWindowManager.GetWindow((int)GUIWindow.Window.WINDOW_DIALOG_NOTIFY);
             info.Reset();
             info.IsOverlayAllowed = true;
-            info.SetHeading("Ошибка");
-            info.SetText("Не удалось установить связь с сервером. Проверте свои сетевые настройки.");
+            info.SetHeading("РћС€РёР±РєР°");
+            info.SetText("РќРµ СѓРґР°Р»РѕСЃСЊ СѓСЃС‚Р°РЅРѕРІРёС‚СЊ СЃРІСЏР·СЊ СЃ СЃРµСЂРІРµСЂРѕРј. РџСЂРѕРІРµСЂС‚Рµ СЃРІРѕРё СЃРµС‚РµРІС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё.");
             info.DoModal(WebTelek.PluginID);
             _timer.Dispose();
             _workerCompleted = true;

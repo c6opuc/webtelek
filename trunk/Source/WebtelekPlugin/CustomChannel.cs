@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -153,7 +153,7 @@ namespace MediaPortal.GUI.WebTelek
                 textCategory.Text.Trim() == "" ||
                 textDescription.Text.Trim() == "")
             {
-                MessageBox.Show("Все поля должны быть заполнены");
+                MessageBox.Show("Р’СЃРµ РїРѕР»СЏ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ Р·Р°РїРѕР»РЅРµРЅС‹");
                 return;
             }
             if (editBtnPressed)
