@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Net;
 using System.Xml;
 using System.Xml.XPath;
@@ -200,7 +200,7 @@ namespace MediaPortal.GUI.WebTelek
                     }
                     catch (Exception)
                     {
-                        channellist = "нет данных";
+                        channellist = "РЅРµС‚ РґР°РЅРЅС‹С…";
                     }
                     result.Add(channellist);
                 }
@@ -274,7 +274,7 @@ namespace MediaPortal.GUI.WebTelek
                     }
                     catch (Exception)
                     {
-                        channellist = "нет данных";
+                        channellist = "РЅРµС‚ РґР°РЅРЅС‹С…";
                     }
                 }
             }

@@ -1,4 +1,4 @@
-namespace MediaPortal.GUI.WebTelek
+п»їnamespace MediaPortal.GUI.WebTelek
 {
     partial class CustomChannel
     {
@@ -63,7 +63,7 @@ namespace MediaPortal.GUI.WebTelek
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(100, 23);
             this.btnNew.TabIndex = 1;
-            this.btnNew.Text = "Новый";
+            this.btnNew.Text = "РќРѕРІС‹Р№";
             this.btnNew.UseVisualStyleBackColor = true;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
@@ -73,7 +73,7 @@ namespace MediaPortal.GUI.WebTelek
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(100, 23);
             this.btnEdit.TabIndex = 2;
-            this.btnEdit.Text = "Редактировать";
+            this.btnEdit.Text = "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
@@ -83,7 +83,7 @@ namespace MediaPortal.GUI.WebTelek
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(100, 23);
             this.btnDel.TabIndex = 3;
-            this.btnDel.Text = "Удалить";
+            this.btnDel.Text = "РЈРґР°Р»РёС‚СЊ";
             this.btnDel.UseVisualStyleBackColor = true;
             this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
@@ -99,7 +99,7 @@ namespace MediaPortal.GUI.WebTelek
             this.groupBox1.Size = new System.Drawing.Size(567, 289);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Дополнительные каналы";
+            this.groupBox1.Text = "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РєР°РЅР°Р»С‹";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // ChannelsView
@@ -121,27 +121,27 @@ namespace MediaPortal.GUI.WebTelek
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Название";
+            this.columnHeader1.Text = "РќР°Р·РІР°РЅРёРµ";
             this.columnHeader1.Width = 96;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Адрес";
+            this.columnHeader2.Text = "РђРґСЂРµСЃ";
             this.columnHeader2.Width = 92;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Страна";
+            this.columnHeader3.Text = "РЎС‚СЂР°РЅР°";
             this.columnHeader3.Width = 96;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Категория";
+            this.columnHeader4.Text = "РљР°С‚РµРіРѕСЂРёСЏ";
             this.columnHeader4.Width = 120;
             // 
             // columnHeader5
             // 
-            this.columnHeader5.Text = "Описание";
+            this.columnHeader5.Text = "РћРїРёСЃР°РЅРёРµ";
             this.columnHeader5.Width = 146;
             // 
             // btnSave
@@ -150,7 +150,7 @@ namespace MediaPortal.GUI.WebTelek
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 23);
             this.btnSave.TabIndex = 4;
-            this.btnSave.Text = "Сохранить";
+            this.btnSave.Text = "РЎРѕС…СЂР°РЅРёС‚СЊ";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -171,7 +171,7 @@ namespace MediaPortal.GUI.WebTelek
             this.groupBox2.Size = new System.Drawing.Size(567, 176);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Свойства канала";
+            this.groupBox2.Text = "РЎРІРѕР№СЃС‚РІР° РєР°РЅР°Р»Р°";
             // 
             // textDescription
             // 
@@ -187,7 +187,7 @@ namespace MediaPortal.GUI.WebTelek
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 13);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Описание";
+            this.label5.Text = "РћРїРёСЃР°РЅРёРµ";
             // 
             // textCategory
             // 
@@ -203,7 +203,7 @@ namespace MediaPortal.GUI.WebTelek
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 13);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Категория";
+            this.label4.Text = "РљР°С‚РµРіРѕСЂРёСЏ";
             // 
             // textCountry
             // 
@@ -219,7 +219,7 @@ namespace MediaPortal.GUI.WebTelek
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Страна";
+            this.label3.Text = "РЎС‚СЂР°РЅР°";
             // 
             // textURL
             // 
@@ -235,7 +235,7 @@ namespace MediaPortal.GUI.WebTelek
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Адрес";
+            this.label2.Text = "РђРґСЂРµСЃ";
             // 
             // label1
             // 
@@ -244,7 +244,7 @@ namespace MediaPortal.GUI.WebTelek
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Название";
+            this.label1.Text = "РќР°Р·РІР°РЅРёРµ";
             // 
             // textName
             // 
@@ -286,7 +286,7 @@ namespace MediaPortal.GUI.WebTelek
             this.MaximumSize = new System.Drawing.Size(599, 561);
             this.MinimumSize = new System.Drawing.Size(599, 561);
             this.Name = "CustomChannel";
-            this.Text = "Дополнительные каналы";
+            this.Text = "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РєР°РЅР°Р»С‹";
             this.Load += new System.EventHandler(this.CustomChannel_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
