@@ -30,6 +30,8 @@ namespace MediaPortal.GUI.WebTelek
         protected GUIButtonControl btnSelection = null;
         [SkinControlAttribute(7)]
         protected GUIButtonControl btnFavorites = null;
+        [SkinControlAttribute(17)]
+        protected GUIButtonControl btnSearch = null;
         [SkinControlAttribute(9)]
         protected GUIButtonControl btnArchive = null;
         [SkinControlAttribute(10)]
@@ -71,6 +73,7 @@ namespace MediaPortal.GUI.WebTelek
         private StringCollection FCountries = new StringCollection();
         private StringCollection FNames = new StringCollection();
         private StringCollection FUrls = new StringCollection();
+        private List<string> _searchNames = new List<string>();
         private StringCollection FDescriptions = new StringCollection();
         private StringCollection PlayNextUrls = new StringCollection();
         private StringCollection PlayNextNames = new StringCollection();
@@ -226,7 +229,7 @@ namespace MediaPortal.GUI.WebTelek
             listKinozal.IsVisible = false;
             imageKinozal.IsVisible = false;
 
-            LoadFavorites();
+            LoadFavoritesAndSearches();
             if (currplay != "") GUIPropertyManager.SetProperty("#Play.Current.Title", currplay);
             GetChannelData(false);
 
@@ -298,7 +301,7 @@ namespace MediaPortal.GUI.WebTelek
             }
         }
 
-        private void LoadFavorites()
+        private void LoadFavoritesAndSearches()
         {
             FavURLs.Clear();
             string dir = Directory.GetCurrentDirectory();
@@ -310,6 +313,16 @@ namespace MediaPortal.GUI.WebTelek
                     if (temp != "") FavURLs.Add(temp);
                 }
             }
+            _searchNames.Clear();
+            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_searches.xml"), false))
+            {
+                for (int i = 0; i <= 1500; i++)
+                {
+                    string temp = Convert.ToString(xmlreader.GetValueAsString("Searches", i.ToString(), "")).Trim();
+                    if (temp != "") _searchNames.Add (temp);
+                }
+            }
+
         }
 
         private void SaveFavorites()
@@ -336,6 +349,31 @@ namespace MediaPortal.GUI.WebTelek
             writer.Close();
 
         }
+
+        private void SaveSearches()
+        {
+            string dir = Directory.GetCurrentDirectory();
+            File.Delete(Config.GetFile(Config.Dir.Config, "webtelek_searches.xml"));
+            XmlTextWriter writer = new XmlTextWriter(Config.GetFile(Config.Dir.Config, "webtelek_searches.xml"), null);
+            writer.WriteStartDocument();
+            writer.Formatting = Formatting.Indented;
+            writer.WriteStartElement("profile");
+            writer.WriteStartElement("section");
+            writer.WriteAttributeString("name", "Searches");
+            for (int i = 0; i < _searchNames.Count; i++)
+            {
+                writer.WriteStartElement("entry");
+                writer.WriteAttributeString("name", i.ToString());
+                writer.WriteString(_searchNames[i].Trim());
+                writer.WriteEndElement();
+            }
+            writer.WriteEndElement();
+            writer.WriteEndElement();
+            writer.Flush();
+            writer.Close();
+
+        }
+
         public void GetChannelData(Boolean refresh)
         {
             Countries.Clear();
@@ -982,6 +1020,7 @@ namespace MediaPortal.GUI.WebTelek
 
         public override void OnAction(Action action)
         {
+            
             if ( (action.wID == Action.ActionType.ACTION_PREVIOUS_MENU || action.wID == Action.ActionType.ACTION_PARENT_DIR ) && LastChoosen != "")
             {
 
@@ -1223,6 +1262,10 @@ namespace MediaPortal.GUI.WebTelek
             {
                 ArchiveSelector();
             }
+            //if (control == btnSearch)
+            //{
+            //    SearchSelector();
+            //}
             if (control == btnFavorites)
             {
                 archiveMenuPath[0].Clear();
@@ -1244,6 +1287,52 @@ namespace MediaPortal.GUI.WebTelek
             }
             base.OnClicked(controlId, control, actionType);
         }
+
+        //private void SearchSelector()
+        //{
+        //    chooser = (GUIDialogMenu)GUIWindowManager.GetWindow((int)GUIWindow.Window.WINDOW_DIALOG_MENU);
+        //    chooser.Reset();
+        //    chooser.SetHeading("Сохранённые поиски");
+
+        //    chooser.Add("Выбрать");
+        //    foreach (string item in _searchNames)
+        //    {
+        //        chooser.Add(item);   
+        //    }
+        //    chooser.DoModal(GetID);
+
+        //    switch (chooser.SelectedId)
+        //    {
+        //        case 1:
+        //            if (arcChannelSelector != String.Empty) channel = archive.getChannels()[0][archive.getChannels()[1].IndexOf(arcChannelSelector)];
+        //            if (arcGenreSelector != String.Empty) genre = archive.getGenres()[0][archive.getGenres()[1].IndexOf(arcGenreSelector)];
+        //            ShowArchiveShow(channel, arcDateSelector, genre);
+        //            break;
+        //        case 2:
+        //            ArchiveDateSelector();
+        //            break;
+        //        case 3:
+        //            ArchiveChannelSelector();
+        //            break;
+        //        case 4:
+        //            ArchiveGenreSelector();
+        //            break;
+        //        case 5:
+        //            arcDateSelector = String.Empty;
+        //            arcChannelSelector = String.Empty;
+        //            arcGenreSelector = String.Empty;
+        //            ArchiveSelector();
+        //            break;
+        //        case 6:
+        //            // code for displaying saved search patterns...
+        //            break;
+        //        default:
+        //            break;
+        //    }
+
+        //}
+
+
 
         void ArchiveSelector()
         {
@@ -1291,10 +1380,48 @@ namespace MediaPortal.GUI.WebTelek
                     ArchiveSelector();
                     break;
                 case 6:
-                    // code for displaying saved search patterns...
+                    chooser = (GUIDialogMenu)GUIWindowManager.GetWindow((int)GUIWindow.Window.WINDOW_DIALOG_MENU);
+                    chooser.Reset();
+                    chooser.SetHeading("Сохранённые поиски");
+                    foreach (string item in _searchNames )
+                    {
+                        chooser.Add(item);
+                        
+                    }
+                    chooser.DoModal(GetID);
+                    //ShowResultOfSearch(chooser.SelectedLabelText); //TODO: uncomment this for real version
+                    ShowResultOfSearch("Прогноз Погоды");
                     break;
                 default:
                     break;
+            }
+        }
+
+        private void ShowResultOfSearch(string titleToSearchFor)
+        {//Retrives search result for currently selected item
+
+            Navigation.Insert(0, (int)NaviPlace.ARCHIVELIST);
+            GUIPropertyManager.SetProperty("#Header", "Результаты поиска");
+            LastChoosen = ChoosenList;
+            ChoosenList = ARCHIVESHOWS;
+            archivexml = webdata.getHTTPData("http://www.webtelek.com/export/archive.php?action=listings&version=2.0&q=" + titleToSearchFor);
+
+            listView.IsVisible = true;
+            textKinozal.IsVisible = false;
+            imageKinozal.IsVisible = false;
+            listKinozal.IsVisible = false;
+
+            listView.Clear();
+            int j = 0;
+            while (j < archive.getShows(archivexml)[0].Count)
+            {
+                GUIListItem item = new GUIListItem();
+                item.Label = archive.getShows(archivexml)[2][j];
+                item.IsFolder = false;
+                getChannelLogo(archive.getShows(archivexml)[1][j]);
+                item.IconImage = "webtelek\\" + archive.getShows(archivexml)[1][j] + ".jpg";
+                listView.Add(item);
+                j++;
             }
         }
 
@@ -1537,7 +1664,7 @@ namespace MediaPortal.GUI.WebTelek
             FUrls.Clear();
             FDescriptions.Clear();
             SaveFavorites();
-
+            SaveSearches();
             if (ChoosenList != "Channels")
             {
                 ChoosenList = "";
@@ -1589,9 +1716,12 @@ namespace MediaPortal.GUI.WebTelek
                 {
                     case 1:
                         // Code for finding similar programms in all archive based on name of the show, or similar
+
                         break;
                     case 2:
                         // Code for saving search string in user's settings
+                        string currentShow = archive.getShows(archivexml)[3][listView.SelectedListItemIndex];
+                        if (!_searchNames.Contains (currentShow)) _searchNames.Add(currentShow);
                         break;
                     default:
                         break;
