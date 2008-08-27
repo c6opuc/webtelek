@@ -1721,7 +1721,12 @@ namespace MediaPortal.GUI.WebTelek
                     case 2:
                         // Code for saving search string in user's settings
                         string currentShow = archive.getShows(archivexml)[3][listView.SelectedListItemIndex];
-                        currentShow = currentShow.Replace("\"", string.Empty).Replace(".", string.Empty);
+                        //currentShow = currentShow.Replace("\"", string.Empty).Replace(".", string.Empty);
+                        if (Regex.Match (currentShow, ".*\"(.*)\".*").Groups.Count >=1)
+                        {  
+                            currentShow = Regex.Match(currentShow, ".*\"(.*)\".*").Groups[1].ToString();    
+                        }
+                        
                         if (!_searchNames.Contains (currentShow)) _searchNames.Add(currentShow);
                         break;
                     default:
