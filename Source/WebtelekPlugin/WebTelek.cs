@@ -1386,11 +1386,9 @@ namespace MediaPortal.GUI.WebTelek
                     foreach (string item in _searchNames )
                     {
                         chooser.Add(item);
-                        
                     }
                     chooser.DoModal(GetID);
-                    //ShowResultOfSearch(chooser.SelectedLabelText); //TODO: uncomment this for real version
-                    ShowResultOfSearch("Прогноз Погоды");
+                    ShowResultOfSearch(chooser.SelectedLabelText);
                     break;
                 default:
                     break;
@@ -1400,10 +1398,12 @@ namespace MediaPortal.GUI.WebTelek
         private void ShowResultOfSearch(string titleToSearchFor)
         {//Retrives search result for currently selected item
 
+            
             Navigation.Insert(0, (int)NaviPlace.ARCHIVELIST);
             GUIPropertyManager.SetProperty("#Header", "Результаты поиска");
             LastChoosen = ChoosenList;
             ChoosenList = ARCHIVESHOWS;
+            titleToSearchFor = System.Web.HttpUtility.UrlEncode(titleToSearchFor, Encoding.GetEncoding("windows-1251"));
             archivexml = webdata.getHTTPData("http://www.webtelek.com/export/archive.php?action=listings&version=2.0&q=" + titleToSearchFor);
 
             listView.IsVisible = true;
@@ -1721,6 +1721,7 @@ namespace MediaPortal.GUI.WebTelek
                     case 2:
                         // Code for saving search string in user's settings
                         string currentShow = archive.getShows(archivexml)[3][listView.SelectedListItemIndex];
+                        currentShow = currentShow.Replace("\"", string.Empty).Replace(".", string.Empty);
                         if (!_searchNames.Contains (currentShow)) _searchNames.Add(currentShow);
                         break;
                     default:
