@@ -134,9 +134,10 @@ namespace MediaPortal.GUI.WebTelek
         private TypeOfList _currentTypeOfList;
         private TypeOfList _previousTypeOfList;
         private string _lastSearchTitle;
-
+        
         public enum TypeOfList
         {
+            NONE,
             SavedSearchList,
             ResultsOfSavedSearchSelection
         }
@@ -245,7 +246,7 @@ namespace MediaPortal.GUI.WebTelek
 
             if (airzone == "" ) airzone = webdata.region;
 
-            if (_currentTypeOfList == TypeOfList.ResultsOfSavedSearchSelection )
+            if ((_currentTypeOfList == TypeOfList.SavedSearchList || _currentTypeOfList == TypeOfList.ResultsOfSavedSearchSelection)  &&  !string.IsNullOrEmpty (_lastSearchTitle) )
             {
                 ShowResultOfSearch(_lastSearchTitle); return;
             }
@@ -862,6 +863,7 @@ namespace MediaPortal.GUI.WebTelek
 
         private void ShowKinozal()
         {
+            _currentTypeOfList = TypeOfList.NONE;
             chooser = (GUIDialogMenu)GUIWindowManager.GetWindow((int)GUIWindow.Window.WINDOW_DIALOG_MENU);
             chooser.Reset();
             chooser.SetHeading("Кинозал");
@@ -1151,10 +1153,15 @@ namespace MediaPortal.GUI.WebTelek
                         g_Player.FullScreen = true;
                     }
                 }
-                if (_currentTypeOfList == TypeOfList.SavedSearchList)
+                if (_currentTypeOfList == TypeOfList.SavedSearchList || _currentTypeOfList == TypeOfList.ResultsOfSavedSearchSelection )
                 {
-                    _previousTypeOfList = TypeOfList.SavedSearchList;
+                    //_previousTypeOfList = TypeOfList.SavedSearchList;
                     ShowResultOfSearch(listView.SelectedListItem.Label);
+                }
+                else
+                {
+                    _currentTypeOfList = TypeOfList.NONE;
+                    //_previousTypeOfList = TypeOfList.NONE;
                 }
 
                 if (ChoosenList == "Channels" || ChoosenList == "Favorites")
@@ -1254,7 +1261,7 @@ namespace MediaPortal.GUI.WebTelek
                 chooser.Add("По категориям");
                 chooser.Add("Выбор из EPG");
                 chooser.DoModal(GetID);
-
+                _currentTypeOfList = TypeOfList.NONE;
                 switch (chooser.SelectedId)
                 {
                     case 1:
@@ -1281,12 +1288,16 @@ namespace MediaPortal.GUI.WebTelek
             }
             if (control == btnArchive)
             {
+                
                 ArchiveSelector();
+                if (listView.Visible )
+                {
+                    control.Focus = false;
+                    listView.Focus = true;
+                    
+                }
             }
-            //if (control == btnSearch)
-            //{
-            //    SearchSelector();
-            //}
+
             if (control == btnFavorites)
             {
                 archiveMenuPath[0].Clear();
@@ -1360,7 +1371,7 @@ namespace MediaPortal.GUI.WebTelek
             chooser = (GUIDialogMenu)GUIWindowManager.GetWindow((int)GUIWindow.Window.WINDOW_DIALOG_MENU);
             chooser.Reset();
             chooser.SetHeading("Выбор из архива");
-
+            _currentTypeOfList = TypeOfList.NONE;
             chooser.Add("Выбрать");
 
             if (arcDateSelector == String.Empty) chooser.Add("Дата: любая");
@@ -1401,7 +1412,6 @@ namespace MediaPortal.GUI.WebTelek
                     ArchiveSelector();
                     break;
                 case 6:
-
                     ShowSavedSearches();
                     break;
                 default:
@@ -1759,17 +1769,15 @@ namespace MediaPortal.GUI.WebTelek
                 switch (chooser.SelectedId)
                 {
                     case 1:
+                        string currentShow = archive.getShows(archivexml)[3][listView.SelectedListItemIndex];
                         // Code for finding similar programms in all archive based on name of the show, or similar
-
+                        ShowResultOfSearch(ParseTitle(currentShow));
                         break;
                     case 2:
                         // Code for saving search string in user's settings
-                        string currentShow = archive.getShows(archivexml)[3][listView.SelectedListItemIndex];
+                        currentShow = archive.getShows(archivexml)[3][listView.SelectedListItemIndex];
                         //currentShow = currentShow.Replace("\"", string.Empty).Replace(".", string.Empty);
-                        if (Regex.Match (currentShow, ".*\"(.*)\".*").Groups.Count >=1)
-                        {  
-                            currentShow = Regex.Match(currentShow, ".*\"(.*)\".*").Groups[1].ToString();    
-                        }
+                        currentShow = ParseTitle(currentShow);
                         
                         if (!_searchNames.Contains (currentShow)) _searchNames.Add(currentShow);
                         break;
@@ -1793,6 +1801,15 @@ namespace MediaPortal.GUI.WebTelek
                 ShowChannels("Favorites", "", -1);
             }
             base.OnShowContextMenu();
+        }
+
+        private static string ParseTitle(string currentShow)
+        {
+            if (Regex.Match(currentShow, ".*\"(.*)\".*").Groups.Count >= 2)
+            {
+                currentShow = Regex.Match(currentShow, ".*\"(.*)\".*").Groups[1].ToString();
+            }
+            return currentShow;
         }
     }
 }
