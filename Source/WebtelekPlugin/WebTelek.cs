@@ -131,6 +131,15 @@ namespace MediaPortal.GUI.WebTelek
         static extern ErrorModes GetErrorMode();
 
         List<int> Navigation = new List<int>();
+        private TypeOfList _currentTypeOfList;
+        private TypeOfList _previousTypeOfList;
+        private string _lastSearchTitle;
+
+        public enum TypeOfList
+        {
+            SavedSearchList,
+            ResultsOfSavedSearchSelection
+        }
 
         public enum ErrorModes : uint
         {
@@ -182,6 +191,7 @@ namespace MediaPortal.GUI.WebTelek
         void OnPlayBackStopped(g_Player.MediaType type, int stoptime, string filename)
         {
             Log.Debug("WebTelekPlugin: recieved PlayBackStopped event");
+           
         }
 
         void OnPlayBackEnded(g_Player.MediaType type, string filename)
@@ -235,7 +245,10 @@ namespace MediaPortal.GUI.WebTelek
 
             if (airzone == "" ) airzone = webdata.region;
 
-
+            if (_currentTypeOfList == TypeOfList.ResultsOfSavedSearchSelection )
+            {
+                ShowResultOfSearch(_lastSearchTitle); return;
+            }
             if (LastChoosen != "")
             {
                 if (LastChoosen == "ShowRecord")
@@ -1020,7 +1033,9 @@ namespace MediaPortal.GUI.WebTelek
 
         public override void OnAction(Action action)
         {
+
             
+
             if ( (action.wID == Action.ActionType.ACTION_PREVIOUS_MENU || action.wID == Action.ActionType.ACTION_PARENT_DIR ) && LastChoosen != "")
             {
 
@@ -1073,6 +1088,8 @@ namespace MediaPortal.GUI.WebTelek
 
 
         protected override void OnClicked(int controlId, GUIControl control, MediaPortal.GUI.Library.Action.ActionType actionType)
+        
+        
         {
 
             int i = 0;
@@ -1108,8 +1125,7 @@ namespace MediaPortal.GUI.WebTelek
                 {
                     ShowRecord(listView.SelectedListItemIndex);
                 }
-
-                if ( ChoosenList == ARCHIVESHOWS || ChoosenList == ARCHIVECHANNELS || ChoosenList == ARCHIVEDATES || ChoosenList == ARCHIVECHANNELSBYDATE || ChoosenList == ARCHIVEDATESBYCHANNEL)
+                if ( ChoosenList == ARCHIVESHOWS || ChoosenList == ARCHIVECHANNELS || ChoosenList == ARCHIVEDATES || ChoosenList == ARCHIVECHANNELSBYDATE || ChoosenList == ARCHIVEDATESBYCHANNEL || _currentTypeOfList== TypeOfList.ResultsOfSavedSearchSelection )
                 {
                     if (archiveMenuPath[1].IndexOf(ChoosenList) == -1)
                     {
@@ -1117,7 +1133,7 @@ namespace MediaPortal.GUI.WebTelek
                         archiveMenuPath[0].Add(listView.SelectedListItemIndex.ToString());
                     }
 
-                    if ( ChoosenList == ARCHIVESHOWS)
+                    if ( ChoosenList == ARCHIVESHOWS || _currentTypeOfList == TypeOfList.ResultsOfSavedSearchSelection )
                     {
                         string url = "http://www.webtelek.com/play_pvr.php?programid=" + archive.getShows(archivexml)[0][listView.SelectedListItemIndex];
                         currplay = archive.getShows(archivexml)[2][listView.SelectedListItemIndex];
@@ -1135,7 +1151,12 @@ namespace MediaPortal.GUI.WebTelek
                         g_Player.FullScreen = true;
                     }
                 }
-                
+                if (_currentTypeOfList == TypeOfList.SavedSearchList)
+                {
+                    _previousTypeOfList = TypeOfList.SavedSearchList;
+                    ShowResultOfSearch(listView.SelectedListItem.Label);
+                }
+
                 if (ChoosenList == "Channels" || ChoosenList == "Favorites")
                 {
                     if (ChoosenList == "Channels") i = 1; 
@@ -1380,37 +1401,47 @@ namespace MediaPortal.GUI.WebTelek
                     ArchiveSelector();
                     break;
                 case 6:
-                    chooser = (GUIDialogMenu)GUIWindowManager.GetWindow((int)GUIWindow.Window.WINDOW_DIALOG_MENU);
-                    chooser.Reset();
-                    chooser.SetHeading("Сохранённые поиски");
-                    foreach (string item in _searchNames )
-                    {
-                        chooser.Add(item);
-                    }
-                    chooser.DoModal(GetID);
-                    ShowResultOfSearch(chooser.SelectedLabelText);
+
+                    ShowSavedSearches();
                     break;
                 default:
                     break;
             }
         }
 
+        private void ShowSavedSearches()
+        {
+            listView.Visible = true;
+            listView.Clear();
+            foreach (string item in _searchNames)
+            {
+                GUIListItem itemList = new GUIListItem();
+                itemList.Label = item;
+                itemList.IsFolder = false;
+                listView.Add(itemList);
+            }
+            
+            _currentTypeOfList = TypeOfList.SavedSearchList;
+            ChoosenList = string.Empty;
+
+        }
+
         private void ShowResultOfSearch(string titleToSearchFor)
         {//Retrives search result for currently selected item
-
-            
             Navigation.Insert(0, (int)NaviPlace.ARCHIVELIST);
             GUIPropertyManager.SetProperty("#Header", "Результаты поиска");
-            LastChoosen = ChoosenList;
-            ChoosenList = ARCHIVESHOWS;
+            //LastChoosen = ChoosenList;
+            //ChoosenList = ARCHIVESHOWS;
+            _currentTypeOfList = TypeOfList.ResultsOfSavedSearchSelection;
+            _lastSearchTitle = titleToSearchFor;
+            LastChoosen = string.Empty;
+            ChoosenList = string.Empty;
             titleToSearchFor = System.Web.HttpUtility.UrlEncode(titleToSearchFor, Encoding.GetEncoding("windows-1251"));
             archivexml = webdata.getHTTPData("http://www.webtelek.com/export/archive.php?action=listings&version=2.0&q=" + titleToSearchFor);
-
             listView.IsVisible = true;
             textKinozal.IsVisible = false;
             imageKinozal.IsVisible = false;
             listKinozal.IsVisible = false;
-
             listView.Clear();
             int j = 0;
             while (j < archive.getShows(archivexml)[0].Count)
@@ -1686,6 +1717,19 @@ namespace MediaPortal.GUI.WebTelek
 
         protected override void OnShowContextMenu()
         {
+            if (_currentTypeOfList == TypeOfList.SavedSearchList)
+            {//Show modal dialog to delete current saved search
+                GUIDialogYesNo menu = (GUIDialogYesNo)GUIWindowManager.GetWindow((int)GUIWindow.Window.WINDOW_DIALOG_YES_NO);
+                menu.ResetAllControls();
+                menu.SetHeading("Сохранённые поиски:");
+                menu.SetDefaultToYes(true);
+                menu.SetLine(1, "Удалить сохранённый поиск?");
+                menu.SetLine(2, listView.SelectedListItem.Label);
+                menu.DoModal(GetID);
+                if (!menu.IsConfirmed) return;
+                _searchNames.Remove(listView.SelectedListItem.Label);
+                ShowSavedSearches();
+            }
             if (ChoosenList == "Channels")
             {
                 GUIDialogYesNo menu = (GUIDialogYesNo)GUIWindowManager.GetWindow((int)GUIWindow.Window.WINDOW_DIALOG_YES_NO );
