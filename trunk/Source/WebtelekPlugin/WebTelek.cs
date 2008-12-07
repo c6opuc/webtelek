@@ -51,7 +51,7 @@ namespace MediaPortal.GUI.WebTelek
         #endregion
         #region Variables
                 
-        public static string VERSION = "5.2";
+        public static string VERSION = "5.3";
         public static int PluginID  = 6926;
         public static int TVGuideID = 6927;
         public static int TVProgramID = 6928;
@@ -413,7 +413,7 @@ namespace MediaPortal.GUI.WebTelek
                     webdata.getHTTPData("http://www.webtelek.com/export/archive.php?action=channels&version=2.0"),
                     webdata.getHTTPData("http://www.webtelek.com/export/archive.php?action=genres&version=2.0")
                 );
-                webdata.getEPG();
+                webdata.getEPG(true);
             }
             else
             {
@@ -426,7 +426,7 @@ namespace MediaPortal.GUI.WebTelek
                         webdata.getHTTPData("http://www.webtelek.com/export/archive.php?action=channels&version=2.0"),
                         webdata.getHTTPData("http://www.webtelek.com/export/archive.php?action=genres&version=2.0")
                     );
-                    webdata.getEPG();
+                    webdata.getEPG(true);
                     GetInfoMessage();
                 }
                 if (xml == null) xml = new WebTelekLiveXML(new MemoryStream(UTF8Encoding.Default.GetBytes(webdata.getData())));
@@ -1772,11 +1772,13 @@ namespace MediaPortal.GUI.WebTelek
                         string currentShow = archive.getShows(archivexml)[3][listView.SelectedListItemIndex];
                         // Code for finding similar programms in all archive based on name of the show, or similar
                         ShowResultOfSearch(ParseTitle(currentShow));
+                        //ShowResultOfSearch(currentShow);
                         break;
                     case 2:
                         // Code for saving search string in user's settings
                         currentShow = archive.getShows(archivexml)[3][listView.SelectedListItemIndex];
                         //currentShow = currentShow.Replace("\"", string.Empty).Replace(".", string.Empty);
+
                         currentShow = ParseTitle(currentShow);
                         
                         if (!_searchNames.Contains (currentShow)) _searchNames.Add(currentShow);

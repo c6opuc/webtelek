@@ -29,7 +29,7 @@ namespace MediaPortal.GUI.WebTelek
         public string region = "";
         string timezone = "";
         string httpurl = "";
-        string epgdays = "1";
+        string epgdays = "2";
         bool _workerCompleted = true; 
         StreamReader responseStream = null;
         Encoding enc = null;
@@ -46,11 +46,27 @@ namespace MediaPortal.GUI.WebTelek
                 password = Convert.ToString(xmlreader.GetValueAsString("Account", "password", ""));
                 region = Convert.ToString(xmlreader.GetValueAsString("Account", "region", ""));
                 timezone = Convert.ToString(xmlreader.GetValueAsString("Account", "timezone", ""));
-                epgdays = Convert.ToString(xmlreader.GetValueAsString("Account", "epgdays", ""));
+                epgdays = Convert.ToString(xmlreader.GetValueAsString("Account", "epgdays", "2"));
                 timeout = (int)Decimal.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "netdelay", "15"))) * 1000;
             }
         }
 
+        public void getEPG(Boolean refresh)
+        {
+            if (refresh)
+            {
+                using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "MediaPortal.xml"), false))
+                {
+                    string dirname = Convert.ToString(xmlreader.GetValueAsString("xmltv", "folder", ""));
+                    if (File.Exists(dirname + @"\epglastdate.dat"))
+                    {
+                        File.Delete(dirname + @"\epglastdate.dat");
+                    }
+                }
+            }
+            getEPG();
+
+        }
         public void getEPG()
         {
             
