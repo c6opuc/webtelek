@@ -51,10 +51,10 @@ namespace MediaPortal.GUI.WebTelek
                 string password = Convert.ToString(xmlreader.GetValueAsString("Account", "password", "password"));
                 string region = Convert.ToString(xmlreader.GetValueAsString("Account", "region", "MSK"));
                 string timezone = Convert.ToString(xmlreader.GetValueAsString("Account", "timezone", "1"));
-                string epgdays = Convert.ToString(xmlreader.GetValueAsString("Account", "epgdays", "1"));
+                string epgdays = Convert.ToString(xmlreader.GetValueAsString("Account", "epgdays", "2"));
                 string epgnotify = Convert.ToString(xmlreader.GetValueAsString("Account", "epgnotify", "false"));
                 string osddelay = Convert.ToString(xmlreader.GetValueAsString("Account", "osddelay", "5"));
-                string netdelay = Convert.ToString(xmlreader.GetValueAsString("Account", "netdelay", "15"));
+                string netdelay = Convert.ToString(xmlreader.GetValueAsString("Account", "netdelay", "30"));
                 string epgload = Convert.ToString(xmlreader.GetValueAsString("Account", "epgload", "true"));
                 string versioncheck = Convert.ToString(xmlreader.GetValueAsString("Account", "versioncheck", "true"));
                 string switchtimeout = Convert.ToString(xmlreader.GetValueAsString("Account", "switchtimeout", "1"));
