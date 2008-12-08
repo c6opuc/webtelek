@@ -51,7 +51,7 @@ namespace MediaPortal.GUI.WebTelek
         #endregion
         #region Variables
                 
-        public static string VERSION = "5.3";
+        public static string VERSION = "5.4";
         public static int PluginID  = 6926;
         public static int TVGuideID = 6927;
         public static int TVProgramID = 6928;
@@ -620,7 +620,7 @@ namespace MediaPortal.GUI.WebTelek
                 case 4:
                     g_Player.Stop();
                     g_Player.Release();
-                    GC.Collect(); GC.Collect(); GC.Collect(); GC.Collect();
+                    //GC.Collect(); GC.Collect(); GC.Collect(); GC.Collect();
                     g_Player.Init();
                     key.Close();
                     break;
@@ -1156,7 +1156,7 @@ namespace MediaPortal.GUI.WebTelek
                 if (_currentTypeOfList == TypeOfList.SavedSearchList || _currentTypeOfList == TypeOfList.ResultsOfSavedSearchSelection )
                 {
                     //_previousTypeOfList = TypeOfList.SavedSearchList;
-                    ShowResultOfSearch(listView.SelectedListItem.Label);
+                    ShowResultOfSearch(_searchNames[listView.SelectedListItemIndex]);
                 }
                 else
                 {
@@ -1426,7 +1426,7 @@ namespace MediaPortal.GUI.WebTelek
             foreach (string item in _searchNames)
             {
                 GUIListItem itemList = new GUIListItem();
-                itemList.Label = item;
+                itemList.Label = item.Replace("%","");
                 itemList.IsFolder = false;
                 listView.Add(itemList);
             }
@@ -1447,6 +1447,7 @@ namespace MediaPortal.GUI.WebTelek
             LastChoosen = string.Empty;
             ChoosenList = string.Empty;
             titleToSearchFor = System.Web.HttpUtility.UrlEncode(titleToSearchFor, Encoding.GetEncoding("windows-1251"));
+            //Log.Info(titleToSearchFor);
             archivexml = webdata.getHTTPData("http://www.webtelek.com/export/archive.php?action=listings&version=2.0&q=" + titleToSearchFor);
             listView.IsVisible = true;
             textKinozal.IsVisible = false;
@@ -1737,7 +1738,7 @@ namespace MediaPortal.GUI.WebTelek
                 menu.SetLine(2, listView.SelectedListItem.Label);
                 menu.DoModal(GetID);
                 if (!menu.IsConfirmed) return;
-                _searchNames.Remove(listView.SelectedListItem.Label);
+                _searchNames.RemoveAt(listView.SelectedListItemIndex);
                 ShowSavedSearches();
             }
             if (ChoosenList == "Channels")
@@ -1807,11 +1808,14 @@ namespace MediaPortal.GUI.WebTelek
 
         private static string ParseTitle(string currentShow)
         {
-            if (Regex.Match(currentShow, ".*\"(.*)\".*").Groups.Count >= 2)
+/*            if (Regex.Match(currentShow, ".*\"(.*)\".*").Groups.Count >= 2)
             {
                 currentShow = Regex.Match(currentShow, ".*\"(.*)\".*").Groups[1].ToString();
             }
+*/
+            currentShow = currentShow.Replace("\"", "%");
             return currentShow;
+
         }
     }
 }
