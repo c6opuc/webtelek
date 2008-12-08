@@ -53,19 +53,19 @@ namespace MediaPortal.GUI.WebTelek
 
         public void getEPG(Boolean refresh)
         {
-            if (refresh)
+
+            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "MediaPortal.xml"), false))
             {
-                using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "MediaPortal.xml"), false))
+                string dirname = Convert.ToString(xmlreader.GetValueAsString("xmltv", "folder", ""));
+                if (refresh)
                 {
-                    string dirname = Convert.ToString(xmlreader.GetValueAsString("xmltv", "folder", ""));
                     if (File.Exists(dirname + @"\epglastdate.dat"))
                     {
                         File.Delete(dirname + @"\epglastdate.dat");
                     }
                 }
+                getEPG();
             }
-            getEPG();
-
         }
         public void getEPG()
         {
