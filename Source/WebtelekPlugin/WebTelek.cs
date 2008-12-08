@@ -1304,6 +1304,7 @@ namespace MediaPortal.GUI.WebTelek
                 archiveMenuPath[1].Clear();
                 GetChannelData(false);
                 ShowChannels("Favorites", "", -1);
+                _currentTypeOfList = TypeOfList.NONE;
                 btnFavorites.Focus = false;
                 listView.Focus = true;
             }
@@ -1392,8 +1393,16 @@ namespace MediaPortal.GUI.WebTelek
             switch (chooser.SelectedId)
             {
                 case 1:
-                    if (arcChannelSelector != String.Empty) channel = archive.getChannels()[0][archive.getChannels()[1].IndexOf(arcChannelSelector)];
-                    if (arcGenreSelector != String.Empty) genre = archive.getGenres()[0][archive.getGenres()[1].IndexOf(arcGenreSelector)];
+                    if (arcChannelSelector != String.Empty)
+                        channel = archive.getChannels()[0][archive.getChannels()[1].IndexOf(arcChannelSelector)];
+                    else
+                        channel = String.Empty;
+
+                    if (arcGenreSelector != String.Empty)
+                        genre = archive.getGenres()[0][archive.getGenres()[1].IndexOf(arcGenreSelector)];
+                    else
+                        genre = String.Empty;
+
                     ShowArchiveShow(channel, arcDateSelector, genre);
                     break;
                 case 2:

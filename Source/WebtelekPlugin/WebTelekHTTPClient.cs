@@ -164,7 +164,7 @@ namespace MediaPortal.GUI.WebTelek
                 request.ContentType = @"application/x-www-form-urlencoded";
                 request.Referer = string.Format("https://www.webtelek.com/register.php");
                 request.CookieContainer = cookieContainer;
-                string postData = string.Format("response=&email_address={0}&password={1}", username, password);
+                string postData = string.Format("response=&email_address={0}&password={1}&persistent={2}", username, password, "y");
                 request.Method = "POST";
 
                 byte[] postBuffer = System.Text.Encoding.GetEncoding(1252).GetBytes(postData);
@@ -186,6 +186,9 @@ namespace MediaPortal.GUI.WebTelek
                 request.Method = "GET";
                 response = (HttpWebResponse)request.GetResponse();
                 response.Cookies = request.CookieContainer.GetCookies(request.RequestUri);
+                
+                //Log.Info(response.Cookies.ToString());
+
                 responseStream = new StreamReader(response.GetResponseStream(), enc, true);
                 responseHtml = responseStream.ReadToEnd();
                 
