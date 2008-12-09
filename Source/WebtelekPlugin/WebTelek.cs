@@ -55,6 +55,8 @@ namespace MediaPortal.GUI.WebTelek
         public static int PluginID  = 6926;
         public static int TVGuideID = 6927;
         public static int TVProgramID = 6928;
+        public static int VirtualKeyboardID = 6929;
+
         public static bool isPlayNextActive = false;
 
         GUIDialogMenu optionchooser = null;
@@ -132,7 +134,6 @@ namespace MediaPortal.GUI.WebTelek
 
         List<int> Navigation = new List<int>();
         private TypeOfList _currentTypeOfList;
-        private TypeOfList _previousTypeOfList;
         private string _lastSearchTitle;
         
         public enum TypeOfList
@@ -1388,6 +1389,8 @@ namespace MediaPortal.GUI.WebTelek
 
             chooser.Add("Сохраненный поиск");
 
+            chooser.Add("Свободный поиск");
+
             chooser.DoModal(GetID);
 
             switch (chooser.SelectedId)
@@ -1423,6 +1426,28 @@ namespace MediaPortal.GUI.WebTelek
                 case 6:
                     ShowSavedSearches();
                     break;
+                case 7:
+                    VirtualKeyboardRU keyboard = (VirtualKeyboardRU)GUIWindowManager.GetWindow((int)WebTelek.VirtualKeyboardID);
+                    if (null == keyboard) return;
+                    string searchterm = string.Empty;
+                    //keyboard.IsSearchKeyboard = true;
+                    keyboard.Reset();
+                    keyboard.Text = "";
+                    keyboard.DoModal(GetID); // show it...
+
+                    Log.Info("Webtelek: OSD keyboard loaded!");
+
+                    // If input is finished, the string is saved to the searchterm var.
+                    if (keyboard.IsConfirmed)
+                        searchterm = keyboard.Text;
+
+                    // If there was a string entered try getting the article.
+                    if (searchterm != "")
+                    {
+                        ShowResultOfSearch(searchterm);
+                        Log.Info("Webtelek: Searchterm gotten from OSD keyboard: {0}", searchterm);
+                    }
+                    break;
                 default:
                     break;
             }
@@ -1435,7 +1460,8 @@ namespace MediaPortal.GUI.WebTelek
             foreach (string item in _searchNames)
             {
                 GUIListItem itemList = new GUIListItem();
-                itemList.Label = item.Replace("%","");
+                //itemList.Label = item.Replace("%","");
+                itemList.Label = item;
                 itemList.IsFolder = false;
                 listView.Add(itemList);
             }
@@ -1822,7 +1848,7 @@ namespace MediaPortal.GUI.WebTelek
                 currentShow = Regex.Match(currentShow, ".*\"(.*)\".*").Groups[1].ToString();
             }
 */
-            currentShow = currentShow.Replace("\"", "%");
+            //currentShow = currentShow.Replace("\"", "%");
             return currentShow;
 
         }
