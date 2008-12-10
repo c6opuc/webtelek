@@ -427,7 +427,7 @@ namespace MediaPortal.GUI.WebTelek
                         webdata.getHTTPData("http://www.webtelek.com/export/archive.php?action=channels&version=2.0"),
                         webdata.getHTTPData("http://www.webtelek.com/export/archive.php?action=genres&version=2.0")
                     );
-                    webdata.getEPG(true);
+                    webdata.getEPG();
                     GetInfoMessage();
                 }
                 if (xml == null) xml = new WebTelekLiveXML(new MemoryStream(UTF8Encoding.Default.GetBytes(webdata.getData())));
@@ -787,13 +787,27 @@ namespace MediaPortal.GUI.WebTelek
             }
         }
 
+
         private void ShowArchiveShow(string channel, string date, string genre)
+        {
+            ShowArchiveShow(channel, date, genre, "");
+        }
+
+        private void ShowArchiveShow(string query)
+        {
+            ShowArchiveShow("", "", "", query);
+        }
+
+        private void ShowArchiveShow(string channel, string date, string genre, string query)
         {
             Navigation.Insert(0, (int)NaviPlace.ARCHIVELIST);
             GUIPropertyManager.SetProperty("#Header", "Список выбранных программ");
             LastChoosen = ChoosenList;
             ChoosenList = ARCHIVESHOWS;
-            archivexml = webdata.getHTTPData("http://www.webtelek.com/export/archive.php?action=listings&version=2.0&ch=" + channel + "&day=" + date + "&lg=" + genre);
+
+            query = System.Web.HttpUtility.UrlEncode(query, Encoding.GetEncoding("windows-1251"));
+            Log.Info("WebTelek Search URL: http://www.webtelek.com/export/archive.php?action=listings&version=2.0&ch=" + channel + "&day=" + date + "&lg=" + genre + "&q=" + query);
+            archivexml = webdata.getHTTPData("http://www.webtelek.com/export/archive.php?action=listings&version=2.0&ch=" + channel + "&day=" + date + "&lg=" + genre + "&q=" + query);
 
             listView.IsVisible = true;
             textKinozal.IsVisible = false;
@@ -1444,7 +1458,18 @@ namespace MediaPortal.GUI.WebTelek
                     // If there was a string entered try getting the article.
                     if (searchterm != "")
                     {
-                        ShowResultOfSearch(searchterm);
+                        if (arcChannelSelector != String.Empty)
+                            channel = archive.getChannels()[0][archive.getChannels()[1].IndexOf(arcChannelSelector)];
+                        else
+                            channel = String.Empty;
+
+                        if (arcGenreSelector != String.Empty)
+                            genre = archive.getGenres()[0][archive.getGenres()[1].IndexOf(arcGenreSelector)];
+                        else
+                            genre = String.Empty;
+
+                        ShowArchiveShow(channel, arcDateSelector, genre, searchterm);
+
                         Log.Info("Webtelek: Searchterm gotten from OSD keyboard: {0}", searchterm);
                     }
                     break;
