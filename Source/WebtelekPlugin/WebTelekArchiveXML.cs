@@ -146,10 +146,10 @@ namespace MediaPortal.GUI.WebTelek
 
                         DateTime datefrom = DateTime.ParseExact(from, "yyyyMMddHHmmss", null);
                         DateTime dateto = DateTime.ParseExact(to, "yyyyMMddHHmmss", null);
-                        System.Globalization.DateTimeFormatInfo formatInfo = System.Threading.Thread.CurrentThread.CurrentCulture.DateTimeFormat;
+                        //System.Globalization.DateTimeFormatInfo formatInfo = System.Threading.Thread.CurrentThread.CurrentCulture.DateTimeFormat;
                         //
                         string titel = //getChannels()[1][getChannels()[0].IndexOf(channel_id)] + ":" +
-                        datefrom.ToString(formatInfo.ShortDatePattern) + " " +
+                        datefrom.ToString("ddd, MM/dd") + " " +
                         datefrom.ToString("HH:mm") + "-" + dateto.ToString("HH:mm") + " " + 
                         showname;
 
