@@ -549,9 +549,14 @@ namespace MediaPortal.GUI.WebTelek
             GUIDialogMenu netchooser = (GUIDialogMenu)GUIWindowManager.GetWindow((int)GUIWindow.Window.WINDOW_DIALOG_MENU);
             netchooser.Reset();
             netchooser.SetHeading("Настройки сети");
-            
-            RegistryKey key = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\MediaPlayer\\Preferences",true);
 
+            RegistryKey key;
+
+            key = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\MediaPlayer\\Preferences", true);
+
+            if (key.GetValue("UseUDP") == null) key.SetValue("UseUDP", 1);
+            if (key.GetValue("UseTCP") == null) key.SetValue("UseTCP", 1);
+            if (key.GetValue("UseHTTP") == null) key.SetValue("UseHTTP", 1);
 
             if ((int)key.GetValue("UseUDP") == 1)
             {
@@ -561,7 +566,7 @@ namespace MediaPortal.GUI.WebTelek
             {
                 netchooser.Add("UDP : ВЫКЛ");
             }
-            if ((int)key.GetValue("UseTCP") == 1)
+            if ((int)key.GetValue("UseTCP") == 1 || key.GetValue("UseTCP") == null)
             {
                 netchooser.Add("TCP : ВКЛ");
             }
@@ -569,7 +574,7 @@ namespace MediaPortal.GUI.WebTelek
             {
                 netchooser.Add("TCP : ВЫКЛ");
             }
-            if ((int)key.GetValue("UseHTTP") == 1)
+            if ((int)key.GetValue("UseHTTP") == 1 || key.GetValue("UseHTTP") == null)
             {
                 netchooser.Add("HTTP : ВКЛ");
             }
