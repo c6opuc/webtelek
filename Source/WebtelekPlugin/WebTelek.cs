@@ -187,6 +187,7 @@ namespace MediaPortal.GUI.WebTelek
 
             g_Player.PlayBackEnded += new g_Player.EndedHandler(OnPlayBackEnded);
             g_Player.PlayBackStopped += new g_Player.StoppedHandler(OnPlayBackStopped);
+
             return Load(GUIGraphicsContext.Skin + @"\webtelek.xml");
         }
 
@@ -626,7 +627,7 @@ namespace MediaPortal.GUI.WebTelek
                 case 4:
                     g_Player.Stop();
                     g_Player.Release();
-                    //GC.Collect(); GC.Collect(); GC.Collect(); GC.Collect();
+                    GC.Collect(); GC.Collect(); GC.Collect(); GC.Collect();
                     g_Player.Init();
                     key.Close();
                     break;
@@ -1776,7 +1777,6 @@ namespace MediaPortal.GUI.WebTelek
             {
                 ChoosenList = "";
             }
-
             base.OnPageDestroy(new_windowId);
         }
 
