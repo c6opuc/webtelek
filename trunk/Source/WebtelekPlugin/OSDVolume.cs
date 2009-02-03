@@ -61,7 +61,14 @@ namespace MediaPortal.GUI.WebTelek
         {
             if (_osd == null)
             {
-                _osd = new OSDVolume(Application.OpenForms[0]);
+                try
+                {
+                    _osd = new OSDVolume(Application.OpenForms[0]);
+                }
+                catch (Exception e)
+                {
+                    Log.Error(e);
+                }
             }
             _enabled = true;
         }
