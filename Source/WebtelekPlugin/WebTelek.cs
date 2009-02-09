@@ -135,6 +135,7 @@ namespace MediaPortal.GUI.WebTelek
         List<int> Navigation = new List<int>();
         private TypeOfList _currentTypeOfList;
         private string _lastSearchTitle;
+        private Boolean preload;
         
         public enum TypeOfList
         {
@@ -188,8 +189,15 @@ namespace MediaPortal.GUI.WebTelek
             g_Player.PlayBackEnded += new g_Player.EndedHandler(OnPlayBackEnded);
             g_Player.PlayBackStopped += new g_Player.StoppedHandler(OnPlayBackStopped);
 
+            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"), false))
+            {
+                preload = Boolean.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "preload", "false")));
+            }
+
+
             return Load(GUIGraphicsContext.Skin + @"\webtelek.xml");
         }
+
 
         void OnPlayBackStopped(g_Player.MediaType type, int stoptime, string filename)
         {
@@ -1130,7 +1138,7 @@ namespace MediaPortal.GUI.WebTelek
                 string dir = Directory.GetCurrentDirectory();
                 File.Delete(dir + @"\webtelek.asx");
                 String _tempasx = webdata.getHTTPData(url);
-                _tempasx =  _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
+                if ( preload ) _tempasx =  _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
                 File.WriteAllText(dir + @"\webtelek.asx", _tempasx, Encoding.Default);
                 url = dir + @"\webtelek.asx";
                 g_Player.Play(url);
@@ -1166,7 +1174,7 @@ namespace MediaPortal.GUI.WebTelek
                         string dir = Directory.GetCurrentDirectory();
                         File.Delete(dir + @"\webtelek.asx");
                         String _tempasx = webdata.getHTTPData(url);
-                        _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
+                        if (preload) _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
                         File.WriteAllText(dir + @"\webtelek.asx",_tempasx,Encoding.Default);
                         url = dir + @"\webtelek.asx";
                         g_Player.Play(url);
@@ -1220,7 +1228,7 @@ namespace MediaPortal.GUI.WebTelek
                         if (FUrls[listView.SelectedListItemIndex - i].Contains("http://www.webtelek.com/play.php?ch="))
                         {
                             String _tempasx = webdata.getHTTPData(FUrls[listView.SelectedListItemIndex - i]);
-                            _tempasx = _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
+                            if (preload) _tempasx = _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
                             File.WriteAllText(dir + @"\webtelek.asx", _tempasx, Encoding.Default);
                             mmsurl = dir + @"\webtelek.asx";
                             OSDInfo.channel_id = FUrls[listView.SelectedListItemIndex - i].Substring(36);
@@ -1647,7 +1655,7 @@ namespace MediaPortal.GUI.WebTelek
                 if (next == 0 && curr_play_url != PlayNextUrls[PlayNextIndex])
                 {
                     String _tempasx = webdata.getHTTPData(PlayNextUrls[PlayNextIndex]);
-                    _tempasx = _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
+                    if (preload) _tempasx = _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
                     File.WriteAllText(dir + @"\" + tempasx, _tempasx, Encoding.Default);
                 }
                 mmsurl = dir + @"\" + tempasx;
@@ -1703,7 +1711,7 @@ namespace MediaPortal.GUI.WebTelek
                 string dir = Directory.GetCurrentDirectory();
                 File.Delete(dir + @"\webtelek.asx");
                 String _tempasx = webdata.getHTTPData(DataUrls[PlayNextIndex]);
-                _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
+                if (preload) _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
                 File.WriteAllText(dir + @"\webtelek.asx", _tempasx, Encoding.Default);
                 string mmsurl = dir + @"\webtelek.asx";
                 OSDInfo.channel_id = DataUrls[PlayNextIndex].Substring(36);
