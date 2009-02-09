@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigurationForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.preloadBox = new System.Windows.Forms.CheckBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.txtPluginName = new System.Windows.Forms.TextBox();
             this.btnCleanAll = new System.Windows.Forms.Button();
@@ -74,6 +76,7 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SwitchTimeout)).BeginInit();
@@ -91,6 +94,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.groupBox11);
             this.groupBox1.Controls.Add(this.groupBox10);
             this.groupBox1.Controls.Add(this.btnCleanAll);
             this.groupBox1.Controls.Add(this.groupBox9);
@@ -112,6 +116,30 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Настройки";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.preloadBox);
+            this.groupBox11.Location = new System.Drawing.Point(17, 330);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(299, 44);
+            this.groupBox11.TabIndex = 41;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Заставка";
+            this.toolTip.SetToolTip(this.groupBox11, "Не показывать надоедающую заставку \r\nпри переключении каналов.");
+            // 
+            // preloadBox
+            // 
+            this.preloadBox.AutoSize = true;
+            this.preloadBox.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.preloadBox.Location = new System.Drawing.Point(6, 14);
+            this.preloadBox.Name = "preloadBox";
+            this.preloadBox.Size = new System.Drawing.Size(112, 17);
+            this.preloadBox.TabIndex = 30;
+            this.preloadBox.Text = "Убрать заставку";
+            this.preloadBox.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolTip.SetToolTip(this.preloadBox, "Не показывать надоедающую заставку \r\nпри переключении каналов.");
+            this.preloadBox.UseVisualStyleBackColor = true;
             // 
             // groupBox10
             // 
@@ -615,7 +643,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(349, 564);
+            this.ClientSize = new System.Drawing.Size(357, 573);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
@@ -630,6 +658,8 @@
             this.Load += new System.EventHandler(this.ConfigurationForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
             this.groupBox9.ResumeLayout(false);
@@ -702,5 +732,7 @@
         private System.Windows.Forms.Button btnCleanAll;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.TextBox txtPluginName;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.CheckBox preloadBox;
     }
 }

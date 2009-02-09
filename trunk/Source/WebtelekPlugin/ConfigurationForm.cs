@@ -60,10 +60,12 @@ namespace MediaPortal.GUI.WebTelek
                 string switchtimeout = Convert.ToString(xmlreader.GetValueAsString("Account", "switchtimeout", "1"));
                 string switchonokonly = Convert.ToString(xmlreader.GetValueAsString("Account", "switchonokonly", "false"));
                 string PluginName = Convert.ToString(xmlreader.GetValueAsString("Account", "pluginname", "WEBTELEK+"));
+                string preload = Convert.ToString(xmlreader.GetValueAsString("Account", "preload", "false"));
 
                 textBox1.Text = username;
                 textBox2.Text = password;
                 txtPluginName.Text = PluginName;
+                preloadBox.Checked = Boolean.Parse(preload);
 
                 EPGdays.Value = Decimal.Parse(epgdays);
                 OSDDelay.Value = Decimal.Parse(osddelay);
@@ -150,6 +152,7 @@ namespace MediaPortal.GUI.WebTelek
                 writer.SetValue("Account", "switchtimeout", SwitchTimeout.Value.ToString().Trim());
                 writer.SetValue("Account", "switchonokonly", SwitchOnOKOnly.Checked.ToString().Trim());
                 writer.SetValue("Account", "pluginname", txtPluginName.Text.Trim());
+                writer.SetValue("Account", "preload", preloadBox.Checked.ToString().Trim());
             }
             this.Dispose(true);
         }
@@ -273,6 +276,7 @@ namespace MediaPortal.GUI.WebTelek
             MessageBox.Show("Готово!");
         }
 
+ 
 
     }
 }
