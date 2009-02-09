@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigurationForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.txtPluginName = new System.Windows.Forms.TextBox();
             this.btnCleanAll = new System.Windows.Forms.Button();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -71,9 +73,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.txtPluginName = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
+            this.groupBox10.SuspendLayout();
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SwitchTimeout)).BeginInit();
             this.groupBox8.SuspendLayout();
@@ -86,7 +87,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.EPGdays)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox10.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -107,15 +107,33 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(12, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(328, 454);
+            this.groupBox1.Size = new System.Drawing.Size(328, 514);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Настройки";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.txtPluginName);
+            this.groupBox10.Location = new System.Drawing.Point(17, 379);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(299, 53);
+            this.groupBox10.TabIndex = 40;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Название плагина";
+            this.toolTip.SetToolTip(this.groupBox10, "Здесь Вы можете задать название плагина.");
+            // 
+            // txtPluginName
+            // 
+            this.txtPluginName.Location = new System.Drawing.Point(6, 20);
+            this.txtPluginName.Name = "txtPluginName";
+            this.txtPluginName.Size = new System.Drawing.Size(287, 20);
+            this.txtPluginName.TabIndex = 0;
+            // 
             // btnCleanAll
             // 
-            this.btnCleanAll.Location = new System.Drawing.Point(17, 382);
+            this.btnCleanAll.Location = new System.Drawing.Point(17, 438);
             this.btnCleanAll.Name = "btnCleanAll";
             this.btnCleanAll.Size = new System.Drawing.Size(299, 34);
             this.btnCleanAll.TabIndex = 39;
@@ -413,7 +431,7 @@
             // 
             // CustomButton
             // 
-            this.CustomButton.Location = new System.Drawing.Point(216, 422);
+            this.CustomButton.Location = new System.Drawing.Point(216, 478);
             this.CustomButton.Name = "CustomButton";
             this.CustomButton.Size = new System.Drawing.Size(100, 23);
             this.CustomButton.TabIndex = 10;
@@ -426,7 +444,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(98, 422);
+            this.button4.Location = new System.Drawing.Point(98, 478);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 4;
@@ -493,7 +511,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(17, 422);
+            this.button3.Location = new System.Drawing.Point(17, 478);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 3;
@@ -578,7 +596,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(214, 470);
+            this.linkLabel1.Location = new System.Drawing.Point(214, 542);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(125, 13);
             this.linkLabel1.TabIndex = 3;
@@ -593,43 +611,27 @@
             this.toolTip.InitialDelay = 500;
             this.toolTip.ReshowDelay = 100;
             // 
-            // groupBox10
-            // 
-            this.groupBox10.Controls.Add(this.txtPluginName);
-            this.groupBox10.Location = new System.Drawing.Point(17, 323);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(299, 53);
-            this.groupBox10.TabIndex = 40;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Название плагина";
-            this.toolTip.SetToolTip(this.groupBox10, "Здесь Вы можете задать название плагина.");
-            // 
-            // txtPluginName
-            // 
-            this.txtPluginName.Location = new System.Drawing.Point(6, 20);
-            this.txtPluginName.Name = "txtPluginName";
-            this.txtPluginName.Size = new System.Drawing.Size(287, 20);
-            this.txtPluginName.TabIndex = 0;
-            // 
             // ConfigurationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(357, 492);
+            this.ClientSize = new System.Drawing.Size(349, 564);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(365, 520);
+            this.MaximumSize = new System.Drawing.Size(365, 600);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(365, 520);
+            this.MinimumSize = new System.Drawing.Size(365, 600);
             this.Name = "ConfigurationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Настройки WEBTELEK+";
             this.Load += new System.EventHandler(this.ConfigurationForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SwitchTimeout)).EndInit();
@@ -650,8 +652,6 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox10.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
