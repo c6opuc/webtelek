@@ -142,7 +142,7 @@ namespace MediaPortal.GUI.WebTelek
                     case Action.ActionType.ACTION_VOLUME_DOWN:
                     case Action.ActionType.ACTION_VOLUME_MUTE:
                         if (_enabled)
-                            if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.WebTelekWMP)))
+                            if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9) | g_Player.Player.GetType() == typeof(MediaPortal.Player.WebTelekWMP)))
                             {
                                 _timer.Enabled = false;
                                 if (g_Player.FullScreen)

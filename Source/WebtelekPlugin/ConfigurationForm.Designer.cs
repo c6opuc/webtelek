@@ -75,6 +75,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.playerBox = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -90,10 +92,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.EPGdays)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox12.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.groupBox12);
             this.groupBox1.Controls.Add(this.groupBox11);
             this.groupBox1.Controls.Add(this.groupBox10);
             this.groupBox1.Controls.Add(this.btnCleanAll);
@@ -122,7 +126,7 @@
             this.groupBox11.Controls.Add(this.preloadBox);
             this.groupBox11.Location = new System.Drawing.Point(17, 330);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(299, 44);
+            this.groupBox11.Size = new System.Drawing.Size(144, 44);
             this.groupBox11.TabIndex = 41;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Заставка";
@@ -132,7 +136,7 @@
             // 
             this.preloadBox.AutoSize = true;
             this.preloadBox.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.preloadBox.Location = new System.Drawing.Point(6, 14);
+            this.preloadBox.Location = new System.Drawing.Point(6, 19);
             this.preloadBox.Name = "preloadBox";
             this.preloadBox.Size = new System.Drawing.Size(112, 17);
             this.preloadBox.TabIndex = 30;
@@ -639,6 +643,34 @@
             this.toolTip.InitialDelay = 500;
             this.toolTip.ReshowDelay = 100;
             // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.playerBox);
+            this.groupBox12.Location = new System.Drawing.Point(167, 330);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(149, 44);
+            this.groupBox12.TabIndex = 42;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Webtelek Плеер";
+            this.toolTip.SetToolTip(this.groupBox12, "По умолчанию используется плеер разработаный для Webtelek.\r\nВ некоторых случаях е" +
+                    "сть необходимость использовать стандартный\r\nплеер от Mediaportal. Например если " +
+                    "используется TV Server.");
+            // 
+            // playerBox
+            // 
+            this.playerBox.AutoSize = true;
+            this.playerBox.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.playerBox.Location = new System.Drawing.Point(6, 19);
+            this.playerBox.Name = "playerBox";
+            this.playerBox.Size = new System.Drawing.Size(114, 17);
+            this.playerBox.TabIndex = 30;
+            this.playerBox.Text = "Не использовать";
+            this.playerBox.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolTip.SetToolTip(this.playerBox, "По умолчанию используется плеер разработаный для Webtelek.\r\nВ некоторых случаях е" +
+                    "сть необходимость использовать стандартный\r\nплеер от Mediaportal. Например если " +
+                    "используется TV Server.");
+            this.playerBox.UseVisualStyleBackColor = true;
+            // 
             // ConfigurationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -682,6 +714,8 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -734,5 +768,7 @@
         private System.Windows.Forms.TextBox txtPluginName;
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.CheckBox preloadBox;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.CheckBox playerBox;
     }
 }
