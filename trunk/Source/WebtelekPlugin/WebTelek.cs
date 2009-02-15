@@ -51,7 +51,7 @@ namespace MediaPortal.GUI.WebTelek
         #endregion
         #region Variables
                 
-        public static string VERSION = "5.5";
+        public static string VERSION = "5.6";
         public static int PluginID  = 6926;
         public static int TVGuideID = 6927;
         public static int TVProgramID = 6928;
@@ -136,6 +136,7 @@ namespace MediaPortal.GUI.WebTelek
         private TypeOfList _currentTypeOfList;
         private string _lastSearchTitle;
         private Boolean preload;
+        private Boolean stdplayer;
         
         public enum TypeOfList
         {
@@ -183,8 +184,6 @@ namespace MediaPortal.GUI.WebTelek
             SetErrorMode(ErrorModes.SEM_FAILCRITICALERRORS);
             archiveMenuPath[0] = new StringCollection();
             archiveMenuPath[1] = new StringCollection();
-            //Test
-            g_Player.Factory = new WebTelekPlayerFactory();
 
             g_Player.PlayBackEnded += new g_Player.EndedHandler(OnPlayBackEnded);
             g_Player.PlayBackStopped += new g_Player.StoppedHandler(OnPlayBackStopped);
@@ -192,8 +191,10 @@ namespace MediaPortal.GUI.WebTelek
             using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"), false))
             {
                 preload = Boolean.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "preload", "false")));
+                stdplayer = Boolean.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "stdplayer", "false")));
             }
 
+            if (! stdplayer) g_Player.Factory = new WebTelekPlayerFactory();
 
             return Load(GUIGraphicsContext.Skin + @"\webtelek.xml");
         }
