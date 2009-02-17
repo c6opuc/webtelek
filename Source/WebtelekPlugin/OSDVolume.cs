@@ -210,7 +210,7 @@ namespace MediaPortal.GUI.WebTelek
                         }
                 }
             }
-            this.Opacity = 1;
+            this.Opacity = WebTelek.opacity;
             this.Refresh();
         }
 

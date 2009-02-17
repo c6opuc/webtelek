@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigurationForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.playerBox = new System.Windows.Forms.CheckBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.preloadBox = new System.Windows.Forms.CheckBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
@@ -75,9 +77,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.playerBox = new System.Windows.Forms.CheckBox();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.OSDopacity = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
+            this.groupBox12.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox9.SuspendLayout();
@@ -92,11 +95,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.EPGdays)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox12.SuspendLayout();
+            this.groupBox13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OSDopacity)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.groupBox13);
             this.groupBox1.Controls.Add(this.groupBox12);
             this.groupBox1.Controls.Add(this.groupBox11);
             this.groupBox1.Controls.Add(this.groupBox10);
@@ -120,6 +125,34 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Настройки";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.playerBox);
+            this.groupBox12.Location = new System.Drawing.Point(167, 330);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(149, 44);
+            this.groupBox12.TabIndex = 42;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Webtelek Плеер";
+            this.toolTip.SetToolTip(this.groupBox12, "По умолчанию используется плеер разработаный для Webtelek.\r\nВ некоторых случаях е" +
+                    "сть необходимость использовать стандартный\r\nплеер от Mediaportal. Например если " +
+                    "используется TV Server.");
+            // 
+            // playerBox
+            // 
+            this.playerBox.AutoSize = true;
+            this.playerBox.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.playerBox.Location = new System.Drawing.Point(6, 19);
+            this.playerBox.Name = "playerBox";
+            this.playerBox.Size = new System.Drawing.Size(114, 17);
+            this.playerBox.TabIndex = 30;
+            this.playerBox.Text = "Не использовать";
+            this.playerBox.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolTip.SetToolTip(this.playerBox, "По умолчанию используется плеер разработаный для Webtelek.\r\nВ некоторых случаях е" +
+                    "сть необходимость использовать стандартный\r\nплеер от Mediaportal. Например если " +
+                    "используется TV Server.");
+            this.playerBox.UseVisualStyleBackColor = true;
             // 
             // groupBox11
             // 
@@ -372,7 +405,7 @@
             this.groupBox5.Controls.Add(this.EPGNotifyCheckBox);
             this.groupBox5.Location = new System.Drawing.Point(17, 228);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(173, 44);
+            this.groupBox5.Size = new System.Drawing.Size(71, 44);
             this.groupBox5.TabIndex = 12;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "TV Notify";
@@ -384,9 +417,9 @@
             this.EPGNotifyCheckBox.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
             this.EPGNotifyCheckBox.Location = new System.Drawing.Point(6, 14);
             this.EPGNotifyCheckBox.Name = "EPGNotifyCheckBox";
-            this.EPGNotifyCheckBox.Size = new System.Drawing.Size(155, 17);
+            this.EPGNotifyCheckBox.Size = new System.Drawing.Size(48, 17);
             this.EPGNotifyCheckBox.TabIndex = 30;
-            this.EPGNotifyCheckBox.Text = "Напоминатель программ";
+            this.EPGNotifyCheckBox.Text = "Вкл.";
             this.EPGNotifyCheckBox.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolTip.SetToolTip(this.EPGNotifyCheckBox, resources.GetString("EPGNotifyCheckBox.ToolTip"));
             this.EPGNotifyCheckBox.UseVisualStyleBackColor = true;
@@ -643,33 +676,36 @@
             this.toolTip.InitialDelay = 500;
             this.toolTip.ReshowDelay = 100;
             // 
-            // groupBox12
+            // groupBox13
             // 
-            this.groupBox12.Controls.Add(this.playerBox);
-            this.groupBox12.Location = new System.Drawing.Point(167, 330);
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(149, 44);
-            this.groupBox12.TabIndex = 42;
-            this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "Webtelek Плеер";
-            this.toolTip.SetToolTip(this.groupBox12, "По умолчанию используется плеер разработаный для Webtelek.\r\nВ некоторых случаях е" +
-                    "сть необходимость использовать стандартный\r\nплеер от Mediaportal. Например если " +
-                    "используется TV Server.");
+            this.groupBox13.Controls.Add(this.OSDopacity);
+            this.groupBox13.Location = new System.Drawing.Point(94, 228);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(96, 44);
+            this.groupBox13.TabIndex = 43;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Transparency";
+            this.toolTip.SetToolTip(this.groupBox13, "Задав значение между 0 и 1 можно \r\nдобиться полупрозрачности OSD \r\nэлементов ");
             // 
-            // playerBox
+            // OSDopacity
             // 
-            this.playerBox.AutoSize = true;
-            this.playerBox.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.playerBox.Location = new System.Drawing.Point(6, 19);
-            this.playerBox.Name = "playerBox";
-            this.playerBox.Size = new System.Drawing.Size(114, 17);
-            this.playerBox.TabIndex = 30;
-            this.playerBox.Text = "Не использовать";
-            this.playerBox.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolTip.SetToolTip(this.playerBox, "По умолчанию используется плеер разработаный для Webtelek.\r\nВ некоторых случаях е" +
-                    "сть необходимость использовать стандартный\r\nплеер от Mediaportal. Например если " +
-                    "используется TV Server.");
-            this.playerBox.UseVisualStyleBackColor = true;
+            this.OSDopacity.DecimalPlaces = 1;
+            this.OSDopacity.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.OSDopacity.Location = new System.Drawing.Point(16, 15);
+            this.OSDopacity.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            65536});
+            this.OSDopacity.Name = "OSDopacity";
+            this.OSDopacity.Size = new System.Drawing.Size(63, 20);
+            this.OSDopacity.TabIndex = 35;
+            this.OSDopacity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.OSDopacity, "0 - полная прозначность\r\n1 - полная непрозначность");
             // 
             // ConfigurationForm
             // 
@@ -690,6 +726,8 @@
             this.Load += new System.EventHandler(this.ConfigurationForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
             this.groupBox10.ResumeLayout(false);
@@ -714,8 +752,8 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox12.ResumeLayout(false);
-            this.groupBox12.PerformLayout();
+            this.groupBox13.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.OSDopacity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -770,5 +808,7 @@
         private System.Windows.Forms.CheckBox preloadBox;
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.CheckBox playerBox;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.NumericUpDown OSDopacity;
     }
 }

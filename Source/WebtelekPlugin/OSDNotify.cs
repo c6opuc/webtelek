@@ -258,7 +258,7 @@ namespace MediaPortal.GUI.WebTelek
                     Log.Error(ex);
                 }
             }
-            this.Opacity = 1;
+            this.Opacity = WebTelek.opacity;
             this.Refresh();
         }
 
