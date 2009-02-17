@@ -137,6 +137,7 @@ namespace MediaPortal.GUI.WebTelek
         private string _lastSearchTitle;
         private Boolean preload;
         private Boolean stdplayer;
+        public static Double opacity;
         
         public enum TypeOfList
         {
@@ -192,6 +193,7 @@ namespace MediaPortal.GUI.WebTelek
             {
                 preload = Boolean.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "preload", "false")));
                 stdplayer = Boolean.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "stdplayer", "false")));
+                opacity = Double.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "opacity", "1")));
             }
 
             if (! stdplayer) g_Player.Factory = new WebTelekPlayerFactory();

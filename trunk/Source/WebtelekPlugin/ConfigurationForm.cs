@@ -62,6 +62,7 @@ namespace MediaPortal.GUI.WebTelek
                 string PluginName = Convert.ToString(xmlreader.GetValueAsString("Account", "pluginname", "WEBTELEK+"));
                 string preload = Convert.ToString(xmlreader.GetValueAsString("Account", "preload", "false"));
                 string stdplayer = Convert.ToString(xmlreader.GetValueAsString("Account", "stdplayer", "false"));
+                string opacity = Convert.ToString(xmlreader.GetValueAsString("Account", "opacity", "1"));
 
                 textBox1.Text = username;
                 textBox2.Text = password;
@@ -77,6 +78,7 @@ namespace MediaPortal.GUI.WebTelek
                 VersionCheckBox.Checked = Boolean.Parse(versioncheck);
                 SwitchTimeout.Value = Decimal.Parse(switchtimeout);
                 SwitchOnOKOnly.Checked = Boolean.Parse(switchonokonly);
+                OSDopacity.Value = Decimal.Parse(opacity);
 
                 if (Boolean.Parse(switchonokonly)) SwitchTimeout.Enabled = false;
 
@@ -156,7 +158,7 @@ namespace MediaPortal.GUI.WebTelek
                 writer.SetValue("Account", "pluginname", txtPluginName.Text.Trim());
                 writer.SetValue("Account", "preload", preloadBox.Checked.ToString().Trim());
                 writer.SetValue("Account", "stdplayer", playerBox.Checked.ToString().Trim());
-
+                writer.SetValue("Account", "opacity", OSDopacity.Value.ToString().Trim());
             }
             this.Dispose(true);
         }
