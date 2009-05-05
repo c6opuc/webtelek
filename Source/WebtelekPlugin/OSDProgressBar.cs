@@ -1,4 +1,4 @@
-﻿#region Copyright (C) 2005-2006 Team MediaPortal
+#region Copyright (C) 2005-2006 Team MediaPortal
 
 /* 
  *	Copyright (C) 2005-2006 Team MediaPortal
@@ -169,7 +169,7 @@ namespace MediaPortal.GUI.WebTelek
                         case Action.ActionType.ACTION_MOVE_UP:
                         case Action.ActionType.ACTION_MOVE_DOWN:
                             if (_enabled)
-                                if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9) | g_Player.Player.GetType() == typeof(MediaPortal.Player.WebTelekWMP)))
+                                if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.WebTelekWMP)))
                                 {
                                     _timer.Enabled = false;
                                     if (g_Player.FullScreen)
@@ -188,7 +188,7 @@ namespace MediaPortal.GUI.WebTelek
                         case Action.ActionType.ACTION_CONTEXT_MENU:
                         case Action.ActionType.ACTION_SELECT_ITEM:
                             if (_enabled)
-                                if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9) | g_Player.Player.GetType() == typeof(MediaPortal.Player.WebTelekWMP)))
+                                if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.WebTelekWMP)))
                                 {
                                     _timer.Enabled = false;
                                     if (g_Player.FullScreen)
@@ -211,6 +211,9 @@ namespace MediaPortal.GUI.WebTelek
 
         void GUIWindowManager_OnNewAction(Action action)
         {
+            //string dir = Directory.GetCurrentDirectory();
+            //File.AppendAllText(dir + @"\webtelek.log", "OSD: " + action.wID.ToString() + " \n");
+
             switch (action.wID)
             {
                 case Action.ActionType.ACTION_BIG_STEP_FORWARD:
@@ -315,7 +318,7 @@ namespace MediaPortal.GUI.WebTelek
                     Log.Error(ex);
                 }
             }
-            this.Opacity = WebTelek.opacity;
+            this.Opacity = 1;
             this.Refresh();
         }
 

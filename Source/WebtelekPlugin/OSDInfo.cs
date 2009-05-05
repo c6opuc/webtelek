@@ -1,4 +1,4 @@
-﻿#region Copyright (C) 2005-2006 Team MediaPortal
+#region Copyright (C) 2005-2006 Team MediaPortal
 
 /* 
  *	Copyright (C) 2005-2006 Team MediaPortal
@@ -152,6 +152,8 @@ namespace MediaPortal.GUI.WebTelek
 
         void GUIWindowManager_OnNewAction(Action action)
         {
+            //string dir = Directory.GetCurrentDirectory();
+            //File.AppendAllText(dir + @"\webtelek.log", "OSD: " + action.wID.ToString() + " \n");
             if (g_Player.Player != null)
             {
                 switch (action.wID)
@@ -159,7 +161,7 @@ namespace MediaPortal.GUI.WebTelek
                     case Action.ActionType.ACTION_SHOW_OSD:
                     case Action.ActionType.ACTION_CONTEXT_MENU:
                         if (_enabled)
-                            if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9) | g_Player.Player.GetType() == typeof(MediaPortal.Player.WebTelekWMP)))
+                            if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.WebTelekWMP)))
                             {
                                 _timer.Enabled = false;
                                 if (g_Player.FullScreen)
@@ -182,7 +184,7 @@ namespace MediaPortal.GUI.WebTelek
                     case Action.ActionType.ACTION_PAGE_UP:
                         if (wp != null)
                         {
-                            if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9) | g_Player.Player.GetType() == typeof(MediaPortal.Player.WebTelekWMP)))
+                            if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.WebTelekWMP)))
                             {
                                 wp.PlayNext(1,false);
                                 wp.GetChannelData(false);
@@ -202,7 +204,7 @@ namespace MediaPortal.GUI.WebTelek
                     case Action.ActionType.ACTION_PAGE_DOWN:
                         if (wp != null)
                         {
-                            if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9) | g_Player.Player.GetType() == typeof(MediaPortal.Player.WebTelekWMP)))
+                            if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.WebTelekWMP)))
                             {
                                 wp.PlayNext(-1,false);
                                 wp.GetChannelData(false);
@@ -218,7 +220,7 @@ namespace MediaPortal.GUI.WebTelek
                         }
                         break;
                     case Action.ActionType.ACTION_SELECT_ITEM:
-                        if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9) | g_Player.Player.GetType() == typeof(MediaPortal.Player.WebTelekWMP)))
+                        if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.WebTelekWMP)))
                         {
 
                             if ((_changeOnOKonly) && (wp != null)) wp.PlayNext(0, false);
@@ -274,6 +276,8 @@ namespace MediaPortal.GUI.WebTelek
 
         protected virtual void _playtimer_Tick(object sender, EventArgs e)
         {
+            //string dir = Directory.GetCurrentDirectory();
+            //File.AppendAllText(dir + @"\webtelek.log", "timer has gone\n");
                 _playtimer.Stop();
                 wp.PlayNext(0, _changeOnOKonly);
         }
@@ -299,7 +303,21 @@ namespace MediaPortal.GUI.WebTelek
                     g.DrawString(info, f, new SolidBrush(Color.White), new RectangleF(40, 20, _bitmap.Width - 70 - 49, _bitmap.Height - 40)); 
                     if (channel_id != null)
                     {
-                        WebTelek.getChannelLogo(channel_id);
+                        if (!File.Exists(@"webtelek\" + channel_id + ".jpg"))
+                        {
+                            try
+                            {
+                                WebClient client = new WebClient();
+                                client.DownloadFile(
+                                "http://www.webtelek.com/img/mediaportal/" + channel_id + ".jpg",
+                                "webtelek\\" + channel_id + ".jpg"
+                                );
+                            }
+                            catch (Exception)
+                            {
+
+                            }
+                        }
                         Bitmap logo;
                         if (File.Exists(@"webtelek\" + channel_id + ".jpg"))
                         {
@@ -321,7 +339,7 @@ namespace MediaPortal.GUI.WebTelek
                     Log.Error(ex);
                 }
             }
-            this.Opacity = WebTelek.opacity;
+            this.Opacity = 1;
             this.Refresh();
         }
 
