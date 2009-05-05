@@ -134,7 +134,7 @@ namespace MediaPortal.Player
       GUIWindowManager.SendMessage(msg);
 
       _notifyPlaying = true;
-      GC.Collect();
+      //GC.Collect();
       CreateInstance();
 
       LoadStreamingSettings();
@@ -284,7 +284,7 @@ namespace MediaPortal.Player
         GUIGraphicsContext.IsFullScreenVideo = false;
         GUIGraphicsContext.IsPlaying = false;
         _graphState = PlayState.Init;
-        GC.Collect();
+        //GC.Collect();
     }
     private void LoadStreamingSettings()
     {      
@@ -345,7 +345,7 @@ namespace MediaPortal.Player
       {
         _graphState = PlayState.Init;
       }
-      GC.Collect();
+      //GC.Collect();
     }
 
 

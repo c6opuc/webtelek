@@ -31,12 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigurationForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.playerBox = new System.Windows.Forms.CheckBox();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.preloadBox = new System.Windows.Forms.CheckBox();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.txtPluginName = new System.Windows.Forms.TextBox();
             this.btnCleanAll = new System.Windows.Forms.Button();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -77,12 +71,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.OSDopacity = new System.Windows.Forms.NumericUpDown();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.txtPluginName = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
-            this.groupBox12.SuspendLayout();
-            this.groupBox11.SuspendLayout();
-            this.groupBox10.SuspendLayout();
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SwitchTimeout)).BeginInit();
             this.groupBox8.SuspendLayout();
@@ -95,15 +86,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.EPGdays)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.OSDopacity)).BeginInit();
+            this.groupBox10.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.groupBox13);
-            this.groupBox1.Controls.Add(this.groupBox12);
-            this.groupBox1.Controls.Add(this.groupBox11);
             this.groupBox1.Controls.Add(this.groupBox10);
             this.groupBox1.Controls.Add(this.btnCleanAll);
             this.groupBox1.Controls.Add(this.groupBox9);
@@ -120,85 +107,15 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(12, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(328, 514);
+            this.groupBox1.Size = new System.Drawing.Size(328, 454);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Настройки";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // groupBox12
-            // 
-            this.groupBox12.Controls.Add(this.playerBox);
-            this.groupBox12.Location = new System.Drawing.Point(167, 330);
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(149, 44);
-            this.groupBox12.TabIndex = 42;
-            this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "Webtelek Плеер";
-            this.toolTip.SetToolTip(this.groupBox12, "По умолчанию используется плеер разработаный для Webtelek.\r\nВ некоторых случаях е" +
-                    "сть необходимость использовать стандартный\r\nплеер от Mediaportal. Например если " +
-                    "используется TV Server.");
-            // 
-            // playerBox
-            // 
-            this.playerBox.AutoSize = true;
-            this.playerBox.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.playerBox.Location = new System.Drawing.Point(6, 19);
-            this.playerBox.Name = "playerBox";
-            this.playerBox.Size = new System.Drawing.Size(114, 17);
-            this.playerBox.TabIndex = 30;
-            this.playerBox.Text = "Не использовать";
-            this.playerBox.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolTip.SetToolTip(this.playerBox, "По умолчанию используется плеер разработаный для Webtelek.\r\nВ некоторых случаях е" +
-                    "сть необходимость использовать стандартный\r\nплеер от Mediaportal. Например если " +
-                    "используется TV Server.");
-            this.playerBox.UseVisualStyleBackColor = true;
-            // 
-            // groupBox11
-            // 
-            this.groupBox11.Controls.Add(this.preloadBox);
-            this.groupBox11.Location = new System.Drawing.Point(17, 330);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(144, 44);
-            this.groupBox11.TabIndex = 41;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Заставка";
-            this.toolTip.SetToolTip(this.groupBox11, "Не показывать надоедающую заставку \r\nпри переключении каналов.");
-            // 
-            // preloadBox
-            // 
-            this.preloadBox.AutoSize = true;
-            this.preloadBox.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.preloadBox.Location = new System.Drawing.Point(6, 19);
-            this.preloadBox.Name = "preloadBox";
-            this.preloadBox.Size = new System.Drawing.Size(112, 17);
-            this.preloadBox.TabIndex = 30;
-            this.preloadBox.Text = "Убрать заставку";
-            this.preloadBox.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolTip.SetToolTip(this.preloadBox, "Не показывать надоедающую заставку \r\nпри переключении каналов.");
-            this.preloadBox.UseVisualStyleBackColor = true;
-            // 
-            // groupBox10
-            // 
-            this.groupBox10.Controls.Add(this.txtPluginName);
-            this.groupBox10.Location = new System.Drawing.Point(17, 379);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(299, 53);
-            this.groupBox10.TabIndex = 40;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Название плагина";
-            this.toolTip.SetToolTip(this.groupBox10, "Здесь Вы можете задать название плагина.");
-            // 
-            // txtPluginName
-            // 
-            this.txtPluginName.Location = new System.Drawing.Point(6, 20);
-            this.txtPluginName.Name = "txtPluginName";
-            this.txtPluginName.Size = new System.Drawing.Size(287, 20);
-            this.txtPluginName.TabIndex = 0;
-            // 
             // btnCleanAll
             // 
-            this.btnCleanAll.Location = new System.Drawing.Point(17, 438);
+            this.btnCleanAll.Location = new System.Drawing.Point(17, 382);
             this.btnCleanAll.Name = "btnCleanAll";
             this.btnCleanAll.Size = new System.Drawing.Size(299, 34);
             this.btnCleanAll.TabIndex = 39;
@@ -405,7 +322,7 @@
             this.groupBox5.Controls.Add(this.EPGNotifyCheckBox);
             this.groupBox5.Location = new System.Drawing.Point(17, 228);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(71, 44);
+            this.groupBox5.Size = new System.Drawing.Size(173, 44);
             this.groupBox5.TabIndex = 12;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "TV Notify";
@@ -417,9 +334,9 @@
             this.EPGNotifyCheckBox.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
             this.EPGNotifyCheckBox.Location = new System.Drawing.Point(6, 14);
             this.EPGNotifyCheckBox.Name = "EPGNotifyCheckBox";
-            this.EPGNotifyCheckBox.Size = new System.Drawing.Size(48, 17);
+            this.EPGNotifyCheckBox.Size = new System.Drawing.Size(155, 17);
             this.EPGNotifyCheckBox.TabIndex = 30;
-            this.EPGNotifyCheckBox.Text = "Вкл.";
+            this.EPGNotifyCheckBox.Text = "Напоминатель программ";
             this.EPGNotifyCheckBox.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolTip.SetToolTip(this.EPGNotifyCheckBox, resources.GetString("EPGNotifyCheckBox.ToolTip"));
             this.EPGNotifyCheckBox.UseVisualStyleBackColor = true;
@@ -496,7 +413,7 @@
             // 
             // CustomButton
             // 
-            this.CustomButton.Location = new System.Drawing.Point(216, 478);
+            this.CustomButton.Location = new System.Drawing.Point(216, 422);
             this.CustomButton.Name = "CustomButton";
             this.CustomButton.Size = new System.Drawing.Size(100, 23);
             this.CustomButton.TabIndex = 10;
@@ -509,7 +426,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(98, 478);
+            this.button4.Location = new System.Drawing.Point(98, 422);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 4;
@@ -576,7 +493,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(17, 478);
+            this.button3.Location = new System.Drawing.Point(17, 422);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 3;
@@ -661,7 +578,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(214, 542);
+            this.linkLabel1.Location = new System.Drawing.Point(214, 470);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(125, 13);
             this.linkLabel1.TabIndex = 3;
@@ -676,62 +593,43 @@
             this.toolTip.InitialDelay = 500;
             this.toolTip.ReshowDelay = 100;
             // 
-            // groupBox13
+            // groupBox10
             // 
-            this.groupBox13.Controls.Add(this.OSDopacity);
-            this.groupBox13.Location = new System.Drawing.Point(94, 228);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(96, 44);
-            this.groupBox13.TabIndex = 43;
-            this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "Transparency";
-            this.toolTip.SetToolTip(this.groupBox13, "Задав значение между 0 и 1 можно \r\nдобиться полупрозрачности OSD \r\nэлементов ");
+            this.groupBox10.Controls.Add(this.txtPluginName);
+            this.groupBox10.Location = new System.Drawing.Point(17, 323);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(299, 53);
+            this.groupBox10.TabIndex = 40;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Название плагина";
+            this.toolTip.SetToolTip(this.groupBox10, "Здесь Вы можете задать название плагина.");
             // 
-            // OSDopacity
+            // txtPluginName
             // 
-            this.OSDopacity.DecimalPlaces = 1;
-            this.OSDopacity.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.OSDopacity.Location = new System.Drawing.Point(16, 15);
-            this.OSDopacity.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            65536});
-            this.OSDopacity.Name = "OSDopacity";
-            this.OSDopacity.Size = new System.Drawing.Size(63, 20);
-            this.OSDopacity.TabIndex = 35;
-            this.OSDopacity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.toolTip.SetToolTip(this.OSDopacity, "0 - полная прозначность\r\n1 - полная непрозначность");
+            this.txtPluginName.Location = new System.Drawing.Point(6, 20);
+            this.txtPluginName.Name = "txtPluginName";
+            this.txtPluginName.Size = new System.Drawing.Size(287, 20);
+            this.txtPluginName.TabIndex = 0;
             // 
             // ConfigurationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(357, 573);
+            this.ClientSize = new System.Drawing.Size(357, 492);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(365, 600);
+            this.MaximumSize = new System.Drawing.Size(365, 520);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(365, 600);
+            this.MinimumSize = new System.Drawing.Size(365, 520);
             this.Name = "ConfigurationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Настройки WEBTELEK+";
             this.Load += new System.EventHandler(this.ConfigurationForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox12.ResumeLayout(false);
-            this.groupBox12.PerformLayout();
-            this.groupBox11.ResumeLayout(false);
-            this.groupBox11.PerformLayout();
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox10.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SwitchTimeout)).EndInit();
@@ -752,8 +650,8 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox13.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.OSDopacity)).EndInit();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -804,11 +702,5 @@
         private System.Windows.Forms.Button btnCleanAll;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.TextBox txtPluginName;
-        private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.CheckBox preloadBox;
-        private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.CheckBox playerBox;
-        private System.Windows.Forms.GroupBox groupBox13;
-        private System.Windows.Forms.NumericUpDown OSDopacity;
     }
 }

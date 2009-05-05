@@ -51,7 +51,7 @@ namespace MediaPortal.GUI.WebTelek
         #endregion
         #region Variables
                 
-        public static string VERSION = "5.7";
+        public static string VERSION = "5.4";
         public static int PluginID  = 6926;
         public static int TVGuideID = 6927;
         public static int TVProgramID = 6928;
@@ -135,9 +135,6 @@ namespace MediaPortal.GUI.WebTelek
         List<int> Navigation = new List<int>();
         private TypeOfList _currentTypeOfList;
         private string _lastSearchTitle;
-        private Boolean preload;
-        private Boolean stdplayer;
-        public static Double opacity;
         
         public enum TypeOfList
         {
@@ -185,22 +182,13 @@ namespace MediaPortal.GUI.WebTelek
             SetErrorMode(ErrorModes.SEM_FAILCRITICALERRORS);
             archiveMenuPath[0] = new StringCollection();
             archiveMenuPath[1] = new StringCollection();
+            //Test
+            g_Player.Factory = new WebTelekPlayerFactory();
 
             g_Player.PlayBackEnded += new g_Player.EndedHandler(OnPlayBackEnded);
             g_Player.PlayBackStopped += new g_Player.StoppedHandler(OnPlayBackStopped);
-
-            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"), false))
-            {
-                preload = Boolean.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "preload", "false")));
-                stdplayer = Boolean.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "stdplayer", "false")));
-                opacity = Double.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "opacity", "1")));
-            }
-
-            if (! stdplayer) g_Player.Factory = new WebTelekPlayerFactory();
-
             return Load(GUIGraphicsContext.Skin + @"\webtelek.xml");
         }
-
 
         void OnPlayBackStopped(g_Player.MediaType type, int stoptime, string filename)
         {
@@ -561,14 +549,9 @@ namespace MediaPortal.GUI.WebTelek
             GUIDialogMenu netchooser = (GUIDialogMenu)GUIWindowManager.GetWindow((int)GUIWindow.Window.WINDOW_DIALOG_MENU);
             netchooser.Reset();
             netchooser.SetHeading("Настройки сети");
+            
+            RegistryKey key = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\MediaPlayer\\Preferences",true);
 
-            RegistryKey key;
-
-            key = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\MediaPlayer\\Preferences", true);
-
-            if (key.GetValue("UseUDP") == null) key.SetValue("UseUDP", 1);
-            if (key.GetValue("UseTCP") == null) key.SetValue("UseTCP", 1);
-            if (key.GetValue("UseHTTP") == null) key.SetValue("UseHTTP", 1);
 
             if ((int)key.GetValue("UseUDP") == 1)
             {
@@ -578,7 +561,7 @@ namespace MediaPortal.GUI.WebTelek
             {
                 netchooser.Add("UDP : ВЫКЛ");
             }
-            if ((int)key.GetValue("UseTCP") == 1 || key.GetValue("UseTCP") == null)
+            if ((int)key.GetValue("UseTCP") == 1)
             {
                 netchooser.Add("TCP : ВКЛ");
             }
@@ -586,7 +569,7 @@ namespace MediaPortal.GUI.WebTelek
             {
                 netchooser.Add("TCP : ВЫКЛ");
             }
-            if ((int)key.GetValue("UseHTTP") == 1 || key.GetValue("UseHTTP") == null)
+            if ((int)key.GetValue("UseHTTP") == 1)
             {
                 netchooser.Add("HTTP : ВКЛ");
             }
@@ -638,7 +621,7 @@ namespace MediaPortal.GUI.WebTelek
                 case 4:
                     g_Player.Stop();
                     g_Player.Release();
-                    GC.Collect(); 
+                    //GC.Collect(); GC.Collect(); GC.Collect(); GC.Collect();
                     g_Player.Init();
                     key.Close();
                     break;
@@ -1140,9 +1123,7 @@ namespace MediaPortal.GUI.WebTelek
                 GUIPropertyManager.SetProperty("#Play.Current.Title", currplay);
                 string dir = Directory.GetCurrentDirectory();
                 File.Delete(dir + @"\webtelek.asx");
-                String _tempasx = webdata.getHTTPData(url);
-                if ( preload ) _tempasx =  _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
-                File.WriteAllText(dir + @"\webtelek.asx", _tempasx, Encoding.Default);
+                File.WriteAllText(dir + @"\webtelek.asx", webdata.getHTTPData(url), Encoding.Default);
                 url = dir + @"\webtelek.asx";
                 g_Player.Play(url);
                 OSDInfo.wp = null;
@@ -1176,9 +1157,7 @@ namespace MediaPortal.GUI.WebTelek
                         GUIPropertyManager.SetProperty("#Play.Current.Title", currplay);
                         string dir = Directory.GetCurrentDirectory();
                         File.Delete(dir + @"\webtelek.asx");
-                        String _tempasx = webdata.getHTTPData(url);
-                        if (preload) _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
-                        File.WriteAllText(dir + @"\webtelek.asx",_tempasx,Encoding.Default);
+                        File.WriteAllText(dir + @"\webtelek.asx",webdata.getHTTPData(url),Encoding.Default);
                         url = dir + @"\webtelek.asx";
                         g_Player.Play(url);
                         OSDInfo.wp = null;
@@ -1230,9 +1209,7 @@ namespace MediaPortal.GUI.WebTelek
                     {
                         if (FUrls[listView.SelectedListItemIndex - i].Contains("http://www.webtelek.com/play.php?ch="))
                         {
-                            String _tempasx = webdata.getHTTPData(FUrls[listView.SelectedListItemIndex - i]);
-                            if (preload) _tempasx = _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
-                            File.WriteAllText(dir + @"\webtelek.asx", _tempasx, Encoding.Default);
+                            File.WriteAllText(dir + @"\webtelek.asx", webdata.getHTTPData(FUrls[listView.SelectedListItemIndex - i]), Encoding.Default);
                             mmsurl = dir + @"\webtelek.asx";
                             OSDInfo.channel_id = FUrls[listView.SelectedListItemIndex - i].Substring(36);
                         }
@@ -1563,7 +1540,7 @@ namespace MediaPortal.GUI.WebTelek
                 chooser.Add(date.ToString("dddd, dd MMMM"));
                 j++;
             }
-
+ 
             chooser.DoModal(GetID);
 
             if (chooser.SelectedId >= 1) arcDateSelector = archive.getDates()[chooser.SelectedId-1];
@@ -1655,12 +1632,7 @@ namespace MediaPortal.GUI.WebTelek
 
             if (PlayNextUrls[PlayNextIndex].Contains("http://www.webtelek.com/play.php?ch="))
             {
-                if (next == 0 && curr_play_url != PlayNextUrls[PlayNextIndex])
-                {
-                    String _tempasx = webdata.getHTTPData(PlayNextUrls[PlayNextIndex]);
-                    if (preload) _tempasx = _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
-                    File.WriteAllText(dir + @"\" + tempasx, _tempasx, Encoding.Default);
-                }
+                if (next == 0 && curr_play_url != PlayNextUrls[PlayNextIndex] ) File.WriteAllText(dir + @"\" + tempasx, webdata.getHTTPData(PlayNextUrls[PlayNextIndex]), Encoding.Default);
                 mmsurl = dir + @"\" + tempasx;
                 OSDInfo.channel_id = PlayNextUrls[PlayNextIndex].Substring(36);
             }
@@ -1713,9 +1685,7 @@ namespace MediaPortal.GUI.WebTelek
             {
                 string dir = Directory.GetCurrentDirectory();
                 File.Delete(dir + @"\webtelek.asx");
-                String _tempasx = webdata.getHTTPData(DataUrls[PlayNextIndex]);
-                if (preload) _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
-                File.WriteAllText(dir + @"\webtelek.asx", _tempasx, Encoding.Default);
+                File.WriteAllText(dir + @"\webtelek.asx", webdata.getHTTPData(DataUrls[PlayNextIndex]), Encoding.Default);
                 string mmsurl = dir + @"\webtelek.asx";
                 OSDInfo.channel_id = DataUrls[PlayNextIndex].Substring(36);
                 g_Player.Play(mmsurl);
@@ -1801,6 +1771,7 @@ namespace MediaPortal.GUI.WebTelek
             {
                 ChoosenList = "";
             }
+
             base.OnPageDestroy(new_windowId);
         }
 
