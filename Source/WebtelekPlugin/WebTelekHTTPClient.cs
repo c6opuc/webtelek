@@ -1,4 +1,4 @@
-п»їusing System;
+using System;
 using System.Net;
 using System.Text;
 using System.Threading;
@@ -29,7 +29,7 @@ namespace MediaPortal.GUI.WebTelek
         public string region = "";
         string timezone = "";
         string httpurl = "";
-        string epgdays = "2";
+        string epgdays = "1";
         bool _workerCompleted = true; 
         StreamReader responseStream = null;
         Encoding enc = null;
@@ -46,27 +46,11 @@ namespace MediaPortal.GUI.WebTelek
                 password = Convert.ToString(xmlreader.GetValueAsString("Account", "password", ""));
                 region = Convert.ToString(xmlreader.GetValueAsString("Account", "region", ""));
                 timezone = Convert.ToString(xmlreader.GetValueAsString("Account", "timezone", ""));
-                epgdays = Convert.ToString(xmlreader.GetValueAsString("Account", "epgdays", "2"));
+                epgdays = Convert.ToString(xmlreader.GetValueAsString("Account", "epgdays", ""));
                 timeout = (int)Decimal.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "netdelay", "15"))) * 1000;
             }
         }
 
-        public void getEPG(Boolean refresh)
-        {
-
-            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "MediaPortal.xml"), false))
-            {
-                string dirname = Convert.ToString(xmlreader.GetValueAsString("xmltv", "folder", ""));
-                if (refresh)
-                {
-                    if (File.Exists(dirname + @"\epglastdate.dat"))
-                    {
-                        File.Delete(dirname + @"\epglastdate.dat");
-                    }
-                }
-                getEPG();
-            }
-        }
         public void getEPG()
         {
             
@@ -141,8 +125,8 @@ namespace MediaPortal.GUI.WebTelek
             GUIDialogNotify info = (GUIDialogNotify)GUIWindowManager.GetWindow((int)GUIWindow.Window.WINDOW_DIALOG_NOTIFY);
             info.Reset();
             info.IsOverlayAllowed = true;
-            info.SetHeading("РћС€РёР±РєР°");
-            info.SetText("РќРµ СѓРґР°Р»РѕСЃСЊ СѓСЃС‚Р°РЅРѕРІРёС‚СЊ СЃРІСЏР·СЊ СЃ СЃРµСЂРІРµСЂРѕРј. РџСЂРѕРІРµСЂС‚Рµ СЃРІРѕРё СЃРµС‚РµРІС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё.");
+            info.SetHeading("Ошибка");
+            info.SetText("Не удалось установить связь с сервером. Проверте свои сетевые настройки.");
             info.DoModal(WebTelek.PluginID);
             _timer.Dispose();
             _workerCompleted = true;
@@ -164,7 +148,7 @@ namespace MediaPortal.GUI.WebTelek
                 request.ContentType = @"application/x-www-form-urlencoded";
                 request.Referer = string.Format("https://www.webtelek.com/register.php");
                 request.CookieContainer = cookieContainer;
-                string postData = string.Format("response=&email_address={0}&password={1}&persistent={2}", username, password, "y");
+                string postData = string.Format("response=&email_address={0}&password={1}", username, password);
                 request.Method = "POST";
 
                 byte[] postBuffer = System.Text.Encoding.GetEncoding(1252).GetBytes(postData);
@@ -186,9 +170,6 @@ namespace MediaPortal.GUI.WebTelek
                 request.Method = "GET";
                 response = (HttpWebResponse)request.GetResponse();
                 response.Cookies = request.CookieContainer.GetCookies(request.RequestUri);
-                
-                //Log.Info(response.Cookies.ToString());
-
                 responseStream = new StreamReader(response.GetResponseStream(), enc, true);
                 responseHtml = responseStream.ReadToEnd();
                 

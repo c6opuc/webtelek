@@ -1,4 +1,4 @@
-﻿#region Copyright (C) 2005-2008 Team MediaPortal
+#region Copyright (C) 2005-2008 Team MediaPortal
 
 /* 
  *	Copyright (C) 2005-2008 Team MediaPortal
@@ -263,11 +263,11 @@ namespace MediaPortal.Player
       switch (_wmp10Player.playState)
       {
         case WMPLib.WMPPlayState.wmppsStopped:
-          if ( ! MediaPortal.GUI.WebTelek.WebTelek.isPlayNextActive ) SongEnded(false);
+          SongEnded(false);
           break;
         case WMPLib.WMPPlayState.wmppsReady:
-          if ( ! MediaPortal.GUI.WebTelek.WebTelek.isPlayNextActive ) PlayEnded();
-          break;
+            PlayEnded();
+            break;
       }
     }
 

@@ -1,26 +1,20 @@
-﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{59FD049D-CEE1-4772-847E-5480386D23C1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WebTelek</RootNamespace>
     <AssemblyName>WebTelek</AssemblyName>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <OldToolsVersion>2.0</OldToolsVersion>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>D:\MediaPortalCode\xbmc\bin\Debug\plugins\Windows\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -68,7 +62,6 @@
     <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="TVCapture, Version=0.2.2.0, Culture=neutral, processorArchitecture=x86">
@@ -119,7 +112,6 @@
     </Compile>
     <Compile Include="TVGuide\TVGuide.cs" />
     <Compile Include="TVGuide\TVGuideBase.cs" />
-    <Compile Include="VirtualKeyboard\VirtualKeyboard.cs" />
     <Compile Include="WebTelekArchiveXML.cs" />
     <Compile Include="WebTelekHTTPClient.cs" />
     <Compile Include="WebTelekKinozalXML.cs" />
@@ -182,23 +174,6 @@
       <WrapperTool>tlbimp</WrapperTool>
       <Isolated>False</Isolated>
     </COMReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="bin\AxInterop.WMPLib.dll" />
-    <Content Include="bin\Core.dll" />
-    <Content Include="bin\Databases.dll" />
-    <Content Include="bin\DirectShowLib.dll" />
-    <Content Include="bin\Interop.TunerLib.dll" />
-    <Content Include="bin\Interop.WMPLib.dll" />
-    <Content Include="bin\Microsoft.DirectX.Direct3D.dll" />
-    <Content Include="bin\Microsoft.DirectX.dll" />
-    <Content Include="bin\TVCapture.dll" />
-    <Content Include="bin\Utils.dll" />
-    <Content Include="bin\WindowPlugins.dll" />
-    <Content Include="bin\Dialogs.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bin\Debug\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
