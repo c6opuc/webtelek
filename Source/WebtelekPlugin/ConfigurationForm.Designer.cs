@@ -1,4 +1,4 @@
-п»їnamespace MediaPortal.GUI.WebTelek
+namespace MediaPortal.GUI.WebTelek
 {
     partial class ConfigurationForm
     {
@@ -31,13 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigurationForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.playerBox = new System.Windows.Forms.CheckBox();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.preloadBox = new System.Windows.Forms.CheckBox();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.txtPluginName = new System.Windows.Forms.TextBox();
-            this.btnCleanAll = new System.Windows.Forms.Button();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -77,12 +70,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.OSDopacity = new System.Windows.Forms.NumericUpDown();
+            this.btnCleanAll = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            this.groupBox12.SuspendLayout();
-            this.groupBox11.SuspendLayout();
-            this.groupBox10.SuspendLayout();
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SwitchTimeout)).BeginInit();
             this.groupBox8.SuspendLayout();
@@ -95,16 +84,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.EPGdays)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.OSDopacity)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.groupBox13);
-            this.groupBox1.Controls.Add(this.groupBox12);
-            this.groupBox1.Controls.Add(this.groupBox11);
-            this.groupBox1.Controls.Add(this.groupBox10);
             this.groupBox1.Controls.Add(this.btnCleanAll);
             this.groupBox1.Controls.Add(this.groupBox9);
             this.groupBox1.Controls.Add(this.groupBox8);
@@ -120,92 +103,11 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(12, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(328, 514);
+            this.groupBox1.Size = new System.Drawing.Size(328, 405);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "РќР°СЃС‚СЂРѕР№РєРё";
+            this.groupBox1.Text = "Настройки";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // groupBox12
-            // 
-            this.groupBox12.Controls.Add(this.playerBox);
-            this.groupBox12.Location = new System.Drawing.Point(167, 330);
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(149, 44);
-            this.groupBox12.TabIndex = 42;
-            this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "Webtelek РџР»РµРµСЂ";
-            this.toolTip.SetToolTip(this.groupBox12, "РџРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РїР»РµРµСЂ СЂР°Р·СЂР°Р±РѕС‚Р°РЅС‹Р№ РґР»СЏ Webtelek.\r\nР’ РЅРµРєРѕС‚РѕСЂС‹С… СЃР»СѓС‡Р°СЏС… Рµ" +
-                    "СЃС‚СЊ РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚СЊ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЃС‚Р°РЅРґР°СЂС‚РЅС‹Р№\r\nРїР»РµРµСЂ РѕС‚ Mediaportal. РќР°РїСЂРёРјРµСЂ РµСЃР»Рё " +
-                    "РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ TV Server.");
-            // 
-            // playerBox
-            // 
-            this.playerBox.AutoSize = true;
-            this.playerBox.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.playerBox.Location = new System.Drawing.Point(6, 19);
-            this.playerBox.Name = "playerBox";
-            this.playerBox.Size = new System.Drawing.Size(114, 17);
-            this.playerBox.TabIndex = 30;
-            this.playerBox.Text = "РќРµ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ";
-            this.playerBox.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolTip.SetToolTip(this.playerBox, "РџРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РїР»РµРµСЂ СЂР°Р·СЂР°Р±РѕС‚Р°РЅС‹Р№ РґР»СЏ Webtelek.\r\nР’ РЅРµРєРѕС‚РѕСЂС‹С… СЃР»СѓС‡Р°СЏС… Рµ" +
-                    "СЃС‚СЊ РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚СЊ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЃС‚Р°РЅРґР°СЂС‚РЅС‹Р№\r\nРїР»РµРµСЂ РѕС‚ Mediaportal. РќР°РїСЂРёРјРµСЂ РµСЃР»Рё " +
-                    "РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ TV Server.");
-            this.playerBox.UseVisualStyleBackColor = true;
-            // 
-            // groupBox11
-            // 
-            this.groupBox11.Controls.Add(this.preloadBox);
-            this.groupBox11.Location = new System.Drawing.Point(17, 330);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(144, 44);
-            this.groupBox11.TabIndex = 41;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Р—Р°СЃС‚Р°РІРєР°";
-            this.toolTip.SetToolTip(this.groupBox11, "РќРµ РїРѕРєР°Р·С‹РІР°С‚СЊ РЅР°РґРѕРµРґР°СЋС‰СѓСЋ Р·Р°СЃС‚Р°РІРєСѓ \r\nРїСЂРё РїРµСЂРµРєР»СЋС‡РµРЅРёРё РєР°РЅР°Р»РѕРІ.");
-            // 
-            // preloadBox
-            // 
-            this.preloadBox.AutoSize = true;
-            this.preloadBox.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.preloadBox.Location = new System.Drawing.Point(6, 19);
-            this.preloadBox.Name = "preloadBox";
-            this.preloadBox.Size = new System.Drawing.Size(112, 17);
-            this.preloadBox.TabIndex = 30;
-            this.preloadBox.Text = "РЈР±СЂР°С‚СЊ Р·Р°СЃС‚Р°РІРєСѓ";
-            this.preloadBox.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolTip.SetToolTip(this.preloadBox, "РќРµ РїРѕРєР°Р·С‹РІР°С‚СЊ РЅР°РґРѕРµРґР°СЋС‰СѓСЋ Р·Р°СЃС‚Р°РІРєСѓ \r\nРїСЂРё РїРµСЂРµРєР»СЋС‡РµРЅРёРё РєР°РЅР°Р»РѕРІ.");
-            this.preloadBox.UseVisualStyleBackColor = true;
-            // 
-            // groupBox10
-            // 
-            this.groupBox10.Controls.Add(this.txtPluginName);
-            this.groupBox10.Location = new System.Drawing.Point(17, 379);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(299, 53);
-            this.groupBox10.TabIndex = 40;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "РќР°Р·РІР°РЅРёРµ РїР»Р°РіРёРЅР°";
-            this.toolTip.SetToolTip(this.groupBox10, "Р—РґРµСЃСЊ Р’С‹ РјРѕР¶РµС‚Рµ Р·Р°РґР°С‚СЊ РЅР°Р·РІР°РЅРёРµ РїР»Р°РіРёРЅР°.");
-            // 
-            // txtPluginName
-            // 
-            this.txtPluginName.Location = new System.Drawing.Point(6, 20);
-            this.txtPluginName.Name = "txtPluginName";
-            this.txtPluginName.Size = new System.Drawing.Size(287, 20);
-            this.txtPluginName.TabIndex = 0;
-            // 
-            // btnCleanAll
-            // 
-            this.btnCleanAll.Location = new System.Drawing.Point(17, 438);
-            this.btnCleanAll.Name = "btnCleanAll";
-            this.btnCleanAll.Size = new System.Drawing.Size(299, 34);
-            this.btnCleanAll.TabIndex = 39;
-            this.btnCleanAll.Text = "РћС‡РёСЃС‚РёС‚СЊ Р±Р°Р·Сѓ РґР°РЅРЅС‹С… EPG";
-            this.toolTip.SetToolTip(this.btnCleanAll, resources.GetString("btnCleanAll.ToolTip"));
-            this.btnCleanAll.UseVisualStyleBackColor = true;
-            this.btnCleanAll.Click += new System.EventHandler(this.btnCleanAll_Click);
             // 
             // groupBox9
             // 
@@ -218,7 +120,7 @@
             this.groupBox9.Size = new System.Drawing.Size(299, 46);
             this.groupBox9.TabIndex = 38;
             this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "РџРµСЂРµРєР»СЋС‡Р°С‚РµР»СЊ РєР°РЅР°Р»РѕРІ";
+            this.groupBox9.Text = "Переключатель каналов";
             this.toolTip.SetToolTip(this.groupBox9, resources.GetString("groupBox9.ToolTip"));
             // 
             // label14
@@ -228,7 +130,7 @@
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(28, 13);
             this.label14.TabIndex = 37;
-            this.label14.Text = "СЃРµРє.";
+            this.label14.Text = "сек.";
             this.toolTip.SetToolTip(this.label14, resources.GetString("label14.ToolTip"));
             // 
             // label13
@@ -238,7 +140,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(107, 13);
             this.label13.TabIndex = 2;
-            this.label13.Text = "РџРµСЂРµРєР»СЋС‡Р°С‚СЊ С‡РµСЂРµР·";
+            this.label13.Text = "Переключать через";
             this.toolTip.SetToolTip(this.label13, resources.GetString("label13.ToolTip"));
             // 
             // SwitchTimeout
@@ -271,7 +173,7 @@
             this.SwitchOnOKOnly.Name = "SwitchOnOKOnly";
             this.SwitchOnOKOnly.Size = new System.Drawing.Size(114, 17);
             this.SwitchOnOKOnly.TabIndex = 0;
-            this.SwitchOnOKOnly.Text = "РўРѕР»СЊРєРѕ РїРѕ РєРЅ. OK";
+            this.SwitchOnOKOnly.Text = "Только по кн. OK";
             this.toolTip.SetToolTip(this.SwitchOnOKOnly, resources.GetString("SwitchOnOKOnly.ToolTip"));
             this.SwitchOnOKOnly.UseVisualStyleBackColor = true;
             this.SwitchOnOKOnly.CheckedChanged += new System.EventHandler(this.SwitchOnOKOnly_CheckedChanged);
@@ -284,9 +186,9 @@
             this.groupBox8.Size = new System.Drawing.Size(120, 40);
             this.groupBox8.TabIndex = 37;
             this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "РќРѕРІС‹Рµ РІРµСЂСЃРёРё";
-            this.toolTip.SetToolTip(this.groupBox8, "РћС‚РјРµС‚СЊС‚Рµ СЌС‚Сѓ РіР°Р»РѕС‡РєСѓ РµСЃР»Рё Р’С‹ С…РѕС‚РёС‚Рµ РІРёРґРµС‚СЊ \r\nСѓРІРµРґРѕРјР»РµРЅРёСЏ Рѕ РґРѕСЃС‚СѓРїРЅС‹С… РЅРѕРІС‹С… РІРµСЂСЃРёСЏ" +
-                    "С… \r\nWebTelek+ РїР»Р°РіРёРЅР°.");
+            this.groupBox8.Text = "Новые версии";
+            this.toolTip.SetToolTip(this.groupBox8, "Отметьте эту галочку если Вы хотите видеть \r\nуведомления о доступных новых версия" +
+                    "х \r\nWebTelek+ плагина.");
             // 
             // VersionCheckBox
             // 
@@ -295,9 +197,9 @@
             this.VersionCheckBox.Name = "VersionCheckBox";
             this.VersionCheckBox.Size = new System.Drawing.Size(97, 17);
             this.VersionCheckBox.TabIndex = 0;
-            this.VersionCheckBox.Text = "РІРєР». РїСЂРѕРІРµСЂРєСѓ";
-            this.toolTip.SetToolTip(this.VersionCheckBox, "РћС‚РјРµС‚СЊС‚Рµ СЌС‚Сѓ РіР°Р»РѕС‡РєСѓ РµСЃР»Рё Р’С‹ С…РѕС‚РёС‚Рµ РІРёРґРµС‚СЊ \r\nСѓРІРµРґРѕРјР»РµРЅРёСЏ Рѕ РґРѕСЃС‚СѓРїРЅС‹С… РЅРѕРІС‹С… РІРµСЂСЃРёСЏ" +
-                    "С… \r\nWebTelek+ РїР»Р°РіРёРЅР°.");
+            this.VersionCheckBox.Text = "вкл. проверку";
+            this.toolTip.SetToolTip(this.VersionCheckBox, "Отметьте эту галочку если Вы хотите видеть \r\nуведомления о доступных новых версия" +
+                    "х \r\nWebTelek+ плагина.");
             this.VersionCheckBox.UseVisualStyleBackColor = true;
             // 
             // groupBox6
@@ -309,7 +211,7 @@
             this.groupBox6.Size = new System.Drawing.Size(120, 40);
             this.groupBox6.TabIndex = 13;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "OSD С‚Р°Р№РјР°СѓС‚";
+            this.groupBox6.Text = "OSD таймаут";
             this.toolTip.SetToolTip(this.groupBox6, resources.GetString("groupBox6.ToolTip"));
             this.groupBox6.Enter += new System.EventHandler(this.groupBox6_Enter);
             // 
@@ -320,7 +222,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(28, 13);
             this.label10.TabIndex = 35;
-            this.label10.Text = "СЃРµРє.";
+            this.label10.Text = "сек.";
             this.toolTip.SetToolTip(this.label10, resources.GetString("label10.ToolTip"));
             // 
             // OSDDelay
@@ -357,10 +259,10 @@
             this.groupBox7.Size = new System.Drawing.Size(120, 40);
             this.groupBox7.TabIndex = 15;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "РЎРµС‚РµРІРѕР№ С‚Р°Р№РјР°СѓС‚";
-            this.toolTip.SetToolTip(this.groupBox7, "Р­С‚РѕС‚ РїР°СЂР°РјРµС‚СЂ РѕРїСЂРµРґРµР»СЏРµС‚ СЃРєРѕР»СЊРєРѕ СЃРµРєСѓРЅРґ РїР»Р°РіРёРЅ \r\nР±СѓРґРµС‚ РїС‹С‚Р°С‚СЊСЃСЏ СЃРѕРµРґРёРЅРёС‚СЊСЃСЏ СЃ СЃРµСЂ" +
-                    "РІРµСЂРѕРј WebTelek+.\r\nРњРµРЅСЏР№С‚Рµ СЌС‚РѕС‚ РїР°СЂР°РјРµС‚СЂ С‚РѕР»СЊРєРѕ РєРѕРіРґР° СЌС‚Рѕ РЅРµРѕР±С…РѕРґРёРјРѕ Рё \r\nС‚РѕР»СЊРєРѕ Рµ" +
-                    "СЃР»Рё Р’С‹ Р·РЅР°РµС‚Рµ, С‡С‚Рѕ Р’С‹ РґРµР»Р°РµС‚Рµ.");
+            this.groupBox7.Text = "Сетевой таймаут";
+            this.toolTip.SetToolTip(this.groupBox7, "Этот параметр определяет сколько секунд плагин \r\nбудет пытаться соединиться с сер" +
+                    "вером WebTelek+.\r\nМеняйте этот параметр только когда это необходимо и \r\nтолько е" +
+                    "сли Вы знаете, что Вы делаете.");
             // 
             // label12
             // 
@@ -369,10 +271,10 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(28, 13);
             this.label12.TabIndex = 36;
-            this.label12.Text = "СЃРµРє.";
-            this.toolTip.SetToolTip(this.label12, "Р­С‚РѕС‚ РїР°СЂР°РјРµС‚СЂ РѕРїСЂРµРґРµР»СЏРµС‚ СЃРєРѕР»СЊРєРѕ СЃРµРєСѓРЅРґ РїР»Р°РіРёРЅ \r\nР±СѓРґРµС‚ РїС‹С‚Р°С‚СЊСЃСЏ СЃРѕРµРґРёРЅРёС‚СЊСЃСЏ СЃ СЃРµСЂ" +
-                    "РІРµСЂРѕРј WebTelek+.\r\nРњРµРЅСЏР№С‚Рµ СЌС‚РѕС‚ РїР°СЂР°РјРµС‚СЂ С‚РѕР»СЊРєРѕ РєРѕРіРґР° СЌС‚Рѕ РЅРµРѕР±С…РѕРґРёРјРѕ Рё \r\nС‚РѕР»СЊРєРѕ Рµ" +
-                    "СЃР»Рё Р’С‹ Р·РЅР°РµС‚Рµ, С‡С‚Рѕ Р’С‹ РґРµР»Р°РµС‚Рµ.");
+            this.label12.Text = "сек.";
+            this.toolTip.SetToolTip(this.label12, "Этот параметр определяет сколько секунд плагин \r\nбудет пытаться соединиться с сер" +
+                    "вером WebTelek+.\r\nМеняйте этот параметр только когда это необходимо и \r\nтолько е" +
+                    "сли Вы знаете, что Вы делаете.");
             // 
             // NetDelay
             // 
@@ -391,9 +293,9 @@
             this.NetDelay.Size = new System.Drawing.Size(44, 20);
             this.NetDelay.TabIndex = 0;
             this.NetDelay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.toolTip.SetToolTip(this.NetDelay, "Р­С‚РѕС‚ РїР°СЂР°РјРµС‚СЂ РѕРїСЂРµРґРµР»СЏРµС‚ СЃРєРѕР»СЊРєРѕ СЃРµРєСѓРЅРґ РїР»Р°РіРёРЅ \r\nР±СѓРґРµС‚ РїС‹С‚Р°С‚СЊСЃСЏ СЃРѕРµРґРёРЅРёС‚СЊСЃСЏ СЃ СЃРµСЂ" +
-                    "РІРµСЂРѕРј WebTelek+.\r\nРњРµРЅСЏР№С‚Рµ СЌС‚РѕС‚ РїР°СЂР°РјРµС‚СЂ С‚РѕР»СЊРєРѕ РєРѕРіРґР° СЌС‚Рѕ РЅРµРѕР±С…РѕРґРёРјРѕ Рё \r\nС‚РѕР»СЊРєРѕ Рµ" +
-                    "СЃР»Рё Р’С‹ Р·РЅР°РµС‚Рµ, С‡С‚Рѕ Р’С‹ РґРµР»Р°РµС‚Рµ.");
+            this.toolTip.SetToolTip(this.NetDelay, "Этот параметр определяет сколько секунд плагин \r\nбудет пытаться соединиться с сер" +
+                    "вером WebTelek+.\r\nМеняйте этот параметр только когда это необходимо и \r\nтолько е" +
+                    "сли Вы знаете, что Вы делаете.");
             this.NetDelay.Value = new decimal(new int[] {
             5,
             0,
@@ -405,7 +307,7 @@
             this.groupBox5.Controls.Add(this.EPGNotifyCheckBox);
             this.groupBox5.Location = new System.Drawing.Point(17, 228);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(71, 44);
+            this.groupBox5.Size = new System.Drawing.Size(173, 44);
             this.groupBox5.TabIndex = 12;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "TV Notify";
@@ -417,9 +319,9 @@
             this.EPGNotifyCheckBox.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
             this.EPGNotifyCheckBox.Location = new System.Drawing.Point(6, 14);
             this.EPGNotifyCheckBox.Name = "EPGNotifyCheckBox";
-            this.EPGNotifyCheckBox.Size = new System.Drawing.Size(48, 17);
+            this.EPGNotifyCheckBox.Size = new System.Drawing.Size(155, 17);
             this.EPGNotifyCheckBox.TabIndex = 30;
-            this.EPGNotifyCheckBox.Text = "Р’РєР».";
+            this.EPGNotifyCheckBox.Text = "Напоминатель программ";
             this.EPGNotifyCheckBox.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolTip.SetToolTip(this.EPGNotifyCheckBox, resources.GetString("EPGNotifyCheckBox.ToolTip"));
             this.EPGNotifyCheckBox.UseVisualStyleBackColor = true;
@@ -446,7 +348,7 @@
             this.EPGLoadCheckBox.Name = "EPGLoadCheckBox";
             this.EPGLoadCheckBox.Size = new System.Drawing.Size(139, 17);
             this.EPGLoadCheckBox.TabIndex = 30;
-            this.EPGLoadCheckBox.Text = "Р—Р°РіСЂСѓР¶Р°С‚СЊ РїСЂРѕРіСЂР°РјРјСѓ";
+            this.EPGLoadCheckBox.Text = "Загружать программу";
             this.toolTip.SetToolTip(this.EPGLoadCheckBox, resources.GetString("EPGLoadCheckBox.ToolTip"));
             this.EPGLoadCheckBox.UseVisualStyleBackColor = true;
             // 
@@ -457,7 +359,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(84, 13);
             this.label7.TabIndex = 27;
-            this.label7.Text = "РџСЂРѕРіСЂР°РјРјР° РЅР° ";
+            this.label7.Text = "Программа на ";
             this.toolTip.SetToolTip(this.label7, resources.GetString("label7.ToolTip"));
             // 
             // EPGdays
@@ -491,25 +393,25 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(22, 13);
             this.label9.TabIndex = 29;
-            this.label9.Text = "РґРЅ.";
+            this.label9.Text = "дн.";
             this.toolTip.SetToolTip(this.label9, resources.GetString("label9.ToolTip"));
             // 
             // CustomButton
             // 
-            this.CustomButton.Location = new System.Drawing.Point(216, 478);
+            this.CustomButton.Location = new System.Drawing.Point(216, 371);
             this.CustomButton.Name = "CustomButton";
             this.CustomButton.Size = new System.Drawing.Size(100, 23);
             this.CustomButton.TabIndex = 10;
-            this.CustomButton.Text = "Р”СЂСѓРіРёРµ РєР°РЅР°Р»С‹";
-            this.toolTip.SetToolTip(this.CustomButton, "Р—РґРµСЃСЊ Р’С‹ СЃРјРѕР¶РµС‚Рµ РґРѕР±Р°РІРёС‚СЊ  Р’Р°С€Рё Р»СЋР±РёРјС‹Рµ РІРёРґРµРѕ- Рё \r\nС‚РµР»РµРєР°РЅР°Р»С‹ РЅР°Р№РґРµРЅС‹Рµ РЅР° РїСЂРѕСЃС‚РѕСЂ" +
-                    "Р°С… РРЅС‚РµСЂРЅРµС‚Р°. \r\nРљ РїСЂРёРјРµСЂСѓ, Р’С‹ СЃРјРѕР¶РµС‚Рµ РґРѕР±Р°РІРёС‚СЊ Р±РµСЃРїР»Р°С‚РЅС‹Рµ РєР°РЅР°Р»С‹, \r\nРѕРїСѓР±Р»РёРєРѕРІР°РЅС‹" +
-                    "Рµ РЅР° www.webtelek.com.");
+            this.CustomButton.Text = "Другие каналы";
+            this.toolTip.SetToolTip(this.CustomButton, "Здесь Вы сможете добавить  Ваши любимые видео- и \r\nтелеканалы найденые на простор" +
+                    "ах Интернета. \r\nК примеру, Вы сможете добавить бесплатные каналы, \r\nопубликованы" +
+                    "е на www.webtelek.com.");
             this.CustomButton.UseVisualStyleBackColor = true;
             this.CustomButton.Click += new System.EventHandler(this.CustomButton_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(98, 478);
+            this.button4.Location = new System.Drawing.Point(98, 371);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 4;
@@ -576,7 +478,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(17, 478);
+            this.button3.Location = new System.Drawing.Point(17, 371);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 3;
@@ -605,7 +507,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 13);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Р’СЂРµРјРµРЅРЅР°СЏ Р·РѕРЅР°";
+            this.label5.Text = "Временная зона";
             // 
             // label4
             // 
@@ -614,7 +516,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 13);
             this.label4.TabIndex = 7;
-            this.label4.Text = "3РѕРЅР° РІРµС‰Р°РЅРёСЏ";
+            this.label4.Text = "3она вещания";
             // 
             // label2
             // 
@@ -623,7 +525,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 6;
-            this.label2.Text = "РџР°СЂРѕР»СЊ";
+            this.label2.Text = "Пароль";
             // 
             // label1
             // 
@@ -632,7 +534,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 13);
             this.label1.TabIndex = 5;
-            this.label1.Text = "E-mail Р°РґСЂРµСЃ";
+            this.label1.Text = "E-mail адрес";
             // 
             // label8
             // 
@@ -661,12 +563,12 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(214, 542);
+            this.linkLabel1.Location = new System.Drawing.Point(214, 421);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(125, 13);
             this.linkLabel1.TabIndex = 3;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "В© 6opuc (Borys Saulyak)";
+            this.linkLabel1.Text = "© 6opuc (Borys Saulyak)";
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Blue;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
@@ -676,62 +578,36 @@
             this.toolTip.InitialDelay = 500;
             this.toolTip.ReshowDelay = 100;
             // 
-            // groupBox13
+            // btnCleanAll
             // 
-            this.groupBox13.Controls.Add(this.OSDopacity);
-            this.groupBox13.Location = new System.Drawing.Point(94, 228);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(96, 44);
-            this.groupBox13.TabIndex = 43;
-            this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "Transparency";
-            this.toolTip.SetToolTip(this.groupBox13, "Р—Р°РґР°РІ Р·РЅР°С‡РµРЅРёРµ РјРµР¶РґСѓ 0 Рё 1 РјРѕР¶РЅРѕ \r\nРґРѕР±РёС‚СЊСЃСЏ РїРѕР»СѓРїСЂРѕР·СЂР°С‡РЅРѕСЃС‚Рё OSD \r\nСЌР»РµРјРµРЅС‚РѕРІ ");
-            // 
-            // OSDopacity
-            // 
-            this.OSDopacity.DecimalPlaces = 1;
-            this.OSDopacity.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.OSDopacity.Location = new System.Drawing.Point(16, 15);
-            this.OSDopacity.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            65536});
-            this.OSDopacity.Name = "OSDopacity";
-            this.OSDopacity.Size = new System.Drawing.Size(63, 20);
-            this.OSDopacity.TabIndex = 35;
-            this.OSDopacity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.toolTip.SetToolTip(this.OSDopacity, "0 - РїРѕР»РЅР°СЏ РїСЂРѕР·РЅР°С‡РЅРѕСЃС‚СЊ\r\n1 - РїРѕР»РЅР°СЏ РЅРµРїСЂРѕР·РЅР°С‡РЅРѕСЃС‚СЊ");
+            this.btnCleanAll.Location = new System.Drawing.Point(17, 331);
+            this.btnCleanAll.Name = "btnCleanAll";
+            this.btnCleanAll.Size = new System.Drawing.Size(299, 34);
+            this.btnCleanAll.TabIndex = 39;
+            this.btnCleanAll.Text = "Очистить базу данных EPG";
+            this.toolTip.SetToolTip(this.btnCleanAll, resources.GetString("btnCleanAll.ToolTip"));
+            this.btnCleanAll.UseVisualStyleBackColor = true;
+            this.btnCleanAll.Click += new System.EventHandler(this.btnCleanAll_Click);
             // 
             // ConfigurationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(357, 573);
+            this.ClientSize = new System.Drawing.Size(357, 452);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(365, 600);
+            this.MaximumSize = new System.Drawing.Size(365, 480);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(365, 600);
+            this.MinimumSize = new System.Drawing.Size(365, 480);
             this.Name = "ConfigurationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "РќР°СЃС‚СЂРѕР№РєРё WEBTELEK+";
+            this.Text = "Настройки WEBTELEK+";
             this.Load += new System.EventHandler(this.ConfigurationForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox12.ResumeLayout(false);
-            this.groupBox12.PerformLayout();
-            this.groupBox11.ResumeLayout(false);
-            this.groupBox11.PerformLayout();
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox10.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SwitchTimeout)).EndInit();
@@ -752,8 +628,6 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox13.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.OSDopacity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -802,13 +676,5 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnCleanAll;
-        private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.TextBox txtPluginName;
-        private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.CheckBox preloadBox;
-        private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.CheckBox playerBox;
-        private System.Windows.Forms.GroupBox groupBox13;
-        private System.Windows.Forms.NumericUpDown OSDopacity;
     }
 }

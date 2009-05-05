@@ -1,4 +1,4 @@
-﻿#region Copyright (C) 2005-2006 Team MediaPortal
+#region Copyright (C) 2005-2006 Team MediaPortal
 
 /* 
  *	Copyright (C) 2005-2006 Team MediaPortal
@@ -61,14 +61,7 @@ namespace MediaPortal.GUI.WebTelek
         {
             if (_osd == null)
             {
-                try
-                {
-                    _osd = new OSDVolume(Application.OpenForms[0]);
-                }
-                catch (Exception e)
-                {
-                    Log.Error(e);
-                }
+                _osd = new OSDVolume(Application.OpenForms[0]);
             }
             _enabled = true;
         }
@@ -142,7 +135,7 @@ namespace MediaPortal.GUI.WebTelek
                     case Action.ActionType.ACTION_VOLUME_DOWN:
                     case Action.ActionType.ACTION_VOLUME_MUTE:
                         if (_enabled)
-                            if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9) | g_Player.Player.GetType() == typeof(MediaPortal.Player.WebTelekWMP)))
+                            if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9)))
                             {
                                 _timer.Enabled = false;
                                 if (g_Player.FullScreen)
@@ -210,7 +203,7 @@ namespace MediaPortal.GUI.WebTelek
                         }
                 }
             }
-            this.Opacity = WebTelek.opacity;
+            this.Opacity = 1;
             this.Refresh();
         }
 

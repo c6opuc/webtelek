@@ -1,4 +1,4 @@
-п»ї#region Copyright (C) 2005-2008 Team MediaPortal
+#region Copyright (C) 2005-2008 Team MediaPortal
 
 /* 
  *	Copyright (C) 2005-2008 Team MediaPortal
@@ -2324,7 +2324,7 @@ namespace MediaPortal.GUI.TV
         dlg.Reset();
         dlg.SetHeading(GUILocalizeStrings.Get(498));//Menu
 
-        dlg.Add("РџРѕР»РЅРѕСЌРєСЂР°РЅРЅС‹Р№ СЂРµР¶РёРј РїСЂРѕСЃРјРѕС‚СЂР°");
+        dlg.Add("Полноэкранный режим просмотра");
 
         dlg.AddLocalizedString(939);// Switch mode
 
@@ -2395,14 +2395,14 @@ namespace MediaPortal.GUI.TV
         dlg.SetHeading(_currentProgram.Title);
         if (!(_currentProgram.IsRunningAt(DateTime.Now) || _currentProgram.EndTime <= DateTime.Now))
         {
-            dlg.Add("РЎРјРѕС‚СЂРµС‚СЊ СЌС‚РѕС‚ РєР°РЅР°Р»");
-            dlg.Add("РџРѕР»РЅРѕСЌРєСЂР°РЅРЅС‹Р№ СЂРµР¶РёРј РїСЂРѕСЃРјРѕС‚СЂР°");
-            dlg.Add("РќР°РїРѕРјРЅРёС‚СЊ Рѕ РЅР°С‡Р°Р»Рµ СЌС‚РѕР№ РїСЂРѕРіСЂР°РјРјС‹");
+            dlg.Add("Смотреть этот канал");
+            dlg.Add("Полноэкранный режим просмотра");
+            dlg.Add("Напомнить о начале этой программы");
         }
         else
         {
-            dlg.Add("РЎРјРѕС‚СЂРµС‚СЊ СЌС‚РѕС‚ РєР°РЅР°Р»");
-            dlg.Add("РџРѕР»РЅРѕСЌРєСЂР°РЅРЅС‹Р№ СЂРµР¶РёРј РїСЂРѕСЃРјРѕС‚СЂР°");
+            dlg.Add("Смотреть этот канал");
+            dlg.Add("Полноэкранный режим просмотра");
         }
         dlg.DoModal(GetID);
         switch (dlg.SelectedId)

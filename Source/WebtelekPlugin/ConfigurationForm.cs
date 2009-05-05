@@ -1,4 +1,4 @@
-п»їusing System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -40,7 +40,7 @@ namespace MediaPortal.GUI.WebTelek
             }
 
         }
-
+        
         public ConfigurationForm()
         {
             InitializeComponent();
@@ -51,24 +51,17 @@ namespace MediaPortal.GUI.WebTelek
                 string password = Convert.ToString(xmlreader.GetValueAsString("Account", "password", "password"));
                 string region = Convert.ToString(xmlreader.GetValueAsString("Account", "region", "MSK"));
                 string timezone = Convert.ToString(xmlreader.GetValueAsString("Account", "timezone", "1"));
-                string epgdays = Convert.ToString(xmlreader.GetValueAsString("Account", "epgdays", "2"));
+                string epgdays = Convert.ToString(xmlreader.GetValueAsString("Account", "epgdays", "1"));
                 string epgnotify = Convert.ToString(xmlreader.GetValueAsString("Account", "epgnotify", "false"));
                 string osddelay = Convert.ToString(xmlreader.GetValueAsString("Account", "osddelay", "5"));
-                string netdelay = Convert.ToString(xmlreader.GetValueAsString("Account", "netdelay", "30"));
+                string netdelay = Convert.ToString(xmlreader.GetValueAsString("Account", "netdelay", "15"));
                 string epgload = Convert.ToString(xmlreader.GetValueAsString("Account", "epgload", "true"));
                 string versioncheck = Convert.ToString(xmlreader.GetValueAsString("Account", "versioncheck", "true"));
                 string switchtimeout = Convert.ToString(xmlreader.GetValueAsString("Account", "switchtimeout", "1"));
                 string switchonokonly = Convert.ToString(xmlreader.GetValueAsString("Account", "switchonokonly", "false"));
-                string PluginName = Convert.ToString(xmlreader.GetValueAsString("Account", "pluginname", "WEBTELEK+"));
-                string preload = Convert.ToString(xmlreader.GetValueAsString("Account", "preload", "false"));
-                string stdplayer = Convert.ToString(xmlreader.GetValueAsString("Account", "stdplayer", "false"));
-                string opacity = Convert.ToString(xmlreader.GetValueAsString("Account", "opacity", "1"));
 
                 textBox1.Text = username;
                 textBox2.Text = password;
-                txtPluginName.Text = PluginName;
-                preloadBox.Checked = Boolean.Parse(preload);
-                playerBox.Checked = Boolean.Parse(stdplayer);
 
                 EPGdays.Value = Decimal.Parse(epgdays);
                 OSDDelay.Value = Decimal.Parse(osddelay);
@@ -78,42 +71,41 @@ namespace MediaPortal.GUI.WebTelek
                 VersionCheckBox.Checked = Boolean.Parse(versioncheck);
                 SwitchTimeout.Value = Decimal.Parse(switchtimeout);
                 SwitchOnOKOnly.Checked = Boolean.Parse(switchonokonly);
-                OSDopacity.Value = Decimal.Parse(opacity);
 
                 if (Boolean.Parse(switchonokonly)) SwitchTimeout.Enabled = false;
 
                 ArrayList streamZones = new ArrayList();
                 ArrayList timeZones = new ArrayList();
 
-                streamZones.Add(new KeyValuePair("est", "EST - РќСЊСЋ-Р™РѕСЂРє"));
-                streamZones.Add(new KeyValuePair("pst", "PST - Р›РѕСЃ РђРЅР¶РµР»РµСЃ"));
-                streamZones.Add(new KeyValuePair("msk", "MSK - РњРѕСЃРєРІР°"));
-
-                timeZones.Add(new KeyValuePair("-12", "РљР°РјС‡Р°С‚РєР°, GMT-12"));
-                timeZones.Add(new KeyValuePair("-11", "РЎР°РјРѕР°, GMT-11"));
-                timeZones.Add(new KeyValuePair("-10", "Р“РѕРЅРѕР»СѓР»Сѓ, GMT-10"));
-                timeZones.Add(new KeyValuePair("-9", "РђРЅРєРѕСЂРёРґР¶, GMT-9"));
-                timeZones.Add(new KeyValuePair("-8", "Р›РѕСЃ-РђРЅРґР¶РµР»РµСЃ, GMT-8"));
-                timeZones.Add(new KeyValuePair("-7", "Р”РµРЅРІРµСЂ, GMT-7"));
-                timeZones.Add(new KeyValuePair("-6", "Р§РёРєР°РіРѕ, GMT-6"));
-                timeZones.Add(new KeyValuePair("-5", "РќСЊСЋ-Р™РѕСЂРє, GMT-5"));
-                timeZones.Add(new KeyValuePair("-4", "РљР°СЂР°РєР°СЃ, GMT-4"));
-                timeZones.Add(new KeyValuePair("-3", "Р‘СѓРµРЅРѕСЃ РђР№СЂРµСЃ, GMT-3"));
+                streamZones.Add(new KeyValuePair("est", "EST - Нью-Йорк"));
+                streamZones.Add(new KeyValuePair("pst", "PST - Лос Анжелес"));
+                streamZones.Add(new KeyValuePair("msk", "MSK - Москва"));
+                
+                timeZones.Add(new KeyValuePair("-12", "Камчатка, GMT-12"));
+                timeZones.Add(new KeyValuePair("-11", "Самоа, GMT-11"));
+                timeZones.Add(new KeyValuePair("-10", "Гонолулу, GMT-10"));
+                timeZones.Add(new KeyValuePair("-9", "Анкоридж, GMT-9"));
+                timeZones.Add(new KeyValuePair("-8", "Лос-Анджелес, GMT-8"));
+                timeZones.Add(new KeyValuePair("-7", "Денвер, GMT-7"));
+                timeZones.Add(new KeyValuePair("-6", "Чикаго, GMT-6"));
+                timeZones.Add(new KeyValuePair("-5", "Нью-Йорк, GMT-5"));
+                timeZones.Add(new KeyValuePair("-4", "Каракас, GMT-4"));
+                timeZones.Add(new KeyValuePair("-3", "Буенос Айрес, GMT-3"));
                 timeZones.Add(new KeyValuePair("-2", "Mid-Atlantic, GMT-2"));
-                timeZones.Add(new KeyValuePair("-1", "РљР°РїРµ Р’РµСЂРґРµ, GMT-1"));
-                timeZones.Add(new KeyValuePair("0", "Р›РѕРЅРґРѕРЅ, GMT-0"));
-                timeZones.Add(new KeyValuePair("1", "РџР°СЂРёР¶, GMT+1"));
-                timeZones.Add(new KeyValuePair("2", "РљРёРµРІ, GMT+2"));
-                timeZones.Add(new KeyValuePair("3", "РњРѕСЃРєРІР°, GMT+3"));
-                timeZones.Add(new KeyValuePair("4", "РўР±РёР»РёСЃРё, GMT+4"));
-                timeZones.Add(new KeyValuePair("5", "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі, GMT+5"));
-                timeZones.Add(new KeyValuePair("6", "РќРѕРІРѕСЃРёР±РёСЂСЃРє, GMT+6"));
-                timeZones.Add(new KeyValuePair("7", "Р‘Р°РЅРєРѕРє, GMT+7"));
-                timeZones.Add(new KeyValuePair("8", "РџРµРєРёРЅ, GMT+8"));
-                timeZones.Add(new KeyValuePair("9", "РўРѕРєРёРѕ, GMT+9"));
-                timeZones.Add(new KeyValuePair("10", "Р’Р»Р°РґРёРІРѕСЃС‚РѕРє, GMT+10"));
-                timeZones.Add(new KeyValuePair("11", "РњР°РіР°РґР°РЅ, GMT+11"));
-                timeZones.Add(new KeyValuePair("12", "Р¤РёРґР¶Рё, GMT+12"));
+                timeZones.Add(new KeyValuePair("-1", "Капе Верде, GMT-1"));
+                timeZones.Add(new KeyValuePair("0", "Лондон, GMT-0"));
+                timeZones.Add(new KeyValuePair("1", "Париж, GMT+1"));
+                timeZones.Add(new KeyValuePair("2", "Киев, GMT+2"));
+                timeZones.Add(new KeyValuePair("3", "Москва, GMT+3"));
+                timeZones.Add(new KeyValuePair("4", "Тбилиси, GMT+4"));
+                timeZones.Add(new KeyValuePair("5", "Екатеринбург, GMT+5"));
+                timeZones.Add(new KeyValuePair("6", "Новосибирск, GMT+6"));
+                timeZones.Add(new KeyValuePair("7", "Банкок, GMT+7"));
+                timeZones.Add(new KeyValuePair("8", "Пекин, GMT+8"));
+                timeZones.Add(new KeyValuePair("9", "Токио, GMT+9"));
+                timeZones.Add(new KeyValuePair("10", "Владивосток, GMT+10"));
+                timeZones.Add(new KeyValuePair("11", "Магадан, GMT+11"));
+                timeZones.Add(new KeyValuePair("12", "Фиджи, GMT+12"));
 
                 comboBox1.DataSource = streamZones;
                 comboBox1.DisplayMember = "Value";
@@ -126,7 +118,7 @@ namespace MediaPortal.GUI.WebTelek
                 comboBox2.SelectedValue = timezone;
 
 
-
+              
             }
 
         }
@@ -141,24 +133,20 @@ namespace MediaPortal.GUI.WebTelek
             //OK Button
             string dir = Directory.GetCurrentDirectory();
             //using (MediaPortal.Profile.Settings writer = new MediaPortal.Profile.Settings(dir +  @"\webtelek_profile.xml",false) )
-            using (MediaPortal.Profile.Settings writer = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"), false))
-            {
-                writer.SetValue("Account", "username", textBox1.Text.Trim());
+            using (MediaPortal.Profile.Settings writer = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"),false) )
+            {   
+                writer.SetValue("Account", "username", textBox1.Text.Trim());                
                 writer.SetValue("Account", "password", textBox2.Text.Trim());
                 writer.SetValue("Account", "region", comboBox1.SelectedValue.ToString().Trim());
                 writer.SetValue("Account", "timezone", comboBox2.SelectedValue.ToString().Trim());
-                writer.SetValue("Account", "epgdays", EPGdays.Value.ToString().Trim());
+                writer.SetValue("Account", "epgdays",  EPGdays.Value.ToString().Trim());
                 writer.SetValue("Account", "epgnotify", EPGNotifyCheckBox.Checked.ToString().Trim());
                 writer.SetValue("Account", "osddelay", OSDDelay.Value.ToString().Trim());
                 writer.SetValue("Account", "netdelay", NetDelay.Value.ToString().Trim());
                 writer.SetValue("Account", "epgload", EPGLoadCheckBox.Checked.ToString().Trim());
                 writer.SetValue("Account", "versioncheck", VersionCheckBox.Checked.ToString().Trim());
-                writer.SetValue("Account", "switchtimeout", SwitchTimeout.Value.ToString().Trim());
+                writer.SetValue("Account", "switchtimeout",  SwitchTimeout.Value.ToString().Trim());
                 writer.SetValue("Account", "switchonokonly", SwitchOnOKOnly.Checked.ToString().Trim());
-                writer.SetValue("Account", "pluginname", txtPluginName.Text.Trim());
-                writer.SetValue("Account", "preload", preloadBox.Checked.ToString().Trim());
-                writer.SetValue("Account", "stdplayer", playerBox.Checked.ToString().Trim());
-                writer.SetValue("Account", "opacity", OSDopacity.Value.ToString().Trim());
             }
             this.Dispose(true);
         }
@@ -223,7 +211,7 @@ namespace MediaPortal.GUI.WebTelek
             {
                 if (xmlreader.GetValue("plugins", "TV Notifier") == "yes" && EPGNotifyCheckBox.Checked == true)
                 {
-                    MessageBox.Show("РЎС‚Р°РЅРґР°СЂС‚РЅС‹Р№ \"TV Notifier\" Р°РєС‚РёРІРёСЂРѕРІР°РЅ. Р’С‹РєР»СЋС‡РёС‚Рµ РµРіРѕ СЃРЅР°С‡Р°Р»Р° Рё РїРµСЂРµР·Р°РїСѓСЃС‚РёС‚Рµ \"Mediaportal Configuration\".");
+                    MessageBox.Show("Стандартный \"TV Notifier\" активирован. Выключите его сначала и перезапустите \"Mediaportal Configuration\".");
                     EPGNotifyCheckBox.Checked = false;
                 }
             }
@@ -276,13 +264,12 @@ namespace MediaPortal.GUI.WebTelek
             {
                 TVDatabase.RemoveChannel(channel.Name);
             }
-
+            
             // delete channel thumbs
-            foreach (string file in Directory.GetFiles(Config.GetFolder(Config.Dir.Thumbs) + @"\tv\logos\", "*.jpg")) File.Delete(file);
-            MessageBox.Show("Р“РѕС‚РѕРІРѕ!");
+            foreach (string file in Directory.GetFiles( Config.GetFolder(Config.Dir.Thumbs) + @"\tv\logos\","*.jpg") ) File.Delete(file);
+            MessageBox.Show("Готово!");
         }
 
- 
-
+                   
     }
 }
