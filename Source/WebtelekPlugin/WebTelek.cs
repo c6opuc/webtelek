@@ -51,7 +51,7 @@ namespace MediaPortal.GUI.WebTelek
         #endregion
         #region Variables
                 
-        public static string VERSION = "5.7";
+        public static string VERSION = "5.6";
         public static int PluginID  = 6926;
         public static int TVGuideID = 6927;
         public static int TVProgramID = 6928;
@@ -137,7 +137,6 @@ namespace MediaPortal.GUI.WebTelek
         private string _lastSearchTitle;
         private Boolean preload;
         private Boolean stdplayer;
-        public static Double opacity;
         
         public enum TypeOfList
         {
@@ -193,7 +192,6 @@ namespace MediaPortal.GUI.WebTelek
             {
                 preload = Boolean.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "preload", "false")));
                 stdplayer = Boolean.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "stdplayer", "false")));
-                opacity = Double.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "opacity", "1")));
             }
 
             if (! stdplayer) g_Player.Factory = new WebTelekPlayerFactory();
@@ -1563,7 +1561,7 @@ namespace MediaPortal.GUI.WebTelek
                 chooser.Add(date.ToString("dddd, dd MMMM"));
                 j++;
             }
-
+ 
             chooser.DoModal(GetID);
 
             if (chooser.SelectedId >= 1) arcDateSelector = archive.getDates()[chooser.SelectedId-1];
