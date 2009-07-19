@@ -215,10 +215,19 @@ namespace MediaPortal.GUI.WebTelek
 
         protected override void OnPageLoad()
         {
+            base.OnPageLoad();
+
+            GUIPropertyManager.SetProperty("#favorites", "Любимые");
+            GUIPropertyManager.SetProperty("#select", "Выбор каналов");
+            GUIPropertyManager.SetProperty("#archive", "Архив передач");
+            GUIPropertyManager.SetProperty("#kinozal", "Кинозал");
+            GUIPropertyManager.SetProperty("#others", "Дополнительно");
+
             OSDVolume.Stop();
             OSDInfo.Stop();
             OSDProgressBar.Stop();
             OSDNotify.Stop();
+            
             OSDVolume.Start();
             OSDInfo.Start();
             OSDProgressBar.Start();
@@ -233,15 +242,10 @@ namespace MediaPortal.GUI.WebTelek
                 Log.Debug("OnPageLoad: empty");
             }
 
-            base.OnPageLoad();
+            
             GUIPropertyManager.SetProperty("#Header",       " ");
             GUIPropertyManager.SetProperty("#ChannelInfo",  " ");
 
-            GUIPropertyManager.SetProperty("#favorites",    "Любимые");
-            GUIPropertyManager.SetProperty("#select",       "Выбор каналов");
-            GUIPropertyManager.SetProperty("#archive",      "Архив передач");
-            GUIPropertyManager.SetProperty("#kinozal",      "Кинозал");
-            GUIPropertyManager.SetProperty("#others",       "Дополнительно");
 
             listView.Focus = true;
             btnArchive.Focus = false;
