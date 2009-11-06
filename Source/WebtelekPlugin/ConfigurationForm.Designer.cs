@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigurationForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.OSDopacity = new System.Windows.Forms.NumericUpDown();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.playerBox = new System.Windows.Forms.CheckBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
@@ -77,9 +79,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.OSDopacity = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
+            this.groupBox13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OSDopacity)).BeginInit();
             this.groupBox12.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -95,8 +97,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.EPGdays)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.OSDopacity)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -125,6 +125,38 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Настройки";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.OSDopacity);
+            this.groupBox13.Location = new System.Drawing.Point(94, 228);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(96, 44);
+            this.groupBox13.TabIndex = 43;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Transparency";
+            this.toolTip.SetToolTip(this.groupBox13, "Задав значение между 0 и 1 можно \r\nдобиться полупрозрачности OSD \r\nэлементов. Раб" +
+                    "отает  только с Vista и выше.");
+            // 
+            // OSDopacity
+            // 
+            this.OSDopacity.DecimalPlaces = 1;
+            this.OSDopacity.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.OSDopacity.Location = new System.Drawing.Point(16, 15);
+            this.OSDopacity.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            65536});
+            this.OSDopacity.Name = "OSDopacity";
+            this.OSDopacity.Size = new System.Drawing.Size(63, 20);
+            this.OSDopacity.TabIndex = 35;
+            this.OSDopacity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.OSDopacity, "0 - полная прозначность\r\n1 - полная непрозначность");
             // 
             // groupBox12
             // 
@@ -676,37 +708,6 @@
             this.toolTip.InitialDelay = 500;
             this.toolTip.ReshowDelay = 100;
             // 
-            // groupBox13
-            // 
-            this.groupBox13.Controls.Add(this.OSDopacity);
-            this.groupBox13.Location = new System.Drawing.Point(94, 228);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(96, 44);
-            this.groupBox13.TabIndex = 43;
-            this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "Transparency";
-            this.toolTip.SetToolTip(this.groupBox13, "Задав значение между 0 и 1 можно \r\nдобиться полупрозрачности OSD \r\nэлементов ");
-            // 
-            // OSDopacity
-            // 
-            this.OSDopacity.DecimalPlaces = 1;
-            this.OSDopacity.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.OSDopacity.Location = new System.Drawing.Point(16, 15);
-            this.OSDopacity.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            65536});
-            this.OSDopacity.Name = "OSDopacity";
-            this.OSDopacity.Size = new System.Drawing.Size(63, 20);
-            this.OSDopacity.TabIndex = 35;
-            this.OSDopacity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.toolTip.SetToolTip(this.OSDopacity, "0 - полная прозначность\r\n1 - полная непрозначность");
-            // 
             // ConfigurationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -726,6 +727,8 @@
             this.Load += new System.EventHandler(this.ConfigurationForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox13.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.OSDopacity)).EndInit();
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
             this.groupBox11.ResumeLayout(false);
@@ -752,8 +755,6 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox13.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.OSDopacity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

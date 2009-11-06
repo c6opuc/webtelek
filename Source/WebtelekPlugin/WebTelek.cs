@@ -317,7 +317,7 @@ namespace MediaPortal.GUI.WebTelek
             {
                 if (Convert.ToString(xmlreader.GetValueAsString("Account", "versioncheck", "true")) == "true")
                 {
-                    string infomessage = webdata.getHTTPData("http://www.webtelek.com/export/maintenance-updates.php?ver=" + VERSION);
+                    string infomessage = webdata.getHTTPData("http://www.webtelek.com/members/export/maintenance-updates.php?ver=" + VERSION);
                     if (infomessage != "OK")
                     {
                         GUIDialogNotify info = (GUIDialogNotify)GUIWindowManager.GetWindow((int)GUIWindow.Window.WINDOW_DIALOG_NOTIFY);
@@ -426,9 +426,9 @@ namespace MediaPortal.GUI.WebTelek
                 if (airzone != "") webdata.region = airzone;
                 xml = new WebTelekLiveXML(new MemoryStream(UTF8Encoding.Default.GetBytes(webdata.getData())));
                 archive = new WebTelekArchiveXML(
-                    webdata.getHTTPData("http://www.webtelek.com/export/archive.php?action=days&version=2.0"),
-                    webdata.getHTTPData("http://www.webtelek.com/export/archive.php?action=channels&version=2.0"),
-                    webdata.getHTTPData("http://www.webtelek.com/export/archive.php?action=genres&version=2.0")
+                    webdata.getHTTPData("http://www.webtelek.com/members/export/archive.php?action=days&version=2.0"),
+                    webdata.getHTTPData("http://www.webtelek.com/members/export/archive.php?action=channels&version=2.0"),
+                    webdata.getHTTPData("http://www.webtelek.com/members/export/archive.php?action=genres&version=2.0")
                 );
                 webdata.getEPG(true);
             }
@@ -439,18 +439,18 @@ namespace MediaPortal.GUI.WebTelek
                     webdata = new WebTelekHTTPClient();
                     xml = new WebTelekLiveXML(new MemoryStream(UTF8Encoding.Default.GetBytes(webdata.getData())));
                     archive = new WebTelekArchiveXML(
-                        webdata.getHTTPData("http://www.webtelek.com/export/archive.php?action=days&version=2.0"),
-                        webdata.getHTTPData("http://www.webtelek.com/export/archive.php?action=channels&version=2.0"),
-                        webdata.getHTTPData("http://www.webtelek.com/export/archive.php?action=genres&version=2.0")
+                        webdata.getHTTPData("http://www.webtelek.com/members/export/archive.php?action=days&version=2.0"),
+                        webdata.getHTTPData("http://www.webtelek.com/members/export/archive.php?action=channels&version=2.0"),
+                        webdata.getHTTPData("http://www.webtelek.com/members/export/archive.php?action=genres&version=2.0")
                     );
                     webdata.getEPG();
                     GetInfoMessage();
                 }
                 if (xml == null) xml = new WebTelekLiveXML(new MemoryStream(UTF8Encoding.Default.GetBytes(webdata.getData())));
                 if (archive == null) archive = new WebTelekArchiveXML(
-                                        webdata.getHTTPData("http://www.webtelek.com/export/archive.php?action=days&version=2.0"),
-                                        webdata.getHTTPData("http://www.webtelek.com/export/archive.php?action=channels&version=2.0"),
-                                        webdata.getHTTPData("http://www.webtelek.com/export/archive.php?action=genres&version=2.0")
+                                        webdata.getHTTPData("http://www.webtelek.com/members/export/archive.php?action=days&version=2.0"),
+                                        webdata.getHTTPData("http://www.webtelek.com/members/export/archive.php?action=channels&version=2.0"),
+                                        webdata.getHTTPData("http://www.webtelek.com/members/export/archive.php?action=genres&version=2.0")
                                      );
 
             }
@@ -534,6 +534,14 @@ namespace MediaPortal.GUI.WebTelek
             {
                 airzonechooser.Add("Выбрать зону вещания PST");
             }
+            if (airzone == "aest")
+            {
+                airzonechooser.Add("Выбрана зона вещания AEST *");
+            }
+            else
+            {
+                airzonechooser.Add("Выбрать зону вещания AEST");
+            }
 
             airzonechooser.DoModal(GetID);
 
@@ -553,6 +561,11 @@ namespace MediaPortal.GUI.WebTelek
                 case 3:
                     File.Delete(Convert.ToString(xmlreader.GetValueAsString("xmltv", "folder", "")) + @"\epglastdate.dat");
                     airzone = "pst";
+                    GetChannelData(true);
+                    break;
+                case 4:
+                    File.Delete(Convert.ToString(xmlreader.GetValueAsString("xmltv", "folder", "")) + @"\epglastdate.dat");
+                    airzone = "aest";
                     GetChannelData(true);
                     break;
                 default:
@@ -827,8 +840,8 @@ namespace MediaPortal.GUI.WebTelek
             ChoosenList = ARCHIVESHOWS;
 
             query = System.Web.HttpUtility.UrlEncode(query, Encoding.GetEncoding("windows-1251"));
-            Log.Info("WebTelek Search URL: http://www.webtelek.com/export/archive.php?action=listings&version=2.0&ch=" + channel + "&day=" + date + "&lg=" + genre + "&q=" + query);
-            archivexml = webdata.getHTTPData("http://www.webtelek.com/export/archive.php?action=listings&version=2.0&ch=" + channel + "&day=" + date + "&lg=" + genre + "&q=" + query);
+            Log.Info("WebTelek Search URL: http://www.webtelek.com/members/export/archive.php?action=listings&version=2.0&ch=" + channel + "&day=" + date + "&lg=" + genre + "&q=" + query);
+            archivexml = webdata.getHTTPData("http://www.webtelek.com/members/export/archive.php?action=listings&version=2.0&ch=" + channel + "&day=" + date + "&lg=" + genre + "&q=" + query);
 
             listView.IsVisible = true;
             textKinozal.IsVisible = false;
@@ -916,16 +929,16 @@ namespace MediaPortal.GUI.WebTelek
                     ShowVODCategories();
                     break;
                 case 2:
-                    ShowRecords("http://www.webtelek.com/export/kinozal.php?action=top100");
+                    ShowRecords("http://www.webtelek.com/members/export/kinozal.php?action=top100");
                     break;
                 case 3:
-                    ShowRecords("http://www.webtelek.com/export/kinozal.php?action=newrecords");
+                    ShowRecords("http://www.webtelek.com/members/export/kinozal.php?action=newrecords");
                     break;
                 case 4:
-                    ShowRecords("http://www.webtelek.com/export/kinozal.php?action=updates");
+                    ShowRecords("http://www.webtelek.com/members/export/kinozal.php?action=updates");
                     break;
                 case 5:
-                    ShowRecords("http://www.webtelek.com/export/kinozal.php?action=comingsoon");
+                    ShowRecords("http://www.webtelek.com/members/export/kinozal.php?action=comingsoon");
                     break;
                 default:
                     break;
@@ -974,7 +987,7 @@ namespace MediaPortal.GUI.WebTelek
 
             if (chooser.SelectedId >= 1)
             {
-                ShowRecords("http://www.webtelek.com/export/kinozal.php?action=records&gid=" + genres[0][chooser.SelectedId - 1]);
+                ShowRecords("http://www.webtelek.com/members/export/kinozal.php?action=records&gid=" + genres[0][chooser.SelectedId - 1]);
             }
             else
             {
@@ -1023,7 +1036,7 @@ namespace MediaPortal.GUI.WebTelek
         private void ShowRecord(int index)
         {
             Navigation.Insert(0, (int)NaviPlace.KINOZALRECORD);
-            recorditems = (new WebTelekKinozalXML(webdata)).getRecord("http://www.webtelek.com/export/kinozal.php?action=items&rid="+records[0][index]);
+            recorditems = (new WebTelekKinozalXML(webdata)).getRecord("http://www.webtelek.com/members/export/kinozal.php?action=items&rid="+records[0][index]);
             kinozalItemIndex = index;
 
             ChoosenList = "ShowRecord";
@@ -1535,7 +1548,7 @@ namespace MediaPortal.GUI.WebTelek
             ChoosenList = string.Empty;
             titleToSearchFor = System.Web.HttpUtility.UrlEncode(titleToSearchFor, Encoding.GetEncoding("windows-1251"));
             //Log.Info(titleToSearchFor);
-            archivexml = webdata.getHTTPData("http://www.webtelek.com/export/archive.php?action=listings&version=2.0&q=" + titleToSearchFor);
+            archivexml = webdata.getHTTPData("http://www.webtelek.com/members/export/archive.php?action=listings&version=2.0&q=" + titleToSearchFor);
             listView.IsVisible = true;
             textKinozal.IsVisible = false;
             imageKinozal.IsVisible = false;
