@@ -88,6 +88,7 @@ namespace MediaPortal.GUI.WebTelek
                 streamZones.Add(new KeyValuePair("est", "EST - Нью-Йорк"));
                 streamZones.Add(new KeyValuePair("pst", "PST - Лос Анжелес"));
                 streamZones.Add(new KeyValuePair("msk", "MSK - Москва"));
+                streamZones.Add(new KeyValuePair("aest", "AEST - Сидней"));
 
                 timeZones.Add(new KeyValuePair("-12", "Камчатка, GMT-12"));
                 timeZones.Add(new KeyValuePair("-11", "Самоа, GMT-11"));

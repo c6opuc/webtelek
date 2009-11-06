@@ -33,7 +33,7 @@ namespace MediaPortal.GUI.WebTelek
             result[1] = new StringCollection();
             try
             {
-                xml = new XPathDocument(new MemoryStream(UTF8Encoding.Default.GetBytes(webdata.getHTTPData("http://www.webtelek.com/export/kinozal.php?action=categories"))));
+                xml = new XPathDocument(new MemoryStream(UTF8Encoding.Default.GetBytes(webdata.getHTTPData("http://www.webtelek.com/members/export/kinozal.php?action=categories"))));
                 XPathNavigator nav = xml.CreateNavigator();
                 XPathExpression expr;
                 expr = nav.Compile("/vod/CATEGORY");
@@ -60,7 +60,7 @@ namespace MediaPortal.GUI.WebTelek
 
             try
             {
-                xml = new XPathDocument(new MemoryStream(UTF8Encoding.Default.GetBytes(webdata.getHTTPData("http://www.webtelek.com/export/kinozal.php?action=genres&cid="+cid))));
+                xml = new XPathDocument(new MemoryStream(UTF8Encoding.Default.GetBytes(webdata.getHTTPData("http://www.webtelek.com/members/export/kinozal.php?action=genres&cid="+cid))));
                 XPathNavigator nav = xml.CreateNavigator();
                 XPathExpression expr;
                 expr = nav.Compile("/vod/GENRE");
