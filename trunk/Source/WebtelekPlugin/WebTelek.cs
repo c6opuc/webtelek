@@ -1148,7 +1148,7 @@ namespace MediaPortal.GUI.WebTelek
             if (control == listKinozal)
             {
                 LastChoosen = "ShowRecord";
-                string url = "http://www.webtelek.com/play.php?action=vod&movieid="
+                string url = "http://www.webtelek.com/members/play.php?action=vod&movieid="
                 + recorditems[0][listKinozal.SelectedListItemIndex] + "&moviepart=" 
                 + recorditems[1][listKinozal.SelectedListItemIndex];
 
@@ -1245,7 +1245,7 @@ namespace MediaPortal.GUI.WebTelek
 
                     if (curr_play_url != FUrls[listView.SelectedListItemIndex - i] || g_Player.Playing == false)
                     {
-                        if (FUrls[listView.SelectedListItemIndex - i].Contains("http://www.webtelek.com/play.php?ch="))
+                        if (FUrls[listView.SelectedListItemIndex - i].Contains("http://www.webtelek.com/members/play.php?ch="))
                         {
                             String _tempasx = webdata.getHTTPData(FUrls[listView.SelectedListItemIndex - i]);
                             if (preload) _tempasx = _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
@@ -1670,7 +1670,7 @@ namespace MediaPortal.GUI.WebTelek
             if (PlayNextIndex >= PlayNextNames.Count) PlayNextIndex = 0;
             if (PlayNextIndex < 0) PlayNextIndex = PlayNextNames.Count - 1;
 
-            if (PlayNextUrls[PlayNextIndex].Contains("http://www.webtelek.com/play.php?ch="))
+            if (PlayNextUrls[PlayNextIndex].Contains("http://www.webtelek.com/members/play.php?ch="))
             {
                 if (next == 0 && curr_play_url != PlayNextUrls[PlayNextIndex])
                 {
@@ -1767,7 +1767,7 @@ namespace MediaPortal.GUI.WebTelek
                     {
                         case "Favorites":
                             GUIPropertyManager.SetProperty("#ChannelInfo", FDescriptions[listView.SelectedListItemIndex]);
-                            if (FUrls[listView.SelectedListItemIndex].Contains("http://www.webtelek.com/play.php?ch="))
+                            if (FUrls[listView.SelectedListItemIndex].Contains("http://www.webtelek.com/members/play.php?ch="))
                             {
                                 getChannelLogo(FUrls[listView.SelectedListItemIndex].Substring(36));
                                 ChannelLogo.SetFileName("webtelek\\" + FUrls[listView.SelectedListItemIndex].Substring(36) + ".jpg");
@@ -1780,7 +1780,7 @@ namespace MediaPortal.GUI.WebTelek
                         case "Channels":
                             if (listView.SelectedListItemIndex - 1 >= 0) {
                                 GUIPropertyManager.SetProperty("#ChannelInfo", FDescriptions[listView.SelectedListItemIndex - 1]);
-                                if (FUrls[listView.SelectedListItemIndex - 1].Contains("http://www.webtelek.com/play.php?ch="))
+                                if (FUrls[listView.SelectedListItemIndex - 1].Contains("http://www.webtelek.com/members/play.php?ch="))
                                 {
                                     getChannelLogo(FUrls[listView.SelectedListItemIndex - 1].Substring(36));
                                     ChannelLogo.SetFileName("webtelek\\" + FUrls[listView.SelectedListItemIndex - 1].Substring(36) + ".jpg");

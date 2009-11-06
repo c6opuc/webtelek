@@ -143,7 +143,7 @@ namespace MediaPortal.GUI.WebTelek
                 while (iterator.MoveNext())
                 {
                     XPathNavigator nav2 = iterator.Current.Clone();
-                    result.Add("http://www.webtelek.com/play.php?ch=" + nav2.Value);
+                    result.Add("http://www.webtelek.com/members/play.php?ch=" + nav2.Value);
                 }
             }
             catch (Exception)
