@@ -51,7 +51,7 @@ namespace MediaPortal.GUI.WebTelek
         #endregion
         #region Variables
                 
-        public static string VERSION = "5.7";
+        public static string VERSION = "5.7.1";
         public static int PluginID  = 6926;
         public static int TVGuideID = 6927;
         public static int TVProgramID = 6928;
@@ -1251,7 +1251,8 @@ namespace MediaPortal.GUI.WebTelek
                             if (preload) _tempasx = _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
                             File.WriteAllText(dir + @"\webtelek.asx", _tempasx, Encoding.Default);
                             mmsurl = dir + @"\webtelek.asx";
-                            OSDInfo.channel_id = FUrls[listView.SelectedListItemIndex - i].Substring(36);
+                            //Log.Info("!!id="+FUrls[listView.SelectedListItemIndex - i].Substring(44));
+                            OSDInfo.channel_id = FUrls[listView.SelectedListItemIndex - i].Substring(44);
                         }
                         else
                         {
@@ -1679,7 +1680,7 @@ namespace MediaPortal.GUI.WebTelek
                     File.WriteAllText(dir + @"\" + tempasx, _tempasx, Encoding.Default);
                 }
                 mmsurl = dir + @"\" + tempasx;
-                OSDInfo.channel_id = PlayNextUrls[PlayNextIndex].Substring(36);
+                OSDInfo.channel_id = PlayNextUrls[PlayNextIndex].Substring(44);
             }
             else
             {
@@ -1734,7 +1735,7 @@ namespace MediaPortal.GUI.WebTelek
                 if (preload) _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
                 File.WriteAllText(dir + @"\webtelek.asx", _tempasx, Encoding.Default);
                 string mmsurl = dir + @"\webtelek.asx";
-                OSDInfo.channel_id = DataUrls[PlayNextIndex].Substring(36);
+                OSDInfo.channel_id = DataUrls[PlayNextIndex].Substring(44);
                 g_Player.Play(mmsurl);
             }
             curr_play_url = DataUrls[PlayNextIndex];
