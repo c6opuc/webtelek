@@ -1770,8 +1770,8 @@ namespace MediaPortal.GUI.WebTelek
                             GUIPropertyManager.SetProperty("#ChannelInfo", FDescriptions[listView.SelectedListItemIndex]);
                             if (FUrls[listView.SelectedListItemIndex].Contains("http://www.webtelek.com/members/play.php?ch="))
                             {
-                                getChannelLogo(FUrls[listView.SelectedListItemIndex].Substring(36));
-                                ChannelLogo.SetFileName("webtelek\\" + FUrls[listView.SelectedListItemIndex].Substring(36) + ".jpg");
+                                getChannelLogo(FUrls[listView.SelectedListItemIndex].Substring(44));
+                                ChannelLogo.SetFileName("webtelek\\" + FUrls[listView.SelectedListItemIndex].Substring(44) + ".jpg");
                             }
                             else
                             {
@@ -1783,8 +1783,8 @@ namespace MediaPortal.GUI.WebTelek
                                 GUIPropertyManager.SetProperty("#ChannelInfo", FDescriptions[listView.SelectedListItemIndex - 1]);
                                 if (FUrls[listView.SelectedListItemIndex - 1].Contains("http://www.webtelek.com/members/play.php?ch="))
                                 {
-                                    getChannelLogo(FUrls[listView.SelectedListItemIndex - 1].Substring(36));
-                                    ChannelLogo.SetFileName("webtelek\\" + FUrls[listView.SelectedListItemIndex - 1].Substring(36) + ".jpg");
+                                    getChannelLogo(FUrls[listView.SelectedListItemIndex - 1].Substring(44));
+                                    ChannelLogo.SetFileName("webtelek\\" + FUrls[listView.SelectedListItemIndex - 1].Substring(44) + ".jpg");
                                 }
                                 else
                                 {
