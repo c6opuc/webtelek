@@ -10,7 +10,7 @@ using System.Text;
 using System.Windows.Forms;
 using MediaPortal.GUI.Library;
 using MediaPortal.Utils;
-using MediaPortal.TV.Database;
+//using MediaPortal.TV.Database;
 using MediaPortal.Configuration;
 
 namespace MediaPortal.GUI.WebTelek
@@ -44,7 +44,8 @@ namespace MediaPortal.GUI.WebTelek
         public ConfigurationForm()
         {
             InitializeComponent();
-            string dir = Directory.GetCurrentDirectory();
+            //string dir = Directory.GetCurrentDirectory();
+            string dir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"), false))
             {
                 string username = Convert.ToString(xmlreader.GetValueAsString("Account", "username", "your@email.com"));
@@ -140,7 +141,8 @@ namespace MediaPortal.GUI.WebTelek
         private void OKButton_Click(object sender, EventArgs e)
         {
             //OK Button
-            string dir = Directory.GetCurrentDirectory();
+            //string dir = Directory.GetCurrentDirectory();
+            string dir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             //using (MediaPortal.Profile.Settings writer = new MediaPortal.Profile.Settings(dir +  @"\webtelek_profile.xml",false) )
             using (MediaPortal.Profile.Settings writer = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"), false))
             {
@@ -265,21 +267,22 @@ namespace MediaPortal.GUI.WebTelek
         private void btnCleanAll_Click(object sender, EventArgs e)
         {
             // delete tvguide.xml
-            MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "MediaPortal.xml"), false);
-            string dirname = Convert.ToString(xmlreader.GetValueAsString("xmltv", "folder", ""));
+            //MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "MediaPortal.xml"), false);
+            //string dirname = Convert.ToString(xmlreader.GetValueAsString("xmltv", "folder", ""));
+            string dirname = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             File.Delete(dirname + @"\tvguide.xml");
             File.Delete(dirname + @"\epglastdate.dat");
             // delete tvguide databases
-            TVDatabase.RemovePrograms();
-            List<TVChannel> channels = new List<TVChannel>();
-            TVDatabase.GetChannels(ref channels);
-            foreach (TVChannel channel in channels)
-            {
-                TVDatabase.RemoveChannel(channel.Name);
-            }
+            //TVDatabase.RemovePrograms();
+            //List<TVChannel> channels = new List<TVChannel>();
+            //TVDatabase.GetChannels(ref channels);
+            //foreach (TVChannel channel in channels)
+            //{
+            //    TVDatabase.RemoveChannel(channel.Name);
+            //}
 
             // delete channel thumbs
-            foreach (string file in Directory.GetFiles(Config.GetFolder(Config.Dir.Thumbs) + @"\tv\logos\", "*.jpg")) File.Delete(file);
+            //foreach (string file in Directory.GetFiles(Config.GetFolder(Config.Dir.Thumbs) + @"\tv\logos\", "*.jpg")) File.Delete(file);
             MessageBox.Show("Готово!");
         }
 

@@ -31,7 +31,7 @@ using System.IO;
 
 using MediaPortal.GUI.Library;
 using MediaPortal.Configuration;
-using MediaPortal.TV.Database;
+//using MediaPortal.TV.Database;
 using MediaPortal.Util;
 
 namespace MediaPortal.GUI.WebTelek

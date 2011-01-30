@@ -342,10 +342,10 @@ namespace MediaPortal.Player
             }
           }
 
-          if (extension == ".radio")
-          {
-            return new RadioTuner();
-          }
+          //if (extension == ".radio")
+          //{
+          //  return new RadioTuner();
+          //}
 
           if (Util.Utils.IsCDDA(aFileName))
           {
