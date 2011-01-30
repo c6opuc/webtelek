@@ -39,7 +39,8 @@ namespace MediaPortal.GUI.WebTelek
 
         public WebTelekHTTPClient() 
         {
-            string dir = Directory.GetCurrentDirectory();
+            //string dir = Directory.GetCurrentDirectory();
+            string dir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"), false))
             {
                 username = Convert.ToString(xmlreader.GetValueAsString("Account", "username", ""));
@@ -74,7 +75,8 @@ namespace MediaPortal.GUI.WebTelek
             {
                 if (Convert.ToString(xmlreader.GetValueAsString("Account", "epgload", "true")) == "true")
                 {
-                    string dirname = Convert.ToString(xmlreader.GetValueAsString("xmltv", "folder", ""));
+                    //string dirname = Convert.ToString(xmlreader.GetValueAsString("xmltv", "folder", ""));
+                    string dirname = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
                     string fromdate = DateTime.Today.ToString("yyyy-MM-dd");
                     DateTime lastdate = DateTime.Now.Date;
                     DateTime now = DateTime.Now.Date;
@@ -98,11 +100,11 @@ namespace MediaPortal.GUI.WebTelek
                     {
                         //File.WriteAllText(dirname + @"\epg.log", "EPG:" + "http://www.webtelek.com/members/export/epg.php?from=" + fromdate + "&days=" + epgdays);
                         string tvguide = getHTTPData("http://www.webtelek.com/members/export/epg.php?from=" + fromdate + "&days=" + epgdays);
-                        File.Delete(dirname + @"\tvguide.xml");
+                        File.Delete(dirname + @"\webtelek\tvguide.xml");
                         tvguide = Regex.Replace(tvguide, "windows-1251", "utf-8");
-                        File.WriteAllText(dirname + @"\tvguide.xml", tvguide, Encoding.UTF8);
-                        File.Delete(dirname + @"\epglastdate.dat");
-                        File.WriteAllText(dirname + @"\epglastdate.dat", lastdate.AddDays(Double.Parse(epgdays)).Date.ToString());
+                        File.WriteAllText(dirname + @"\webtelek\tvguide.xml", tvguide, Encoding.UTF8);
+                        File.Delete(dirname + @"\webtelek\epglastdate.dat");
+                        File.WriteAllText(dirname + @"\webtelek\epglastdate.dat", lastdate.AddDays(Double.Parse(epgdays)).Date.ToString());
                     }
                 }
             }

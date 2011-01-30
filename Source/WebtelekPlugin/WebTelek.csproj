@@ -38,25 +38,21 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Program Files\Team MediaPortal\MediaPortal\AxInterop.WMPLib.dll</HintPath>
     </Reference>
-    <Reference Include="Core, Version=1.0.2553.37481, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Core, Version=1.1.2.20593, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Program Files\Team MediaPortal\MediaPortal\Core.DLL</HintPath>
+      <HintPath>..\..\..\..\Program Files\Team MediaPortal\MediaPortal\Core.dll</HintPath>
     </Reference>
-    <Reference Include="Databases, Version=0.2.3.0, Culture=neutral, processorArchitecture=x86">
+    <Reference Include="Databases, Version=1.1.2.20596, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Program Files\Team MediaPortal\MediaPortal\Databases.DLL</HintPath>
+      <HintPath>..\..\..\..\Program Files\Team MediaPortal\MediaPortal\Databases.dll</HintPath>
     </Reference>
-    <Reference Include="Dialogs, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86">
+    <Reference Include="Dialogs, Version=1.1.2.20600, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Program Files\Team MediaPortal\MediaPortal\Plugins\Windows\Dialogs.DLL</HintPath>
+      <HintPath>..\..\..\..\Program Files\Team MediaPortal\MediaPortal\plugins\Windows\Dialogs.dll</HintPath>
     </Reference>
-    <Reference Include="DirectShowLib, Version=1.4.0.0, Culture=neutral, processorArchitecture=x86">
+    <Reference Include="DirectShowLib, Version=2.0.0.0, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Program Files\Team MediaPortal\MediaPortal\DirectShowLib.dll</HintPath>
-    </Reference>
-    <Reference Include="Interop.TunerLib, Version=1.0.0.0, Culture=neutral">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Program Files\Team MediaPortal\MediaPortal\Interop.TunerLib.dll</HintPath>
     </Reference>
     <Reference Include="Interop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -71,9 +67,17 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="TVCapture, Version=0.2.2.0, Culture=neutral, processorArchitecture=x86">
+    <Reference Include="TVDatabase, Version=1.1.2.20631, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Program Files\Team MediaPortal\MediaPortal\TVCapture.DLL</HintPath>
+      <HintPath>..\..\..\..\Program Files\Team MediaPortal\MediaPortal TV Server\TVDatabase.dll</HintPath>
+    </Reference>
+    <Reference Include="TVLibrary, Version=1.1.2.20624, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Team MediaPortal\MediaPortal TV Server\TVLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="TvLibrary.Utils, Version=1.1.2.20622, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Team MediaPortal\MediaPortal TV Server\TvLibrary.Utils.dll</HintPath>
     </Reference>
     <Reference Include="Utils, Version=1.0.2553.37524, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -99,12 +103,6 @@
     <Compile Include="ConfigurationForm.Designer.cs">
       <DependentUpon>ConfigurationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="OSDNotify.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OSDNotify.designer.cs">
-      <DependentUpon>OSDNotify.cs</DependentUpon>
-    </Compile>
     <Compile Include="OSDVolume.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,8 +115,6 @@
     <Compile Include="CustomChannel.Designer.cs">
       <DependentUpon>CustomChannel.cs</DependentUpon>
     </Compile>
-    <Compile Include="TVGuide\TVGuide.cs" />
-    <Compile Include="TVGuide\TVGuideBase.cs" />
     <Compile Include="VirtualKeyboard\VirtualKeyboard.cs" />
     <Compile Include="WebTelekArchiveXML.cs" />
     <Compile Include="WebTelekHTTPClient.cs" />
@@ -142,10 +138,6 @@
   <ItemGroup>
     <EmbeddedResource Include="ConfigurationForm.resx">
       <DependentUpon>ConfigurationForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OSDNotify.resx">
-      <DependentUpon>OSDNotify.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="OSDVolume.resx">
@@ -172,33 +164,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="DXTRANSLib">
-      <Guid>{54314D1D-35FE-11D1-81A1-0000F87557DB}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>1</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="bin\AxInterop.WMPLib.dll" />
-    <Content Include="bin\Core.dll" />
-    <Content Include="bin\Databases.dll" />
-    <Content Include="bin\DirectShowLib.dll" />
-    <Content Include="bin\Interop.TunerLib.dll" />
-    <Content Include="bin\Interop.WMPLib.dll" />
-    <Content Include="bin\Microsoft.DirectX.Direct3D.dll" />
-    <Content Include="bin\Microsoft.DirectX.dll" />
-    <Content Include="bin\TVCapture.dll" />
-    <Content Include="bin\Utils.dll" />
-    <Content Include="bin\WindowPlugins.dll" />
-    <Content Include="bin\Dialogs.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bin\Debug\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

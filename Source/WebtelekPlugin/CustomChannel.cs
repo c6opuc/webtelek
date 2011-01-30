@@ -50,7 +50,8 @@ namespace MediaPortal.GUI.WebTelek
 
         private void CustomChannel_Load(object sender, EventArgs e)
         {
-            string dir = Directory.GetCurrentDirectory();
+            //string dir = Directory.GetCurrentDirectory();
+            string dir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             //using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(dir + @"\webtelek_custom.xml", true))
             using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_custom.xml")))
             {
@@ -184,7 +185,8 @@ namespace MediaPortal.GUI.WebTelek
 
         private void SaveAll()
         {
-            string dir = Directory.GetCurrentDirectory();
+            //string dir = Directory.GetCurrentDirectory();
+            string dir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             File.Delete(Config.GetFile(Config.Dir.Config, "webtelek_custom.xml"));
 //            XmlTextWriter writer = new XmlTextWriter(dir + @"\webtelek_custom.xml", null);
             XmlTextWriter writer = new XmlTextWriter(Config.GetFile(Config.Dir.Config, "webtelek_custom.xml"), null); 

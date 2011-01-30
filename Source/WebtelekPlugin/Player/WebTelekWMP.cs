@@ -488,7 +488,7 @@ namespace MediaPortal.Player
 
     #region IDisposable Members
 
-    public override void Release()
+    public override void Dispose()
     {
 
       if (_wmp10Player == null) return;

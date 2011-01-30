@@ -38,8 +38,8 @@ using MediaPortal.GUI.Library;
 using MediaPortal.Util;
 using MediaPortal.Dialogs;
 using MediaPortal.Player;
-using MediaPortal.TV.Recording;
-using MediaPortal.TV.Database;
+//using MediaPortal.TV.Recording;
+//using MediaPortal.TV.Database;
 using MediaPortal.Configuration;
 #endregion
 

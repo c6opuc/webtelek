@@ -447,6 +447,7 @@
             // 
             this.EPGNotifyCheckBox.AutoSize = true;
             this.EPGNotifyCheckBox.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.EPGNotifyCheckBox.Enabled = false;
             this.EPGNotifyCheckBox.Location = new System.Drawing.Point(6, 14);
             this.EPGNotifyCheckBox.Name = "EPGNotifyCheckBox";
             this.EPGNotifyCheckBox.Size = new System.Drawing.Size(48, 17);
@@ -474,6 +475,7 @@
             // EPGLoadCheckBox
             // 
             this.EPGLoadCheckBox.AutoSize = true;
+            this.EPGLoadCheckBox.Enabled = false;
             this.EPGLoadCheckBox.Location = new System.Drawing.Point(12, 17);
             this.EPGLoadCheckBox.Name = "EPGLoadCheckBox";
             this.EPGLoadCheckBox.Size = new System.Drawing.Size(139, 17);
@@ -494,6 +496,7 @@
             // 
             // EPGdays
             // 
+            this.EPGdays.Enabled = false;
             this.EPGdays.Location = new System.Drawing.Point(93, 35);
             this.EPGdays.Maximum = new decimal(new int[] {
             7,
@@ -712,7 +715,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(357, 573);
+            this.ClientSize = new System.Drawing.Size(357, 568);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);

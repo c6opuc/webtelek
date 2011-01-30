@@ -30,7 +30,8 @@ namespace MediaPortal.GUI.WebTelek
         public StringCollection getCustom(string param)
         {
             StringCollection result = new StringCollection();
-            string dir = Directory.GetCurrentDirectory();
+            //string dir = Directory.GetCurrentDirectory();
+            string dir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_custom.xml"), false))
             {
                 for (int i = 0; i <= 1500; i++)
@@ -285,7 +286,8 @@ namespace MediaPortal.GUI.WebTelek
 
             using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "MediaPortal.xml"), false))
             {
-                string dirname = Convert.ToString(xmlreader.GetValueAsString("xmltv", "folder", ""));
+                //string dirname = Convert.ToString(xmlreader.GetValueAsString("xmltv", "folder", ""));
+                string dirname = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
                 File.Delete(dirname + @"\tvguide.xml");
                 File.WriteAllText(dirname + @"\tvguide.xml", tvguide, Encoding.UTF8);
             }
