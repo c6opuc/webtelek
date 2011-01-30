@@ -4,6 +4,7 @@
   <Groups>
     <Items>
       <GroupItem Name="Skin">
+        <ParentGroup />
         <DisplayName>Skin</DisplayName>
         <DefaulChecked>true</DefaulChecked>
         <Description>Skin</Description>
@@ -901,7 +902,7 @@ Click Next to continue or Cancel to exit Setup.</Value>
               <Description />
             </SectionParam>
             <SectionParam Name="Header image">
-              <Value />
+              <Value>[mediaportal root]\webtelek\default.jpg</Value>
               <ValueType>File</ValueType>
               <Description>Image in upper right part</Description>
             </SectionParam>
@@ -928,7 +929,7 @@ Click Next to continue or Cancel to exit Setup.</Value>
               <Description>Description of section, shown in under section title</Description>
             </SectionParam>
             <SectionParam Name="Header image">
-              <Value />
+              <Value>[mediaportal root]\webtelek\default.jpg</Value>
               <ValueType>File</ValueType>
               <Description>Image in upper right part</Description>
             </SectionParam>
@@ -996,19 +997,21 @@ Click Next to continue or Cancel to exit Setup.</Value>
       <Major>5</Major>
       <Minor>8</Minor>
       <Build>0</Build>
-      <Revision>0</Revision>
+      <Revision>1</Revision>
     </Version>
     <ExtensionDescription>Frontend plugin for www.webtelek.com</ExtensionDescription>
-    <VersionDescription />
+    <VersionDescription>Built for MP v1.1
+EPG is disabled due to incopatibiliy with MP v1.1
+</VersionDescription>
     <DevelopmentStatus>Beta</DevelopmentStatus>
     <OnlineLocation />
     <ReleaseDate>2011-01-29T16:14:32.171875+01:00</ReleaseDate>
     <Tags />
-    <Location>C:\mediaportal\webtelek\webtelek+.mpe1</Location>
+    <Location>C:\mediaportal\webtelek+.mpe1</Location>
     <Params>
       <Items>
         <SectionParam Name="Icon">
-          <Value />
+          <Value>[mediaportal root]\webtelek\default.jpg</Value>
           <ValueType>File</ValueType>
           <Description>The icon file of the package (jpg,png,bmp)</Description>
         </SectionParam>
@@ -1892,6 +1895,13 @@ Click Next to continue or Cancel to exit Setup.</Value>
         <LocalFileName>Source\WebtelekPlugin\bin\Release\WebTelek.dll</LocalFileName>
         <ZipFileName>Installer{CopyFile}\{5a47d705-a696-45bc-b4f4-8e4dece0636b}-WebTelek.dll</ZipFileName>
         <DestinationFilename>%Plugins%\Windows\WebTelek.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\webtelek\default.jpg</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{7bd9bf40-2b58-4632-b2fc-1116712b0566}-default.jpg</ZipFileName>
+        <DestinationFilename />
       </FileItem>
     </Items>
   </UniqueFileList>
