@@ -111,7 +111,7 @@ namespace MediaPortal.GUI.WebTelek
 
         public StringCollection[] getRecord(string url)
         {
-            StringCollection[] result = new StringCollection[8];
+            StringCollection[] result = new StringCollection[9];
             result[0] = new StringCollection();
             result[1] = new StringCollection();
             result[2] = new StringCollection();
@@ -120,6 +120,7 @@ namespace MediaPortal.GUI.WebTelek
             result[5] = new StringCollection();
             result[6] = new StringCollection();
             result[7] = new StringCollection();
+            result[8] = new StringCollection();
 
 
             try
@@ -141,6 +142,7 @@ namespace MediaPortal.GUI.WebTelek
                     result[5].Add(nav2.GetAttribute("producer", ""));
                     result[6].Add(nav2.GetAttribute("actors", ""));
                     result[7].Add(nav2.GetAttribute("length", ""));
+                    result[8].Add(nav2.GetAttribute("vid", ""));
                 }
             }
             catch (Exception e)
