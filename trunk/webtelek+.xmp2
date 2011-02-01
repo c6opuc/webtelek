@@ -897,7 +897,7 @@ Click Next to continue or Cancel to exit Setup.</Value>
               <Description />
             </SectionParam>
             <SectionParam Name="Left part image">
-              <Value />
+              <Value>webtelek+.png</Value>
               <ValueType>File</ValueType>
               <Description />
             </SectionParam>
@@ -958,12 +958,12 @@ Click Next to continue or Cancel to exit Setup.</Value>
               <Description />
             </SectionParam>
             <SectionParam Name="Left part image">
-              <Value />
+              <Value>webtelek+.png</Value>
               <ValueType>File</ValueType>
               <Description />
             </SectionParam>
             <SectionParam Name="Show radio buttons">
-              <Value />
+              <Value>NO</Value>
               <ValueType>Bool</ValueType>
               <Description>Use radiobutton in place of combobox</Description>
             </SectionParam>
@@ -997,7 +997,7 @@ Click Next to continue or Cancel to exit Setup.</Value>
       <Major>5</Major>
       <Minor>8</Minor>
       <Build>0</Build>
-      <Revision>1</Revision>
+      <Revision>2</Revision>
     </Version>
     <ExtensionDescription>Frontend plugin for www.webtelek.com</ExtensionDescription>
     <VersionDescription>Built for MP v1.1
@@ -1899,8 +1899,15 @@ EPG is disabled due to incopatibiliy with MP v1.1
       <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>webtelek+.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{ea662986-dbf1-42cf-b737-0f17971c7b1d}-webtelek+.png</ZipFileName>
+        <DestinationFilename />
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>[mediaportal root]\webtelek\default.jpg</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{7bd9bf40-2b58-4632-b2fc-1116712b0566}-default.jpg</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{3dd495bd-37d6-4776-994e-6fd45572f4d3}-default.jpg</ZipFileName>
         <DestinationFilename />
       </FileItem>
     </Items>

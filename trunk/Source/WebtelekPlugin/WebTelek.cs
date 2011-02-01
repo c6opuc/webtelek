@@ -438,7 +438,7 @@ namespace MediaPortal.GUI.WebTelek
                     webdata.getHTTPData("http://www.webtelek.com/members/export/archive.php?action=channels&version=2.0"),
                     webdata.getHTTPData("http://www.webtelek.com/members/export/archive.php?action=genres&version=2.0")
                 );
-                webdata.getEPG(true);
+                // webdata.getEPG(true);
             }
             else
             {
@@ -451,7 +451,7 @@ namespace MediaPortal.GUI.WebTelek
                         webdata.getHTTPData("http://www.webtelek.com/members/export/archive.php?action=channels&version=2.0"),
                         webdata.getHTTPData("http://www.webtelek.com/members/export/archive.php?action=genres&version=2.0")
                     );
-                    webdata.getEPG();
+                    //webdata.getEPG();
                     GetInfoMessage();
                 }
                 if (xml == null) xml = new WebTelekLiveXML(new MemoryStream(UTF8Encoding.Default.GetBytes(webdata.getData())));
@@ -1062,7 +1062,12 @@ namespace MediaPortal.GUI.WebTelek
             btnKinozal.Focus = false;
             listKinozal.Focus = true;
 
-            imageKinozal.SetFileName("http://tvekran.ca/images/" + recorditems[4][0]);
+            //imageKinozal.SetFileName("http://tvekran.ca/images/" + recorditems[4][0]);
+            //Log.Info("KINOZAL: " + recorditems[8][0]);
+            
+            //imageKinozal.SetFileName("http://iptv-distribution.net/includes/image_vod_cached.ashx?vid="+recorditems[8][0]+"&picID=&width=100&height=148&aspect=true");
+            imageKinozal.SetFileName("http://iptv-distribution.net/includes/image_vod.ashx?width=100&height=148&aspect=true&vid=" + recorditems[8][0]);
+
             textKinozal.Label = "Режисер: "  +   recorditems[5][0] + "\n" +
                                 "Актеры: "    +   recorditems[6][0] + "\n" +
                                 "Время: "     +   recorditems[7][0] + "\n" +
@@ -1087,13 +1092,12 @@ namespace MediaPortal.GUI.WebTelek
                 item.IconImage = "defaultVideo.png";
                 listKinozal.Add(item);
             }
+            
 
         }
 
         public override void OnAction(Action action)
         {
-
-            
 
             if ( (action.wID == Action.ActionType.ACTION_PREVIOUS_MENU || action.wID == Action.ActionType.ACTION_PARENT_DIR ) && LastChoosen != "")
             {
@@ -1167,7 +1171,7 @@ namespace MediaPortal.GUI.WebTelek
                 string dir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
                 File.Delete(dir + @"\webtelek\webtelek.asx");
                 String _tempasx = webdata.getHTTPData(url);
-                if ( preload ) _tempasx =  _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
+                if ( preload ) if (_tempasx.IndexOf("connect.wmv") > 0) _tempasx =  _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
                 File.WriteAllText(dir + @"\webtelek\webtelek.asx", _tempasx, Encoding.Default);
                 url = dir + @"\webtelek\webtelek.asx";
                 g_Player.Play(url);
@@ -1204,7 +1208,7 @@ namespace MediaPortal.GUI.WebTelek
                         string dir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
                         File.Delete(dir + @"\webtelek\webtelek.asx");
                         String _tempasx = webdata.getHTTPData(url);
-                        if (preload) _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
+                        if (preload) if (_tempasx.IndexOf("connect.wmv") > 0) _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
                         File.WriteAllText(dir + @"\webtelek\webtelek.asx", _tempasx, Encoding.Default);
                         url = dir + @"\webtelek\webtelek.asx";
                         g_Player.Play(url);
@@ -1259,7 +1263,7 @@ namespace MediaPortal.GUI.WebTelek
                         if (FUrls[listView.SelectedListItemIndex - i].Contains("http://www.webtelek.com/members/play.php?ch="))
                         {
                             String _tempasx = webdata.getHTTPData(FUrls[listView.SelectedListItemIndex - i]);
-                            if (preload) _tempasx = _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
+                            if (preload) if (_tempasx.IndexOf("connect.wmv") > 0) _tempasx = _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
                             File.WriteAllText(dir + @"\webtelek\webtelek.asx", _tempasx, Encoding.Default);
                             mmsurl = dir + @"\webtelek\webtelek.asx";
                             //Log.Info("!!id="+FUrls[listView.SelectedListItemIndex - i].Substring(44));
@@ -1689,7 +1693,7 @@ namespace MediaPortal.GUI.WebTelek
                 if (next == 0 && curr_play_url != PlayNextUrls[PlayNextIndex])
                 {
                     String _tempasx = webdata.getHTTPData(PlayNextUrls[PlayNextIndex]);
-                    if (preload) _tempasx = _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
+                    if (preload) if (_tempasx.IndexOf("connect.wmv") > 0) _tempasx = _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
                     File.WriteAllText(dir + @"\webtelek\" + tempasx, _tempasx, Encoding.Default);
                 }
                 mmsurl = dir + @"\webtelek\" + tempasx;
@@ -1746,7 +1750,7 @@ namespace MediaPortal.GUI.WebTelek
                 string dir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
                 File.Delete(dir + @"\webtelek\webtelek.asx");
                 String _tempasx = webdata.getHTTPData(DataUrls[PlayNextIndex]);
-                if (preload) _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
+                if (preload) if (_tempasx.IndexOf("connect.wmv") > 0) _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
                 File.WriteAllText(dir + @"\webtelek\webtelek.asx", _tempasx, Encoding.Default);
                 string mmsurl = dir + @"\webtelek\webtelek.asx";
                 OSDInfo.channel_id = DataUrls[PlayNextIndex].Substring(44);
@@ -1768,7 +1772,9 @@ namespace MediaPortal.GUI.WebTelek
                 if (listKinozal.SelectedListItemIndex != -1)
                 {
                     textKinozal.Label = "";
-                    imageKinozal.SetFileName("http://tvekran.ca/images/" + recorditems[4][listKinozal.SelectedListItemIndex]);
+                    //imageKinozal.SetFileName("http://tvekran.ca/images/" + recorditems[4][listKinozal.SelectedListItemIndex]);
+                    imageKinozal.SetFileName("http://iptv-distribution.net/includes/image_vod.ashx?width=100&height=148&aspect=true&vid=" + recorditems[8][0]);
+
                     textKinozal.Label = "Режисер: " +   recorditems[5][listKinozal.SelectedListItemIndex] + "\n" +
                                         "Актеры: "  +   recorditems[6][listKinozal.SelectedListItemIndex] + "\n" +
                                         "Продолжительность: "   +   recorditems[7][listKinozal.SelectedListItemIndex] + " минут\n" +
