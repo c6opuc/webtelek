@@ -885,24 +885,31 @@
         <Params>
           <Items>
             <SectionParam Name="Header text">
-              <Value>Welcome to the Extension Installer for [Name]</Value>
+              <Value>Welcome to the Extension Installer of Webtelek+   </Value>
               <ValueType>String</ValueType>
               <Description />
             </SectionParam>
             <SectionParam Name="Description">
               <Value>This will install [Name] version [Version] on your computer.
 It is recommended that you close all other applications before continuing.
-Click Next to continue or Cancel to exit Setup.</Value>
+Click Next to continue or Cancel to exit Setup.
+
+Requirements:
+MediaPortal 1 1 is required for this version.
+Limitations:
+This is beta version.
+EPG is temporary disabled.
+</Value>
               <ValueType>String</ValueType>
               <Description />
             </SectionParam>
             <SectionParam Name="Left part image">
-              <Value>webtelek+.png</Value>
+              <Value>verticall_logo.PNG</Value>
               <ValueType>File</ValueType>
               <Description />
             </SectionParam>
             <SectionParam Name="Header image">
-              <Value>[mediaportal root]\webtelek\default.jpg</Value>
+              <Value />
               <ValueType>File</ValueType>
               <Description>Image in upper right part</Description>
             </SectionParam>
@@ -919,7 +926,7 @@ Click Next to continue or Cancel to exit Setup.</Value>
         <Params>
           <Items>
             <SectionParam Name="Header Title">
-              <Value />
+              <Value>Installation of plugin is in progress...</Value>
               <ValueType>String</ValueType>
               <Description>Header title</Description>
             </SectionParam>
@@ -953,12 +960,17 @@ Click Next to continue or Cancel to exit Setup.</Value>
         <Params>
           <Items>
             <SectionParam Name="Header text">
-              <Value>The Extension Installer Wizard has successfully installed [Name].</Value>
+              <Value>The Extension Installer Wizard has successfully installed [Name].
+
+Enjoy!
+
+
+</Value>
               <ValueType>String</ValueType>
               <Description />
             </SectionParam>
             <SectionParam Name="Left part image">
-              <Value>webtelek+.png</Value>
+              <Value>verticall_logo.PNG</Value>
               <ValueType>File</ValueType>
               <Description />
             </SectionParam>
@@ -997,7 +1009,7 @@ Click Next to continue or Cancel to exit Setup.</Value>
       <Major>5</Major>
       <Minor>8</Minor>
       <Build>0</Build>
-      <Revision>2</Revision>
+      <Revision>3</Revision>
     </Version>
     <ExtensionDescription>Frontend plugin for www.webtelek.com</ExtensionDescription>
     <VersionDescription>Built for MP v1.1
@@ -1899,15 +1911,15 @@ EPG is disabled due to incopatibiliy with MP v1.1
       <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
-        <LocalFileName>webtelek+.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{ea662986-dbf1-42cf-b737-0f17971c7b1d}-webtelek+.png</ZipFileName>
+        <LocalFileName>verticall_logo.PNG</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{e0937867-bcf3-4902-94e5-73f35c08ddd2}-verticall_logo.PNG</ZipFileName>
         <DestinationFilename />
       </FileItem>
       <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>[mediaportal root]\webtelek\default.jpg</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{3dd495bd-37d6-4776-994e-6fd45572f4d3}-default.jpg</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{14a546f8-5615-48df-8ab9-be26227bb503}-default.jpg</ZipFileName>
         <DestinationFilename />
       </FileItem>
     </Items>
