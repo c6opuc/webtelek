@@ -1,0 +1,1942 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Version>2.0</Version>
+  <Groups>
+    <Items>
+      <GroupItem Name="Skin">
+        <ParentGroup />
+        <DisplayName>Skin</DisplayName>
+        <DefaulChecked>true</DefaulChecked>
+        <Description>Skin</Description>
+        <Files>
+          <Items>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Xface\webtelek.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{470f21ed-82b5-4e6f-b8a9-0b015f6cc479}-webtelek.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Xface\webtelek.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Xface\webtelek_bg_top.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{efec06cb-0284-4c88-abe7-3b769f68214c}-webtelek_bg_top.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Xface\webtelek_bg_top.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Xface\webtelek_notify.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{12b07414-ff87-424c-8de3-9c94b1ac7f2a}-webtelek_notify.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Xface\webtelek_notify.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Xface\webtelek_schedule.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{5cc6dca0-6e39-4f9d-be3a-0cdeaf6fe4e2}-webtelek_schedule.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Xface\webtelek_schedule.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Xface\webtelek_tvguide.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{dfc86ad1-3a68-4971-a7ba-3c8bb5dba159}-webtelek_tvguide.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Xface\webtelek_tvguide.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Xface\WMP9Notify.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{55e153ce-0584-4e8d-9e16-2eb04a7b7a16}-WMP9Notify.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Xface\WMP9Notify.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Xface\WMP9OSD.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{fbe6d44d-fd39-4db9-9ecf-59ff20d50a54}-WMP9OSD.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Xface\WMP9OSD.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Xface\WMP9SCHED.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{37e13dd4-0aae-45c4-8947-c7f9cbb17aba}-WMP9SCHED.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Xface\WMP9SCHED.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Xface\Media\buttonNF_webtelek.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{c02349e2-1f12-47da-affe-81c6cea01689}-buttonNF_webtelek.png</ZipFileName>
+              <DestinationFilename>%Skin%\Xface\Media\buttonNF_webtelek.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Xface\Media\button_webtelek.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{ad54c50a-e43e-4607-a961-3e3518eb5d09}-button_webtelek.png</ZipFileName>
+              <DestinationFilename>%Skin%\Xface\Media\button_webtelek.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Xface\Media\hover_webtelek.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{f7ea990e-84b9-413b-986a-df1783f7807c}-hover_webtelek.png</ZipFileName>
+              <DestinationFilename>%Skin%\Xface\Media\hover_webtelek.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Xface\Media\webtelek_bg_top.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{c81e2441-3a78-4bfe-8e63-ec8ffafa37a7}-webtelek_bg_top.png</ZipFileName>
+              <DestinationFilename>%Skin%\Xface\Media\webtelek_bg_top.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Xface\Media\webtelek_logo.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{c9fdac7f-7faa-4b0d-9f2e-cea5897588a2}-webtelek_logo.png</ZipFileName>
+              <DestinationFilename>%Skin%\Xface\Media\webtelek_logo.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Xface\Media\webtelek_logotype.gif</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{6002c5f3-0b28-417a-9582-aa265bb5341b}-webtelek_logotype.gif</ZipFileName>
+              <DestinationFilename>%Skin%\Xface\Media\webtelek_logotype.gif</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Xface\Media\webtelek_logo_back.jpg</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{b828034c-72f2-486d-985a-86b7373c02f4}-webtelek_logo_back.jpg</ZipFileName>
+              <DestinationFilename>%Skin%\Xface\Media\webtelek_logo_back.jpg</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Xface\Media\webtelek_progress_background.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{06b0b6d4-ff99-40c7-ba25-04c4acbc0cc4}-webtelek_progress_background.png</ZipFileName>
+              <DestinationFilename>%Skin%\Xface\Media\webtelek_progress_background.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Xface\Media\webtelek_progress_indicator.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{d49037ad-b85d-4eec-9fae-e89a8209cd61}-webtelek_progress_indicator.png</ZipFileName>
+              <DestinationFilename>%Skin%\Xface\Media\webtelek_progress_indicator.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Xface\Media\webtelek_progress_mid.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{9727d1f8-e3dd-4b99-adc8-fd5a3c0559da}-webtelek_progress_mid.png</ZipFileName>
+              <DestinationFilename>%Skin%\Xface\Media\webtelek_progress_mid.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Xface\Media\webtelek_schedule.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{e9800a41-31e4-4764-8865-377a90fff756}-webtelek_schedule.png</ZipFileName>
+              <DestinationFilename>%Skin%\Xface\Media\webtelek_schedule.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\ReVision\webtelek.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{b782a46f-a816-4c13-9c72-556b114badef}-webtelek.xml</ZipFileName>
+              <DestinationFilename>%Skin%\ReVision\webtelek.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\ReVision\webtelek_bg_top.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{b51a8cba-5ca1-42a5-ab7e-a6939d9ae22c}-webtelek_bg_top.xml</ZipFileName>
+              <DestinationFilename>%Skin%\ReVision\webtelek_bg_top.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\ReVision\webtelek_notify.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{d18bc713-3ad3-48ce-9676-d4843aa9e116}-webtelek_notify.xml</ZipFileName>
+              <DestinationFilename>%Skin%\ReVision\webtelek_notify.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\ReVision\webtelek_schedule.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{a71a2203-09f4-4e40-81f4-e36a2faa2bcd}-webtelek_schedule.xml</ZipFileName>
+              <DestinationFilename>%Skin%\ReVision\webtelek_schedule.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\ReVision\webtelek_tvguide.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{78db03e8-e3d7-43c2-b4ab-29eb88d6f445}-webtelek_tvguide.xml</ZipFileName>
+              <DestinationFilename>%Skin%\ReVision\webtelek_tvguide.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\ReVision\WMP9Notify.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{8f7ecaed-28c9-41e1-8dbd-a0901161387e}-WMP9Notify.xml</ZipFileName>
+              <DestinationFilename>%Skin%\ReVision\WMP9Notify.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\ReVision\WMP9OSD.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{b260f0a1-c185-46db-a546-2b44dea2c10b}-WMP9OSD.xml</ZipFileName>
+              <DestinationFilename>%Skin%\ReVision\WMP9OSD.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\ReVision\WMP9SCHED.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{a56785a0-1681-4625-9eda-c268ecaa11ac}-WMP9SCHED.xml</ZipFileName>
+              <DestinationFilename>%Skin%\ReVision\WMP9SCHED.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\ReVision\Media\hover_webtelek.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{825c9195-7b60-4258-8967-739ebab15642}-hover_webtelek.png</ZipFileName>
+              <DestinationFilename>%Skin%\ReVision\Media\hover_webtelek.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\ReVision\Media\webtelek_bg_top.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{36edc3ca-849f-4e28-82a0-7cc3e42d0510}-webtelek_bg_top.png</ZipFileName>
+              <DestinationFilename>%Skin%\ReVision\Media\webtelek_bg_top.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\ReVision\Media\webtelek_logo.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{bcfa217f-2382-44da-8562-f493cd6dd7ca}-webtelek_logo.png</ZipFileName>
+              <DestinationFilename>%Skin%\ReVision\Media\webtelek_logo.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\ReVision\Media\webtelek_logotype.gif</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{c723e2ce-5195-4ac4-aafe-db6df56ed8d0}-webtelek_logotype.gif</ZipFileName>
+              <DestinationFilename>%Skin%\ReVision\Media\webtelek_logotype.gif</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\ReVision\Media\webtelek_logo_back.jpg</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{9d72d276-c742-49eb-8be0-46bbfe080d40}-webtelek_logo_back.jpg</ZipFileName>
+              <DestinationFilename>%Skin%\ReVision\Media\webtelek_logo_back.jpg</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\ReVision\Media\webtelek_progress_background.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{de208921-e60a-41ef-bfc6-79e020647660}-webtelek_progress_background.png</ZipFileName>
+              <DestinationFilename>%Skin%\ReVision\Media\webtelek_progress_background.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\ReVision\Media\webtelek_progress_indicator.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{63283a7f-2a04-4a26-adb8-0a43f4877c83}-webtelek_progress_indicator.png</ZipFileName>
+              <DestinationFilename>%Skin%\ReVision\Media\webtelek_progress_indicator.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\ReVision\Media\webtelek_progress_mid.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{e6f6444a-9178-4b1d-897b-8137e4414ce4}-webtelek_progress_mid.png</ZipFileName>
+              <DestinationFilename>%Skin%\ReVision\Media\webtelek_progress_mid.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\ReVision\Media\webtelek_schedule.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{4a1c35a1-5eee-448c-b3be-961480a334df}-webtelek_schedule.png</ZipFileName>
+              <DestinationFilename>%Skin%\ReVision\Media\webtelek_schedule.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Replicant\webtelek.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{375a28ad-c9aa-4274-bcfc-ed4c8f548c36}-webtelek.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Replicant\webtelek.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Replicant\webtelek_bg_top.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{a8726ebc-8547-4e10-864f-bc3093b35146}-webtelek_bg_top.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Replicant\webtelek_bg_top.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Replicant\webtelek_notify.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{505a2a10-87dc-4913-8fb8-35449a7a298c}-webtelek_notify.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Replicant\webtelek_notify.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Replicant\webtelek_schedule.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{9eb3965b-3f3b-45a1-b5f5-f7d147a8f877}-webtelek_schedule.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Replicant\webtelek_schedule.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Replicant\webtelek_tvguide.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{f9e1dc8f-2dae-4879-b5fc-a0796a55c611}-webtelek_tvguide.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Replicant\webtelek_tvguide.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Replicant\WMP9Notify.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{e85f4170-71e3-406b-bfec-42dba7de3205}-WMP9Notify.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Replicant\WMP9Notify.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Replicant\WMP9OSD.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{9eee681f-ec41-48e2-a926-a3fd13ea80a3}-WMP9OSD.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Replicant\WMP9OSD.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Replicant\WMP9SCHED.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{0a6c1633-07d0-4fd8-8c2b-6635abdd68d4}-WMP9SCHED.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Replicant\WMP9SCHED.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Replicant\Media\hover_webtelek.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{a602bf9b-d414-4f5e-b3e0-9db77a86eea1}-hover_webtelek.png</ZipFileName>
+              <DestinationFilename>%Skin%\Replicant\Media\hover_webtelek.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Replicant\Media\webtelek_bg_top.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{5c2b82b2-3d32-44ca-a393-978be5e24552}-webtelek_bg_top.png</ZipFileName>
+              <DestinationFilename>%Skin%\Replicant\Media\webtelek_bg_top.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Replicant\Media\webtelek_logo.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{a64c6e53-7508-43fc-a50f-a4f444bdf44a}-webtelek_logo.png</ZipFileName>
+              <DestinationFilename>%Skin%\Replicant\Media\webtelek_logo.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Replicant\Media\webtelek_logotype.gif</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{d4c86eef-4e5e-45e6-84c5-a265396c4368}-webtelek_logotype.gif</ZipFileName>
+              <DestinationFilename>%Skin%\Replicant\Media\webtelek_logotype.gif</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Replicant\Media\webtelek_logo_back.jpg</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{f845bfdc-3f64-43be-a224-1a8522360dea}-webtelek_logo_back.jpg</ZipFileName>
+              <DestinationFilename>%Skin%\Replicant\Media\webtelek_logo_back.jpg</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Replicant\Media\webtelek_progress_background.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{11d3241a-0cf2-475a-9e05-224b40b63ff3}-webtelek_progress_background.png</ZipFileName>
+              <DestinationFilename>%Skin%\Replicant\Media\webtelek_progress_background.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Replicant\Media\webtelek_progress_indicator.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{50668c8d-0293-454e-8741-e35fced8fcff}-webtelek_progress_indicator.png</ZipFileName>
+              <DestinationFilename>%Skin%\Replicant\Media\webtelek_progress_indicator.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Replicant\Media\webtelek_progress_mid.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{1d7056d2-6e73-4612-9a94-41cb629dca17}-webtelek_progress_mid.png</ZipFileName>
+              <DestinationFilename>%Skin%\Replicant\Media\webtelek_progress_mid.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Replicant\Media\webtelek_schedule.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{0f026f8f-b55e-497c-8e0d-7b8a12117685}-webtelek_schedule.png</ZipFileName>
+              <DestinationFilename>%Skin%\Replicant\Media\webtelek_schedule.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\webtelek.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{a4c15662-760c-4d72-a4f0-73729f757be0}-webtelek.xml</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo wide\webtelek.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\webtelek_bg_top.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{3b9dc0a8-106d-401d-bd71-3ec398219371}-webtelek_bg_top.xml</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo wide\webtelek_bg_top.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\webtelek_notify.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{78679116-e8d6-4509-a1de-a01bebecf06e}-webtelek_notify.xml</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo wide\webtelek_notify.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\webtelek_schedule.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{09036560-e974-47b7-b5bc-8f1da7cbd997}-webtelek_schedule.xml</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo wide\webtelek_schedule.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\webtelek_tvguide.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{09e4a2e0-1b63-4151-9884-6863f9a3ad02}-webtelek_tvguide.xml</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo wide\webtelek_tvguide.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\WMP9Notify.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{0a741c67-813c-4b0d-9cd7-bd2b2b159589}-WMP9Notify.xml</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo wide\WMP9Notify.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\WMP9OSD.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{6d9f0922-0290-4173-93b0-326c8723d97c}-WMP9OSD.xml</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo wide\WMP9OSD.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\WMP9SCHED.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{b7cd8124-2845-487d-8998-9194b3797683}-WMP9SCHED.xml</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo wide\WMP9SCHED.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\Media\hover_webtelek.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{74c64bf6-3e1b-48c0-8f1e-533c380ca792}-hover_webtelek.png</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo wide\Media\hover_webtelek.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\Media\webtelek_bg_top.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{421c4344-c452-47ea-87b0-4bfa62445e74}-webtelek_bg_top.png</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo wide\Media\webtelek_bg_top.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\Media\webtelek_logo.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{ce5cf363-de0d-40fa-b3c7-416249659572}-webtelek_logo.png</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo wide\Media\webtelek_logo.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\Media\webtelek_logotype.gif</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{a8cdd73b-1b12-44fc-ba35-5c416a403506}-webtelek_logotype.gif</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo wide\Media\webtelek_logotype.gif</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\Media\webtelek_logo_back.jpg</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{9eb6ba81-a21f-412e-9d66-ecce1ecf0129}-webtelek_logo_back.jpg</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo wide\Media\webtelek_logo_back.jpg</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\Media\webtelek_progress_background.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{534cdf89-8b65-4bdd-952e-f689bbc84abe}-webtelek_progress_background.png</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo wide\Media\webtelek_progress_background.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\Media\webtelek_progress_indicator.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{712ce2a5-68e8-4086-a405-0210d769f7b1}-webtelek_progress_indicator.png</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo wide\Media\webtelek_progress_indicator.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\Media\webtelek_progress_mid.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{cefc6ed0-ba81-435c-97e6-914b781a5f45}-webtelek_progress_mid.png</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo wide\Media\webtelek_progress_mid.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\Media\webtelek_schedule.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{98fae229-e517-4e86-b36f-713126e2616d}-webtelek_schedule.png</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo wide\Media\webtelek_schedule.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo\webtelek.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{49110662-11ce-4ba3-8573-509918f8d563}-webtelek.xml</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo\webtelek.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo\webtelek_bg_top.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{832eef25-2ceb-4d0e-93c7-f82a53ac23d8}-webtelek_bg_top.xml</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo\webtelek_bg_top.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo\webtelek_notify.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{aa83bccd-de2f-47fd-8885-da212c191a29}-webtelek_notify.xml</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo\webtelek_notify.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo\webtelek_schedule.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{569b9401-92fa-4ef1-acae-e7f3c505c10c}-webtelek_schedule.xml</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo\webtelek_schedule.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo\webtelek_tvguide.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{74141e96-a2e7-46a8-a603-ba57d5eaacf1}-webtelek_tvguide.xml</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo\webtelek_tvguide.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo\WMP9Notify.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{364543db-a114-4420-817e-332e1ae5ccec}-WMP9Notify.xml</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo\WMP9Notify.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo\WMP9OSD.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{55ec1c8b-b9ec-4557-adbe-55488a19ff51}-WMP9OSD.xml</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo\WMP9OSD.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo\WMP9SCHED.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{ed861c9c-8abe-452b-a855-40ff5870ad92}-WMP9SCHED.xml</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo\WMP9SCHED.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo\Media\hover_webtelek.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{ad44ccc8-7e61-4f79-8327-7dd86902d4d2}-hover_webtelek.png</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo\Media\hover_webtelek.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo\Media\webtelek_bg_top.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{ebbea5a9-a444-4c1a-8440-2137beb16353}-webtelek_bg_top.png</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo\Media\webtelek_bg_top.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo\Media\webtelek_logo.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{cbeeb3aa-e812-4048-ba87-632b15fedbd9}-webtelek_logo.png</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo\Media\webtelek_logo.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo\Media\webtelek_logotype.gif</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{f56c8a5e-85e2-41dd-8433-c0c934f653e0}-webtelek_logotype.gif</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo\Media\webtelek_logotype.gif</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo\Media\webtelek_logo_back.jpg</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{d1601034-94db-4ce6-8518-35b021afb1b9}-webtelek_logo_back.jpg</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo\Media\webtelek_logo_back.jpg</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo\Media\webtelek_progress_background.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{f2923260-dad1-477d-b645-4514fdd06e61}-webtelek_progress_background.png</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo\Media\webtelek_progress_background.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo\Media\webtelek_progress_indicator.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{3fca90ec-d4de-4610-b15b-a620811670c0}-webtelek_progress_indicator.png</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo\Media\webtelek_progress_indicator.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo\Media\webtelek_progress_mid.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{d5e7a7dd-b69c-4d11-8928-2783ea3a8bef}-webtelek_progress_mid.png</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo\Media\webtelek_progress_mid.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\BlueTwo\Media\webtelek_schedule.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{9f9f90d3-ced8-4b1a-8d20-655751b03f4b}-webtelek_schedule.png</ZipFileName>
+              <DestinationFilename>%Skin%\BlueTwo\Media\webtelek_schedule.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\webtelek.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{24c1c661-7bcf-45c1-a5a0-431d7d043f51}-webtelek.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\webtelek.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\webtelek_bg_top.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{2a8f0d04-0b48-418f-99d0-20e529bf9360}-webtelek_bg_top.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\webtelek_bg_top.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\webtelek_notify.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{3b7cfb9c-da71-47b0-840e-64248b4b0464}-webtelek_notify.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\webtelek_notify.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\webtelek_schedule.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{7cef608a-e074-4aba-bc7b-d017afb4b715}-webtelek_schedule.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\webtelek_schedule.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\webtelek_tvguide.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{72e00ad6-611e-4577-8816-087773bcbf0d}-webtelek_tvguide.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\webtelek_tvguide.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\WMP9Notify.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{782f16e4-09ec-4345-8080-e42c8a34683e}-WMP9Notify.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\WMP9Notify.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\WMP9OSD.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{6b19b5a0-f68f-4309-aa57-38173330c7ae}-WMP9OSD.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\WMP9OSD.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\WMP9SCHED.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{76eb1c1d-ee0d-40b1-8f42-c0c456a75ae1}-WMP9SCHED.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\WMP9SCHED.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\hover_webtelek.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{dc149522-10d8-4336-812a-1e5e21a0834b}-hover_webtelek.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\Media\hover_webtelek.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\webtelek_bg_top.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{6a6c5c1d-1849-4bec-a77b-670be61350d3}-webtelek_bg_top.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\Media\webtelek_bg_top.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\webtelek_logo.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{e509e423-3588-42b7-86a1-45e4bae95a86}-webtelek_logo.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\Media\webtelek_logo.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\webtelek_logotype.gif</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{8d2b791c-2cea-407d-875f-d41ffb3a08c8}-webtelek_logotype.gif</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\Media\webtelek_logotype.gif</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\webtelek_logo_back.jpg</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{b74560f9-254d-48a7-b255-7fad8acff726}-webtelek_logo_back.jpg</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\Media\webtelek_logo_back.jpg</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\webtelek_progress_background.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{2ecc86f5-e073-40e1-8466-f1302251a362}-webtelek_progress_background.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\Media\webtelek_progress_background.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\webtelek_progress_indicator.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{80d03193-6c19-4b52-936d-eb8e7b6e6014}-webtelek_progress_indicator.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\Media\webtelek_progress_indicator.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\webtelek_progress_mid.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{0d0fd6cd-74ad-4597-ba85-3e127c970d3f}-webtelek_progress_mid.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\Media\webtelek_progress_mid.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\webtelek_schedule.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{3c982cdb-973a-4910-ab9c-2fd2d3812403}-webtelek_schedule.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\Media\webtelek_schedule.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\webtelek.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{a31bc611-79d1-4c1b-9427-78ccb4de0623}-webtelek.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\webtelek.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\webtelek_bg_top.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{17dc3d44-d749-48eb-bd13-afb25f931562}-webtelek_bg_top.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\webtelek_bg_top.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\webtelek_notify.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{7dec0bd7-9862-49f1-9f13-406b4336b899}-webtelek_notify.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\webtelek_notify.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\webtelek_schedule.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{bf4e704b-39a1-4423-b190-6dee445f4963}-webtelek_schedule.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\webtelek_schedule.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\webtelek_tvguide.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{de9655eb-1d9a-4e2e-a292-05fc16b974e3}-webtelek_tvguide.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\webtelek_tvguide.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\WMP9Notify.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{9245b65a-ab7f-4b01-acc6-826d64adac4b}-WMP9Notify.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\WMP9Notify.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\WMP9OSD.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{9339310b-089c-4f8d-a2f9-f59d470e55f5}-WMP9OSD.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\WMP9OSD.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\WMP9SCHED.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{823160f6-d7c0-4f9a-ad91-b036ec38f911}-WMP9SCHED.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\WMP9SCHED.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\Media\hover_webtelek.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{91d33bf6-4b45-4152-a0f3-4483eaa229c9}-hover_webtelek.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\Media\hover_webtelek.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\Media\webtelek_bg_top.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{a4466ca1-8d98-47a8-b2cd-20903eb03d54}-webtelek_bg_top.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\Media\webtelek_bg_top.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\Media\webtelek_logo.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{9bc7b7bd-166f-4bb0-8984-5f15dc696058}-webtelek_logo.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\Media\webtelek_logo.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\Media\webtelek_logotype.gif</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{4291da47-0cfb-4b7e-b696-8f27a3cbc7b0}-webtelek_logotype.gif</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\Media\webtelek_logotype.gif</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\Media\webtelek_logo_back.jpg</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{540477d5-9b01-4c0d-9bbe-f061ebe8d524}-webtelek_logo_back.jpg</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\Media\webtelek_logo_back.jpg</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\Media\webtelek_progress_background.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{47db71c4-2074-405c-babd-50c7e14463a3}-webtelek_progress_background.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\Media\webtelek_progress_background.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\Media\webtelek_progress_indicator.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{fb64707e-35ec-4368-bf4e-341a9bf35497}-webtelek_progress_indicator.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\Media\webtelek_progress_indicator.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\Media\webtelek_progress_mid.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{f9fe8466-7b0a-4277-9a8e-14df65d3c88e}-webtelek_progress_mid.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\Media\webtelek_progress_mid.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\Media\webtelek_schedule.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{4e9a5dd8-37a7-4112-96b8-3fa1ce329918}-webtelek_schedule.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\Media\webtelek_schedule.png</DestinationFilename>
+            </FileItem>
+          </Items>
+        </Files>
+      </GroupItem>
+      <GroupItem Name="Plugin">
+        <ParentGroup />
+        <DisplayName>Plugin</DisplayName>
+        <DefaulChecked>true</DefaulChecked>
+        <Description>Plugin</Description>
+        <Files>
+          <Items>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>Source\WebtelekPlugin\bin\Release\WebTelek.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{5a47d705-a696-45bc-b4f4-8e4dece0636b}-WebTelek.dll</ZipFileName>
+              <DestinationFilename>%Plugins%\Windows\WebTelek.dll</DestinationFilename>
+            </FileItem>
+          </Items>
+        </Files>
+      </GroupItem>
+    </Items>
+  </Groups>
+  <Sections>
+    <Items>
+      <SectionItem Guid="2357b554-017f-491f-9f7a-e8fd2f95eb7e" Name="Welcome Screen" ConditionGroup="">
+        <Params>
+          <Items>
+            <SectionParam Name="Header text">
+              <Value>Welcome to the Extension Installer of Webtelek+   </Value>
+              <ValueType>String</ValueType>
+              <Description />
+            </SectionParam>
+            <SectionParam Name="Description">
+              <Value>This will install [Name] version [Version] on your computer.
+It is recommended that you close all other applications before continuing.
+Click Next to continue or Cancel to exit Setup.
+
+Requirements:
+MediaPortal 1 1 is required for this version.
+Limitations:
+This is beta version.
+EPG is temporary disabled.
+</Value>
+              <ValueType>String</ValueType>
+              <Description />
+            </SectionParam>
+            <SectionParam Name="Left part image">
+              <Value>verticall_logo.PNG</Value>
+              <ValueType>File</ValueType>
+              <Description />
+            </SectionParam>
+            <SectionParam Name="Header image">
+              <Value />
+              <ValueType>File</ValueType>
+              <Description>Image in upper right part</Description>
+            </SectionParam>
+          </Items>
+        </Params>
+        <Actions>
+          <Items />
+        </Actions>
+        <IncludedGroups />
+        <PanelName>Welcome Screen</PanelName>
+        <WizardButtonsEnum>NextCancel</WizardButtonsEnum>
+      </SectionItem>
+      <SectionItem Guid="21914c01-ff8c-4b36-93b6-7ed917b9e516" Name="Install Section" ConditionGroup="">
+        <Params>
+          <Items>
+            <SectionParam Name="Header Title">
+              <Value>Installation of plugin is in progress...</Value>
+              <ValueType>String</ValueType>
+              <Description>Header title</Description>
+            </SectionParam>
+            <SectionParam Name="Header description">
+              <Value />
+              <ValueType>String</ValueType>
+              <Description>Description of section, shown in under section title</Description>
+            </SectionParam>
+            <SectionParam Name="Header image">
+              <Value>[mediaportal root]\webtelek\default.jpg</Value>
+              <ValueType>File</ValueType>
+              <Description>Image in upper right part</Description>
+            </SectionParam>
+          </Items>
+        </Params>
+        <Actions>
+          <Items>
+            <ActionItem Name="InstallFiles" ActionType="InstallFiles" ConditionGroup="">
+              <Params>
+                <Items />
+              </Params>
+              <ExecuteLocation>AfterPanelShow</ExecuteLocation>
+            </ActionItem>
+          </Items>
+        </Actions>
+        <IncludedGroups />
+        <PanelName>Install Section</PanelName>
+        <WizardButtonsEnum>Next</WizardButtonsEnum>
+      </SectionItem>
+      <SectionItem Guid="2150cabd-b79a-4368-b46e-454d3a8401f8" Name="Setup Complete" ConditionGroup="">
+        <Params>
+          <Items>
+            <SectionParam Name="Header text">
+              <Value>The Extension Installer Wizard has successfully installed [Name].
+
+Enjoy!
+
+
+</Value>
+              <ValueType>String</ValueType>
+              <Description />
+            </SectionParam>
+            <SectionParam Name="Left part image">
+              <Value>verticall_logo.PNG</Value>
+              <ValueType>File</ValueType>
+              <Description />
+            </SectionParam>
+            <SectionParam Name="Show radio buttons">
+              <Value>NO</Value>
+              <ValueType>Bool</ValueType>
+              <Description>Use radiobutton in place of combobox</Description>
+            </SectionParam>
+            <SectionParam Name="Header image">
+              <Value />
+              <ValueType>File</ValueType>
+              <Description>Image in upper right part</Description>
+            </SectionParam>
+          </Items>
+        </Params>
+        <Actions>
+          <Items />
+        </Actions>
+        <IncludedGroups />
+        <PanelName>Setup Complete</PanelName>
+        <WizardButtonsEnum>Finish</WizardButtonsEnum>
+      </SectionItem>
+    </Items>
+  </Sections>
+  <Dependencies>
+    <Items />
+  </Dependencies>
+  <GeneralInfo>
+    <Name>WebTelek+</Name>
+    <Id>0d972e9e-51fd-478c-8005-02c380c2159c</Id>
+    <Author>6opuc (saulyak@gmail.com)</Author>
+    <HomePage>http://code.google.com/p/webtelek/</HomePage>
+    <ForumPage />
+    <UpdateUrl />
+    <Version>
+      <Major>5</Major>
+      <Minor>8</Minor>
+      <Build>0</Build>
+      <Revision>3</Revision>
+    </Version>
+    <ExtensionDescription>Frontend plugin for www.webtelek.com</ExtensionDescription>
+    <VersionDescription>Built for MP v1.1
+EPG is disabled due to incopatibiliy with MP v1.1
+</VersionDescription>
+    <DevelopmentStatus>Beta</DevelopmentStatus>
+    <OnlineLocation />
+    <ReleaseDate>2011-01-29T16:14:32.171875+01:00</ReleaseDate>
+    <Tags />
+    <Location>C:\mediaportal\webtelek+.mpe1</Location>
+    <Params>
+      <Items>
+        <SectionParam Name="Icon">
+          <Value>[mediaportal root]\webtelek\default.jpg</Value>
+          <ValueType>File</ValueType>
+          <Description>The icon file of the package (jpg,png,bmp)</Description>
+        </SectionParam>
+        <SectionParam Name="Online Icon">
+          <Value />
+          <ValueType>String</ValueType>
+          <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
+        </SectionParam>
+        <SectionParam Name="Configuration file">
+          <Value />
+          <ValueType>Template</ValueType>
+          <Description>The file used to configure the extension.
+ If have .exe extension the will be executed
+ If have .dll extension used like MP plugin configuration</Description>
+        </SectionParam>
+        <SectionParam Name="Online Screenshots">
+          <Value />
+          <ValueType>String</ValueType>
+          <Description>Online stored screenshot urls separated by ; </Description>
+        </SectionParam>
+        <SectionParam Name="Force to uninstall on update">
+          <Value>yes</Value>
+          <ValueType>Bool</ValueType>
+          <Description>Show dialog and force to uninstall previous version when updating an extension. Should only be disabled if you are using an NSIS/MSI installer.</Description>
+        </SectionParam>
+      </Items>
+    </Params>
+  </GeneralInfo>
+  <UniqueFileList>
+    <Items>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Xface\webtelek.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{470f21ed-82b5-4e6f-b8a9-0b015f6cc479}-webtelek.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Xface\webtelek.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Xface\webtelek_bg_top.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{efec06cb-0284-4c88-abe7-3b769f68214c}-webtelek_bg_top.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Xface\webtelek_bg_top.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Xface\webtelek_notify.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{12b07414-ff87-424c-8de3-9c94b1ac7f2a}-webtelek_notify.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Xface\webtelek_notify.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Xface\webtelek_schedule.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{5cc6dca0-6e39-4f9d-be3a-0cdeaf6fe4e2}-webtelek_schedule.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Xface\webtelek_schedule.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Xface\webtelek_tvguide.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{dfc86ad1-3a68-4971-a7ba-3c8bb5dba159}-webtelek_tvguide.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Xface\webtelek_tvguide.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Xface\WMP9Notify.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{55e153ce-0584-4e8d-9e16-2eb04a7b7a16}-WMP9Notify.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Xface\WMP9Notify.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Xface\WMP9OSD.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{fbe6d44d-fd39-4db9-9ecf-59ff20d50a54}-WMP9OSD.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Xface\WMP9OSD.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Xface\WMP9SCHED.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{37e13dd4-0aae-45c4-8947-c7f9cbb17aba}-WMP9SCHED.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Xface\WMP9SCHED.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Xface\Media\buttonNF_webtelek.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{c02349e2-1f12-47da-affe-81c6cea01689}-buttonNF_webtelek.png</ZipFileName>
+        <DestinationFilename>%Skin%\Xface\Media\buttonNF_webtelek.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Xface\Media\button_webtelek.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{ad54c50a-e43e-4607-a961-3e3518eb5d09}-button_webtelek.png</ZipFileName>
+        <DestinationFilename>%Skin%\Xface\Media\button_webtelek.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Xface\Media\hover_webtelek.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{f7ea990e-84b9-413b-986a-df1783f7807c}-hover_webtelek.png</ZipFileName>
+        <DestinationFilename>%Skin%\Xface\Media\hover_webtelek.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Xface\Media\webtelek_bg_top.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{c81e2441-3a78-4bfe-8e63-ec8ffafa37a7}-webtelek_bg_top.png</ZipFileName>
+        <DestinationFilename>%Skin%\Xface\Media\webtelek_bg_top.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Xface\Media\webtelek_logo.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{c9fdac7f-7faa-4b0d-9f2e-cea5897588a2}-webtelek_logo.png</ZipFileName>
+        <DestinationFilename>%Skin%\Xface\Media\webtelek_logo.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Xface\Media\webtelek_logotype.gif</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{6002c5f3-0b28-417a-9582-aa265bb5341b}-webtelek_logotype.gif</ZipFileName>
+        <DestinationFilename>%Skin%\Xface\Media\webtelek_logotype.gif</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Xface\Media\webtelek_logo_back.jpg</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{b828034c-72f2-486d-985a-86b7373c02f4}-webtelek_logo_back.jpg</ZipFileName>
+        <DestinationFilename>%Skin%\Xface\Media\webtelek_logo_back.jpg</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Xface\Media\webtelek_progress_background.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{06b0b6d4-ff99-40c7-ba25-04c4acbc0cc4}-webtelek_progress_background.png</ZipFileName>
+        <DestinationFilename>%Skin%\Xface\Media\webtelek_progress_background.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Xface\Media\webtelek_progress_indicator.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{d49037ad-b85d-4eec-9fae-e89a8209cd61}-webtelek_progress_indicator.png</ZipFileName>
+        <DestinationFilename>%Skin%\Xface\Media\webtelek_progress_indicator.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Xface\Media\webtelek_progress_mid.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{9727d1f8-e3dd-4b99-adc8-fd5a3c0559da}-webtelek_progress_mid.png</ZipFileName>
+        <DestinationFilename>%Skin%\Xface\Media\webtelek_progress_mid.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Xface\Media\webtelek_schedule.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{e9800a41-31e4-4764-8865-377a90fff756}-webtelek_schedule.png</ZipFileName>
+        <DestinationFilename>%Skin%\Xface\Media\webtelek_schedule.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\ReVision\webtelek.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{b782a46f-a816-4c13-9c72-556b114badef}-webtelek.xml</ZipFileName>
+        <DestinationFilename>%Skin%\ReVision\webtelek.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\ReVision\webtelek_bg_top.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{b51a8cba-5ca1-42a5-ab7e-a6939d9ae22c}-webtelek_bg_top.xml</ZipFileName>
+        <DestinationFilename>%Skin%\ReVision\webtelek_bg_top.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\ReVision\webtelek_notify.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{d18bc713-3ad3-48ce-9676-d4843aa9e116}-webtelek_notify.xml</ZipFileName>
+        <DestinationFilename>%Skin%\ReVision\webtelek_notify.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\ReVision\webtelek_schedule.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{a71a2203-09f4-4e40-81f4-e36a2faa2bcd}-webtelek_schedule.xml</ZipFileName>
+        <DestinationFilename>%Skin%\ReVision\webtelek_schedule.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\ReVision\webtelek_tvguide.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{78db03e8-e3d7-43c2-b4ab-29eb88d6f445}-webtelek_tvguide.xml</ZipFileName>
+        <DestinationFilename>%Skin%\ReVision\webtelek_tvguide.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\ReVision\WMP9Notify.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{8f7ecaed-28c9-41e1-8dbd-a0901161387e}-WMP9Notify.xml</ZipFileName>
+        <DestinationFilename>%Skin%\ReVision\WMP9Notify.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\ReVision\WMP9OSD.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{b260f0a1-c185-46db-a546-2b44dea2c10b}-WMP9OSD.xml</ZipFileName>
+        <DestinationFilename>%Skin%\ReVision\WMP9OSD.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\ReVision\WMP9SCHED.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{a56785a0-1681-4625-9eda-c268ecaa11ac}-WMP9SCHED.xml</ZipFileName>
+        <DestinationFilename>%Skin%\ReVision\WMP9SCHED.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\ReVision\Media\hover_webtelek.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{825c9195-7b60-4258-8967-739ebab15642}-hover_webtelek.png</ZipFileName>
+        <DestinationFilename>%Skin%\ReVision\Media\hover_webtelek.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\ReVision\Media\webtelek_bg_top.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{36edc3ca-849f-4e28-82a0-7cc3e42d0510}-webtelek_bg_top.png</ZipFileName>
+        <DestinationFilename>%Skin%\ReVision\Media\webtelek_bg_top.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\ReVision\Media\webtelek_logo.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{bcfa217f-2382-44da-8562-f493cd6dd7ca}-webtelek_logo.png</ZipFileName>
+        <DestinationFilename>%Skin%\ReVision\Media\webtelek_logo.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\ReVision\Media\webtelek_logotype.gif</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{c723e2ce-5195-4ac4-aafe-db6df56ed8d0}-webtelek_logotype.gif</ZipFileName>
+        <DestinationFilename>%Skin%\ReVision\Media\webtelek_logotype.gif</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\ReVision\Media\webtelek_logo_back.jpg</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{9d72d276-c742-49eb-8be0-46bbfe080d40}-webtelek_logo_back.jpg</ZipFileName>
+        <DestinationFilename>%Skin%\ReVision\Media\webtelek_logo_back.jpg</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\ReVision\Media\webtelek_progress_background.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{de208921-e60a-41ef-bfc6-79e020647660}-webtelek_progress_background.png</ZipFileName>
+        <DestinationFilename>%Skin%\ReVision\Media\webtelek_progress_background.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\ReVision\Media\webtelek_progress_indicator.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{63283a7f-2a04-4a26-adb8-0a43f4877c83}-webtelek_progress_indicator.png</ZipFileName>
+        <DestinationFilename>%Skin%\ReVision\Media\webtelek_progress_indicator.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\ReVision\Media\webtelek_progress_mid.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{e6f6444a-9178-4b1d-897b-8137e4414ce4}-webtelek_progress_mid.png</ZipFileName>
+        <DestinationFilename>%Skin%\ReVision\Media\webtelek_progress_mid.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\ReVision\Media\webtelek_schedule.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{4a1c35a1-5eee-448c-b3be-961480a334df}-webtelek_schedule.png</ZipFileName>
+        <DestinationFilename>%Skin%\ReVision\Media\webtelek_schedule.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Replicant\webtelek.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{375a28ad-c9aa-4274-bcfc-ed4c8f548c36}-webtelek.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Replicant\webtelek.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Replicant\webtelek_bg_top.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{a8726ebc-8547-4e10-864f-bc3093b35146}-webtelek_bg_top.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Replicant\webtelek_bg_top.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Replicant\webtelek_notify.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{505a2a10-87dc-4913-8fb8-35449a7a298c}-webtelek_notify.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Replicant\webtelek_notify.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Replicant\webtelek_schedule.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{9eb3965b-3f3b-45a1-b5f5-f7d147a8f877}-webtelek_schedule.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Replicant\webtelek_schedule.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Replicant\webtelek_tvguide.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{f9e1dc8f-2dae-4879-b5fc-a0796a55c611}-webtelek_tvguide.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Replicant\webtelek_tvguide.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Replicant\WMP9Notify.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{e85f4170-71e3-406b-bfec-42dba7de3205}-WMP9Notify.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Replicant\WMP9Notify.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Replicant\WMP9OSD.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{9eee681f-ec41-48e2-a926-a3fd13ea80a3}-WMP9OSD.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Replicant\WMP9OSD.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Replicant\WMP9SCHED.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{0a6c1633-07d0-4fd8-8c2b-6635abdd68d4}-WMP9SCHED.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Replicant\WMP9SCHED.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Replicant\Media\hover_webtelek.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{a602bf9b-d414-4f5e-b3e0-9db77a86eea1}-hover_webtelek.png</ZipFileName>
+        <DestinationFilename>%Skin%\Replicant\Media\hover_webtelek.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Replicant\Media\webtelek_bg_top.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{5c2b82b2-3d32-44ca-a393-978be5e24552}-webtelek_bg_top.png</ZipFileName>
+        <DestinationFilename>%Skin%\Replicant\Media\webtelek_bg_top.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Replicant\Media\webtelek_logo.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{a64c6e53-7508-43fc-a50f-a4f444bdf44a}-webtelek_logo.png</ZipFileName>
+        <DestinationFilename>%Skin%\Replicant\Media\webtelek_logo.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Replicant\Media\webtelek_logotype.gif</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{d4c86eef-4e5e-45e6-84c5-a265396c4368}-webtelek_logotype.gif</ZipFileName>
+        <DestinationFilename>%Skin%\Replicant\Media\webtelek_logotype.gif</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Replicant\Media\webtelek_logo_back.jpg</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{f845bfdc-3f64-43be-a224-1a8522360dea}-webtelek_logo_back.jpg</ZipFileName>
+        <DestinationFilename>%Skin%\Replicant\Media\webtelek_logo_back.jpg</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Replicant\Media\webtelek_progress_background.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{11d3241a-0cf2-475a-9e05-224b40b63ff3}-webtelek_progress_background.png</ZipFileName>
+        <DestinationFilename>%Skin%\Replicant\Media\webtelek_progress_background.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Replicant\Media\webtelek_progress_indicator.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{50668c8d-0293-454e-8741-e35fced8fcff}-webtelek_progress_indicator.png</ZipFileName>
+        <DestinationFilename>%Skin%\Replicant\Media\webtelek_progress_indicator.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Replicant\Media\webtelek_progress_mid.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{1d7056d2-6e73-4612-9a94-41cb629dca17}-webtelek_progress_mid.png</ZipFileName>
+        <DestinationFilename>%Skin%\Replicant\Media\webtelek_progress_mid.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Replicant\Media\webtelek_schedule.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{0f026f8f-b55e-497c-8e0d-7b8a12117685}-webtelek_schedule.png</ZipFileName>
+        <DestinationFilename>%Skin%\Replicant\Media\webtelek_schedule.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\webtelek.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{a4c15662-760c-4d72-a4f0-73729f757be0}-webtelek.xml</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo wide\webtelek.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\webtelek_bg_top.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{3b9dc0a8-106d-401d-bd71-3ec398219371}-webtelek_bg_top.xml</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo wide\webtelek_bg_top.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\webtelek_notify.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{78679116-e8d6-4509-a1de-a01bebecf06e}-webtelek_notify.xml</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo wide\webtelek_notify.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\webtelek_schedule.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{09036560-e974-47b7-b5bc-8f1da7cbd997}-webtelek_schedule.xml</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo wide\webtelek_schedule.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\webtelek_tvguide.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{09e4a2e0-1b63-4151-9884-6863f9a3ad02}-webtelek_tvguide.xml</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo wide\webtelek_tvguide.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\WMP9Notify.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{0a741c67-813c-4b0d-9cd7-bd2b2b159589}-WMP9Notify.xml</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo wide\WMP9Notify.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\WMP9OSD.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{6d9f0922-0290-4173-93b0-326c8723d97c}-WMP9OSD.xml</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo wide\WMP9OSD.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\WMP9SCHED.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{b7cd8124-2845-487d-8998-9194b3797683}-WMP9SCHED.xml</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo wide\WMP9SCHED.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\Media\hover_webtelek.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{74c64bf6-3e1b-48c0-8f1e-533c380ca792}-hover_webtelek.png</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo wide\Media\hover_webtelek.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\Media\webtelek_bg_top.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{421c4344-c452-47ea-87b0-4bfa62445e74}-webtelek_bg_top.png</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo wide\Media\webtelek_bg_top.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\Media\webtelek_logo.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{ce5cf363-de0d-40fa-b3c7-416249659572}-webtelek_logo.png</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo wide\Media\webtelek_logo.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\Media\webtelek_logotype.gif</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{a8cdd73b-1b12-44fc-ba35-5c416a403506}-webtelek_logotype.gif</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo wide\Media\webtelek_logotype.gif</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\Media\webtelek_logo_back.jpg</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{9eb6ba81-a21f-412e-9d66-ecce1ecf0129}-webtelek_logo_back.jpg</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo wide\Media\webtelek_logo_back.jpg</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\Media\webtelek_progress_background.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{534cdf89-8b65-4bdd-952e-f689bbc84abe}-webtelek_progress_background.png</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo wide\Media\webtelek_progress_background.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\Media\webtelek_progress_indicator.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{712ce2a5-68e8-4086-a405-0210d769f7b1}-webtelek_progress_indicator.png</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo wide\Media\webtelek_progress_indicator.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\Media\webtelek_progress_mid.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{cefc6ed0-ba81-435c-97e6-914b781a5f45}-webtelek_progress_mid.png</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo wide\Media\webtelek_progress_mid.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo wide\Media\webtelek_schedule.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{98fae229-e517-4e86-b36f-713126e2616d}-webtelek_schedule.png</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo wide\Media\webtelek_schedule.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo\webtelek.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{49110662-11ce-4ba3-8573-509918f8d563}-webtelek.xml</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo\webtelek.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo\webtelek_bg_top.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{832eef25-2ceb-4d0e-93c7-f82a53ac23d8}-webtelek_bg_top.xml</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo\webtelek_bg_top.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo\webtelek_notify.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{aa83bccd-de2f-47fd-8885-da212c191a29}-webtelek_notify.xml</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo\webtelek_notify.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo\webtelek_schedule.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{569b9401-92fa-4ef1-acae-e7f3c505c10c}-webtelek_schedule.xml</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo\webtelek_schedule.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo\webtelek_tvguide.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{74141e96-a2e7-46a8-a603-ba57d5eaacf1}-webtelek_tvguide.xml</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo\webtelek_tvguide.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo\WMP9Notify.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{364543db-a114-4420-817e-332e1ae5ccec}-WMP9Notify.xml</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo\WMP9Notify.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo\WMP9OSD.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{55ec1c8b-b9ec-4557-adbe-55488a19ff51}-WMP9OSD.xml</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo\WMP9OSD.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo\WMP9SCHED.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{ed861c9c-8abe-452b-a855-40ff5870ad92}-WMP9SCHED.xml</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo\WMP9SCHED.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo\Media\hover_webtelek.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{ad44ccc8-7e61-4f79-8327-7dd86902d4d2}-hover_webtelek.png</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo\Media\hover_webtelek.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo\Media\webtelek_bg_top.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{ebbea5a9-a444-4c1a-8440-2137beb16353}-webtelek_bg_top.png</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo\Media\webtelek_bg_top.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo\Media\webtelek_logo.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{cbeeb3aa-e812-4048-ba87-632b15fedbd9}-webtelek_logo.png</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo\Media\webtelek_logo.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo\Media\webtelek_logotype.gif</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{f56c8a5e-85e2-41dd-8433-c0c934f653e0}-webtelek_logotype.gif</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo\Media\webtelek_logotype.gif</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo\Media\webtelek_logo_back.jpg</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{d1601034-94db-4ce6-8518-35b021afb1b9}-webtelek_logo_back.jpg</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo\Media\webtelek_logo_back.jpg</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo\Media\webtelek_progress_background.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{f2923260-dad1-477d-b645-4514fdd06e61}-webtelek_progress_background.png</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo\Media\webtelek_progress_background.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo\Media\webtelek_progress_indicator.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{3fca90ec-d4de-4610-b15b-a620811670c0}-webtelek_progress_indicator.png</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo\Media\webtelek_progress_indicator.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo\Media\webtelek_progress_mid.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{d5e7a7dd-b69c-4d11-8928-2783ea3a8bef}-webtelek_progress_mid.png</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo\Media\webtelek_progress_mid.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\BlueTwo\Media\webtelek_schedule.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{9f9f90d3-ced8-4b1a-8d20-655751b03f4b}-webtelek_schedule.png</ZipFileName>
+        <DestinationFilename>%Skin%\BlueTwo\Media\webtelek_schedule.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\webtelek.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{24c1c661-7bcf-45c1-a5a0-431d7d043f51}-webtelek.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\webtelek.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\webtelek_bg_top.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{2a8f0d04-0b48-418f-99d0-20e529bf9360}-webtelek_bg_top.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\webtelek_bg_top.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\webtelek_notify.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{3b7cfb9c-da71-47b0-840e-64248b4b0464}-webtelek_notify.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\webtelek_notify.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\webtelek_schedule.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{7cef608a-e074-4aba-bc7b-d017afb4b715}-webtelek_schedule.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\webtelek_schedule.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\webtelek_tvguide.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{72e00ad6-611e-4577-8816-087773bcbf0d}-webtelek_tvguide.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\webtelek_tvguide.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\WMP9Notify.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{782f16e4-09ec-4345-8080-e42c8a34683e}-WMP9Notify.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\WMP9Notify.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\WMP9OSD.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{6b19b5a0-f68f-4309-aa57-38173330c7ae}-WMP9OSD.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\WMP9OSD.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\WMP9SCHED.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{76eb1c1d-ee0d-40b1-8f42-c0c456a75ae1}-WMP9SCHED.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\WMP9SCHED.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\hover_webtelek.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{dc149522-10d8-4336-812a-1e5e21a0834b}-hover_webtelek.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\Media\hover_webtelek.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\webtelek_bg_top.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{6a6c5c1d-1849-4bec-a77b-670be61350d3}-webtelek_bg_top.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\Media\webtelek_bg_top.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\webtelek_logo.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{e509e423-3588-42b7-86a1-45e4bae95a86}-webtelek_logo.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\Media\webtelek_logo.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\webtelek_logotype.gif</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{8d2b791c-2cea-407d-875f-d41ffb3a08c8}-webtelek_logotype.gif</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\Media\webtelek_logotype.gif</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\webtelek_logo_back.jpg</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{b74560f9-254d-48a7-b255-7fad8acff726}-webtelek_logo_back.jpg</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\Media\webtelek_logo_back.jpg</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\webtelek_progress_background.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{2ecc86f5-e073-40e1-8466-f1302251a362}-webtelek_progress_background.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\Media\webtelek_progress_background.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\webtelek_progress_indicator.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{80d03193-6c19-4b52-936d-eb8e7b6e6014}-webtelek_progress_indicator.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\Media\webtelek_progress_indicator.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\webtelek_progress_mid.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{0d0fd6cd-74ad-4597-ba85-3e127c970d3f}-webtelek_progress_mid.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\Media\webtelek_progress_mid.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\webtelek_schedule.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{3c982cdb-973a-4910-ab9c-2fd2d3812403}-webtelek_schedule.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\Media\webtelek_schedule.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\webtelek.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{a31bc611-79d1-4c1b-9427-78ccb4de0623}-webtelek.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\webtelek.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\webtelek_bg_top.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{17dc3d44-d749-48eb-bd13-afb25f931562}-webtelek_bg_top.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\webtelek_bg_top.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\webtelek_notify.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{7dec0bd7-9862-49f1-9f13-406b4336b899}-webtelek_notify.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\webtelek_notify.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\webtelek_schedule.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{bf4e704b-39a1-4423-b190-6dee445f4963}-webtelek_schedule.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\webtelek_schedule.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\webtelek_tvguide.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{de9655eb-1d9a-4e2e-a292-05fc16b974e3}-webtelek_tvguide.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\webtelek_tvguide.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\WMP9Notify.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{9245b65a-ab7f-4b01-acc6-826d64adac4b}-WMP9Notify.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\WMP9Notify.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\WMP9OSD.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{9339310b-089c-4f8d-a2f9-f59d470e55f5}-WMP9OSD.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\WMP9OSD.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\WMP9SCHED.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{823160f6-d7c0-4f9a-ad91-b036ec38f911}-WMP9SCHED.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\WMP9SCHED.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\Media\hover_webtelek.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{91d33bf6-4b45-4152-a0f3-4483eaa229c9}-hover_webtelek.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\Media\hover_webtelek.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\Media\webtelek_bg_top.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{a4466ca1-8d98-47a8-b2cd-20903eb03d54}-webtelek_bg_top.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\Media\webtelek_bg_top.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\Media\webtelek_logo.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{9bc7b7bd-166f-4bb0-8984-5f15dc696058}-webtelek_logo.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\Media\webtelek_logo.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\Media\webtelek_logotype.gif</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{4291da47-0cfb-4b7e-b696-8f27a3cbc7b0}-webtelek_logotype.gif</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\Media\webtelek_logotype.gif</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\Media\webtelek_logo_back.jpg</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{540477d5-9b01-4c0d-9bbe-f061ebe8d524}-webtelek_logo_back.jpg</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\Media\webtelek_logo_back.jpg</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\Media\webtelek_progress_background.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{47db71c4-2074-405c-babd-50c7e14463a3}-webtelek_progress_background.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\Media\webtelek_progress_background.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\Media\webtelek_progress_indicator.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{fb64707e-35ec-4368-bf4e-341a9bf35497}-webtelek_progress_indicator.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\Media\webtelek_progress_indicator.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\Media\webtelek_progress_mid.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{f9fe8466-7b0a-4277-9a8e-14df65d3c88e}-webtelek_progress_mid.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\Media\webtelek_progress_mid.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\Media\webtelek_schedule.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{4e9a5dd8-37a7-4112-96b8-3fa1ce329918}-webtelek_schedule.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\Media\webtelek_schedule.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>Source\WebtelekPlugin\bin\Release\WebTelek.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{5a47d705-a696-45bc-b4f4-8e4dece0636b}-WebTelek.dll</ZipFileName>
+        <DestinationFilename>%Plugins%\Windows\WebTelek.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>verticall_logo.PNG</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{e0937867-bcf3-4902-94e5-73f35c08ddd2}-verticall_logo.PNG</ZipFileName>
+        <DestinationFilename />
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\webtelek\default.jpg</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{14a546f8-5615-48df-8ab9-be26227bb503}-default.jpg</ZipFileName>
+        <DestinationFilename />
+      </FileItem>
+    </Items>
+  </UniqueFileList>
+  <ProjectSettings>
+    <FolderGroups>
+      <FolderGroup InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName />
+        <ZipFileName>Installer{CopyFile}\{a9ee4983-e977-4d80-85eb-98a77b64cb17}-</ZipFileName>
+        <DestinationFilename>%Skin%</DestinationFilename>
+        <Folder>[mediaportal root]\Skin</Folder>
+        <Group>Skin</Group>
+        <Recursive>true</Recursive>
+      </FolderGroup>
+    </FolderGroups>
+    <ProjectFilename>C:\mediaportal\webtelek\webtelek+.xmp2</ProjectFilename>
+  </ProjectSettings>
+</PackageClass>
