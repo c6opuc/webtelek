@@ -60,7 +60,7 @@ namespace MediaPortal.GUI.WebTelek
                 string versioncheck = Convert.ToString(xmlreader.GetValueAsString("Account", "versioncheck", "true"));
                 string switchtimeout = Convert.ToString(xmlreader.GetValueAsString("Account", "switchtimeout", "1"));
                 string switchonokonly = Convert.ToString(xmlreader.GetValueAsString("Account", "switchonokonly", "false"));
-                string PluginName = Convert.ToString(xmlreader.GetValueAsString("Account", "pluginname", "WEBTELEK+"));
+                string PluginName = Convert.ToString(xmlreader.GetValueAsString("Account", "pluginname", "RUMOTE"));
                 string preload = Convert.ToString(xmlreader.GetValueAsString("Account", "preload", "false"));
                 string stdplayer = Convert.ToString(xmlreader.GetValueAsString("Account", "stdplayer", "false"));
                 string opacity = Convert.ToString(xmlreader.GetValueAsString("Account", "opacity", "1"));

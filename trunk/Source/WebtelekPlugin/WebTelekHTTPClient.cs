@@ -98,8 +98,8 @@ namespace MediaPortal.GUI.WebTelek
                     }
                     if (epgdays != "0")
                     {
-                        //File.WriteAllText(dirname + @"\epg.log", "EPG:" + "http://www.webtelek.com/members/export/epg.php?from=" + fromdate + "&days=" + epgdays);
-                        string tvguide = getHTTPData("http://www.webtelek.com/members/export/epg.php?from=" + fromdate + "&days=" + epgdays);
+                        //File.WriteAllText(dirname + @"\epg.log", "EPG:" + "http://www.rumote.com/export/epg.php?from=" + fromdate + "&days=" + epgdays);
+                        string tvguide = getHTTPData("http://www.rumote.com/export/epg.php?from=" + fromdate + "&days=" + epgdays);
                         File.Delete(dirname + @"\webtelek\tvguide.xml");
                         tvguide = Regex.Replace(tvguide, "windows-1251", "utf-8");
                         File.WriteAllText(dirname + @"\webtelek\tvguide.xml", tvguide, Encoding.UTF8);
@@ -155,7 +155,7 @@ namespace MediaPortal.GUI.WebTelek
             _workerCompleted = false;
             if (username != "" && password != "" && region != "" && timezone != "")
             {
-                string url = string.Format("https://www.webtelek.com/members/register.php?action=process");
+                string url = string.Format("https://www.rumote.com/register.php?action=process");
                 request = (HttpWebRequest)WebRequest.Create(url);
                 request.UserAgent = "WebTelek Plugin for MediaPortal " + WebTelek.VERSION;
                 request.Method = "POST";
@@ -164,7 +164,7 @@ namespace MediaPortal.GUI.WebTelek
                 request.Accept = "text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5";
                 request.KeepAlive = true;
                 request.ContentType = @"application/x-www-form-urlencoded";
-                request.Referer = string.Format("https://www.webtelek.com/members/register.php");
+                request.Referer = string.Format("https://www.rumote.com/register.php");
                 request.CookieContainer = cookieContainer;
                 string postData = string.Format("response=&email_address={0}&password={1}&persistent={2}", username, password, "y");
                 request.Method = "POST";
@@ -182,7 +182,7 @@ namespace MediaPortal.GUI.WebTelek
                 enc = Encoding.Default;
                 responseStream = new StreamReader(response.GetResponseStream(), enc, true);
                 responseHtml = responseStream.ReadToEnd();
-                url = string.Format("https://www.webtelek.com/members/export/channels-2.2.php?region=" + region + "&utcoffset=" + timezone);
+                url = string.Format("https://www.rumote.com/export/channels-2.2.php?region=" + region + "&utcoffset=" + timezone);
                 request = (HttpWebRequest)WebRequest.Create(url);
                 request.CookieContainer = cookieContainer;
                 request.Method = "GET";

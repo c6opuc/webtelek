@@ -51,7 +51,7 @@ namespace MediaPortal.GUI.WebTelek
         #endregion
         #region Variables
                 
-        public static string VERSION = "5.8.0.0(beta)";
+        public static string VERSION = "1.0.0.0(beta)";
         public static int PluginID  = 6926;
         public static int TVGuideID = 6927;
         public static int TVProgramID = 6928;
@@ -322,7 +322,7 @@ namespace MediaPortal.GUI.WebTelek
             {
                 if (Convert.ToString(xmlreader.GetValueAsString("Account", "versioncheck", "true")) == "true")
                 {
-                    string infomessage = webdata.getHTTPData("http://www.webtelek.com/members/export/maintenance-updates.php?ver=" + VERSION);
+                    string infomessage = webdata.getHTTPData("http://www.rumote.com/export/maintenance-updates.php?ver=" + VERSION);
                     if (infomessage != "OK")
                     {
                         GUIDialogNotify info = (GUIDialogNotify)GUIWindowManager.GetWindow((int)GUIWindow.Window.WINDOW_DIALOG_NOTIFY);
@@ -434,9 +434,9 @@ namespace MediaPortal.GUI.WebTelek
                 if (airzone != "") webdata.region = airzone;
                 xml = new WebTelekLiveXML(new MemoryStream(UTF8Encoding.Default.GetBytes(webdata.getData())));
                 archive = new WebTelekArchiveXML(
-                    webdata.getHTTPData("http://www.webtelek.com/members/export/archive.php?action=days&version=2.0"),
-                    webdata.getHTTPData("http://www.webtelek.com/members/export/archive.php?action=channels&version=2.0"),
-                    webdata.getHTTPData("http://www.webtelek.com/members/export/archive.php?action=genres&version=2.0")
+                    webdata.getHTTPData("http://www.rumote.com/export/archive.php?action=days&version=2.0"),
+                    webdata.getHTTPData("http://www.rumote.com/export/archive.php?action=channels&version=2.0"),
+                    webdata.getHTTPData("http://www.rumote.com/export/archive.php?action=genres&version=2.0")
                 );
                 // webdata.getEPG(true);
             }
@@ -447,18 +447,18 @@ namespace MediaPortal.GUI.WebTelek
                     webdata = new WebTelekHTTPClient();
                     xml = new WebTelekLiveXML(new MemoryStream(UTF8Encoding.Default.GetBytes(webdata.getData())));
                     archive = new WebTelekArchiveXML(
-                        webdata.getHTTPData("http://www.webtelek.com/members/export/archive.php?action=days&version=2.0"),
-                        webdata.getHTTPData("http://www.webtelek.com/members/export/archive.php?action=channels&version=2.0"),
-                        webdata.getHTTPData("http://www.webtelek.com/members/export/archive.php?action=genres&version=2.0")
+                        webdata.getHTTPData("http://www.rumote.com/export/archive.php?action=days&version=2.0"),
+                        webdata.getHTTPData("http://www.rumote.com/export/archive.php?action=channels&version=2.0"),
+                        webdata.getHTTPData("http://www.rumote.com/export/archive.php?action=genres&version=2.0")
                     );
                     //webdata.getEPG();
                     GetInfoMessage();
                 }
                 if (xml == null) xml = new WebTelekLiveXML(new MemoryStream(UTF8Encoding.Default.GetBytes(webdata.getData())));
                 if (archive == null) archive = new WebTelekArchiveXML(
-                                        webdata.getHTTPData("http://www.webtelek.com/members/export/archive.php?action=days&version=2.0"),
-                                        webdata.getHTTPData("http://www.webtelek.com/members/export/archive.php?action=channels&version=2.0"),
-                                        webdata.getHTTPData("http://www.webtelek.com/members/export/archive.php?action=genres&version=2.0")
+                                        webdata.getHTTPData("http://www.rumote.com/export/archive.php?action=days&version=2.0"),
+                                        webdata.getHTTPData("http://www.rumote.com/export/archive.php?action=channels&version=2.0"),
+                                        webdata.getHTTPData("http://www.rumote.com/export/archive.php?action=genres&version=2.0")
                                      );
 
             }
@@ -848,8 +848,8 @@ namespace MediaPortal.GUI.WebTelek
             ChoosenList = ARCHIVESHOWS;
 
             query = System.Web.HttpUtility.UrlEncode(query, Encoding.GetEncoding("windows-1251"));
-            Log.Info("WebTelek Search URL: http://www.webtelek.com/members/export/archive.php?action=listings&version=2.0&ch=" + channel + "&day=" + date + "&lg=" + genre + "&q=" + query);
-            archivexml = webdata.getHTTPData("http://www.webtelek.com/members/export/archive.php?action=listings&version=2.0&ch=" + channel + "&day=" + date + "&lg=" + genre + "&q=" + query);
+            Log.Info("WebTelek Search URL: http://www.rumote.com/export/archive.php?action=listings&version=2.0&ch=" + channel + "&day=" + date + "&lg=" + genre + "&q=" + query);
+            archivexml = webdata.getHTTPData("http://www.rumote.com/export/archive.php?action=listings&version=2.0&ch=" + channel + "&day=" + date + "&lg=" + genre + "&q=" + query);
 
             listView.IsVisible = true;
             textKinozal.IsVisible = false;
@@ -937,16 +937,16 @@ namespace MediaPortal.GUI.WebTelek
                     ShowVODCategories();
                     break;
                 case 2:
-                    ShowRecords("http://www.webtelek.com/members/export/kinozal.php?action=top100");
+                    ShowRecords("http://www.rumote.com/export/kinozal.php?action=top100");
                     break;
                 case 3:
-                    ShowRecords("http://www.webtelek.com/members/export/kinozal.php?action=newrecords");
+                    ShowRecords("http://www.rumote.com/export/kinozal.php?action=newrecords");
                     break;
                 case 4:
-                    ShowRecords("http://www.webtelek.com/members/export/kinozal.php?action=updates");
+                    ShowRecords("http://www.rumote.com/export/kinozal.php?action=updates");
                     break;
                 case 5:
-                    ShowRecords("http://www.webtelek.com/members/export/kinozal.php?action=comingsoon");
+                    ShowRecords("http://www.rumote.com/export/kinozal.php?action=comingsoon");
                     break;
                 default:
                     break;
@@ -995,7 +995,7 @@ namespace MediaPortal.GUI.WebTelek
 
             if (chooser.SelectedId >= 1)
             {
-                ShowRecords("http://www.webtelek.com/members/export/kinozal.php?action=records&gid=" + genres[0][chooser.SelectedId - 1]);
+                ShowRecords("http://www.rumote.com/export/kinozal.php?action=records&gid=" + genres[0][chooser.SelectedId - 1]);
             }
             else
             {
@@ -1044,7 +1044,7 @@ namespace MediaPortal.GUI.WebTelek
         private void ShowRecord(int index)
         {
             Navigation.Insert(0, (int)NaviPlace.KINOZALRECORD);
-            recorditems = (new WebTelekKinozalXML(webdata)).getRecord("http://www.webtelek.com/members/export/kinozal.php?action=items&rid="+records[0][index]);
+            recorditems = (new WebTelekKinozalXML(webdata)).getRecord("http://www.rumote.com/export/kinozal.php?action=items&rid=" + records[0][index]);
             kinozalItemIndex = index;
 
             ChoosenList = "ShowRecord";
@@ -1160,7 +1160,7 @@ namespace MediaPortal.GUI.WebTelek
             if (control == listKinozal)
             {
                 LastChoosen = "ShowRecord";
-                string url = "http://www.webtelek.com/members/play.php?action=vod&movieid="
+                string url = "http://www.rumote.com/play.php?action=vod&movieid="
                 + recorditems[0][listKinozal.SelectedListItemIndex] + "&moviepart=" 
                 + recorditems[1][listKinozal.SelectedListItemIndex];
 
@@ -1201,12 +1201,13 @@ namespace MediaPortal.GUI.WebTelek
 
                     if ( ChoosenList == ARCHIVESHOWS || _currentTypeOfList == TypeOfList.ResultsOfSavedSearchSelection )
                     {
-                        string url = "http://www.webtelek.com/play_pvr.php?programid=" + archive.getShows(archivexml)[0][listView.SelectedListItemIndex];
+                        string url = "http://www.rumote.com/play.php?action=pvr&programid=" + archive.getShows(archivexml)[0][listView.SelectedListItemIndex];
                         currplay = archive.getShows(archivexml)[2][listView.SelectedListItemIndex];
                         GUIPropertyManager.SetProperty("#Play.Current.Title", currplay);
                         //string dir = Directory.GetCurrentDirectory();
                         string dir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
                         File.Delete(dir + @"\webtelek\webtelek.asx");
+                        Log.Info("!!!!!:"+url);
                         String _tempasx = webdata.getHTTPData(url);
                         if (preload) if (_tempasx.IndexOf("connect.wmv") > 0) _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
                         File.WriteAllText(dir + @"\webtelek\webtelek.asx", _tempasx, Encoding.Default);
@@ -1260,14 +1261,14 @@ namespace MediaPortal.GUI.WebTelek
 
                     if (curr_play_url != FUrls[listView.SelectedListItemIndex - i] || g_Player.Playing == false)
                     {
-                        if (FUrls[listView.SelectedListItemIndex - i].Contains("http://www.webtelek.com/members/play.php?ch="))
+                        if (FUrls[listView.SelectedListItemIndex - i].Contains("http://www.rumote.com/play.php?ch="))
                         {
                             String _tempasx = webdata.getHTTPData(FUrls[listView.SelectedListItemIndex - i]);
                             if (preload) if (_tempasx.IndexOf("connect.wmv") > 0) _tempasx = _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
                             File.WriteAllText(dir + @"\webtelek\webtelek.asx", _tempasx, Encoding.Default);
                             mmsurl = dir + @"\webtelek\webtelek.asx";
-                            //Log.Info("!!id="+FUrls[listView.SelectedListItemIndex - i].Substring(44));
-                            OSDInfo.channel_id = FUrls[listView.SelectedListItemIndex - i].Substring(44);
+                            //Log.Info("!!id="+FUrls[listView.SelectedListItemIndex - i].Substring(34));
+                            OSDInfo.channel_id = FUrls[listView.SelectedListItemIndex - i].Substring(34);
                         }
                         else
                         {
@@ -1564,7 +1565,7 @@ namespace MediaPortal.GUI.WebTelek
             ChoosenList = string.Empty;
             titleToSearchFor = System.Web.HttpUtility.UrlEncode(titleToSearchFor, Encoding.GetEncoding("windows-1251"));
             //Log.Info(titleToSearchFor);
-            archivexml = webdata.getHTTPData("http://www.webtelek.com/members/export/archive.php?action=listings&version=2.0&q=" + titleToSearchFor);
+            archivexml = webdata.getHTTPData("http://www.rumote.com/export/archive.php?action=listings&version=2.0&q=" + titleToSearchFor);
             listView.IsVisible = true;
             textKinozal.IsVisible = false;
             imageKinozal.IsVisible = false;
@@ -1646,6 +1647,7 @@ namespace MediaPortal.GUI.WebTelek
 
         public static void getChannelLogo(string channel_id)
         {
+            //Log.Info("http://www.rumote.com/img/mediaportal/" + channel_id + ".jpg");
             string dir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             if (!File.Exists(dir + @"\\webtelek\\" + channel_id + ".jpg"))
             {
@@ -1653,7 +1655,7 @@ namespace MediaPortal.GUI.WebTelek
                 {
                     WebClient client = new WebClient();
                     client.DownloadFile(
-                        "http://www.webtelek.com/img/mediaportal/" + channel_id + ".jpg",
+                        "http://www.rumote.com/img/mediaportal/" + channel_id + ".jpg",
                         dir + @"\\webtelek\\" + channel_id + ".jpg"
                     );
                 }
@@ -1688,7 +1690,7 @@ namespace MediaPortal.GUI.WebTelek
             if (PlayNextIndex >= PlayNextNames.Count) PlayNextIndex = 0;
             if (PlayNextIndex < 0) PlayNextIndex = PlayNextNames.Count - 1;
 
-            if (PlayNextUrls[PlayNextIndex].Contains("http://www.webtelek.com/members/play.php?ch="))
+            if (PlayNextUrls[PlayNextIndex].Contains("http://www.rumote.com/play.php?ch="))
             {
                 if (next == 0 && curr_play_url != PlayNextUrls[PlayNextIndex])
                 {
@@ -1697,7 +1699,7 @@ namespace MediaPortal.GUI.WebTelek
                     File.WriteAllText(dir + @"\webtelek\" + tempasx, _tempasx, Encoding.Default);
                 }
                 mmsurl = dir + @"\webtelek\" + tempasx;
-                OSDInfo.channel_id = PlayNextUrls[PlayNextIndex].Substring(44);
+                OSDInfo.channel_id = PlayNextUrls[PlayNextIndex].Substring(34);
             }
             else
             {
@@ -1753,7 +1755,7 @@ namespace MediaPortal.GUI.WebTelek
                 if (preload) if (_tempasx.IndexOf("connect.wmv") > 0) _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
                 File.WriteAllText(dir + @"\webtelek\webtelek.asx", _tempasx, Encoding.Default);
                 string mmsurl = dir + @"\webtelek\webtelek.asx";
-                OSDInfo.channel_id = DataUrls[PlayNextIndex].Substring(44);
+                OSDInfo.channel_id = DataUrls[PlayNextIndex].Substring(34);
                 g_Player.Play(mmsurl);
             }
             curr_play_url = DataUrls[PlayNextIndex];
@@ -1788,10 +1790,10 @@ namespace MediaPortal.GUI.WebTelek
                     {
                         case "Favorites":
                             GUIPropertyManager.SetProperty("#ChannelInfo", FDescriptions[listView.SelectedListItemIndex]);
-                            if (FUrls[listView.SelectedListItemIndex].Contains("http://www.webtelek.com/members/play.php?ch="))
+                            if (FUrls[listView.SelectedListItemIndex].Contains("http://www.rumote.com/play.php?ch="))
                             {
-                                getChannelLogo(FUrls[listView.SelectedListItemIndex].Substring(44));
-                                ChannelLogo.SetFileName(dir + @"\\webtelek\\" + FUrls[listView.SelectedListItemIndex].Substring(44) + ".jpg");
+                                getChannelLogo(FUrls[listView.SelectedListItemIndex].Substring(34));
+                                ChannelLogo.SetFileName(dir + @"\\webtelek\\" + FUrls[listView.SelectedListItemIndex].Substring(34) + ".jpg");
                             }
                             else
                             {
@@ -1801,10 +1803,11 @@ namespace MediaPortal.GUI.WebTelek
                         case "Channels":
                             if (listView.SelectedListItemIndex - 1 >= 0) {
                                 GUIPropertyManager.SetProperty("#ChannelInfo", FDescriptions[listView.SelectedListItemIndex - 1]);
-                                if (FUrls[listView.SelectedListItemIndex - 1].Contains("http://www.webtelek.com/members/play.php?ch="))
+                                if (FUrls[listView.SelectedListItemIndex - 1].Contains("http://www.rumote.com/play.php?ch="))
                                 {
-                                    getChannelLogo(FUrls[listView.SelectedListItemIndex - 1].Substring(44));
-                                    ChannelLogo.SetFileName(dir + @"\\webtelek\\" + FUrls[listView.SelectedListItemIndex - 1].Substring(44) + ".jpg");
+                                    Log.Info(FUrls[listView.SelectedListItemIndex-1]);
+                                    getChannelLogo(FUrls[listView.SelectedListItemIndex - 1].Substring(34));
+                                    ChannelLogo.SetFileName(dir + @"\\webtelek\\" + FUrls[listView.SelectedListItemIndex - 1].Substring(34) + ".jpg");
                                 }
                                 else
                                 {

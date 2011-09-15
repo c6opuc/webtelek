@@ -41,13 +41,13 @@ namespace MediaPortal.GUI.WebTelek
         // Returns the name of the plugin which is shown in the plugin menu
         public string PluginName()
         {
-            return "WEBTELEK";
+            return "Rumote";
         }
 
         // Returns the description of the plugin is shown in the plugin menu
         public string Description()
         {
-            return "WEBTELEK+ Frontend Plugin " + WebTelek.VERSION;
+            return "Rumote Frontend Plugin " + WebTelek.VERSION;
         }
 
         // Returns the author of the plugin which is shown in the plugin menu
@@ -87,10 +87,10 @@ namespace MediaPortal.GUI.WebTelek
 
         public bool GetHome(out string strButtonText, out string strButtonImage, out string strButtonImageFocus, out string strPictureImage)
         {
-            strButtonText = "WEBTELEK+";
+            strButtonText = "Rumote";
             using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"), false))
             {
-                strButtonText = Convert.ToString(xmlreader.GetValueAsString("Account", "pluginname", "WEBTELEK+"));
+                strButtonText = Convert.ToString(xmlreader.GetValueAsString("Account", "pluginname", "Rumote"));
             }
             strButtonImage = String.Empty;
             strButtonImageFocus = String.Empty;

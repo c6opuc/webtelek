@@ -15,7 +15,7 @@
 			<posY>5</posY>
 			<width>210</width>
       			<keepaspectratio>yes</keepaspectratio>
-			<texture>webtelek_logotype.gif</texture>
+			<texture>webtelek_logotype.png</texture>
 		</control>
     		<control>
     			<description>ChannelLogo</description>
