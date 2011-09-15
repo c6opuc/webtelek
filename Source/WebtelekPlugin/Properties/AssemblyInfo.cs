@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("WEBTELEK+ Mediaportal plugin")]
+[assembly: AssemblyTitle("Rumote Mediaportal plugin")]
 [assembly: AssemblyDescription("Frontend for www.webtelek.com")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Borys SAULYAK")]
-[assembly: AssemblyProduct("WEBTELEK+")]
-[assembly: AssemblyCopyright("Copyright © Borys SAULYAK 2006")]
+[assembly: AssemblyProduct("Rumote")]
+[assembly: AssemblyCopyright("Copyright © Borys SAULYAK 2011")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

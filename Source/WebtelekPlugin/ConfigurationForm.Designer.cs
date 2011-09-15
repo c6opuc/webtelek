@@ -318,7 +318,7 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Новые версии";
             this.toolTip.SetToolTip(this.groupBox8, "Отметьте эту галочку если Вы хотите видеть \r\nуведомления о доступных новых версия" +
-                    "х \r\nWebTelek+ плагина.");
+                    "х \r\nRumote плагина.");
             // 
             // VersionCheckBox
             // 
@@ -329,7 +329,7 @@
             this.VersionCheckBox.TabIndex = 0;
             this.VersionCheckBox.Text = "вкл. проверку";
             this.toolTip.SetToolTip(this.VersionCheckBox, "Отметьте эту галочку если Вы хотите видеть \r\nуведомления о доступных новых версия" +
-                    "х \r\nWebTelek+ плагина.");
+                    "х \r\nRumote плагина.");
             this.VersionCheckBox.UseVisualStyleBackColor = true;
             // 
             // groupBox6
@@ -391,7 +391,7 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Сетевой таймаут";
             this.toolTip.SetToolTip(this.groupBox7, "Этот параметр определяет сколько секунд плагин \r\nбудет пытаться соединиться с сер" +
-                    "вером WebTelek+.\r\nМеняйте этот параметр только когда это необходимо и \r\nтолько е" +
+                    "вером Rumote.\r\nМеняйте этот параметр только когда это необходимо и \r\nтолько е" +
                     "сли Вы знаете, что Вы делаете.");
             // 
             // label12
@@ -403,7 +403,7 @@
             this.label12.TabIndex = 36;
             this.label12.Text = "сек.";
             this.toolTip.SetToolTip(this.label12, "Этот параметр определяет сколько секунд плагин \r\nбудет пытаться соединиться с сер" +
-                    "вером WebTelek+.\r\nМеняйте этот параметр только когда это необходимо и \r\nтолько е" +
+                    "вером Rumote.\r\nМеняйте этот параметр только когда это необходимо и \r\nтолько е" +
                     "сли Вы знаете, что Вы делаете.");
             // 
             // NetDelay
@@ -424,7 +424,7 @@
             this.NetDelay.TabIndex = 0;
             this.NetDelay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.toolTip.SetToolTip(this.NetDelay, "Этот параметр определяет сколько секунд плагин \r\nбудет пытаться соединиться с сер" +
-                    "вером WebTelek+.\r\nМеняйте этот параметр только когда это необходимо и \r\nтолько е" +
+                    "вером Rumote.\r\nМеняйте этот параметр только когда это необходимо и \r\nтолько е" +
                     "сли Вы знаете, что Вы делаете.");
             this.NetDelay.Value = new decimal(new int[] {
             5,
@@ -715,7 +715,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(357, 568);
+            this.ClientSize = new System.Drawing.Size(357, 565);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
@@ -726,7 +726,7 @@
             this.MinimumSize = new System.Drawing.Size(365, 600);
             this.Name = "ConfigurationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Настройки WEBTELEK+";
+            this.Text = "Настройки Rumote";
             this.Load += new System.EventHandler(this.ConfigurationForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
