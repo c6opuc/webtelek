@@ -1,4 +1,4 @@
 ﻿<WMP9OSD>
-  <TopBackground>webtelek_schedule.png</TopBackground>
-  <TopRegion>webtelek_notify.xml</TopRegion>
+  <TopBackground>rumote_schedule.png</TopBackground>
+  <TopRegion>rumote_notify.xml</TopRegion>
 </WMP9OSD>

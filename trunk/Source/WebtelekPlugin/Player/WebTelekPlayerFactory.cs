@@ -246,7 +246,7 @@ namespace MediaPortal.Player
             }
           }
 
-          if (aFileName.IndexOf("webtelek") >= 0)
+          if (aFileName.IndexOf("rumote") >= 0)
           {
               return new WebTelekWMP();
           }

@@ -32,7 +32,7 @@ namespace MediaPortal.GUI.WebTelek
             StringCollection result = new StringCollection();
             //string dir = Directory.GetCurrentDirectory();
             string dir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_custom.xml"), false))
+            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "rumote_custom.xml"), false))
             {
                 for (int i = 0; i <= 1500; i++)
                 {

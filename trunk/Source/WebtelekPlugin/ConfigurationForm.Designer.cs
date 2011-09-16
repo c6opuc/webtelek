@@ -538,7 +538,7 @@
             this.CustomButton.Text = "Другие каналы";
             this.toolTip.SetToolTip(this.CustomButton, "Здесь Вы сможете добавить  Ваши любимые видео- и \r\nтелеканалы найденые на простор" +
                     "ах Интернета. \r\nК примеру, Вы сможете добавить бесплатные каналы, \r\nопубликованы" +
-                    "е на www.webtelek.com.");
+                    "е на www.rumote.com.");
             this.CustomButton.UseVisualStyleBackColor = true;
             this.CustomButton.Click += new System.EventHandler(this.CustomButton_Click);
             // 

@@ -51,11 +51,11 @@ namespace MediaPortal.GUI.WebTelek
         #endregion
         #region Variables
                 
-        public static string VERSION = "1.0.0.0(beta)";
-        public static int PluginID  = 6926;
-        public static int TVGuideID = 6927;
-        public static int TVProgramID = 6928;
-        public static int VirtualKeyboardID = 6929;
+        public static string VERSION = "1.0.0.1";
+        public static int PluginID  = 7926;
+        public static int TVGuideID = 7927;
+        public static int TVProgramID = 7928;
+        public static int VirtualKeyboardID = 7929;
 
         public static bool isPlayNextActive = false;
 
@@ -189,7 +189,7 @@ namespace MediaPortal.GUI.WebTelek
             g_Player.PlayBackEnded += new g_Player.EndedHandler(OnPlayBackEnded);
             g_Player.PlayBackStopped += new g_Player.StoppedHandler(OnPlayBackStopped);
 
-            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"), false))
+            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "rumote_profile.xml"), false))
             {
                 preload = Boolean.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "preload", "false")));
                 stdplayer = Boolean.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "stdplayer", "false")));
@@ -199,9 +199,9 @@ namespace MediaPortal.GUI.WebTelek
             if (! stdplayer) g_Player.Factory = new WebTelekPlayerFactory();
 
             string dir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            Directory.CreateDirectory(dir+@"\webtelek\");
+            Directory.CreateDirectory(dir+@"\rumote\");
 
-            return Load(GUIGraphicsContext.Skin + @"\webtelek.xml");
+            return Load(GUIGraphicsContext.Skin + @"\rumote.xml");
         }
 
 
@@ -318,7 +318,7 @@ namespace MediaPortal.GUI.WebTelek
 
         private void GetInfoMessage()
         {
-            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"), false))
+            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "rumote_profile.xml"), false))
             {
                 if (Convert.ToString(xmlreader.GetValueAsString("Account", "versioncheck", "true")) == "true")
                 {
@@ -342,7 +342,7 @@ namespace MediaPortal.GUI.WebTelek
             FavURLs.Clear();
             //string dir = Directory.GetCurrentDirectory();
             string dir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_favorites.xml"), false))
+            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "rumote_favorites.xml"), false))
             {
                 for (int i = 0; i <= 1500; i++)
                 {
@@ -351,7 +351,7 @@ namespace MediaPortal.GUI.WebTelek
                 }
             }
             _searchNames.Clear();
-            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_searches.xml"), false))
+            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "rumote_searches.xml"), false))
             {
                 for (int i = 0; i <= 1500; i++)
                 {
@@ -366,8 +366,8 @@ namespace MediaPortal.GUI.WebTelek
         {
             //string dir = Directory.GetCurrentDirectory();
             string dir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            File.Delete(Config.GetFile(Config.Dir.Config, "webtelek_favorites.xml"));
-            XmlTextWriter writer = new XmlTextWriter(Config.GetFile(Config.Dir.Config, "webtelek_favorites.xml"), null);
+            File.Delete(Config.GetFile(Config.Dir.Config, "rumote_favorites.xml"));
+            XmlTextWriter writer = new XmlTextWriter(Config.GetFile(Config.Dir.Config, "rumote_favorites.xml"), null);
             writer.WriteStartDocument();
             writer.Formatting = Formatting.Indented;
             writer.WriteStartElement("profile");
@@ -392,8 +392,8 @@ namespace MediaPortal.GUI.WebTelek
         {
             //string dir = Directory.GetCurrentDirectory();
             string dir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            File.Delete(Config.GetFile(Config.Dir.Config, "webtelek_searches.xml"));
-            XmlTextWriter writer = new XmlTextWriter(Config.GetFile(Config.Dir.Config, "webtelek_searches.xml"), null);
+            File.Delete(Config.GetFile(Config.Dir.Config, "rumote_searches.xml"));
+            XmlTextWriter writer = new XmlTextWriter(Config.GetFile(Config.Dir.Config, "rumote_searches.xml"), null);
             writer.WriteStartDocument();
             writer.Formatting = Formatting.Indented;
             writer.WriteStartElement("profile");
@@ -848,7 +848,7 @@ namespace MediaPortal.GUI.WebTelek
             ChoosenList = ARCHIVESHOWS;
 
             query = System.Web.HttpUtility.UrlEncode(query, Encoding.GetEncoding("windows-1251"));
-            Log.Info("WebTelek Search URL: http://www.rumote.com/export/archive.php?action=listings&version=2.0&ch=" + channel + "&day=" + date + "&lg=" + genre + "&q=" + query);
+            //Log.Info("WebTelek Search URL: http://www.rumote.com/export/archive.php?action=listings&version=2.0&ch=" + channel + "&day=" + date + "&lg=" + genre + "&q=" + query);
             archivexml = webdata.getHTTPData("http://www.rumote.com/export/archive.php?action=listings&version=2.0&ch=" + channel + "&day=" + date + "&lg=" + genre + "&q=" + query);
 
             listView.IsVisible = true;
@@ -864,7 +864,7 @@ namespace MediaPortal.GUI.WebTelek
                 item.Label = archive.getShows(archivexml)[2][j];
                 item.IsFolder = false;
                 getChannelLogo(archive.getShows(archivexml)[1][j]);
-                item.IconImage = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\\webtelek\\" + archive.getShows(archivexml)[1][j] + ".jpg";
+                item.IconImage = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\\rumote\\" + archive.getShows(archivexml)[1][j] + ".jpg";
                 listView.Add(item);
                 j++;
             }
@@ -1169,11 +1169,11 @@ namespace MediaPortal.GUI.WebTelek
                 GUIPropertyManager.SetProperty("#Play.Current.Title", currplay);
                 //string dir = Directory.GetCurrentDirectory();
                 string dir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-                File.Delete(dir + @"\webtelek\webtelek.asx");
+                File.Delete(dir + @"\rumote\rumote.asx");
                 String _tempasx = webdata.getHTTPData(url);
                 if ( preload ) if (_tempasx.IndexOf("connect.wmv") > 0) _tempasx =  _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
-                File.WriteAllText(dir + @"\webtelek\webtelek.asx", _tempasx, Encoding.Default);
-                url = dir + @"\webtelek\webtelek.asx";
+                File.WriteAllText(dir + @"\rumote\rumote.asx", _tempasx, Encoding.Default);
+                url = dir + @"\rumote\rumote.asx";
                 g_Player.Play(url);
                 OSDInfo.wp = null;
                 OSDInfo.channel_id = null;
@@ -1206,12 +1206,12 @@ namespace MediaPortal.GUI.WebTelek
                         GUIPropertyManager.SetProperty("#Play.Current.Title", currplay);
                         //string dir = Directory.GetCurrentDirectory();
                         string dir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-                        File.Delete(dir + @"\webtelek\webtelek.asx");
+                        File.Delete(dir + @"\rumote\rumote.asx");
                         Log.Info("!!!!!:"+url);
                         String _tempasx = webdata.getHTTPData(url);
                         if (preload) if (_tempasx.IndexOf("connect.wmv") > 0) _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
-                        File.WriteAllText(dir + @"\webtelek\webtelek.asx", _tempasx, Encoding.Default);
-                        url = dir + @"\webtelek\webtelek.asx";
+                        File.WriteAllText(dir + @"\rumote\rumote.asx", _tempasx, Encoding.Default);
+                        url = dir + @"\rumote\rumote.asx";
                         g_Player.Play(url);
                         OSDInfo.wp = null;
                         OSDInfo.channel_id = archive.getShows(archivexml)[1][listView.SelectedListItemIndex];
@@ -1257,7 +1257,7 @@ namespace MediaPortal.GUI.WebTelek
 
                     //string dir = Directory.GetCurrentDirectory();
                     string dir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-                    File.Delete(dir + @"\webtelek\webtelek.asx");
+                    File.Delete(dir + @"\rumote\rumote.asx");
 
                     if (curr_play_url != FUrls[listView.SelectedListItemIndex - i] || g_Player.Playing == false)
                     {
@@ -1265,8 +1265,8 @@ namespace MediaPortal.GUI.WebTelek
                         {
                             String _tempasx = webdata.getHTTPData(FUrls[listView.SelectedListItemIndex - i]);
                             if (preload) if (_tempasx.IndexOf("connect.wmv") > 0) _tempasx = _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
-                            File.WriteAllText(dir + @"\webtelek\webtelek.asx", _tempasx, Encoding.Default);
-                            mmsurl = dir + @"\webtelek\webtelek.asx";
+                            File.WriteAllText(dir + @"\rumote\rumote.asx", _tempasx, Encoding.Default);
+                            mmsurl = dir + @"\rumote\rumote.asx";
                             //Log.Info("!!id="+FUrls[listView.SelectedListItemIndex - i].Substring(34));
                             OSDInfo.channel_id = FUrls[listView.SelectedListItemIndex - i].Substring(34);
                         }
@@ -1506,7 +1506,7 @@ namespace MediaPortal.GUI.WebTelek
                     keyboard.Text = "";
                     keyboard.DoModal(GetID); // show it...
 
-                    Log.Info("Webtelek: OSD keyboard loaded!");
+                    Log.Info("Rumote: OSD keyboard loaded!");
 
                     // If input is finished, the string is saved to the searchterm var.
                     if (keyboard.IsConfirmed)
@@ -1527,7 +1527,7 @@ namespace MediaPortal.GUI.WebTelek
 
                         ShowArchiveShow(channel, arcDateSelector, genre, searchterm);
 
-                        Log.Info("Webtelek: Searchterm gotten from OSD keyboard: {0}", searchterm);
+                        Log.Info("Rumote: Searchterm gotten from OSD keyboard: {0}", searchterm);
                     }
                     break;
                 default:
@@ -1578,7 +1578,7 @@ namespace MediaPortal.GUI.WebTelek
                 item.Label = archive.getShows(archivexml)[2][j];
                 item.IsFolder = false;
                 getChannelLogo(archive.getShows(archivexml)[1][j]);
-                item.IconImage = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\\webtelek\\" + archive.getShows(archivexml)[1][j] + ".jpg";
+                item.IconImage = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\\rumote\\" + archive.getShows(archivexml)[1][j] + ".jpg";
                 listView.Add(item);
                 j++;
             }
@@ -1649,14 +1649,14 @@ namespace MediaPortal.GUI.WebTelek
         {
             //Log.Info("http://www.rumote.com/img/mediaportal/" + channel_id + ".jpg");
             string dir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            if (!File.Exists(dir + @"\\webtelek\\" + channel_id + ".jpg"))
+            if (!File.Exists(dir + @"\\rumote\\" + channel_id + ".jpg"))
             {
                 try
                 {
                     WebClient client = new WebClient();
                     client.DownloadFile(
                         "http://www.rumote.com/img/mediaportal/" + channel_id + ".jpg",
-                        dir + @"\\webtelek\\" + channel_id + ".jpg"
+                        dir + @"\\rumote\\" + channel_id + ".jpg"
                     );
                 }
                 catch (Exception)
@@ -1679,12 +1679,12 @@ namespace MediaPortal.GUI.WebTelek
                 PlayNextIndex = PlayNextUrls.IndexOf(curr_play_url);
             }
 
-            foreach (string file in Directory.GetFiles(dir+@"\webtelek\", @"webtelek*.asx")) File.Delete(file);
+            foreach (string file in Directory.GetFiles(dir+@"\rumote\", @"rumote*.asx")) File.Delete(file);
 
-            if (tempasx != String.Empty) File.Delete(dir + @"\webtelek\" + tempasx);
+            if (tempasx != String.Empty) File.Delete(dir + @"\rumote\" + tempasx);
 
             Random random = new Random();
-            tempasx = "webtelek" + random.Next(999).ToString() + ".asx";
+            tempasx = "rumote" + random.Next(999).ToString() + ".asx";
 
             PlayNextIndex = PlayNextIndex + next;
             if (PlayNextIndex >= PlayNextNames.Count) PlayNextIndex = 0;
@@ -1696,9 +1696,9 @@ namespace MediaPortal.GUI.WebTelek
                 {
                     String _tempasx = webdata.getHTTPData(PlayNextUrls[PlayNextIndex]);
                     if (preload) if (_tempasx.IndexOf("connect.wmv") > 0) _tempasx = _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
-                    File.WriteAllText(dir + @"\webtelek\" + tempasx, _tempasx, Encoding.Default);
+                    File.WriteAllText(dir + @"\rumote\" + tempasx, _tempasx, Encoding.Default);
                 }
-                mmsurl = dir + @"\webtelek\" + tempasx;
+                mmsurl = dir + @"\rumote\" + tempasx;
                 OSDInfo.channel_id = PlayNextUrls[PlayNextIndex].Substring(34);
             }
             else
@@ -1750,11 +1750,11 @@ namespace MediaPortal.GUI.WebTelek
             {
                 //string dir = Directory.GetCurrentDirectory();
                 string dir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-                File.Delete(dir + @"\webtelek\webtelek.asx");
+                File.Delete(dir + @"\rumote\rumote.asx");
                 String _tempasx = webdata.getHTTPData(DataUrls[PlayNextIndex]);
                 if (preload) if (_tempasx.IndexOf("connect.wmv") > 0) _tempasx = _tempasx.Insert(_tempasx.IndexOf("connect.wmv") + 8, "1");
-                File.WriteAllText(dir + @"\webtelek\webtelek.asx", _tempasx, Encoding.Default);
-                string mmsurl = dir + @"\webtelek\webtelek.asx";
+                File.WriteAllText(dir + @"\rumote\rumote.asx", _tempasx, Encoding.Default);
+                string mmsurl = dir + @"\rumote\rumote.asx";
                 OSDInfo.channel_id = DataUrls[PlayNextIndex].Substring(34);
                 g_Player.Play(mmsurl);
             }
@@ -1793,11 +1793,11 @@ namespace MediaPortal.GUI.WebTelek
                             if (FUrls[listView.SelectedListItemIndex].Contains("http://www.rumote.com/play.php?ch="))
                             {
                                 getChannelLogo(FUrls[listView.SelectedListItemIndex].Substring(34));
-                                ChannelLogo.SetFileName(dir + @"\\webtelek\\" + FUrls[listView.SelectedListItemIndex].Substring(34) + ".jpg");
+                                ChannelLogo.SetFileName(dir + @"\\rumote\\" + FUrls[listView.SelectedListItemIndex].Substring(34) + ".jpg");
                             }
                             else
                             {
-                                ChannelLogo.SetFileName(dir + @"\\webtelek\\default.jpg");
+                                ChannelLogo.SetFileName(dir + @"\\rumote\\default.jpg");
                             }
                             break;
                         case "Channels":
@@ -1807,17 +1807,17 @@ namespace MediaPortal.GUI.WebTelek
                                 {
                                     Log.Info(FUrls[listView.SelectedListItemIndex-1]);
                                     getChannelLogo(FUrls[listView.SelectedListItemIndex - 1].Substring(34));
-                                    ChannelLogo.SetFileName(dir + @"\\webtelek\\" + FUrls[listView.SelectedListItemIndex - 1].Substring(34) + ".jpg");
+                                    ChannelLogo.SetFileName(dir + @"\\rumote\\" + FUrls[listView.SelectedListItemIndex - 1].Substring(34) + ".jpg");
                                 }
                                 else
                                 {
-                                    ChannelLogo.SetFileName(dir + @"\\webtelek\\default.jpg");
+                                    ChannelLogo.SetFileName(dir + @"\\rumote\\default.jpg");
                                 }
                             }
                             break;
                         case "ArchiveShows":
                             getChannelLogo(archive.getShows(archivexml)[1][listView.SelectedListItemIndex]);
-                            ChannelLogo.SetFileName(dir + @"\\webtelek\\" + archive.getShows(archivexml)[1][listView.SelectedListItemIndex] + ".jpg");
+                            ChannelLogo.SetFileName(dir + @"\\rumote\\" + archive.getShows(archivexml)[1][listView.SelectedListItemIndex] + ".jpg");
                             break;
                         default:
                             ChannelLogo.SetFileName("DefaultFolderBig.png");

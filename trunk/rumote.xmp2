@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Version>2.0</Version>
+  <Groups>
+    <Items>
+      <GroupItem Name="Skin">
+        <ParentGroup />
+        <DisplayName>Skin</DisplayName>
+        <DefaulChecked>true</DefaulChecked>
+        <Description>Skin</Description>
+        <Files>
+          <Items>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\WMP9Notify.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{782f16e4-09ec-4345-8080-e42c8a34683e}-WMP9Notify.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\WMP9Notify.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\WMP9OSD.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{6b19b5a0-f68f-4309-aa57-38173330c7ae}-WMP9OSD.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\WMP9OSD.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\WMP9SCHED.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{76eb1c1d-ee0d-40b1-8f42-c0c456a75ae1}-WMP9SCHED.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\WMP9SCHED.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\WMP9Notify.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{9245b65a-ab7f-4b01-acc6-826d64adac4b}-WMP9Notify.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\WMP9Notify.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\WMP9OSD.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{9339310b-089c-4f8d-a2f9-f59d470e55f5}-WMP9OSD.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\WMP9OSD.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\WMP9SCHED.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{823160f6-d7c0-4f9a-ad91-b036ec38f911}-WMP9SCHED.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\WMP9SCHED.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\rumote.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{b95f374d-7897-456d-833c-e5ca324298c1}-rumote.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\rumote.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\rumote_bg_top.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{6706be9e-bf97-49ba-b081-e1e56418e25d}-rumote_bg_top.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\rumote_bg_top.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\rumote_notify.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{086e0823-0c2d-4d26-9c41-2f0833101145}-rumote_notify.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\rumote_notify.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\rumote_schedule.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{c34d7b73-13f1-495f-9b81-ec363a3248dd}-rumote_schedule.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\rumote_schedule.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\rumote_tvguide.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{ab2b43ca-6a37-4ea0-aa70-aee8ab66b847}-rumote_tvguide.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\rumote_tvguide.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\hover_rumote.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{76f14288-d9ab-4810-8951-04e1606747b7}-hover_rumote.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\Media\hover_rumote.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\rumote_bg_top.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{d0af7369-4357-49c6-a1b7-0d3b890d5a44}-rumote_bg_top.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\Media\rumote_bg_top.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\rumote_logo.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{7bfb1979-a2d7-4998-b735-48ced10ad560}-rumote_logo.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\Media\rumote_logo.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\rumote_logotype.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{c86b8d31-34c7-4fc9-bd42-eba9dc2be8a7}-rumote_logotype.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\Media\rumote_logotype.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\rumote_logo_back.jpg</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{2a50726a-99bc-49e3-9aa9-3ec21186839a}-rumote_logo_back.jpg</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\Media\rumote_logo_back.jpg</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\rumote_progress_background.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{740d2ae6-19ee-48c3-8bb8-66beb1d2ceff}-rumote_progress_background.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\Media\rumote_progress_background.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\rumote_progress_indicator.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{06072037-bcbb-4125-a018-0bda9f3b5ed8}-rumote_progress_indicator.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\Media\rumote_progress_indicator.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\rumote_progress_mid.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{7089922f-30dd-4ac6-b310-6393ae917b94}-rumote_progress_mid.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\Media\rumote_progress_mid.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\rumote_schedule.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{92661994-01d3-467e-bfc9-c3501881776b}-rumote_schedule.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3wide\Media\rumote_schedule.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\rumote.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{dca7bda2-9dec-4e8b-bb04-851e34474f43}-rumote.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\rumote.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\rumote_bg_top.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{684aacb7-be7b-4db8-ac11-6d86cc01673b}-rumote_bg_top.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\rumote_bg_top.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\rumote_notify.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{9a5cef98-7851-4faa-906f-f795685eafe3}-rumote_notify.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\rumote_notify.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\rumote_schedule.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{91efe792-7b58-4a3d-aa2d-64b754e7cbd9}-rumote_schedule.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\rumote_schedule.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\rumote_tvguide.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{e94c9df8-5f27-4379-8af5-ee0fdfb6fae2}-rumote_tvguide.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\rumote_tvguide.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\Media\hover_rumote.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{a1635950-ea6e-4631-844e-506d5288ebc5}-hover_rumote.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\Media\hover_rumote.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\Media\rumote_bg_top.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{b21d0b1f-f253-48ad-8b57-71e31a18df8c}-rumote_bg_top.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\Media\rumote_bg_top.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\Media\rumote_logo.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{007ff1fd-1812-4c2c-ad6a-b4d8251e07f6}-rumote_logo.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\Media\rumote_logo.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\Media\rumote_logotype.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{083cd979-f815-4dca-8b85-3cba1ea0ee2b}-rumote_logotype.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\Media\rumote_logotype.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\Media\rumote_logo_back.jpg</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{f45ab1fe-241a-4770-a5b3-3e8e5ecb23cb}-rumote_logo_back.jpg</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\Media\rumote_logo_back.jpg</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\Media\rumote_progress_background.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{25c54ea7-c5a6-47fa-b154-04ab706f6421}-rumote_progress_background.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\Media\rumote_progress_background.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\Media\rumote_progress_indicator.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{6b60e477-c29c-4c51-8b4c-14b6fe1b6712}-rumote_progress_indicator.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\Media\rumote_progress_indicator.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\Media\rumote_progress_mid.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{ed70f2d1-9c28-4c62-b2d8-a72d77b4887d}-rumote_progress_mid.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\Media\rumote_progress_mid.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Blue3\Media\rumote_schedule.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{4f6de1b2-51f0-4eb4-93fe-8e4835be3abf}-rumote_schedule.png</ZipFileName>
+              <DestinationFilename>%Skin%\Blue3\Media\rumote_schedule.png</DestinationFilename>
+            </FileItem>
+          </Items>
+        </Files>
+      </GroupItem>
+      <GroupItem Name="Plugin">
+        <ParentGroup />
+        <DisplayName>Plugin</DisplayName>
+        <DefaulChecked>true</DefaulChecked>
+        <Description>Plugin</Description>
+        <Files>
+          <Items>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>Source\WebtelekPlugin\bin\Release\Rumote.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{5a47d705-a696-45bc-b4f4-8e4dece0636b}-WebTelek.dll</ZipFileName>
+              <DestinationFilename>%Plugins%\Windows\Rumote.dll</DestinationFilename>
+            </FileItem>
+          </Items>
+        </Files>
+      </GroupItem>
+    </Items>
+  </Groups>
+  <Sections>
+    <Items>
+      <SectionItem Guid="2357b554-017f-491f-9f7a-e8fd2f95eb7e" Name="Welcome Screen" ConditionGroup="">
+        <Params>
+          <Items>
+            <SectionParam Name="Header text">
+              <Value>Welcome to the Extension Installer of Rumote Frontend plugin</Value>
+              <ValueType>String</ValueType>
+              <Description />
+            </SectionParam>
+            <SectionParam Name="Description">
+              <Value>This will install [Name] version [Version] on your computer.
+It is recommended that you close all other applications before continuing.
+Click Next to continue or Cancel to exit Setup.</Value>
+              <ValueType>String</ValueType>
+              <Description />
+            </SectionParam>
+            <SectionParam Name="Left part image">
+              <Value />
+              <ValueType>File</ValueType>
+              <Description />
+            </SectionParam>
+            <SectionParam Name="Header image">
+              <Value>Rumote_logo.png</Value>
+              <ValueType>File</ValueType>
+              <Description>Image in upper right part</Description>
+            </SectionParam>
+          </Items>
+        </Params>
+        <Actions>
+          <Items />
+        </Actions>
+        <IncludedGroups />
+        <PanelName>Welcome Screen</PanelName>
+        <WizardButtonsEnum>NextCancel</WizardButtonsEnum>
+      </SectionItem>
+      <SectionItem Guid="21914c01-ff8c-4b36-93b6-7ed917b9e516" Name="Install Section" ConditionGroup="">
+        <Params>
+          <Items>
+            <SectionParam Name="Header Title">
+              <Value>Installation of plugin is in progress...</Value>
+              <ValueType>String</ValueType>
+              <Description>Header title</Description>
+            </SectionParam>
+            <SectionParam Name="Header description">
+              <Value />
+              <ValueType>String</ValueType>
+              <Description>Description of section, shown in under section title</Description>
+            </SectionParam>
+            <SectionParam Name="Header image">
+              <Value />
+              <ValueType>File</ValueType>
+              <Description>Image in upper right part</Description>
+            </SectionParam>
+          </Items>
+        </Params>
+        <Actions>
+          <Items>
+            <ActionItem Name="InstallFiles" ActionType="InstallFiles" ConditionGroup="">
+              <Params>
+                <Items />
+              </Params>
+              <ExecuteLocation>AfterPanelShow</ExecuteLocation>
+            </ActionItem>
+          </Items>
+        </Actions>
+        <IncludedGroups />
+        <PanelName>Install Section</PanelName>
+        <WizardButtonsEnum>Next</WizardButtonsEnum>
+      </SectionItem>
+      <SectionItem Guid="2150cabd-b79a-4368-b46e-454d3a8401f8" Name="Setup Complete" ConditionGroup="">
+        <Params>
+          <Items>
+            <SectionParam Name="Header text">
+              <Value>The Extension Installer Wizard has successfully installed [Name].
+
+Enjoy!
+
+
+</Value>
+              <ValueType>String</ValueType>
+              <Description />
+            </SectionParam>
+            <SectionParam Name="Left part image">
+              <Value />
+              <ValueType>File</ValueType>
+              <Description />
+            </SectionParam>
+            <SectionParam Name="Show radio buttons">
+              <Value>NO</Value>
+              <ValueType>Bool</ValueType>
+              <Description>Use radiobutton in place of combobox</Description>
+            </SectionParam>
+            <SectionParam Name="Header image">
+              <Value />
+              <ValueType>File</ValueType>
+              <Description>Image in upper right part</Description>
+            </SectionParam>
+          </Items>
+        </Params>
+        <Actions>
+          <Items />
+        </Actions>
+        <IncludedGroups />
+        <PanelName>Setup Complete</PanelName>
+        <WizardButtonsEnum>Finish</WizardButtonsEnum>
+      </SectionItem>
+    </Items>
+  </Sections>
+  <Dependencies>
+    <Items />
+  </Dependencies>
+  <GeneralInfo>
+    <Name>Rumote</Name>
+    <Id>03235b53-0d55-48f4-a042-de7f8c027cdc</Id>
+    <Author>6opuc (saulyak@gmail.com)</Author>
+    <HomePage />
+    <ForumPage />
+    <UpdateUrl />
+    <Version>
+      <Major>1</Major>
+      <Minor>0</Minor>
+      <Build>0</Build>
+      <Revision>1</Revision>
+    </Version>
+    <ExtensionDescription>Frontend plugin for www.rumote.com</ExtensionDescription>
+    <VersionDescription>First beta</VersionDescription>
+    <DevelopmentStatus>Beta</DevelopmentStatus>
+    <OnlineLocation />
+    <ReleaseDate>2011-01-29T16:14:32.171875+01:00</ReleaseDate>
+    <Tags />
+    <Location>C:\mediaportal\rumote.mpe1</Location>
+    <Params>
+      <Items>
+        <SectionParam Name="Icon">
+          <Value />
+          <ValueType>File</ValueType>
+          <Description>The icon file of the package (jpg,png,bmp)</Description>
+        </SectionParam>
+        <SectionParam Name="Online Icon">
+          <Value />
+          <ValueType>String</ValueType>
+          <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
+        </SectionParam>
+        <SectionParam Name="Configuration file">
+          <Value />
+          <ValueType>Template</ValueType>
+          <Description>The file used to configure the extension.
+ If have .exe extension the will be executed
+ If have .dll extension used like MP plugin configuration</Description>
+        </SectionParam>
+        <SectionParam Name="Online Screenshots">
+          <Value />
+          <ValueType>String</ValueType>
+          <Description>Online stored screenshot urls separated by ; </Description>
+        </SectionParam>
+        <SectionParam Name="Force to uninstall on update">
+          <Value>YES</Value>
+          <ValueType>Bool</ValueType>
+          <Description>Show dialog and force to uninstall previous version when updating an extension. Should only be disabled if you are using an NSIS/MSI installer.</Description>
+        </SectionParam>
+      </Items>
+    </Params>
+  </GeneralInfo>
+  <UniqueFileList>
+    <Items>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\WMP9Notify.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{782f16e4-09ec-4345-8080-e42c8a34683e}-WMP9Notify.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\WMP9Notify.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\WMP9OSD.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{6b19b5a0-f68f-4309-aa57-38173330c7ae}-WMP9OSD.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\WMP9OSD.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\WMP9SCHED.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{76eb1c1d-ee0d-40b1-8f42-c0c456a75ae1}-WMP9SCHED.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\WMP9SCHED.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\WMP9Notify.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{9245b65a-ab7f-4b01-acc6-826d64adac4b}-WMP9Notify.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\WMP9Notify.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\WMP9OSD.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{9339310b-089c-4f8d-a2f9-f59d470e55f5}-WMP9OSD.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\WMP9OSD.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\WMP9SCHED.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{823160f6-d7c0-4f9a-ad91-b036ec38f911}-WMP9SCHED.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\WMP9SCHED.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\rumote.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{b95f374d-7897-456d-833c-e5ca324298c1}-rumote.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\rumote.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\rumote_bg_top.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{6706be9e-bf97-49ba-b081-e1e56418e25d}-rumote_bg_top.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\rumote_bg_top.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\rumote_notify.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{086e0823-0c2d-4d26-9c41-2f0833101145}-rumote_notify.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\rumote_notify.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\rumote_schedule.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{c34d7b73-13f1-495f-9b81-ec363a3248dd}-rumote_schedule.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\rumote_schedule.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\rumote_tvguide.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{ab2b43ca-6a37-4ea0-aa70-aee8ab66b847}-rumote_tvguide.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\rumote_tvguide.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\hover_rumote.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{76f14288-d9ab-4810-8951-04e1606747b7}-hover_rumote.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\Media\hover_rumote.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\rumote_bg_top.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{d0af7369-4357-49c6-a1b7-0d3b890d5a44}-rumote_bg_top.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\Media\rumote_bg_top.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\rumote_logo.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{7bfb1979-a2d7-4998-b735-48ced10ad560}-rumote_logo.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\Media\rumote_logo.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\rumote_logotype.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{c86b8d31-34c7-4fc9-bd42-eba9dc2be8a7}-rumote_logotype.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\Media\rumote_logotype.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\rumote_logo_back.jpg</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{2a50726a-99bc-49e3-9aa9-3ec21186839a}-rumote_logo_back.jpg</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\Media\rumote_logo_back.jpg</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\rumote_progress_background.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{740d2ae6-19ee-48c3-8bb8-66beb1d2ceff}-rumote_progress_background.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\Media\rumote_progress_background.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\rumote_progress_indicator.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{06072037-bcbb-4125-a018-0bda9f3b5ed8}-rumote_progress_indicator.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\Media\rumote_progress_indicator.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\rumote_progress_mid.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{7089922f-30dd-4ac6-b310-6393ae917b94}-rumote_progress_mid.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\Media\rumote_progress_mid.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3wide\Media\rumote_schedule.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{92661994-01d3-467e-bfc9-c3501881776b}-rumote_schedule.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3wide\Media\rumote_schedule.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\rumote.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{dca7bda2-9dec-4e8b-bb04-851e34474f43}-rumote.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\rumote.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\rumote_bg_top.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{684aacb7-be7b-4db8-ac11-6d86cc01673b}-rumote_bg_top.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\rumote_bg_top.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\rumote_notify.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{9a5cef98-7851-4faa-906f-f795685eafe3}-rumote_notify.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\rumote_notify.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\rumote_schedule.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{91efe792-7b58-4a3d-aa2d-64b754e7cbd9}-rumote_schedule.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\rumote_schedule.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\rumote_tvguide.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{e94c9df8-5f27-4379-8af5-ee0fdfb6fae2}-rumote_tvguide.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\rumote_tvguide.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\Media\hover_rumote.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{a1635950-ea6e-4631-844e-506d5288ebc5}-hover_rumote.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\Media\hover_rumote.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\Media\rumote_bg_top.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{b21d0b1f-f253-48ad-8b57-71e31a18df8c}-rumote_bg_top.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\Media\rumote_bg_top.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\Media\rumote_logo.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{007ff1fd-1812-4c2c-ad6a-b4d8251e07f6}-rumote_logo.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\Media\rumote_logo.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\Media\rumote_logotype.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{083cd979-f815-4dca-8b85-3cba1ea0ee2b}-rumote_logotype.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\Media\rumote_logotype.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\Media\rumote_logo_back.jpg</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{f45ab1fe-241a-4770-a5b3-3e8e5ecb23cb}-rumote_logo_back.jpg</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\Media\rumote_logo_back.jpg</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\Media\rumote_progress_background.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{25c54ea7-c5a6-47fa-b154-04ab706f6421}-rumote_progress_background.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\Media\rumote_progress_background.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\Media\rumote_progress_indicator.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{6b60e477-c29c-4c51-8b4c-14b6fe1b6712}-rumote_progress_indicator.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\Media\rumote_progress_indicator.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\Media\rumote_progress_mid.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{ed70f2d1-9c28-4c62-b2d8-a72d77b4887d}-rumote_progress_mid.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\Media\rumote_progress_mid.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Blue3\Media\rumote_schedule.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{4f6de1b2-51f0-4eb4-93fe-8e4835be3abf}-rumote_schedule.png</ZipFileName>
+        <DestinationFilename>%Skin%\Blue3\Media\rumote_schedule.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>Source\WebtelekPlugin\bin\Release\Rumote.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{5a47d705-a696-45bc-b4f4-8e4dece0636b}-WebTelek.dll</ZipFileName>
+        <DestinationFilename>%Plugins%\Windows\Rumote.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>Rumote_logo.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{cbbd539d-c15b-4321-98bb-26a79322638a}-Rumote_logo.png</ZipFileName>
+        <DestinationFilename />
+      </FileItem>
+    </Items>
+  </UniqueFileList>
+  <ProjectSettings>
+    <FolderGroups>
+      <FolderGroup InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName />
+        <ZipFileName>Installer{CopyFile}\{a9ee4983-e977-4d80-85eb-98a77b64cb17}-</ZipFileName>
+        <DestinationFilename>%Skin%</DestinationFilename>
+        <Folder>[mediaportal root]\Skin</Folder>
+        <Group>Skin</Group>
+        <Recursive>true</Recursive>
+      </FolderGroup>
+    </FolderGroups>
+    <ProjectFilename>C:\mediaportal\webtelek\rumote.xmp2</ProjectFilename>
+  </ProjectSettings>
+</PackageClass>
