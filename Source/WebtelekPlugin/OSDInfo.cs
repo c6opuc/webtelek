@@ -89,7 +89,7 @@ namespace MediaPortal.GUI.WebTelek
             _top = new Bitmap(GUIGraphicsContext.Skin + @"\Media\" + cxd.GetElementsByTagName("TopBackground")[0].InnerText);
             _bitmap = new Bitmap(600, 200);
 
-            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"), false))
+            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "rumote_profile.xml"), false))
             {
                 _timer.Interval = (int)Decimal.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "osddelay", "5"))) * 1000;
                 _changeOnOKonly = Boolean.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "switchonokonly", "false")));
@@ -302,13 +302,13 @@ namespace MediaPortal.GUI.WebTelek
                     {
                         WebTelek.getChannelLogo(channel_id);
                         Bitmap logo;
-                        if (File.Exists(dir + @"\\webtelek\\" + channel_id + ".jpg"))
+                        if (File.Exists(dir + @"\\rumote\\" + channel_id + ".jpg"))
                         {
-                            logo = new Bitmap(dir + @"\\webtelek\\" + channel_id + ".jpg");
+                            logo = new Bitmap(dir + @"\\rumote\\" + channel_id + ".jpg");
                         }
                         else
                         {
-                            logo = new Bitmap(dir + @"\\webtelek\\default.jpg");
+                            logo = new Bitmap(dir + @"\\rumote\\default.jpg");
                         }
                         g.DrawRectangle(new Pen(Color.Black, 2), _bitmap.Width - 70 - 40 + 17 + 2, 27 + 2, 49, 37);
                         g.DrawImage(logo, _bitmap.Width - 70 - 40 + 17, 27, 49, 37);

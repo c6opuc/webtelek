@@ -88,13 +88,13 @@ namespace MediaPortal.GUI.WebTelek
         public bool GetHome(out string strButtonText, out string strButtonImage, out string strButtonImageFocus, out string strPictureImage)
         {
             strButtonText = "Rumote";
-            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"), false))
+            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "rumote_profile.xml"), false))
             {
                 strButtonText = Convert.ToString(xmlreader.GetValueAsString("Account", "pluginname", "Rumote"));
             }
             strButtonImage = String.Empty;
             strButtonImageFocus = String.Empty;
-            strPictureImage = "hover_webtelek.png";
+            strPictureImage = "hover_rumote.png";
             return true;
         }
 

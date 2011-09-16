@@ -90,7 +90,7 @@ namespace MediaPortal.GUI.WebTelek
             _gpeh = new g_Player.EndedHandler(g_Player_PlayBackEnded);
             InitializeComponent();
 
-            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"), false))
+            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "rumote_profile.xml"), false))
                 _timer.Interval = (int)Decimal.Parse(Convert.ToString(xmlreader.GetValueAsString("Account", "osddelay", "5"))) * 1000;
 
             _parent = parent;

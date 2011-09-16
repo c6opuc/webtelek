@@ -46,7 +46,7 @@ namespace MediaPortal.GUI.WebTelek
             InitializeComponent();
             //string dir = Directory.GetCurrentDirectory();
             string dir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"), false))
+            using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "rumote_profile.xml"), false))
             {
                 string username = Convert.ToString(xmlreader.GetValueAsString("Account", "username", "your@email.com"));
                 string password = Convert.ToString(xmlreader.GetValueAsString("Account", "password", "password"));
@@ -143,8 +143,8 @@ namespace MediaPortal.GUI.WebTelek
             //OK Button
             //string dir = Directory.GetCurrentDirectory();
             string dir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            //using (MediaPortal.Profile.Settings writer = new MediaPortal.Profile.Settings(dir +  @"\webtelek_profile.xml",false) )
-            using (MediaPortal.Profile.Settings writer = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "webtelek_profile.xml"), false))
+            //using (MediaPortal.Profile.Settings writer = new MediaPortal.Profile.Settings(dir +  @"\rumote_profile.xml",false) )
+            using (MediaPortal.Profile.Settings writer = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "rumote_profile.xml"), false))
             {
                 writer.SetValue("Account", "username", textBox1.Text.Trim());
                 writer.SetValue("Account", "password", textBox2.Text.Trim());

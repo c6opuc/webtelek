@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Rumote Mediaportal plugin")]
-[assembly: AssemblyDescription("Frontend for www.webtelek.com")]
+[assembly: AssemblyDescription("Frontend for www.rumote.com")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Borys SAULYAK")]
 [assembly: AssemblyProduct("Rumote")]

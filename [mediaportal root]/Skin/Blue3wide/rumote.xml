@@ -1,5 +1,5 @@
 <window>
-  <id>6900</id>
+  <id>7926</id>
   <defaultcontrol>1</defaultcontrol>
   <allowoverlay>yes</allowoverlay>
   <autohidetopbar>yes</autohidetopbar>
@@ -82,7 +82,7 @@
 			<posY>5</posY>
 			<width>300</width>
       			<keepaspectratio>yes</keepaspectratio>
-			<texture>webtelek_logotype.png</texture>
+			<texture>rumote_logotype.png</texture>
 		</control>
     		<control>
     			<description>ChannelLogo</description>
