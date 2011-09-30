@@ -73,7 +73,7 @@
 			<posY>35</posY>
 			<width>250</width>
       			<keepaspectratio>yes</keepaspectratio>
-			<texture>webtelek_logotype.gif</texture>
+			<texture>rumote_logotype.png</texture>
 		</control>
 
 	<control>
