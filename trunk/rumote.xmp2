@@ -248,6 +248,132 @@
               <ZipFileName>Installer{CopyFile}\{4f6de1b2-51f0-4eb4-93fe-8e4835be3abf}-rumote_schedule.png</ZipFileName>
               <DestinationFilename>%Skin%\Blue3\Media\rumote_schedule.png</DestinationFilename>
             </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Maya\myrss.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{ddaec8a4-1213-47a8-8896-798efd26ce43}-myrss.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Maya\myrss.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Maya\rumote.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{55536899-fb04-465b-a66c-40e87b85fb09}-rumote.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Maya\rumote.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Maya\rumote_bg_top.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{34ef85e3-ec47-4461-83d9-1c34c3fd6273}-rumote_bg_top.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Maya\rumote_bg_top.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Maya\rumote_notify.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{0cf09c00-e402-4995-a200-16ce73a5d75f}-rumote_notify.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Maya\rumote_notify.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Maya\rumote_schedule.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{85bf63a1-7000-4559-a5d0-83a1df0b3ae5}-rumote_schedule.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Maya\rumote_schedule.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Maya\rumote_tvguide.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{179d5338-b65c-4bae-b3a0-af3c4a0ae982}-rumote_tvguide.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Maya\rumote_tvguide.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Maya\WMP9Notify.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{779a1151-c257-43d8-8d6d-ec0cd8e03656}-WMP9Notify.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Maya\WMP9Notify.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Maya\WMP9OSD.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{0eb568c2-d403-4439-892c-4b3e7313aec2}-WMP9OSD.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Maya\WMP9OSD.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Maya\WMP9SCHED.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{8148f6e7-c8e4-4f83-9571-6efe3d11f1a9}-WMP9SCHED.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Maya\WMP9SCHED.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Maya\Media\hover_rumote.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{bb637466-acea-4005-8756-bdc351d8b65f}-hover_rumote.png</ZipFileName>
+              <DestinationFilename>%Skin%\Maya\Media\hover_rumote.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Maya\Media\rumote_bg_top.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{ca9cc888-aef9-4f55-8abd-1a6b9f228b2f}-rumote_bg_top.png</ZipFileName>
+              <DestinationFilename>%Skin%\Maya\Media\rumote_bg_top.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Maya\Media\rumote_logo.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{cf8d6ee6-7cb0-4d14-ac0d-0ecc5c3e7ceb}-rumote_logo.png</ZipFileName>
+              <DestinationFilename>%Skin%\Maya\Media\rumote_logo.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Maya\Media\rumote_logotype.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{af24153b-9c0e-481a-bc2d-b9e6f1a6bb0e}-rumote_logotype.png</ZipFileName>
+              <DestinationFilename>%Skin%\Maya\Media\rumote_logotype.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Maya\Media\rumote_logo_back.jpg</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{f14de9eb-16ea-433a-b465-8bc43c558fc9}-rumote_logo_back.jpg</ZipFileName>
+              <DestinationFilename>%Skin%\Maya\Media\rumote_logo_back.jpg</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Maya\Media\rumote_progress_background.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{5b725d77-c6f9-47c5-95e1-7dd4297f13da}-rumote_progress_background.png</ZipFileName>
+              <DestinationFilename>%Skin%\Maya\Media\rumote_progress_background.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Maya\Media\rumote_progress_indicator.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{5996abec-21f6-4567-897c-52e1cd991aa6}-rumote_progress_indicator.png</ZipFileName>
+              <DestinationFilename>%Skin%\Maya\Media\rumote_progress_indicator.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Maya\Media\rumote_progress_mid.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{829ad65b-8f72-466a-99b6-25fdbfc453ca}-rumote_progress_mid.png</ZipFileName>
+              <DestinationFilename>%Skin%\Maya\Media\rumote_progress_mid.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Maya\Media\rumote_schedule.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{d0d08988-fd21-44eb-b046-bd2dd092984b}-rumote_schedule.png</ZipFileName>
+              <DestinationFilename>%Skin%\Maya\Media\rumote_schedule.png</DestinationFilename>
+            </FileItem>
           </Items>
         </Files>
       </GroupItem>
@@ -674,6 +800,132 @@ Enjoy!
         <ZipFileName>Installer{CopyFile}\{4f6de1b2-51f0-4eb4-93fe-8e4835be3abf}-rumote_schedule.png</ZipFileName>
         <DestinationFilename>%Skin%\Blue3\Media\rumote_schedule.png</DestinationFilename>
       </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Maya\myrss.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{ddaec8a4-1213-47a8-8896-798efd26ce43}-myrss.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Maya\myrss.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Maya\rumote.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{55536899-fb04-465b-a66c-40e87b85fb09}-rumote.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Maya\rumote.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Maya\rumote_bg_top.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{34ef85e3-ec47-4461-83d9-1c34c3fd6273}-rumote_bg_top.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Maya\rumote_bg_top.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Maya\rumote_notify.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{0cf09c00-e402-4995-a200-16ce73a5d75f}-rumote_notify.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Maya\rumote_notify.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Maya\rumote_schedule.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{85bf63a1-7000-4559-a5d0-83a1df0b3ae5}-rumote_schedule.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Maya\rumote_schedule.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Maya\rumote_tvguide.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{179d5338-b65c-4bae-b3a0-af3c4a0ae982}-rumote_tvguide.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Maya\rumote_tvguide.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Maya\WMP9Notify.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{779a1151-c257-43d8-8d6d-ec0cd8e03656}-WMP9Notify.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Maya\WMP9Notify.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Maya\WMP9OSD.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{0eb568c2-d403-4439-892c-4b3e7313aec2}-WMP9OSD.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Maya\WMP9OSD.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Maya\WMP9SCHED.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{8148f6e7-c8e4-4f83-9571-6efe3d11f1a9}-WMP9SCHED.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Maya\WMP9SCHED.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Maya\Media\hover_rumote.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{bb637466-acea-4005-8756-bdc351d8b65f}-hover_rumote.png</ZipFileName>
+        <DestinationFilename>%Skin%\Maya\Media\hover_rumote.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Maya\Media\rumote_bg_top.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{ca9cc888-aef9-4f55-8abd-1a6b9f228b2f}-rumote_bg_top.png</ZipFileName>
+        <DestinationFilename>%Skin%\Maya\Media\rumote_bg_top.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Maya\Media\rumote_logo.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{cf8d6ee6-7cb0-4d14-ac0d-0ecc5c3e7ceb}-rumote_logo.png</ZipFileName>
+        <DestinationFilename>%Skin%\Maya\Media\rumote_logo.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Maya\Media\rumote_logotype.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{af24153b-9c0e-481a-bc2d-b9e6f1a6bb0e}-rumote_logotype.png</ZipFileName>
+        <DestinationFilename>%Skin%\Maya\Media\rumote_logotype.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Maya\Media\rumote_logo_back.jpg</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{f14de9eb-16ea-433a-b465-8bc43c558fc9}-rumote_logo_back.jpg</ZipFileName>
+        <DestinationFilename>%Skin%\Maya\Media\rumote_logo_back.jpg</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Maya\Media\rumote_progress_background.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{5b725d77-c6f9-47c5-95e1-7dd4297f13da}-rumote_progress_background.png</ZipFileName>
+        <DestinationFilename>%Skin%\Maya\Media\rumote_progress_background.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Maya\Media\rumote_progress_indicator.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{5996abec-21f6-4567-897c-52e1cd991aa6}-rumote_progress_indicator.png</ZipFileName>
+        <DestinationFilename>%Skin%\Maya\Media\rumote_progress_indicator.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Maya\Media\rumote_progress_mid.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{829ad65b-8f72-466a-99b6-25fdbfc453ca}-rumote_progress_mid.png</ZipFileName>
+        <DestinationFilename>%Skin%\Maya\Media\rumote_progress_mid.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Maya\Media\rumote_schedule.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{d0d08988-fd21-44eb-b046-bd2dd092984b}-rumote_schedule.png</ZipFileName>
+        <DestinationFilename>%Skin%\Maya\Media\rumote_schedule.png</DestinationFilename>
+      </FileItem>
       <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
@@ -685,7 +937,7 @@ Enjoy!
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>Rumote_logo.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{cbbd539d-c15b-4321-98bb-26a79322638a}-Rumote_logo.png</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{2af3a9cd-1195-41a6-8058-5285b47c8620}-Rumote_logo.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
     </Items>
