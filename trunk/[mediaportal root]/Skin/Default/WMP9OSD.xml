@@ -1,0 +1,7 @@
+﻿<WMP9OSD>
+  <TopBackground>rumote_bg_top.png</TopBackground>
+  <TopRegion>rumote_bg_top.xml</TopRegion>
+  <ProgressMid>rumote_progress_mid.png</ProgressMid>
+  <ProgressIndicator>rumote_progress_indicator.png</ProgressIndicator>
+  <ProgressBackground>rumote_progress_background.png</ProgressBackground>
+</WMP9OSD>
