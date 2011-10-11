@@ -724,7 +724,7 @@ namespace MediaPortal.GUI.WebTelek
       _shiftTurnedOn = false;
       _state = State.STATE_KEYBOARD;
       _position = 0;
-      _currentKeyboard = KeyboardTypes.TYPE_ALPHABET;
+      _currentKeyboard = KeyboardTypes.TYPE_RUSSIAN;
       _currentRow = 0;
       _currentKey = 0;
       _lastColumn = 0;
@@ -1031,7 +1031,7 @@ namespace MediaPortal.GUI.WebTelek
       _currentRow = 0;
       _currentKey = 0;
       _lastColumn = 1;
-      _currentKeyboard = KeyboardTypes.TYPE_ALPHABET;
+      _currentKeyboard = KeyboardTypes.TYPE_RUSSIAN;
       _capsLockTurnedOn = false;
       _shiftTurnedOn = false;
       _textEntered = "";
