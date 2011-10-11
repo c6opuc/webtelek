@@ -320,9 +320,12 @@ namespace MediaPortal.GUI.WebTelek
         {
             using (MediaPortal.Profile.Settings xmlreader = new MediaPortal.Profile.Settings(Config.GetFile(Config.Dir.Config, "rumote_profile.xml"), false))
             {
-                if (Convert.ToString(xmlreader.GetValueAsString("Account", "versioncheck", "true")) == "true")
+                if (Convert.ToString(xmlreader.GetValueAsString("Account", "versioncheck", "True")) == "True")
                 {
                     string infomessage = webdata.getHTTPData("http://www.rumote.com/export/maintenance-updates.php?ver=" + VERSION);
+
+                    Log.Info(infomessage);
+                    
                     if (infomessage != "OK")
                     {
                         GUIDialogNotify info = (GUIDialogNotify)GUIWindowManager.GetWindow((int)GUIWindow.Window.WINDOW_DIALOG_NOTIFY);
