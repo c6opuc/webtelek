@@ -1,7 +1,0 @@
-﻿<WMP9OSD>
-  <TopBackground>webtelek_bg_top.png</TopBackground>
-  <TopRegion>webtelek_bg_top.xml</TopRegion>
-  <ProgressMid>webtelek_progress_mid.png</ProgressMid>
-  <ProgressIndicator>webtelek_progress_indicator.png</ProgressIndicator>
-  <ProgressBackground>webtelek_progress_background.png</ProgressBackground>
-</WMP9OSD>
