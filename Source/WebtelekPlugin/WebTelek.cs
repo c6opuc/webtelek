@@ -1499,6 +1499,7 @@ namespace MediaPortal.GUI.WebTelek
                     break;
                 case 7:
                     VirtualKeyboardRU keyboard = (VirtualKeyboardRU)GUIWindowManager.GetWindow((int)WebTelek.VirtualKeyboardID);
+//                    VirtualKeyboard keyboard = (VirtualKeyboard)GUIWindowManager.GetWindow((int)Window.WINDOW_VIRTUAL_KEYBOARD);
                     if (null == keyboard) return;
                     string searchterm = string.Empty;
                     //keyboard.IsSearchKeyboard = true;
