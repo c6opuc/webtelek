@@ -61,7 +61,7 @@ namespace MediaPortal.GUI.WebTelek
         readonly PointF[] _pathPoints;
         int refreshCounter = 0;
         int refresh = 0;
-        Action _action;
+        MediaPortal.GUI.Library.Action _action;
 
         public static void Start()
         {
@@ -160,14 +160,14 @@ namespace MediaPortal.GUI.WebTelek
                     switch (_action.wID)
                     {
                         //TODO: Is it adjustible????
-                        case Action.ActionType.ACTION_BIG_STEP_FORWARD:
-                        case Action.ActionType.ACTION_BIG_STEP_BACK:
-                        case Action.ActionType.ACTION_STEP_BACK:
-                        case Action.ActionType.ACTION_STEP_FORWARD:
-                        case Action.ActionType.ACTION_MOVE_LEFT:
-                        case Action.ActionType.ACTION_MOVE_RIGHT:
-                        case Action.ActionType.ACTION_MOVE_UP:
-                        case Action.ActionType.ACTION_MOVE_DOWN:
+                        case MediaPortal.GUI.Library.Action.ActionType.ACTION_BIG_STEP_FORWARD:
+                        case MediaPortal.GUI.Library.Action.ActionType.ACTION_BIG_STEP_BACK:
+                        case MediaPortal.GUI.Library.Action.ActionType.ACTION_STEP_BACK:
+                        case MediaPortal.GUI.Library.Action.ActionType.ACTION_STEP_FORWARD:
+                        case MediaPortal.GUI.Library.Action.ActionType.ACTION_MOVE_LEFT:
+                        case MediaPortal.GUI.Library.Action.ActionType.ACTION_MOVE_RIGHT:
+                        case MediaPortal.GUI.Library.Action.ActionType.ACTION_MOVE_UP:
+                        case MediaPortal.GUI.Library.Action.ActionType.ACTION_MOVE_DOWN:
                             if (_enabled)
                                 if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9) | g_Player.Player.GetType() == typeof(MediaPortal.Player.WebTelekWMP)))
                                 {
@@ -184,9 +184,9 @@ namespace MediaPortal.GUI.WebTelek
                                     _timer.Enabled = true;
                                 }
                             break;
-                        case Action.ActionType.ACTION_SHOW_OSD:
-                        case Action.ActionType.ACTION_CONTEXT_MENU:
-                        case Action.ActionType.ACTION_SELECT_ITEM:
+                        case MediaPortal.GUI.Library.Action.ActionType.ACTION_SHOW_OSD:
+                        case MediaPortal.GUI.Library.Action.ActionType.ACTION_CONTEXT_MENU:
+                        case MediaPortal.GUI.Library.Action.ActionType.ACTION_SELECT_ITEM:
                             if (_enabled)
                                 if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9) | g_Player.Player.GetType() == typeof(MediaPortal.Player.WebTelekWMP)))
                                 {
@@ -209,21 +209,21 @@ namespace MediaPortal.GUI.WebTelek
             catch (Exception) { }
         }
 
-        void GUIWindowManager_OnNewAction(Action action)
+        void GUIWindowManager_OnNewAction(MediaPortal.GUI.Library.Action action)
         {
             switch (action.wID)
             {
-                case Action.ActionType.ACTION_BIG_STEP_FORWARD:
-                case Action.ActionType.ACTION_BIG_STEP_BACK:
-                case Action.ActionType.ACTION_STEP_BACK:
-                case Action.ActionType.ACTION_STEP_FORWARD:
-                case Action.ActionType.ACTION_MOVE_LEFT:
-                case Action.ActionType.ACTION_MOVE_RIGHT:
-                case Action.ActionType.ACTION_MOVE_UP:
-                case Action.ActionType.ACTION_MOVE_DOWN:
-                case Action.ActionType.ACTION_SHOW_OSD:
-                case Action.ActionType.ACTION_CONTEXT_MENU:
-                case Action.ActionType.ACTION_SELECT_ITEM:
+                case MediaPortal.GUI.Library.Action.ActionType.ACTION_BIG_STEP_FORWARD:
+                case MediaPortal.GUI.Library.Action.ActionType.ACTION_BIG_STEP_BACK:
+                case MediaPortal.GUI.Library.Action.ActionType.ACTION_STEP_BACK:
+                case MediaPortal.GUI.Library.Action.ActionType.ACTION_STEP_FORWARD:
+                case MediaPortal.GUI.Library.Action.ActionType.ACTION_MOVE_LEFT:
+                case MediaPortal.GUI.Library.Action.ActionType.ACTION_MOVE_RIGHT:
+                case MediaPortal.GUI.Library.Action.ActionType.ACTION_MOVE_UP:
+                case MediaPortal.GUI.Library.Action.ActionType.ACTION_MOVE_DOWN:
+                case MediaPortal.GUI.Library.Action.ActionType.ACTION_SHOW_OSD:
+                case MediaPortal.GUI.Library.Action.ActionType.ACTION_CONTEXT_MENU:
+                case MediaPortal.GUI.Library.Action.ActionType.ACTION_SELECT_ITEM:
                         refreshCounter = refresh;
                         _action = action;
                         drawOSD();
