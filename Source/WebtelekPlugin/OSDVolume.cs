@@ -131,16 +131,16 @@ namespace MediaPortal.GUI.WebTelek
             _timer.Enabled = false;
         }
 
-        void GUIWindowManager_OnNewAction(Action action)
+        void GUIWindowManager_OnNewAction(MediaPortal.GUI.Library.Action action)
         {
 
             if (g_Player.Player != null)
             {
                 switch (action.wID)
                 {
-                    case Action.ActionType.ACTION_VOLUME_UP:
-                    case Action.ActionType.ACTION_VOLUME_DOWN:
-                    case Action.ActionType.ACTION_VOLUME_MUTE:
+                    case MediaPortal.GUI.Library.Action.ActionType.ACTION_VOLUME_UP:
+                    case MediaPortal.GUI.Library.Action.ActionType.ACTION_VOLUME_DOWN:
+                    case MediaPortal.GUI.Library.Action.ActionType.ACTION_VOLUME_MUTE:
                         if (_enabled)
                             if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9) | g_Player.Player.GetType() == typeof(MediaPortal.Player.WebTelekWMP)))
                             {
@@ -175,7 +175,7 @@ namespace MediaPortal.GUI.WebTelek
         {
         }
 
-        public void Show(Action action)
+        public void Show(MediaPortal.GUI.Library.Action action)
         {
             int max = VolumeHandler.Instance.Maximum;
             int min = VolumeHandler.Instance.Minimum;

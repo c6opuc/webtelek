@@ -813,10 +813,10 @@ namespace MediaPortal.GUI.WebTelek
       _currentKey = -1;
     }
 
-    public override void OnAction(Action action)
+    public override void OnAction(MediaPortal.GUI.Library.Action action)
     {
-      if (action.wID == Action.ActionType.ACTION_CLOSE_DIALOG || action.wID == Action.ActionType.ACTION_PREVIOUS_MENU ||
-          action.wID == Action.ActionType.ACTION_CONTEXT_MENU)
+      if (action.wID == MediaPortal.GUI.Library.Action.ActionType.ACTION_CLOSE_DIALOG || action.wID == MediaPortal.GUI.Library.Action.ActionType.ACTION_PREVIOUS_MENU ||
+          action.wID == MediaPortal.GUI.Library.Action.ActionType.ACTION_CONTEXT_MENU)
       {
         Close();
         return;
@@ -824,37 +824,37 @@ namespace MediaPortal.GUI.WebTelek
 
       switch (action.wID)
       {
-        case Action.ActionType.REMOTE_0:
+          case MediaPortal.GUI.Library.Action.ActionType.REMOTE_0:
           ProcessSmsInsertion(0);
           break;
-        case Action.ActionType.REMOTE_1:
+          case MediaPortal.GUI.Library.Action.ActionType.REMOTE_1:
           ProcessSmsInsertion(1);
           break;
-        case Action.ActionType.REMOTE_2:
+          case MediaPortal.GUI.Library.Action.ActionType.REMOTE_2:
           ProcessSmsInsertion(2);
           break;
-        case Action.ActionType.REMOTE_3:
+          case MediaPortal.GUI.Library.Action.ActionType.REMOTE_3:
           ProcessSmsInsertion(3);
           break;
-        case Action.ActionType.REMOTE_4:
+          case MediaPortal.GUI.Library.Action.ActionType.REMOTE_4:
           ProcessSmsInsertion(4);
           break;
-        case Action.ActionType.REMOTE_5:
+          case MediaPortal.GUI.Library.Action.ActionType.REMOTE_5:
           ProcessSmsInsertion(5);
           break;
-        case Action.ActionType.REMOTE_6:
+          case MediaPortal.GUI.Library.Action.ActionType.REMOTE_6:
           ProcessSmsInsertion(6);
           break;
-        case Action.ActionType.REMOTE_7:
+          case MediaPortal.GUI.Library.Action.ActionType.REMOTE_7:
           ProcessSmsInsertion(7);
           break;
-        case Action.ActionType.REMOTE_8:
+          case MediaPortal.GUI.Library.Action.ActionType.REMOTE_8:
           ProcessSmsInsertion(8);
           break;
-        case Action.ActionType.REMOTE_9:
+          case MediaPortal.GUI.Library.Action.ActionType.REMOTE_9:
           ProcessSmsInsertion(9);
           break;
-        case Action.ActionType.ACTION_MOVE_LEFT:
+          case MediaPortal.GUI.Library.Action.ActionType.ACTION_MOVE_LEFT:
           if (_useSmsStyleTextInsertion && _currentKey == 0)
           {
             Press(Xkey.XK_BACKSPACE);
@@ -862,7 +862,7 @@ namespace MediaPortal.GUI.WebTelek
             return;
           }
           break;
-        case Action.ActionType.ACTION_MOVE_UP:
+          case MediaPortal.GUI.Library.Action.ActionType.ACTION_MOVE_UP:
           if (_useSmsStyleTextInsertion && _currentRow == 0)
           {
             _shiftTurnedOn = !_shiftTurnedOn;
@@ -875,15 +875,15 @@ namespace MediaPortal.GUI.WebTelek
       Event ev;
       switch (action.wID)
       {
-        case Action.ActionType.ACTION_MOUSE_MOVE:
+          case MediaPortal.GUI.Library.Action.ActionType.ACTION_MOUSE_MOVE:
           SelectActiveButton(action.fAmount1, action.fAmount2);
           break;
-        case Action.ActionType.ACTION_MOUSE_CLICK:
+          case MediaPortal.GUI.Library.Action.ActionType.ACTION_MOUSE_CLICK:
           ev = Event.EV_A_BUTTON;
           UpdateState(ev);
           break;
 
-        case Action.ActionType.ACTION_SELECT_ITEM:
+          case MediaPortal.GUI.Library.Action.ActionType.ACTION_SELECT_ITEM:
           if (_currentKey == -1)
           {
             Close();
@@ -893,34 +893,34 @@ namespace MediaPortal.GUI.WebTelek
           UpdateState(ev);
           break;
 
-        case Action.ActionType.ACTION_MOVE_DOWN:
+          case MediaPortal.GUI.Library.Action.ActionType.ACTION_MOVE_DOWN:
           ev = Event.EV_DOWN;
           UpdateState(ev);
           break;
 
-        case Action.ActionType.ACTION_MOVE_UP:
+          case MediaPortal.GUI.Library.Action.ActionType.ACTION_MOVE_UP:
           ev = Event.EV_UP;
           UpdateState(ev);
           break;
 
-        case Action.ActionType.ACTION_MOVE_LEFT:
+          case MediaPortal.GUI.Library.Action.ActionType.ACTION_MOVE_LEFT:
           ev = Event.EV_LEFT;
           UpdateState(ev);
           break;
 
-        case Action.ActionType.ACTION_MOVE_RIGHT:
+          case MediaPortal.GUI.Library.Action.ActionType.ACTION_MOVE_RIGHT:
           ev = Event.EV_RIGHT;
           UpdateState(ev);
           break;
 
-        case Action.ActionType.ACTION_PREVIOUS_MENU:
+          case MediaPortal.GUI.Library.Action.ActionType.ACTION_PREVIOUS_MENU:
           ev = Event.EV_BACK_BUTTON;
           UpdateState(ev);
           break;
-        case Action.ActionType.ACTION_REMOVE_ITEM:
+          case MediaPortal.GUI.Library.Action.ActionType.ACTION_REMOVE_ITEM:
           Press(Xkey.XK_BACKSPACE);
           break;
-        case Action.ActionType.ACTION_KEY_PRESSED:
+          case MediaPortal.GUI.Library.Action.ActionType.ACTION_KEY_PRESSED:
           if (action.m_key != null)
           {
             if (action.m_key.KeyChar >= 32)
@@ -948,7 +948,7 @@ namespace MediaPortal.GUI.WebTelek
             }
           }
           break;
-        case Action.ActionType.ACTION_TOGGLE_SMS_INPUT:
+          case MediaPortal.GUI.Library.Action.ActionType.ACTION_TOGGLE_SMS_INPUT:
           SmsStyleText = !SmsStyleText;
           break;
       }
@@ -1003,8 +1003,8 @@ namespace MediaPortal.GUI.WebTelek
       else
       {
         char tmpChar = (char)('0' + keyPressed);
-        Action tmpAction = new Action(new MediaPortal.GUI.Library.Key(tmpChar, (int)tmpChar),
-                                      Action.ActionType.ACTION_KEY_PRESSED, 0, 0);
+        MediaPortal.GUI.Library.Action tmpAction = new MediaPortal.GUI.Library.Action(new MediaPortal.GUI.Library.Key(tmpChar, (int)tmpChar),
+                                       MediaPortal.GUI.Library.Action.ActionType.ACTION_KEY_PRESSED, 0, 0);
 
         OnAction(tmpAction);
       }

@@ -1099,10 +1099,10 @@ namespace MediaPortal.GUI.WebTelek
 
         }
 
-        public override void OnAction(Action action)
+        public override void OnAction(MediaPortal.GUI.Library.Action action)
         {
 
-            if ( (action.wID == Action.ActionType.ACTION_PREVIOUS_MENU || action.wID == Action.ActionType.ACTION_PARENT_DIR ) && LastChoosen != "")
+            if ( (action.wID == MediaPortal.GUI.Library.Action.ActionType.ACTION_PREVIOUS_MENU || action.wID == MediaPortal.GUI.Library.Action.ActionType.ACTION_PARENT_DIR ) && LastChoosen != "")
             {
 
                 Navigation.RemoveAt(0);
@@ -1145,7 +1145,7 @@ namespace MediaPortal.GUI.WebTelek
                 return;
             }
 
-            if ( action.wID == Action.ActionType.ACTION_PARENT_DIR )
+            if (action.wID == MediaPortal.GUI.Library.Action.ActionType.ACTION_PARENT_DIR)
             {                
                 return;
             }

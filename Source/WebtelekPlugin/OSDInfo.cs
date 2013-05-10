@@ -150,14 +150,14 @@ namespace MediaPortal.GUI.WebTelek
             _timer.Enabled = false;
         }
 
-        void GUIWindowManager_OnNewAction(Action action)
+        void GUIWindowManager_OnNewAction(MediaPortal.GUI.Library.Action action)
         {
             if (g_Player.Player != null)
             {
                 switch (action.wID)
                 {
-                    case Action.ActionType.ACTION_SHOW_OSD:
-                    case Action.ActionType.ACTION_CONTEXT_MENU:
+                    case MediaPortal.GUI.Library.Action.ActionType.ACTION_SHOW_OSD:
+                    case MediaPortal.GUI.Library.Action.ActionType.ACTION_CONTEXT_MENU:
                         if (_enabled)
                             if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9) | g_Player.Player.GetType() == typeof(MediaPortal.Player.WebTelekWMP)))
                             {
@@ -177,9 +177,9 @@ namespace MediaPortal.GUI.WebTelek
                                 _timer.Enabled = true;
                             }
                         break;
-                    case Action.ActionType.ACTION_NEXT_ITEM:
-                    case Action.ActionType.ACTION_NEXT_CHANNEL:
-                    case Action.ActionType.ACTION_PAGE_UP:
+                    case MediaPortal.GUI.Library.Action.ActionType.ACTION_NEXT_ITEM:
+                    case MediaPortal.GUI.Library.Action.ActionType.ACTION_NEXT_CHANNEL:
+                    case MediaPortal.GUI.Library.Action.ActionType.ACTION_PAGE_UP:
                         if (wp != null)
                         {
                             if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9) | g_Player.Player.GetType() == typeof(MediaPortal.Player.WebTelekWMP)))
@@ -197,9 +197,9 @@ namespace MediaPortal.GUI.WebTelek
                             }
                         }
                         break;
-                    case Action.ActionType.ACTION_PREV_CHANNEL:
-                    case Action.ActionType.ACTION_PREV_ITEM:
-                    case Action.ActionType.ACTION_PAGE_DOWN:
+                    case MediaPortal.GUI.Library.Action.ActionType.ACTION_PREV_CHANNEL:
+                    case MediaPortal.GUI.Library.Action.ActionType.ACTION_PREV_ITEM:
+                    case MediaPortal.GUI.Library.Action.ActionType.ACTION_PAGE_DOWN:
                         if (wp != null)
                         {
                             if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9) | g_Player.Player.GetType() == typeof(MediaPortal.Player.WebTelekWMP)))
@@ -217,7 +217,7 @@ namespace MediaPortal.GUI.WebTelek
                             }
                         }
                         break;
-                    case Action.ActionType.ACTION_SELECT_ITEM:
+                    case MediaPortal.GUI.Library.Action.ActionType.ACTION_SELECT_ITEM:
                         if ((g_Player.Playing | g_Player.Paused) & g_Player.FullScreen & g_Player.HasVideo & (g_Player.Player.GetType() == typeof(MediaPortal.Player.AudioPlayerWMP9) | g_Player.Player.GetType() == typeof(MediaPortal.Player.WebTelekWMP)))
                         {
 
