@@ -395,6 +395,209 @@
               <ZipFileName>Installer{CopyFile}\{1e953cf8-864f-4049-bcf5-6ee1dfbcdf8d}-rumote_schedule.png</ZipFileName>
               <DestinationFilename>%Skin%\Default\Media\rumote_schedule.png</DestinationFilename>
             </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Titan\myrss.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{90163d87-d4b0-4605-9f2c-a7b55003fcea}-myrss.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Titan\myrss.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Titan\rumote.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{87752b29-d011-4931-a146-5b70056ac37c}-rumote.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Titan\rumote.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Titan\rumote_bg_top.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{f2592f25-4a7f-4f83-8de3-3a0466b090de}-rumote_bg_top.png</ZipFileName>
+              <DestinationFilename>%Skin%\Titan\rumote_bg_top.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Titan\rumote_bg_top.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{901743d7-204b-47da-8c76-659aba846ab7}-rumote_bg_top.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Titan\rumote_bg_top.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Titan\rumote_logo.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{83cfb7c6-7ce9-47bf-b961-28193cec63a6}-rumote_logo.png</ZipFileName>
+              <DestinationFilename>%Skin%\Titan\rumote_logo.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Titan\rumote_logotype.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{c5461a97-adf7-4bb6-8ceb-7f6c9b1a7504}-rumote_logotype.png</ZipFileName>
+              <DestinationFilename>%Skin%\Titan\rumote_logotype.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Titan\rumote_logo_back.jpg</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{9158cdce-f691-4f68-b887-85efd8bc9911}-rumote_logo_back.jpg</ZipFileName>
+              <DestinationFilename>%Skin%\Titan\rumote_logo_back.jpg</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Titan\rumote_notify.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{0b96e186-b90a-4423-9133-f16f6e33ae5c}-rumote_notify.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Titan\rumote_notify.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Titan\rumote_progress_background.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{69668e53-b0f3-45ca-af85-8fa4b6103eb1}-rumote_progress_background.png</ZipFileName>
+              <DestinationFilename>%Skin%\Titan\rumote_progress_background.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Titan\rumote_progress_indicator.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{d9b400b2-6d68-4d7f-b758-7b8c4a933b76}-rumote_progress_indicator.png</ZipFileName>
+              <DestinationFilename>%Skin%\Titan\rumote_progress_indicator.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Titan\rumote_progress_mid.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{1423d442-d1f7-441c-bfb4-3901c427f347}-rumote_progress_mid.png</ZipFileName>
+              <DestinationFilename>%Skin%\Titan\rumote_progress_mid.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Titan\rumote_schedule.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{268bd51b-84a1-446d-914b-3f62b4d2d3c1}-rumote_schedule.png</ZipFileName>
+              <DestinationFilename>%Skin%\Titan\rumote_schedule.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Titan\rumote_schedule.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{1635d56b-8338-490c-a4af-edbe5e6a1eac}-rumote_schedule.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Titan\rumote_schedule.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Titan\rumote_tvguide.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{da179055-8ab2-424d-b32a-6e8a12f95ad1}-rumote_tvguide.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Titan\rumote_tvguide.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Titan\stdKeyboardRU.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{e7ec3155-593e-4f6a-b347-66b989b4a4d3}-stdKeyboardRU.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Titan\stdKeyboardRU.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Titan\WMP9Notify.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{a68ae1e2-7c6b-4c05-9fbe-3246ea1c50b4}-WMP9Notify.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Titan\WMP9Notify.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Titan\WMP9OSD.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{e060d109-3d0b-4fd0-9ca2-a0342a4bafc1}-WMP9OSD.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Titan\WMP9OSD.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Titan\WMP9SCHED.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{3b8440e6-a09f-4b92-9240-ca86e9d5adc7}-WMP9SCHED.xml</ZipFileName>
+              <DestinationFilename>%Skin%\Titan\WMP9SCHED.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Titan\Media\hover_rumote.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{415d5e26-9c26-497c-b413-5a5eba567b9d}-hover_rumote.png</ZipFileName>
+              <DestinationFilename>%Skin%\Titan\Media\hover_rumote.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Titan\Media\menu_bg.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{f8775e43-7bfc-4d77-87d8-62637da8ae4c}-menu_bg.png</ZipFileName>
+              <DestinationFilename>%Skin%\Titan\Media\menu_bg.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Titan\Media\rumote_bg_top.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{71c6ae60-1b3e-4fa0-8c98-27aebbb806d3}-rumote_bg_top.png</ZipFileName>
+              <DestinationFilename>%Skin%\Titan\Media\rumote_bg_top.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Titan\Media\rumote_logo.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{cdd69689-60b1-41d2-90b1-b414ae194de3}-rumote_logo.png</ZipFileName>
+              <DestinationFilename>%Skin%\Titan\Media\rumote_logo.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Titan\Media\rumote_logotype.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{47bdf96b-320e-4581-ba20-5c30490df5cd}-rumote_logotype.png</ZipFileName>
+              <DestinationFilename>%Skin%\Titan\Media\rumote_logotype.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Titan\Media\rumote_logo_back.jpg</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{97564665-cce7-4670-a364-745372f08a0c}-rumote_logo_back.jpg</ZipFileName>
+              <DestinationFilename>%Skin%\Titan\Media\rumote_logo_back.jpg</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Titan\Media\rumote_menu_bg.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{0444c9b9-c716-4340-8c0c-958fe38d6b13}-rumote_menu_bg.png</ZipFileName>
+              <DestinationFilename>%Skin%\Titan\Media\rumote_menu_bg.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Titan\Media\rumote_progress_background.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{80f8136e-4e6b-4a04-80d4-aae1aedebbdf}-rumote_progress_background.png</ZipFileName>
+              <DestinationFilename>%Skin%\Titan\Media\rumote_progress_background.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Titan\Media\rumote_progress_indicator.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{ec9fca29-97f7-48dc-9e68-471501461bb3}-rumote_progress_indicator.png</ZipFileName>
+              <DestinationFilename>%Skin%\Titan\Media\rumote_progress_indicator.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Titan\Media\rumote_progress_mid.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{816f0723-fc3a-4037-bf31-6e0d2b5710dd}-rumote_progress_mid.png</ZipFileName>
+              <DestinationFilename>%Skin%\Titan\Media\rumote_progress_mid.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>[mediaportal root]\Skin\Titan\Media\rumote_schedule.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{f1602201-1de8-409a-b9fa-d144da467132}-rumote_schedule.png</ZipFileName>
+              <DestinationFilename>%Skin%\Titan\Media\rumote_schedule.png</DestinationFilename>
+            </FileItem>
           </Items>
         </Files>
       </GroupItem>
@@ -408,7 +611,7 @@
             <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
               <Param1 />
               <UpdateOption>OverwriteIfOlder</UpdateOption>
-              <LocalFileName>Source\WebtelekPlugin\bin\Release\Rumote.dll</LocalFileName>
+              <LocalFileName>Source\WebtelekPlugin\bin\x86\Release\Rumote.dll</LocalFileName>
               <ZipFileName>Installer{CopyFile}\{5a47d705-a696-45bc-b4f4-8e4dece0636b}-WebTelek.dll</ZipFileName>
               <DestinationFilename>%Plugins%\Windows\Rumote.dll</DestinationFilename>
             </FileItem>
@@ -575,18 +778,17 @@ Enjoy!
     <UpdateUrl />
     <Version>
       <Major>1</Major>
-      <Minor>2</Minor>
-      <Build>1</Build>
+      <Minor>3</Minor>
+      <Build>0</Build>
       <Revision>0</Revision>
     </Version>
     <ExtensionDescription>Frontend plugin for www.rumote.com</ExtensionDescription>
-    <VersionDescription>Beta for MP 1.2.1.0
-</VersionDescription>
+    <VersionDescription>Beta for MP 1.3.0.0</VersionDescription>
     <DevelopmentStatus>Beta</DevelopmentStatus>
     <OnlineLocation />
     <ReleaseDate>2011-10-11T16:14:32</ReleaseDate>
     <Tags />
-    <Location>C:\mediaportal\rumote-1.2.1.0.mpe1</Location>
+    <Location>C:\mediaportal\rumote-1.3.0.mpe1</Location>
     <Params>
       <Items>
         <SectionParam Name="Icon">
@@ -1006,10 +1208,213 @@ Enjoy!
         <ZipFileName>Installer{CopyFile}\{1e953cf8-864f-4049-bcf5-6ee1dfbcdf8d}-rumote_schedule.png</ZipFileName>
         <DestinationFilename>%Skin%\Default\Media\rumote_schedule.png</DestinationFilename>
       </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Titan\myrss.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{90163d87-d4b0-4605-9f2c-a7b55003fcea}-myrss.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Titan\myrss.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Titan\rumote.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{87752b29-d011-4931-a146-5b70056ac37c}-rumote.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Titan\rumote.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Titan\rumote_bg_top.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{f2592f25-4a7f-4f83-8de3-3a0466b090de}-rumote_bg_top.png</ZipFileName>
+        <DestinationFilename>%Skin%\Titan\rumote_bg_top.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Titan\rumote_bg_top.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{901743d7-204b-47da-8c76-659aba846ab7}-rumote_bg_top.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Titan\rumote_bg_top.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Titan\rumote_logo.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{83cfb7c6-7ce9-47bf-b961-28193cec63a6}-rumote_logo.png</ZipFileName>
+        <DestinationFilename>%Skin%\Titan\rumote_logo.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Titan\rumote_logotype.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{c5461a97-adf7-4bb6-8ceb-7f6c9b1a7504}-rumote_logotype.png</ZipFileName>
+        <DestinationFilename>%Skin%\Titan\rumote_logotype.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Titan\rumote_logo_back.jpg</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{9158cdce-f691-4f68-b887-85efd8bc9911}-rumote_logo_back.jpg</ZipFileName>
+        <DestinationFilename>%Skin%\Titan\rumote_logo_back.jpg</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Titan\rumote_notify.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{0b96e186-b90a-4423-9133-f16f6e33ae5c}-rumote_notify.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Titan\rumote_notify.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Titan\rumote_progress_background.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{69668e53-b0f3-45ca-af85-8fa4b6103eb1}-rumote_progress_background.png</ZipFileName>
+        <DestinationFilename>%Skin%\Titan\rumote_progress_background.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Titan\rumote_progress_indicator.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{d9b400b2-6d68-4d7f-b758-7b8c4a933b76}-rumote_progress_indicator.png</ZipFileName>
+        <DestinationFilename>%Skin%\Titan\rumote_progress_indicator.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Titan\rumote_progress_mid.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{1423d442-d1f7-441c-bfb4-3901c427f347}-rumote_progress_mid.png</ZipFileName>
+        <DestinationFilename>%Skin%\Titan\rumote_progress_mid.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Titan\rumote_schedule.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{268bd51b-84a1-446d-914b-3f62b4d2d3c1}-rumote_schedule.png</ZipFileName>
+        <DestinationFilename>%Skin%\Titan\rumote_schedule.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Titan\rumote_schedule.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{1635d56b-8338-490c-a4af-edbe5e6a1eac}-rumote_schedule.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Titan\rumote_schedule.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Titan\rumote_tvguide.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{da179055-8ab2-424d-b32a-6e8a12f95ad1}-rumote_tvguide.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Titan\rumote_tvguide.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Titan\stdKeyboardRU.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{e7ec3155-593e-4f6a-b347-66b989b4a4d3}-stdKeyboardRU.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Titan\stdKeyboardRU.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Titan\WMP9Notify.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{a68ae1e2-7c6b-4c05-9fbe-3246ea1c50b4}-WMP9Notify.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Titan\WMP9Notify.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Titan\WMP9OSD.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{e060d109-3d0b-4fd0-9ca2-a0342a4bafc1}-WMP9OSD.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Titan\WMP9OSD.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Titan\WMP9SCHED.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{3b8440e6-a09f-4b92-9240-ca86e9d5adc7}-WMP9SCHED.xml</ZipFileName>
+        <DestinationFilename>%Skin%\Titan\WMP9SCHED.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Titan\Media\hover_rumote.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{415d5e26-9c26-497c-b413-5a5eba567b9d}-hover_rumote.png</ZipFileName>
+        <DestinationFilename>%Skin%\Titan\Media\hover_rumote.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Titan\Media\menu_bg.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{f8775e43-7bfc-4d77-87d8-62637da8ae4c}-menu_bg.png</ZipFileName>
+        <DestinationFilename>%Skin%\Titan\Media\menu_bg.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Titan\Media\rumote_bg_top.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{71c6ae60-1b3e-4fa0-8c98-27aebbb806d3}-rumote_bg_top.png</ZipFileName>
+        <DestinationFilename>%Skin%\Titan\Media\rumote_bg_top.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Titan\Media\rumote_logo.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{cdd69689-60b1-41d2-90b1-b414ae194de3}-rumote_logo.png</ZipFileName>
+        <DestinationFilename>%Skin%\Titan\Media\rumote_logo.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Titan\Media\rumote_logotype.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{47bdf96b-320e-4581-ba20-5c30490df5cd}-rumote_logotype.png</ZipFileName>
+        <DestinationFilename>%Skin%\Titan\Media\rumote_logotype.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Titan\Media\rumote_logo_back.jpg</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{97564665-cce7-4670-a364-745372f08a0c}-rumote_logo_back.jpg</ZipFileName>
+        <DestinationFilename>%Skin%\Titan\Media\rumote_logo_back.jpg</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Titan\Media\rumote_menu_bg.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{0444c9b9-c716-4340-8c0c-958fe38d6b13}-rumote_menu_bg.png</ZipFileName>
+        <DestinationFilename>%Skin%\Titan\Media\rumote_menu_bg.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Titan\Media\rumote_progress_background.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{80f8136e-4e6b-4a04-80d4-aae1aedebbdf}-rumote_progress_background.png</ZipFileName>
+        <DestinationFilename>%Skin%\Titan\Media\rumote_progress_background.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Titan\Media\rumote_progress_indicator.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{ec9fca29-97f7-48dc-9e68-471501461bb3}-rumote_progress_indicator.png</ZipFileName>
+        <DestinationFilename>%Skin%\Titan\Media\rumote_progress_indicator.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Titan\Media\rumote_progress_mid.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{816f0723-fc3a-4037-bf31-6e0d2b5710dd}-rumote_progress_mid.png</ZipFileName>
+        <DestinationFilename>%Skin%\Titan\Media\rumote_progress_mid.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>[mediaportal root]\Skin\Titan\Media\rumote_schedule.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{f1602201-1de8-409a-b9fa-d144da467132}-rumote_schedule.png</ZipFileName>
+        <DestinationFilename>%Skin%\Titan\Media\rumote_schedule.png</DestinationFilename>
+      </FileItem>
       <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
-        <LocalFileName>Source\WebtelekPlugin\bin\Release\Rumote.dll</LocalFileName>
+        <LocalFileName>Source\WebtelekPlugin\bin\x86\Release\Rumote.dll</LocalFileName>
         <ZipFileName>Installer{CopyFile}\{5a47d705-a696-45bc-b4f4-8e4dece0636b}-WebTelek.dll</ZipFileName>
         <DestinationFilename>%Plugins%\Windows\Rumote.dll</DestinationFilename>
       </FileItem>
@@ -1017,7 +1422,7 @@ Enjoy!
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>Rumote_logo.png</LocalFileName>
-        <ZipFileName>Installer{CopyFile}\{6f98c1e1-c1c6-44bf-9806-c9b28a57df8b}-Rumote_logo.png</ZipFileName>
+        <ZipFileName>Installer{CopyFile}\{395a24d6-aa6d-40a5-8403-511064af5edc}-Rumote_logo.png</ZipFileName>
         <DestinationFilename />
       </FileItem>
     </Items>
